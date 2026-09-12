@@ -8,7 +8,7 @@ $('#stats').innerHTML=[[games.length,'Games in the collection','A growing person
 $$('[data-status]').forEach(b=>b.querySelector('span').textContent=counts[b.dataset.status]);
 const genreList=[...new Set(games.flatMap(g=>g.genres))].sort();
 genreList.forEach(g=>$('#genre').add(new Option(g,g)));
-const placeholder='data:image/svg+xml,'+encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" width="400" height="560"><rect width="400" height="560" fill="#25301e"/><text x="200" y="270" font-family="Arial" font-size="25" text-anchor="middle" fill="#cefa69">SIMS GAMES LIST</text><text x="200" y="308" font-family="Arial" font-size="16" text-anchor="middle" fill="#a2aa9b">Artwork unavailable</text></svg>');
+const placeholder='data:image/svg+xml,'+encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" width="400" height="560"><rect width="400" height="560" fill="#25301e"/><text x="200" y="270" font-family="Arial" font-size="25" text-anchor="middle" fill="#cefa69">SHIYAM`S GAMES LIST</text><text x="200" y="308" font-family="Arial" font-size="16" text-anchor="middle" fill="#a2aa9b">Artwork unavailable</text></svg>');
 let selected='unplayed',recommendation=null;
 function imgError(event){event.target.onerror=null;event.target.src=placeholder;}
 function render(){
@@ -34,11 +34,11 @@ const eligible=games.filter(g=>g.status==='unplayed'&&!g.future&&!g.genres.some(
 const score=g=>g.genres.reduce((n,t)=>n+(affinity[t]||0),0)/Math.sqrt(g.genres.length);
 const ranked=eligible.slice().sort((a,b)=>score(b)-score(a)||a.id-b.id);
 let seen=new Set();
-try{const stored=JSON.parse(sessionStorage.getItem('sims-rec-seen')||'[]');if(Array.isArray(stored))seen=new Set(stored.filter(id=>eligible.some(g=>g.id===id)));}catch{}
+try{const stored=JSON.parse(sessionStorage.getItem('Shiyam`s-rec-seen')||'[]');if(Array.isArray(stored))seen=new Set(stored.filter(id=>eligible.some(g=>g.id===id)));}catch{}
 function nextRecommendation(){
  if(!ranked.length){$('#rec-info').innerHTML='<p>No eligible backlog games remain.</p>';$('#next-rec').disabled=true;$('#rec-trailer').disabled=true;return;}
  if(seen.size>=ranked.length)seen.clear();
- recommendation=ranked.find(g=>!seen.has(g.id))||ranked[0];seen.add(recommendation.id);try{sessionStorage.setItem('sims-rec-seen',JSON.stringify([...seen]));}catch{}
+ recommendation=ranked.find(g=>!seen.has(g.id))||ranked[0];seen.add(recommendation.id);try{sessionStorage.setItem('Shiyam`s-rec-seen',JSON.stringify([...seen]));}catch{}
  const shared=recommendation.genres.slice().sort((a,b)=>(affinity[b]||0)-(affinity[a]||0))[0];
  const example=loved.find(g=>g.genres.includes(shared));
  $('#rec-info').innerHTML=`<h3>${escapeHTML(recommendation.title)}</h3><div class="rec-meta">${escapeHTML(recommendation.year)} / ${recommendation.genres.map(escapeHTML).join(' · ')}</div><p class="rec-reason">${example?`Because ${escapeHTML(shared.toLowerCase())} games like <strong>${escapeHTML(example.title)}</strong> made your loved list.`:'A different world from your unplayed collection.'}</p>`;
