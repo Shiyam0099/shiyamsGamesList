@@ -2865,5 +2865,23 @@ window.GAMES = [
     "posterSource": "https://stash.games/games/invincible-vs",
     "videoChannel": "Featured by PlayStation",
     "videoSource": "https://www.youtube.com/watch?v=VcRDa5yKpRg"
+  },
+  {
+    "id": 164,
+    "title": "Marvel's Spider-Man 2",
+    "year": "2025",
+    "genres": [
+      "Action-adventure",
+      "Open-world"
+    ],
+    "status": "unplayed",
+    "future": false,
+    "poster": "https://m.media-amazon.com/images/M/MV5BZmUwYTNjZTAtOTYxYS00NmM3LTkwODEtNWM2NDNlOGZlYzMyXkEyXkFqcGc@._V1_.jpg",
+    "videoId": "VcRDa5yKpRh",
+    "description": "",
+    "ratingUrl": "https://www.metacritic.com/game/marvels-spider-man-2/",
+    "posterSource": "",
+    "videoChannel": "Featured by PlayStation",
+    "videoSource": "https://www.youtube.com/watch?v=bgqGdIoa52s"
   }
 ];
