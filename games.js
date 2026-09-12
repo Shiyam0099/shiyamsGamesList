@@ -2882,6 +2882,6 @@ window.GAMES = [
     "ratingUrl": "https://www.metacritic.com/game/marvels-spider-man-2/",
     "posterSource": "",
     "videoChannel": "Featured by PlayStation",
-    "videoSource": "https://www.youtube.com/watch?v=bgqGdIoa52s"
+    "videoSource": "https://youtu.be/nq1M_Wc4FIc?si=2U0e6VGFGYE0z_88"
   }
 ];
