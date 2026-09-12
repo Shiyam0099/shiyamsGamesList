@@ -28,7 +28,7 @@ window.GAMES = [
     ],
     "status": "unplayed",
     "future": false,
-    "poster": "https://gamer4ever.com.co/cdn/shop/products/711719526292.jpg?v=1655232974",
+    "poster": "https://m.media-amazon.com/images/M/MV5BM2RkMDJjNDMtMzNkMi00ZWVlLWI3ODItODU1NDEyMzdhMDIzXkEyXkFqcGc@._V1_.jpg",
     "videoId": "MlNfJvFnzc8",
     "description": "",
     "ratingUrl": "https://www.metacritic.com/game/infamous-second-son/",
