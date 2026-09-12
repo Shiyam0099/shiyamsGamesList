@@ -2877,11 +2877,11 @@ window.GAMES = [
     "status": "unplayed",
     "future": false,
     "poster": "https://m.media-amazon.com/images/M/MV5BZmUwYTNjZTAtOTYxYS00NmM3LTkwODEtNWM2NDNlOGZlYzMyXkEyXkFqcGc@._V1_.jpg",
-    "videoId": "VcRDa5yKpRh",
-    "description": "",
+    "videoId": "nq1M_Wc4FIc",
+    "description": "The incredible power of the symbiote forces Peter Parker and Miles Morales into a desperate fight as they balance their lives, friendships, and their duty to protect in an exciting chapter of the acclaimed Spider-Man franchise.",
     "ratingUrl": "https://www.metacritic.com/game/marvels-spider-man-2/",
     "posterSource": "",
     "videoChannel": "Featured by PlayStation",
-    "videoSource": "https://youtu.be/nq1M_Wc4FIc?si=2U0e6VGFGYE0z_88"
+    "videoSource": "https://www.youtube.com/watch?v=nq1M_Wc4FIc"
   }
 ];
