@@ -1907,7 +1907,7 @@ window.GAMES = [
     "genres": [
       "FPS"
     ],
-    "status": "dropped",
+    "status": "loved",
     "future": false,
     "poster": "https://static.actugaming.net/media/2016/03/call-of-duty-advanced-warfare-jaquette-e1572230211573.jpg",
     "videoId": "YSp8ZqIKEIM",
@@ -2367,7 +2367,7 @@ window.GAMES = [
       "Action roguelike",
       "RPG"
     ],
-    "status": "dropped",
+    "status": "loved",
     "future": false,
     "poster": "https://static.wikia.nocookie.net/hades_gamepedia_en/images/9/9f/H2_PackArt_600px.png/revision/latest?cb=20250925080214",
     "videoId": "ppEKFy83w-o",
