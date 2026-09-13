@@ -12,11 +12,16 @@ window.GAMES = [
     "future": false,
     "poster": "https://i5.walmartimages.com/asr/3ef1514c-7fa2-4898-b284-0f131edc39cf.b4dde454c065764f95854edeb2f76f06.jpeg",
     "videoId": "m7Tb1pFl5_8",
-    "description": "",
+    "description": "Become Arno, an assassin navigating revolution, conspiracy and conflict in eighteenth-century Paris.",
     "ratingUrl": "https://www.metacritic.com/game/assassins-creed-unity/",
     "posterSource": "https://www.walmart.com/ip/102021913",
     "videoChannel": "PlayStation Europe",
-    "videoSource": "https://www.youtube.com/watch?v=m7Tb1pFl5_8"
+    "videoSource": "https://www.youtube.com/watch?v=m7Tb1pFl5_8",
+    "metacritic": 72,
+    "downloadLink": "",
+    "metacriticSource": "https://www.metacritic.com/game/assassins-creed-unity/",
+    "metacriticChecked": "2026-09-13",
+    "descriptionSource": "https://www.metacritic.com/game/assassins-creed-unity/"
   },
   {
     "id": 2,
@@ -30,11 +35,16 @@ window.GAMES = [
     "future": false,
     "poster": "https://m.media-amazon.com/images/M/MV5BM2RkMDJjNDMtMzNkMi00ZWVlLWI3ODItODU1NDEyMzdhMDIzXkEyXkFqcGc@._V1_.jpg",
     "videoId": "MlNfJvFnzc8",
-    "description": "",
+    "description": "Explore a locked-down Seattle as Delsin Rowe, using newfound superhuman abilities to resist an oppressive government agency.",
     "ratingUrl": "https://www.metacritic.com/game/infamous-second-son/",
     "posterSource": "https://gamer4ever.com.co/products/ps4-infamous_second_son-nuevo",
     "videoChannel": "PlayStation",
-    "videoSource": "https://www.youtube.com/watch?v=MlNfJvFnzc8"
+    "videoSource": "https://www.youtube.com/watch?v=MlNfJvFnzc8",
+    "metacritic": 80,
+    "downloadLink": "",
+    "metacriticSource": "https://www.metacritic.com/game/infamous-second-son/",
+    "metacriticChecked": "2026-09-13",
+    "descriptionSource": "https://www.metacritic.com/game/infamous-second-son/"
   },
   {
     "id": 3,
@@ -49,11 +59,16 @@ window.GAMES = [
     "future": false,
     "poster": "https://i5.walmartimages.ca/asr/27158639-436d-4d15-8884-7f98c1093cbe.0f2d98a1b1f7e408a37d904ee0c8660a.jpeg",
     "videoId": "USwkJtDkg2g",
-    "description": "",
+    "description": "Build a gang and challenge London's ruling elite as Jacob Frye during the Industrial Revolution.",
     "ratingUrl": "https://www.metacritic.com/game/assassins-creed-syndicate/",
     "posterSource": "https://www.walmart.ca/en/ip/Assassin-s-Creed-Syndicate-PlayStation-4/6000193672336",
     "videoChannel": "Digic Pictures — cinematic trailer creator",
-    "videoSource": "https://www.youtube.com/watch?v=USwkJtDkg2g"
+    "videoSource": "https://www.youtube.com/watch?v=USwkJtDkg2g",
+    "metacritic": 76,
+    "downloadLink": "",
+    "metacriticSource": "https://www.metacritic.com/game/assassins-creed-syndicate/",
+    "metacriticChecked": "2026-09-13",
+    "descriptionSource": "https://www.metacritic.com/game/assassins-creed-syndicate/"
   },
   {
     "id": 4,
@@ -67,11 +82,16 @@ window.GAMES = [
     "future": false,
     "poster": "https://i.pinimg.com/originals/a2/8b/eb/a28bebcfc2a04d792bc4fc607f41206c.jpg",
     "videoId": "A31h3J-pPdU",
-    "description": "",
+    "description": "Hunt monstrous creatures and uncover the secrets of Yharnam, a gothic city consumed by a mysterious illness.",
     "ratingUrl": "https://www.metacritic.com/game/bloodborne/",
     "posterSource": "https://www.resetera.com/threads/why-is-the-boxart-for-playstation-exclusive-games-so-abysmal.143048/",
     "videoChannel": "PlayStationES",
-    "videoSource": "https://www.youtube.com/watch?v=A31h3J-pPdU"
+    "videoSource": "https://www.youtube.com/watch?v=A31h3J-pPdU",
+    "metacritic": 92,
+    "downloadLink": "",
+    "metacriticSource": "https://www.metacritic.com/game/bloodborne/",
+    "metacriticChecked": "2026-09-13",
+    "descriptionSource": "https://www.metacritic.com/game/bloodborne/"
   },
   {
     "id": 5,
@@ -85,11 +105,16 @@ window.GAMES = [
     "future": false,
     "poster": "https://static.tvtropes.org/pmwiki/pub/images/df28b64823072ca95c0dcc6872bb55bc.jpg",
     "videoId": "cklw-Yu3moE",
-    "description": "",
+    "description": "Guide a small spirit through an atmospheric world of demanding platforming, exploration and gradually unlocked abilities.",
     "ratingUrl": "https://www.metacritic.com/game/ori-and-the-blind-forest/",
     "posterSource": "https://tvtropes.org/pmwiki/pmwiki.php/VideoGame/OriAndTheBlindForest",
     "videoChannel": "Xbox",
-    "videoSource": "https://www.youtube.com/watch?v=cklw-Yu3moE"
+    "videoSource": "https://www.youtube.com/watch?v=cklw-Yu3moE",
+    "metacritic": 88,
+    "downloadLink": "",
+    "metacriticSource": "https://www.metacritic.com/game/ori-and-the-blind-forest/",
+    "metacriticChecked": "2026-09-13",
+    "descriptionSource": "https://www.metacritic.com/game/ori-and-the-blind-forest/"
   },
   {
     "id": 6,
@@ -102,11 +127,16 @@ window.GAMES = [
     "future": false,
     "poster": "https://img.opencritic.com/game/2835/o/SElDduVy.jpg",
     "videoId": "c7nRTF2SowQ",
-    "description": "",
+    "description": "Adapt to changing weather and destructible battlefields in large-scale first-person warfare.",
     "ratingUrl": "https://www.metacritic.com/game/battlefield-1/",
     "posterSource": "https://opencritic.com/game/2835/battlefield-1",
     "videoChannel": "Official trailer — source linked",
-    "videoSource": "https://www.youtube.com/watch?v=c7nRTF2SowQ"
+    "videoSource": "https://www.youtube.com/watch?v=c7nRTF2SowQ",
+    "metacritic": 88,
+    "downloadLink": "",
+    "metacriticSource": "https://www.metacritic.com/game/battlefield-1/",
+    "metacriticChecked": "2026-09-13",
+    "descriptionSource": "https://www.metacritic.com/game/battlefield-1/"
   },
   {
     "id": 7,
@@ -120,11 +150,16 @@ window.GAMES = [
     "future": false,
     "poster": "https://www.oldgamehermit.com/wp-content/uploads/2016/12/a3a66efc-9af3-4c9f-b6e6-1e8fcf888c20_1.559c9416e7d6125d3524cfc1f14fef25.jpeg",
     "videoId": "IiI7SMQA59Q",
-    "description": "",
+    "description": "Travel with Prince Noctis and his closest friends on a dangerous journey to reclaim their homeland.",
     "ratingUrl": "https://www.metacritic.com/game/final-fantasy-xv/",
     "posterSource": "https://www.oldgamehermit.com/2016/12/review-final-fantasy-xv/",
     "videoChannel": "PS4 promotional trailer",
-    "videoSource": "https://www.youtube.com/watch?v=IiI7SMQA59Q"
+    "videoSource": "https://www.youtube.com/watch?v=IiI7SMQA59Q",
+    "metacritic": 81,
+    "downloadLink": "",
+    "metacriticSource": "https://www.metacritic.com/game/final-fantasy-xv/",
+    "metacriticChecked": "2026-09-13",
+    "descriptionSource": "https://www.metacritic.com/game/final-fantasy-xv/"
   },
   {
     "id": 8,
@@ -138,11 +173,16 @@ window.GAMES = [
     "future": false,
     "poster": "https://rushgame.co/cdn/shop/files/assassins-creed-origins-pc-ubisoft-uplay-cd-key-us-cover_628x700.jpg?v=1756273939",
     "videoId": "uUKMc2LbsUw",
-    "description": "",
+    "description": "Explore ancient Egypt and discover the beginnings of the Assassin Brotherhood through combat, tombs and hidden histories.",
     "ratingUrl": "https://www.metacritic.com/game/assassins-creed-origins/",
     "posterSource": "https://rushgame.co/products/assassins-creed-origins-us-ubisoft-connect-cd-key",
     "videoChannel": "Official trailer — source linked",
-    "videoSource": "https://www.gematsu.com/2017/10/assassins-creed-origins-launch-trailer"
+    "videoSource": "https://www.gematsu.com/2017/10/assassins-creed-origins-launch-trailer",
+    "metacritic": 81,
+    "downloadLink": "",
+    "metacriticSource": "https://www.metacritic.com/game/assassins-creed-origins/",
+    "metacriticChecked": "2026-09-13",
+    "descriptionSource": "https://www.metacritic.com/game/assassins-creed-origins/"
   },
   {
     "id": 9,
@@ -155,11 +195,16 @@ window.GAMES = [
     "future": false,
     "poster": "https://images.kabum.com.br/produtos/fotos/sync_mirakl/541345/xlarge/Jogo-Call-Of-Duty-WWII-PS4_1775493333.jpg",
     "videoId": "D4Q_XYVescc",
-    "description": "",
+    "description": "Fight from Normandy across Europe in a World War II campaign built around squad combat and camaraderie.",
     "ratingUrl": "https://www.metacritic.com/game/call-of-duty-wwii/",
     "posterSource": "https://www.kabum.com.br/produto/541345/jogo-call-of-duty-wwii-ps4",
     "videoChannel": "Call of Duty",
-    "videoSource": "https://www.youtube.com/watch?v=D4Q_XYVescc"
+    "videoSource": "https://www.youtube.com/watch?v=D4Q_XYVescc",
+    "metacritic": 79,
+    "downloadLink": "",
+    "metacriticSource": "https://www.metacritic.com/game/call-of-duty-wwii/",
+    "metacriticChecked": "2026-09-13",
+    "descriptionSource": "https://www.metacritic.com/game/call-of-duty-wwii/"
   },
   {
     "id": 10,
@@ -173,11 +218,16 @@ window.GAMES = [
     "future": false,
     "poster": "https://cdn.awsli.com.br/2500x2500/53/53761/produto/23837650/0d4d94f7ea.jpg",
     "videoId": "wzx96gYA8ek",
-    "description": "",
+    "description": "Play as Aloy, a hunter exploring a world of mechanical creatures, ancient technology and mysterious tribal societies.",
     "ratingUrl": "https://www.metacritic.com/game/horizon-zero-dawn/",
     "posterSource": "https://www.gamegames.com.br/horizon-zero-dawn-ps4-",
     "videoChannel": "Official trailer — source linked",
-    "videoSource": "https://www.gematsu.com/2017/02/horizon-zero-dawn-launch-trailer"
+    "videoSource": "https://www.gematsu.com/2017/02/horizon-zero-dawn-launch-trailer",
+    "metacritic": 89,
+    "downloadLink": "",
+    "metacriticSource": "https://www.metacritic.com/game/horizon-zero-dawn/",
+    "metacriticChecked": "2026-09-13",
+    "descriptionSource": "https://www.metacritic.com/game/horizon-zero-dawn/"
   },
   {
     "id": 11,
@@ -191,11 +241,16 @@ window.GAMES = [
     "future": false,
     "poster": "https://www.gamereactor.de/media/74/middle_earth_2227463b.jpg",
     "videoId": "jh29z5EHA7M",
-    "description": "",
+    "description": "Build an orc army, seize fortresses and confront Sauron's forces in an open world shaped by personal rivalries.",
     "ratingUrl": "https://www.metacritic.com/game/middle-earth-shadow-of-war/",
     "posterSource": "https://www.gamereactor.de/mittelerde-schatten-des-krieges-definitive-edition-angekundigt/",
     "videoChannel": "GameSpot Trailers — Definitive Edition",
-    "videoSource": "https://www.youtube.com/watch?v=jh29z5EHA7M"
+    "videoSource": "https://www.youtube.com/watch?v=jh29z5EHA7M",
+    "metacritic": 80,
+    "downloadLink": "",
+    "metacriticSource": "https://www.metacritic.com/game/middle-earth-shadow-of-war/",
+    "metacriticChecked": "2026-09-13",
+    "descriptionSource": "https://www.metacritic.com/game/middle-earth-shadow-of-war/"
   },
   {
     "id": 12,
@@ -208,11 +263,16 @@ window.GAMES = [
     "future": false,
     "poster": "https://m.media-amazon.com/images/I/81mdXXHmSlL._SL1500_.jpg",
     "videoId": "ARHVKZ5K1b0",
-    "description": "",
+    "description": "An action RPG that brings the NieR creative team together with PlatinumGames for a new chapter in the series.",
     "ratingUrl": "https://www.metacritic.com/game/nier-automata/",
     "posterSource": "https://www.ubuy.iq/en/product/6LU2XNQW-nier-automata-ps4",
     "videoChannel": "PlayStation",
-    "videoSource": "https://www.youtube.com/watch?v=ARHVKZ5K1b0"
+    "videoSource": "https://www.youtube.com/watch?v=ARHVKZ5K1b0",
+    "metacritic": 88,
+    "downloadLink": "",
+    "metacriticSource": "https://www.metacritic.com/game/nier-automata/",
+    "metacriticChecked": "2026-09-13",
+    "descriptionSource": "https://www.metacritic.com/game/nier-automata/"
   },
   {
     "id": 13,
@@ -226,11 +286,16 @@ window.GAMES = [
     "future": false,
     "poster": "https://gamestack.studio/cdn/shop/files/ACOD_Kassandra_Box_Art.webp?v=1751136473&width=1445",
     "videoId": "_ddQqzwH__4",
-    "description": "",
+    "description": "Shape a Spartan hero's journey through ancient Greece, exploring cities and wilderness while making consequential choices.",
     "ratingUrl": "https://www.metacritic.com/game/assassins-creed-odyssey/",
     "posterSource": "https://gamestack.studio/products/assassins-creed-odyssey-105gb-high-spec",
     "videoChannel": "Official trailer — source linked",
-    "videoSource": "https://www.playstation.com/en-us/games/assassins-creed-odyssey/"
+    "videoSource": "https://www.playstation.com/en-us/games/assassins-creed-odyssey/",
+    "metacritic": 83,
+    "downloadLink": "",
+    "metacriticSource": "https://www.metacritic.com/game/assassins-creed-odyssey/",
+    "metacriticChecked": "2026-09-13",
+    "descriptionSource": "https://www.metacritic.com/game/assassins-creed-odyssey/"
   },
   {
     "id": 14,
@@ -243,11 +308,16 @@ window.GAMES = [
     "future": false,
     "poster": "https://s.pacn.ws/1/p/va/battlefield-v-563331.15.jpg?v=pif2el",
     "videoId": "a7ZpQadiyqs",
-    "description": "",
+    "description": "Lead a squad through World War II battles with customizable soldiers, vehicles and large-scale multiplayer warfare.",
     "ratingUrl": "https://www.metacritic.com/game/battlefield-v/",
     "posterSource": "https://www.play-asia.com/en/battlefield-v/13/70c2o3",
     "videoChannel": "GameSpot — official reveal trailer",
-    "videoSource": "https://www.youtube.com/watch?v=a7ZpQadiyqs"
+    "videoSource": "https://www.youtube.com/watch?v=a7ZpQadiyqs",
+    "metacritic": 81,
+    "downloadLink": "",
+    "metacriticSource": "https://www.metacritic.com/game/battlefield-v/",
+    "metacriticChecked": "2026-09-13",
+    "descriptionSource": "https://www.metacritic.com/game/battlefield-v/"
   },
   {
     "id": 15,
@@ -261,11 +331,16 @@ window.GAMES = [
     "future": false,
     "poster": "https://www.jnlgame.com/cdn/shop/files/91keHwoCTAL.jpg?v=1745192818&width=5760",
     "videoId": "Kdaoe4hbMso",
-    "description": "",
+    "description": "Resist a violent doomsday cult and its leader Joseph Seed in the open countryside of Hope County, Montana.",
     "ratingUrl": "https://www.metacritic.com/game/far-cry-5/",
     "posterSource": "https://www.jnlgame.com/products/far-cry-5-ps4-playstation-4-pre-owned?srsltid=AfmBOooFvxoXL2u5JRPhNaDKEAyesPeFdAZzDwcJxk3iCyeZ9TrRlIxi",
     "videoChannel": "Ubisoft",
-    "videoSource": "https://www.youtube.com/watch?v=Kdaoe4hbMso"
+    "videoSource": "https://www.youtube.com/watch?v=Kdaoe4hbMso",
+    "metacritic": 81,
+    "downloadLink": "",
+    "metacriticSource": "https://www.metacritic.com/game/far-cry-5/",
+    "metacriticChecked": "2026-09-13",
+    "descriptionSource": "https://www.metacritic.com/game/far-cry-5/"
   },
   {
     "id": 16,
@@ -278,11 +353,16 @@ window.GAMES = [
     "future": false,
     "poster": "https://fixit.com.bd/wp-content/uploads/2023/09/cover-11-1.webp",
     "videoId": "Uev7TBs1Y0A",
-    "description": "",
+    "description": "Kratos and his son face the dangers of a Norse world while learning to survive and understand one another.",
     "ratingUrl": "https://www.metacritic.com/game/god-of-war/",
     "posterSource": "https://fixit.com.bd/product/god-of-war-playstation-4-ps4-buy-at-the-best-price-in-bd/?srsltid=AfmBOoroMclimuFnU9nkAUApM7nXWd_2WUJU4LTkvlIsBfrSst0vT1Ii",
     "videoChannel": "Official trailer — source linked",
-    "videoSource": "https://www.playstation.com/en-us/games/god-of-war/"
+    "videoSource": "https://www.playstation.com/en-us/games/god-of-war/",
+    "metacritic": 94,
+    "downloadLink": "",
+    "metacriticSource": "https://www.metacritic.com/game/god-of-war/",
+    "metacriticChecked": "2026-09-13",
+    "descriptionSource": "https://www.metacritic.com/game/god-of-war/"
   },
   {
     "id": 17,
@@ -296,11 +376,16 @@ window.GAMES = [
     "future": false,
     "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/cob9yp.jpg",
     "videoId": "M6oWk1tmt7c",
-    "description": "",
+    "description": "Swing through New York as an experienced Peter Parker, balancing superhero battles with the demands of his personal life.",
     "ratingUrl": "https://www.metacritic.com/game/marvels-spider-man-remastered/",
     "posterSource": "https://searchtoplay.com/games/marvels-spider-man-remastered",
     "videoChannel": "Marvel",
-    "videoSource": "https://www.youtube.com/watch?v=M6oWk1tmt7c"
+    "videoSource": "https://www.youtube.com/watch?v=M6oWk1tmt7c",
+    "metacritic": 87,
+    "downloadLink": "",
+    "metacriticSource": "https://www.metacritic.com/game/marvels-spider-man-remastered/",
+    "metacriticChecked": "2026-09-13",
+    "descriptionSource": "https://www.metacritic.com/game/marvels-spider-man-remastered/"
   },
   {
     "id": 18,
@@ -314,11 +399,16 @@ window.GAMES = [
     "future": false,
     "poster": "https://www.gameshop.qa/wp-content/uploads/2022/04/Red-Dead-Redemption-2.jpg",
     "videoId": "h6k532Y7jK8",
-    "description": "",
+    "description": "Follow Arthur Morgan and the Van der Linde gang through the dangerous final years of the American frontier.",
     "ratingUrl": "https://www.metacritic.com/game/red-dead-redemption-2/",
     "posterSource": "https://www.gameshop.qa/product/red-dead-redemption-2-2/",
     "videoChannel": "Official trailer — source linked",
-    "videoSource": "https://www.playstation.com/en-us/games/red-dead-redemption-2/"
+    "videoSource": "https://www.playstation.com/en-us/games/red-dead-redemption-2/",
+    "metacritic": 97,
+    "downloadLink": "",
+    "metacriticSource": "https://www.metacritic.com/game/red-dead-redemption-2/",
+    "metacriticChecked": "2026-09-13",
+    "descriptionSource": "https://www.metacritic.com/game/red-dead-redemption-2/"
   },
   {
     "id": 19,
@@ -328,15 +418,20 @@ window.GAMES = [
       "Action-adventure",
       "Stealth"
     ],
-    "status": "unplayed",
+    "status": "playing",
     "future": false,
     "poster": "https://www.codesproduit.fr/wp-content/uploads/2021/01/a-plague-tale-innocence_cover_original-1.png",
     "videoId": "CtP6mNeN6yE",
-    "description": "",
+    "description": "Help siblings Amicia and Hugo evade the Inquisition and deadly rat swarms in a stealth-focused adventure.",
     "ratingUrl": "https://www.metacritic.com/game/a-plague-tale-innocence/",
     "posterSource": "https://www.codesproduit.fr/produit/a-plague-tale-innocence-eu-xbox-one-cd-key/",
     "videoChannel": "Official trailer — source linked",
-    "videoSource": "https://www.playstation.com/en-us/games/a-plague-tale-innocence/"
+    "videoSource": "https://www.playstation.com/en-us/games/a-plague-tale-innocence/",
+    "metacritic": 81,
+    "downloadLink": "https://www.1337x.to/torrent/3760788/A-Plague-Tale-Innocence-Coats-of-Arms-DLC-MULTi11-FitGirl-Repack-Selective-Download-from-10-1-GB/",
+    "metacriticSource": "https://www.metacritic.com/game/a-plague-tale-innocence/",
+    "metacriticChecked": "2026-09-13",
+    "descriptionSource": "https://www.metacritic.com/game/a-plague-tale-innocence/"
   },
   {
     "id": 20,
@@ -349,11 +444,16 @@ window.GAMES = [
     "future": false,
     "poster": "https://pnpdistribution.com/i/COD-MW-2019-P4.jpg",
     "videoId": "bH1lHCirCGI",
-    "description": "",
+    "description": "Take on high-stakes military operations in a modern conflict, with a campaign centered on elite soldiers.",
     "ratingUrl": "https://www.metacritic.com/game/call-of-duty-modern-warfare/",
     "posterSource": "https://pnpgamesonline.com/product/call-of-duty-modern-warfare-2019-m-3/",
     "videoChannel": "Call of Duty",
-    "videoSource": "https://www.youtube.com/watch?v=bH1lHCirCGI"
+    "videoSource": "https://www.youtube.com/watch?v=bH1lHCirCGI",
+    "metacritic": 80,
+    "downloadLink": "",
+    "metacriticSource": "https://www.metacritic.com/game/call-of-duty-modern-warfare/",
+    "metacriticChecked": "2026-09-13",
+    "descriptionSource": "https://www.metacritic.com/game/call-of-duty-modern-warfare/"
   },
   {
     "id": 21,
@@ -368,11 +468,16 @@ window.GAMES = [
     "future": false,
     "poster": "https://i.ebayimg.com/images/g/S-gAAOSwjd1nPFif/s-l1600.jpg",
     "videoId": "s_7yRpVu5n8",
-    "description": "",
+    "description": "Ride through the Pacific Northwest as Deacon St. John, surviving a pandemic-ravaged world of dangerous roads and hostile encounters.",
     "ratingUrl": "https://www.metacritic.com/game/days-gone/",
     "posterSource": "https://www.ebay.com/p/22045275010",
     "videoChannel": "Featured by PlayStation Access",
-    "videoSource": "https://www.youtube.com/watch?v=s_7yRpVu5n8"
+    "videoSource": "https://www.youtube.com/watch?v=s_7yRpVu5n8",
+    "metacritic": 71,
+    "downloadLink": "",
+    "metacriticSource": "https://www.metacritic.com/game/days-gone/",
+    "metacriticChecked": "2026-09-13",
+    "descriptionSource": "https://www.metacritic.com/game/days-gone/"
   },
   {
     "id": 22,
@@ -385,11 +490,16 @@ window.GAMES = [
     "future": false,
     "poster": "https://img-cdn.heureka.group/v1/35a4490d-8038-4b6e-a3a9-d0305a8a1948.jpg",
     "videoId": "h35_KOgslkM",
-    "description": "",
+    "description": "Journey with Kait and her squad to uncover the Locust's origins and protect humanity's remaining survivors.",
     "ratingUrl": "https://www.metacritic.com/game/gears-5/",
     "posterSource": "https://hry-na-xbox-one.heureka.sk/gears-5/",
     "videoChannel": "Xbox",
-    "videoSource": "https://www.youtube.com/watch?v=h35_KOgslkM"
+    "videoSource": "https://www.youtube.com/watch?v=h35_KOgslkM",
+    "metacritic": 84,
+    "downloadLink": "",
+    "metacriticSource": "https://www.metacritic.com/game/gears-5/",
+    "metacriticChecked": "2026-09-13",
+    "descriptionSource": "https://www.metacritic.com/game/gears-5/"
   },
   {
     "id": 23,
@@ -404,11 +514,16 @@ window.GAMES = [
     "future": false,
     "poster": "https://m.media-amazon.com/images/M/MV5BZjIwZWU2NTUtYzRmOC00NzlmLWJiMTEtY2ZkMWY1NjQ1ZDY4XkEyXkFqcGc@._V1_.jpg",
     "videoId": "taktGrh0_Tw",
-    "description": "",
+    "description": "Leave the Moscow Metro with Artyom and fellow survivors on a year-long journey through post-apocalyptic Russia.",
     "ratingUrl": "https://www.metacritic.com/game/metro-exodus/",
     "posterSource": "https://www.filmaffinity.com/es/film596894.html",
     "videoChannel": "IGN — story trailer",
-    "videoSource": "https://www.youtube.com/watch?v=taktGrh0_Tw"
+    "videoSource": "https://www.youtube.com/watch?v=taktGrh0_Tw",
+    "metacritic": 82,
+    "downloadLink": "",
+    "metacriticSource": "https://www.metacritic.com/game/metro-exodus/",
+    "metacriticChecked": "2026-09-13",
+    "descriptionSource": "https://www.metacritic.com/game/metro-exodus/"
   },
   {
     "id": 24,
@@ -422,11 +537,16 @@ window.GAMES = [
     "future": false,
     "poster": "https://lumiere-a.akamaihd.net/v1/images/image_25a0f282.jpeg",
     "videoId": "xIl2z5wwjdA",
-    "description": "",
+    "description": "Survive the Empire's Jedi purge as a fugitive Padawan, exploring ancient mysteries and fighting to rebuild the Order.",
     "ratingUrl": "https://www.metacritic.com/game/star-wars-jedi-fallen-order/",
     "posterSource": "https://videogamesartwork.com/games/star-wars-jedi-fallen-order",
     "videoChannel": "Official trailer — source linked",
-    "videoSource": "https://www.gematsu.com/2019/10/star-wars-jedi-fallen-order-launch-trailer"
+    "videoSource": "https://www.gematsu.com/2019/10/star-wars-jedi-fallen-order-launch-trailer",
+    "metacritic": 79,
+    "downloadLink": "",
+    "metacriticSource": "https://www.metacritic.com/game/star-wars-jedi-fallen-order/",
+    "metacriticChecked": "2026-09-13",
+    "descriptionSource": "https://www.metacritic.com/game/star-wars-jedi-fallen-order/"
   },
   {
     "id": 25,
@@ -440,11 +560,16 @@ window.GAMES = [
     "future": false,
     "poster": "https://static.actugaming.net/media/2020/04/assassins-creed-valhalla-jaquette-2.jpg",
     "videoId": "gnmuEkn30ZE",
-    "description": "",
+    "description": "Lead Eivor's Viking clan from Norway to ninth-century England, building a settlement and forging alliances through conflict.",
     "ratingUrl": "https://www.metacritic.com/game/assassins-creed-valhalla/",
     "posterSource": "https://www.actugaming.net/jeux/assassins-creed-valhalla/actualites/",
     "videoChannel": "Official trailer — source linked",
-    "videoSource": "https://www.playstation.com/en-us/games/assassins-creed-valhalla/"
+    "videoSource": "https://www.playstation.com/en-us/games/assassins-creed-valhalla/",
+    "metacritic": 80,
+    "downloadLink": "",
+    "metacriticSource": "https://www.metacritic.com/game/assassins-creed-valhalla/",
+    "metacriticChecked": "2026-09-13",
+    "descriptionSource": "https://www.metacritic.com/game/assassins-creed-valhalla/"
   },
   {
     "id": 26,
@@ -457,11 +582,16 @@ window.GAMES = [
     "future": false,
     "poster": "https://cdn.mos.cms.futurecdn.net/vYDxVuibS4LFEpwiEQZ5jg.jpg",
     "videoId": "aTS9n_m7TW0",
-    "description": "",
+    "description": "Undertake covert operations around the globe in an early-1980s Cold War campaign, alongside multiplayer and Zombies modes.",
     "ratingUrl": "https://www.metacritic.com/game/call-of-duty-black-ops-cold-war/",
     "posterSource": "https://www.windowscentral.com/call-duty-black-ops-cold-war",
     "videoChannel": "Call of Duty",
-    "videoSource": "https://www.youtube.com/watch?v=aTS9n_m7TW0"
+    "videoSource": "https://www.youtube.com/watch?v=aTS9n_m7TW0",
+    "metacritic": 76,
+    "downloadLink": "",
+    "metacriticSource": "https://www.metacritic.com/game/call-of-duty-black-ops-cold-war/",
+    "metacriticChecked": "2026-09-13",
+    "descriptionSource": "https://www.metacritic.com/game/call-of-duty-black-ops-cold-war/"
   },
   {
     "id": 27,
@@ -475,11 +605,16 @@ window.GAMES = [
     "future": false,
     "poster": "https://down-my.img.susercontent.com/file/sg-11134201-22100-sahcs83ncnivf5",
     "videoId": "xXFTRHvMtlY",
-    "description": "",
+    "description": "Become V, a customizable mercenary pursuing an extraordinary implant through the sprawling, cybernetically enhanced streets of Night City.",
     "ratingUrl": "https://www.metacritic.com/game/cyberpunk-2077/",
     "posterSource": "https://shopee.com.my/PS4-Cyberpunk-2077-%28-Physical-Disc-English-Chinese-Version%29-i.124002311.8242694922",
     "videoChannel": "Official trailer — source linked",
-    "videoSource": "https://www.playstation.com/en-us/games/cyberpunk-2077/"
+    "videoSource": "https://www.playstation.com/en-us/games/cyberpunk-2077/",
+    "metacritic": 86,
+    "downloadLink": "",
+    "metacriticSource": "https://www.metacritic.com/game/cyberpunk-2077/",
+    "metacriticChecked": "2026-09-13",
+    "descriptionSource": "https://www.metacritic.com/game/cyberpunk-2077/"
   },
   {
     "id": 28,
@@ -492,11 +627,16 @@ window.GAMES = [
     "future": false,
     "poster": "https://cms.gameflycdn.com/proxy/gf/boxart/480w/5018058.jpg",
     "videoId": "qzp8wZ-HMKk",
-    "description": "",
+    "description": "Battle demonic armies as the Doom Slayer in a fast, aggressive shooter across multiple dimensions.",
     "ratingUrl": "https://www.metacritic.com/game/doom-eternal/",
     "posterSource": "https://www.gamefly.com/game/Doom-Eternal/5018058",
     "videoChannel": "Official trailer — source linked",
-    "videoSource": "https://www.playstation.com/en-us/games/doom-eternal/"
+    "videoSource": "https://www.playstation.com/en-us/games/doom-eternal/",
+    "metacritic": 88,
+    "downloadLink": "",
+    "metacriticSource": "https://www.metacritic.com/game/doom-eternal/",
+    "metacriticChecked": "2026-09-13",
+    "descriptionSource": "https://www.metacritic.com/game/doom-eternal/"
   },
   {
     "id": 29,
@@ -509,11 +649,16 @@ window.GAMES = [
     "future": false,
     "poster": "https://imguscdn.gamespress.com/cdn/files/Square-Enix/2025/09/121525-74177610/FFVIIRIG_keyart_1080x1350.jpg?w=600&mode=max&otf=y&quality=90&format=jpg&bgcolor=white&sky=b61c99e6d05f3d8214f9f80a41d04338fa98ae7a72809784b5d3e8c0f862ae72",
     "videoId": "iTrwHvMIEag",
-    "description": "",
+    "description": "A reimagining of Final Fantasy VII that revisits its story and characters with action RPG combat.",
     "ratingUrl": "https://www.metacritic.com/game/final-fantasy-vii-remake/",
     "posterSource": "https://www.powerbuy.co.th/th/product/sony-playstation4-software-ff7-remake-standard-sony-plas-10551-257409",
     "videoChannel": "Official trailer — source linked",
-    "videoSource": "https://www.playstation.com/en-us/games/final-fantasy-vii-remake/"
+    "videoSource": "https://www.playstation.com/en-us/games/final-fantasy-vii-remake/",
+    "metacritic": 87,
+    "downloadLink": "",
+    "metacriticSource": "https://www.metacritic.com/game/final-fantasy-vii-remake/",
+    "metacriticChecked": "2026-09-13",
+    "descriptionSource": "https://www.metacritic.com/game/final-fantasy-vii-remake/"
   },
   {
     "id": 30,
@@ -527,11 +672,16 @@ window.GAMES = [
     "future": false,
     "poster": "https://gamerbraves.sgp1.cdn.digitaloceanspaces.com/2020/03/gos-box-art.jpg",
     "videoId": "piApenO8SsE",
-    "description": "",
+    "description": "Defend Tsushima from Mongol invasion by embracing unconventional tactics beyond the traditions of the samurai.",
     "ratingUrl": "https://www.metacritic.com/game/ghost-of-tsushima/",
     "posterSource": "https://www.gamerbraves.com/ghost-of-tsushima-jin-sakai-figma-available-for-pre-order/",
     "videoChannel": "Official launch trailer — via Gematsu",
-    "videoSource": "https://www.youtube.com/watch?v=piApenO8SsE"
+    "videoSource": "https://www.youtube.com/watch?v=piApenO8SsE",
+    "metacritic": 83,
+    "downloadLink": "",
+    "metacriticSource": "https://www.metacritic.com/game/ghost-of-tsushima/",
+    "metacriticChecked": "2026-09-13",
+    "descriptionSource": "https://www.metacritic.com/game/ghost-of-tsushima/"
   },
   {
     "id": 31,
@@ -545,11 +695,16 @@ window.GAMES = [
     "future": false,
     "poster": "https://oechsle.vteximg.com.br/arquivos/ids/2912178-1000-1000/image-c04afd12ade942bfa0d96d4f9ad42afb.jpg?v=637495447979970000",
     "videoId": "x91lpMZ_wWk",
-    "description": "",
+    "description": "Assemble Marvel heroes for a story-driven adventure with customizable abilities and optional cooperative missions.",
     "ratingUrl": "https://www.metacritic.com/game/marvels-avengers/",
     "posterSource": "https://www.oechsle.pe/juego-ps4-marvels-avengers-1000061454/p",
     "videoChannel": "Official launch trailer — via Gematsu",
-    "videoSource": "https://www.youtube.com/watch?v=x91lpMZ_wWk"
+    "videoSource": "https://www.youtube.com/watch?v=x91lpMZ_wWk",
+    "metacritic": 67,
+    "downloadLink": "",
+    "metacriticSource": "https://www.metacritic.com/game/marvels-avengers/",
+    "metacriticChecked": "2026-09-13",
+    "descriptionSource": "https://www.metacritic.com/game/marvels-avengers/"
   },
   {
     "id": 32,
@@ -563,11 +718,16 @@ window.GAMES = [
     "future": false,
     "poster": "https://www.games2egypt.com/Images/Products/88011?fileFormat=2&height=700&v=2",
     "videoId": "DKTZlR6aWzM",
-    "description": "",
+    "description": "Follow Miles Morales as he develops new powers and grows into his own role as New York's Spider-Man.",
     "ratingUrl": "https://www.metacritic.com/game/marvels-spider-man-miles-morales/",
     "posterSource": "https://www.games2egypt.com/Product/24413/marvels-spider-man-miles-morales-arabic--and-english-edition-ps4",
     "videoChannel": "Official trailer — source linked",
-    "videoSource": "https://www.playstation.com/en-us/games/marvels-spider-man-miles-morales/"
+    "videoSource": "https://www.playstation.com/en-us/games/marvels-spider-man-miles-morales/",
+    "metacritic": 85,
+    "downloadLink": "",
+    "metacriticSource": "https://www.metacritic.com/game/marvels-spider-man-miles-morales/",
+    "metacriticChecked": "2026-09-13",
+    "descriptionSource": "https://www.metacritic.com/game/marvels-spider-man-miles-morales/"
   },
   {
     "id": 33,
@@ -581,11 +741,16 @@ window.GAMES = [
     "future": false,
     "poster": "https://media.senscritique.com/media/000019862814/source_big/Ori_and_the_Will_of_the_Wisps.jpg",
     "videoId": "9n10rZayLw0",
-    "description": "",
+    "description": "Guide Ori through a new world to rescue Ku, reunite a family and uncover the spirit's destiny.",
     "ratingUrl": "https://www.metacritic.com/game/ori-and-the-will-of-the-wisps/",
     "posterSource": "https://www.senscritique.com/jeuvideo/ori_and_the_will_of_the_wisps/25439695",
     "videoChannel": "IGN — E3 reveal trailer",
-    "videoSource": "https://www.youtube.com/watch?v=9n10rZayLw0"
+    "videoSource": "https://www.youtube.com/watch?v=9n10rZayLw0",
+    "metacritic": 90,
+    "downloadLink": "",
+    "metacriticSource": "https://www.metacritic.com/game/ori-and-the-will-of-the-wisps/",
+    "metacriticChecked": "2026-09-13",
+    "descriptionSource": "https://www.metacritic.com/game/ori-and-the-will-of-the-wisps/"
   },
   {
     "id": 34,
@@ -598,11 +763,16 @@ window.GAMES = [
     "future": false,
     "poster": "https://store-images.s-microsoft.com/image/apps.31712.14284165171924425.328fdc67-fafc-4929-b10f-b1bc44a36c07.9cb9d66c-985e-4c82-b678-6a638d68b0c8",
     "videoId": "Cmj4_W_Y9OA",
-    "description": "",
+    "description": "Experience the formation of a special-forces team across World War II theaters, with multiplayer and Zombies combat.",
     "ratingUrl": "https://www.metacritic.com/game/call-of-duty-vanguard/",
     "posterSource": "https://www.xbox-now.com/it/game/16104/call-of-duty-vanguard-standard-edition",
     "videoChannel": "Official trailer — source linked",
-    "videoSource": "https://www.playstation.com/en-us/games/call-of-duty-vanguard/"
+    "videoSource": "https://www.playstation.com/en-us/games/call-of-duty-vanguard/",
+    "metacritic": 73,
+    "downloadLink": "",
+    "metacriticSource": "https://www.metacritic.com/game/call-of-duty-vanguard/",
+    "metacriticChecked": "2026-09-13",
+    "descriptionSource": "https://www.metacritic.com/game/call-of-duty-vanguard/"
   },
   {
     "id": 35,
@@ -616,11 +786,16 @@ window.GAMES = [
     "future": false,
     "poster": "https://static-01.daraz.pk/p/320c5607472b6a3502c1f11e37287421.jpg",
     "videoId": "Yg1lPm66y8w",
-    "description": "",
+    "description": "Join Dani Rojas in a guerrilla struggle against the dictatorship controlling the Caribbean island of Yara.",
     "ratingUrl": "https://www.metacritic.com/game/far-cry-6/",
     "posterSource": "https://www.daraz.pk/products/far-cry-6-playstation-5-games-for-ps5-i418752505.html",
     "videoChannel": "Official trailer — source linked",
-    "videoSource": "https://www.playstation.com/en-us/games/far-cry-6/"
+    "videoSource": "https://www.playstation.com/en-us/games/far-cry-6/",
+    "metacritic": 73,
+    "downloadLink": "",
+    "metacriticSource": "https://www.metacritic.com/game/far-cry-6/",
+    "metacriticChecked": "2026-09-13",
+    "descriptionSource": "https://www.metacritic.com/game/far-cry-6/"
   },
   {
     "id": 36,
@@ -634,11 +809,16 @@ window.GAMES = [
     "future": false,
     "poster": "https://i5.walmartimages.com/seo/Forza-Horizon-5-Xbox-One-Xbox-Series-X-Xbox-Series-S_20d4692a-43c9-47ec-ac1d-3e7022498c93.e999adf38af27a33290225eb14322f41.jpeg",
     "videoId": "W-SpP-Z0Uu8",
-    "description": "",
+    "description": "Explore Mexico's varied landscapes in an open-world driving festival featuring hundreds of cars.",
     "ratingUrl": "https://www.metacritic.com/game/forza-horizon-5/",
     "posterSource": "https://www.a.ubuy.com.kw/en/product/1APYIH7C2-forza-horizon-5-xbox-one-xbox-series-x-physical",
     "videoChannel": "Official trailer — source linked",
-    "videoSource": "https://www.playstation.com/en-us/games/forza-horizon-5/"
+    "videoSource": "https://www.playstation.com/en-us/games/forza-horizon-5/",
+    "metacritic": 92,
+    "downloadLink": "",
+    "metacriticSource": "https://www.metacritic.com/game/forza-horizon-5/",
+    "metacriticChecked": "2026-09-13",
+    "descriptionSource": "https://www.metacritic.com/game/forza-horizon-5/"
   },
   {
     "id": 37,
@@ -651,11 +831,16 @@ window.GAMES = [
     "future": false,
     "poster": "https://imguscdn.gamespress.com/cdn/files/Square-Enix-Latin-America/2021/08/05173037-9ff40890-8685-4ce3-914c-96a70d25edd8/MGG_2021_06_14_KA_SLIDE_1x1.jpeg?bgcolor=white&format=jpg&mode=max&otf=y&quality=90&sky=08acdb00fc7a9b2db1a5d127671dc5f0c5e2a76cd8d7ceb494f7da4f035e167b&w=600",
     "videoId": "gPDW6Ttrg5s",
-    "description": "",
+    "description": "Lead Star-Lord and the Guardians through a cosmic action adventure filled with teamwork, volatile personalities and explosive encounters.",
     "ratingUrl": "https://www.metacritic.com/search/Guardians%20of%20the%20Galaxy/",
     "posterSource": "https://press.latam.square-enix.com/pt-BR/EL-DISENO-DE-LOS-GUARDIANES-DE-LA-GALAXIA-UNA-VERSION-RENOVADA-DE-LOS-",
     "videoChannel": "Official trailer — source linked",
-    "videoSource": "https://www.playstation.com/en-us/games/marvels-guardians-of-the-galaxy/"
+    "videoSource": "https://www.playstation.com/en-us/games/marvels-guardians-of-the-galaxy/",
+    "metacritic": 80,
+    "downloadLink": "",
+    "metacriticSource": "https://www.metacritic.com/game/marvels-guardians-of-the-galaxy/",
+    "metacriticChecked": "2026-09-13",
+    "descriptionSource": "https://www.metacritic.com/game/marvels-guardians-of-the-galaxy/"
   },
   {
     "id": 38,
@@ -669,11 +854,16 @@ window.GAMES = [
     "future": false,
     "poster": "https://m.media-amazon.com/images/M/MV5BNTA3Y2ZlZGMtOTgxZC00YzQwLWExMmQtYWNhMmM3NDEwMjg5XkEyXkFqcGc%40._V1_FMjpg_UX1000_.jpg",
     "videoId": "aPKIQgc0Fnw",
-    "description": "",
+    "description": "Travel with Amicia and Hugo as they seek refuge and a way to confront the curse behind devastating rat swarms.",
     "ratingUrl": "https://www.metacritic.com/game/a-plague-tale-requiem/",
     "posterSource": "https://www.imdb.com/title/tt19364930/",
     "videoChannel": "Official trailer — source linked",
-    "videoSource": "https://www.playstation.com/en-us/games/a-plague-tale-requiem/"
+    "videoSource": "https://www.playstation.com/en-us/games/a-plague-tale-requiem/",
+    "metacritic": 82,
+    "downloadLink": "",
+    "metacriticSource": "https://www.metacritic.com/game/a-plague-tale-requiem/",
+    "metacriticChecked": "2026-09-13",
+    "descriptionSource": "https://www.metacritic.com/game/a-plague-tale-requiem/"
   },
   {
     "id": 39,
@@ -686,11 +876,16 @@ window.GAMES = [
     "future": false,
     "poster": "https://i5.walmartimages.com/asr/771fdb72-a4d7-4695-92b6-47870e1920eb.0ffdffd9e4688a094a51047aae7e0fe7.jpeg",
     "videoId": "r72GP1PIZa0",
-    "description": "",
+    "description": "Join Task Force 141's operators in international military missions with returning characters and multiplayer combat.",
     "ratingUrl": "https://www.metacritic.com/game/call-of-duty-modern-warfare-ii/",
     "posterSource": "https://www.bodegaaurrera.com.mx/ip/playstation-5/call-of-duty-modern-warfare-ii-playstation-5-fisico/00004787510355",
     "videoChannel": "Call of Duty",
-    "videoSource": "https://www.youtube.com/watch?v=r72GP1PIZa0"
+    "videoSource": "https://www.youtube.com/watch?v=r72GP1PIZa0",
+    "metacritic": 75,
+    "downloadLink": "",
+    "metacriticSource": "https://www.metacritic.com/game/call-of-duty-modern-warfare-ii/",
+    "metacriticChecked": "2026-09-13",
+    "descriptionSource": "https://www.metacritic.com/game/call-of-duty-modern-warfare-ii/"
   },
   {
     "id": 40,
@@ -704,11 +899,16 @@ window.GAMES = [
     "future": false,
     "poster": "https://rushgame.co/cdn/shop/files/elden-ring-pc-steam-cd-key-na-cover01_1200x1422.jpg?v=1756276424",
     "videoId": "E3Huy2cdih0",
-    "description": "",
+    "description": "Explore a dangerous fantasy world in FromSoftware's action RPG, shaped by Hidetaka Miyazaki and George R. R. Martin.",
     "ratingUrl": "https://www.metacritic.com/game/elden-ring/",
     "posterSource": "https://rushgame.co/products/elden-ring-na-steam-cd-key",
     "videoChannel": "Official trailer — source linked",
-    "videoSource": "https://www.youtube.com/watch?v=E3Huy2cdih0"
+    "videoSource": "https://www.youtube.com/watch?v=E3Huy2cdih0",
+    "metacritic": 96,
+    "downloadLink": "",
+    "metacriticSource": "https://www.metacritic.com/game/elden-ring/",
+    "metacriticChecked": "2026-09-13",
+    "descriptionSource": "https://www.metacritic.com/game/elden-ring/"
   },
   {
     "id": 41,
@@ -718,15 +918,20 @@ window.GAMES = [
       "Third-person shooter",
       "Action"
     ],
-    "status": "unplayed",
+    "status": "playing",
     "future": false,
     "poster": "https://m.media-amazon.com/images/M/MV5BNmFjY2E3NTItZmU1Ny00ODAwLTk5M2YtNDY1ZmYzNjRmM2Q4XkEyXkFqcGc%40._V1_.jpg",
     "videoId": "2O35NOsTIoE",
-    "description": "",
+    "description": "Fight vampiric monsters in a supernatural Wild West using firearms and a lightning-powered gauntlet, alone or cooperatively.",
     "ratingUrl": "https://www.metacritic.com/game/evil-west/",
     "posterSource": "https://www.imdb.com/title/tt22007208/",
     "videoChannel": "Focus Entertainment",
-    "videoSource": "https://www.youtube.com/watch?v=2O35NOsTIoE"
+    "videoSource": "https://www.youtube.com/watch?v=2O35NOsTIoE",
+    "metacritic": 73,
+    "downloadLink": "",
+    "metacriticSource": "https://www.metacritic.com/game/evil-west/",
+    "metacriticChecked": "2026-09-13",
+    "descriptionSource": "https://www.metacritic.com/game/evil-west/"
   },
   {
     "id": 42,
@@ -739,11 +944,16 @@ window.GAMES = [
     "future": false,
     "poster": "https://image.jeuxvideo.com/medias/171711/1717109795-2790-jaquette-avant.jpg",
     "videoId": "hfJ4Km46A-0",
-    "description": "",
+    "description": "Kratos and Atreus confront the dangers of Fimbulwinter as their struggle with the Norse gods grows more intense.",
     "ratingUrl": "https://www.metacritic.com/game/god-of-war-ragnarok/",
     "posterSource": "https://www.jeuxvideo.com/meilleurs/mode-3200/decennie-2020/annee-2022/",
     "videoChannel": "PlayStation",
-    "videoSource": "https://www.youtube.com/watch?v=hfJ4Km46A-0"
+    "videoSource": "https://www.youtube.com/watch?v=hfJ4Km46A-0",
+    "metacritic": 94,
+    "downloadLink": "",
+    "metacriticSource": "https://www.metacritic.com/game/god-of-war-ragnarok/",
+    "metacriticChecked": "2026-09-13",
+    "descriptionSource": "https://www.metacritic.com/game/god-of-war-ragnarok/"
   },
   {
     "id": 43,
@@ -757,11 +967,16 @@ window.GAMES = [
     "future": false,
     "poster": "https://i5.walmartimages.com/asr/645c8a11-40d6-4e2b-83d3-83859bf0a9b5.619f61072df57ba8ebbbdab0e7073863.jpeg",
     "videoId": "UxDWGW7Z67I",
-    "description": "",
+    "description": "Guide Aloy into a dangerous frontier to investigate a spreading blight and confront new mechanical threats.",
     "ratingUrl": "https://www.metacritic.com/game/horizon-forbidden-west/",
     "posterSource": "https://www.walmart.com/ip/Horizon-Forbidden-West-PlayStation-5/949509905",
     "videoChannel": "Official trailer — source linked",
-    "videoSource": "https://www.playstation.com/en-us/games/horizon-forbidden-west/"
+    "videoSource": "https://www.playstation.com/en-us/games/horizon-forbidden-west/",
+    "metacritic": 88,
+    "downloadLink": "",
+    "metacriticSource": "https://www.metacritic.com/game/horizon-forbidden-west/",
+    "metacriticChecked": "2026-09-13",
+    "descriptionSource": "https://www.metacritic.com/game/horizon-forbidden-west/"
   },
   {
     "id": 44,
@@ -775,11 +990,16 @@ window.GAMES = [
     "future": false,
     "poster": "https://pnpdistribution.com/i/NFS-UNBOUND-XX-N.jpg",
     "videoId": "7oQiXlWTd4g",
-    "description": "",
+    "description": "Build a customized garage and race through Lakeshore, earning entry to major events while escaping the police.",
     "ratingUrl": "https://www.metacritic.com/game/need-for-speed-unbound/",
     "posterSource": "https://pnpgamesonline.com/product/nfs-unbound-t-xsx/",
     "videoChannel": "Official trailer — source linked",
-    "videoSource": "https://www.playstation.com/en-us/games/need-for-speed-unbound/"
+    "videoSource": "https://www.playstation.com/en-us/games/need-for-speed-unbound/",
+    "metacritic": 77,
+    "downloadLink": "",
+    "metacriticSource": "https://www.metacritic.com/game/need-for-speed-unbound/",
+    "metacriticChecked": "2026-09-13",
+    "descriptionSource": "https://www.metacritic.com/game/need-for-speed-unbound/"
   },
   {
     "id": 45,
@@ -793,11 +1013,16 @@ window.GAMES = [
     "future": false,
     "poster": "https://assets-prd.ignimgs.com/2022/06/09/last-of-us-part-1-1654816575733.jpeg",
     "videoId": "R2Ebc_OFeug",
-    "description": "",
+    "description": "Escort Ellie across a devastated America as Joel in a rebuilt survival adventure that also includes Left Behind.",
     "ratingUrl": "https://www.metacritic.com/game/the-last-of-us-part-i/",
     "posterSource": "https://www.icecreamfactoryny.com/?c=57855482041500",
     "videoChannel": "Official trailer — source linked",
-    "videoSource": "https://www.playstation.com/en-us/games/the-last-of-us-part-i/"
+    "videoSource": "https://www.playstation.com/en-us/games/the-last-of-us-part-i/",
+    "metacritic": 89,
+    "downloadLink": "",
+    "metacriticSource": "https://www.metacritic.com/game/the-last-of-us-part-i/",
+    "metacriticChecked": "2026-09-13",
+    "descriptionSource": "https://www.metacritic.com/game/the-last-of-us-part-i/"
   },
   {
     "id": 46,
@@ -811,11 +1036,14 @@ window.GAMES = [
     "future": false,
     "poster": "https://cdn.v2.tiendanegocio.com/gallery/24335/img_24335_2u2lax79qpm76x25k3.jpeg",
     "videoId": "6_WDVEw9YUo",
-    "description": "",
+    "description": "Explore a vast fantasy world as Geralt of Rivia, hunting monsters and making choices that shape communities' futures.",
     "ratingUrl": "https://www.metacritic.com/game/the-witcher-3-wild-hunt/",
     "posterSource": "https://digitalgamesgalaxy.com/producto/thewitc3",
     "videoChannel": "Official trailer — source linked",
-    "videoSource": "https://www.playstation.com/en-us/games/the-witcher-3-wild-hunt/"
+    "videoSource": "https://www.playstation.com/en-us/games/the-witcher-3-wild-hunt/",
+    "metacritic": null,
+    "downloadLink": "",
+    "descriptionSource": "https://www.metacritic.com/game/the-witcher-3-wild-hunt/"
   },
   {
     "id": 47,
@@ -828,11 +1056,16 @@ window.GAMES = [
     "future": false,
     "poster": "https://www.games2egypt.com/Images/Products/95128?fileFormat=2&height=700&v=639017974731291634",
     "videoId": "F3Wl-OiZCO4",
-    "description": "",
+    "description": "Join Nathan Drake and Chloe Frazer in remastered versions of Uncharted 4 and The Lost Legacy.",
     "ratingUrl": "https://www.metacritic.com/game/uncharted-legacy-of-thieves-collection/",
     "posterSource": "https://www.games2egypt.com/Product/25815/uncharted-legacy-of-thieves-collection-ps5?srsltid=AfmBOopcDBWVL7TwjrxzEV2d7SQcmOGvCmW4XuS2acsGkd2rIn4YG7zI",
     "videoChannel": "Official trailer — source linked",
-    "videoSource": "https://www.playstation.com/en-us/games/uncharted-legacy-of-thieves-collection/"
+    "videoSource": "https://www.playstation.com/en-us/games/uncharted-legacy-of-thieves-collection/",
+    "metacritic": 87,
+    "downloadLink": "",
+    "metacriticSource": "https://www.metacritic.com/game/uncharted-legacy-of-thieves-collection/",
+    "metacriticChecked": "2026-09-13",
+    "descriptionSource": "https://www.metacritic.com/game/uncharted-legacy-of-thieves-collection/"
   },
   {
     "id": 48,
@@ -846,11 +1079,16 @@ window.GAMES = [
     "future": false,
     "poster": "https://a.allegroimg.com/original/117306/6bcabbf9497c80216f99b2524a75/Assassin-s-Creed-Mirage-PC-Ubisoft-Connect-Uplay-PL-KOD-KLUCZ",
     "videoId": "PPoU4EFeVEI",
-    "description": "",
+    "description": "Follow Basim's transformation from street thief to Master Assassin in a story-driven stealth adventure.",
     "ratingUrl": "https://www.metacritic.com/game/assassins-creed-mirage/",
     "posterSource": "https://allegro.pl/oferta/assassin-s-creed-mirage-pc-ubisoft-connect-uplay-pl-kod-klucz-17880185602",
     "videoChannel": "Official trailer — source linked",
-    "videoSource": "https://www.playstation.com/en-us/games/assassins-creed-mirage/"
+    "videoSource": "https://www.playstation.com/en-us/games/assassins-creed-mirage/",
+    "metacritic": 76,
+    "downloadLink": "",
+    "metacriticSource": "https://www.metacritic.com/game/assassins-creed-mirage/",
+    "metacriticChecked": "2026-09-13",
+    "descriptionSource": "https://www.metacritic.com/game/assassins-creed-mirage/"
   },
   {
     "id": 49,
@@ -864,11 +1102,16 @@ window.GAMES = [
     "future": false,
     "poster": "https://cdn.mos.cms.futurecdn.net/3jAfusuFwUNAqw3qM3ggTL.jpg",
     "videoId": "JJbVvjviXOc",
-    "description": "",
+    "description": "Glide across a sand-covered world and challenge corrupted gods with transforming weapons and sand-powered combat abilities.",
     "ratingUrl": "https://www.metacritic.com/game/atlas-fallen/",
     "posterSource": "https://www.windowscentral.com/gaming/xbox/atlas-fallen-review",
     "videoChannel": "PlayStation",
-    "videoSource": "https://www.youtube.com/watch?v=JJbVvjviXOc"
+    "videoSource": "https://www.youtube.com/watch?v=JJbVvjviXOc",
+    "metacritic": 64,
+    "downloadLink": "",
+    "metacriticSource": "https://www.metacritic.com/game/atlas-fallen/",
+    "metacriticChecked": "2026-09-13",
+    "descriptionSource": "https://www.metacritic.com/game/atlas-fallen/"
   },
   {
     "id": 50,
@@ -882,11 +1125,16 @@ window.GAMES = [
     "future": false,
     "poster": "https://cdn.mobygames.com/covers/17978202-avatar-frontiers-of-pandora-xbox-series-front-cover.png",
     "videoId": "H1D8UnqJp8k",
-    "description": "",
+    "description": "Explore the beauty and dangers of Pandora in a first-person, open-world action adventure.",
     "ratingUrl": "https://www.metacritic.com/game/avatar-frontiers-of-pandora/",
     "posterSource": "https://www.mobygames.com/game/213552/avatar-frontiers-of-pandora/cover/group-378082/cover-906366/",
     "videoChannel": "Official trailer — source linked",
-    "videoSource": "https://www.playstation.com/en-us/games/avatar-frontiers-of-pandora/"
+    "videoSource": "https://www.playstation.com/en-us/games/avatar-frontiers-of-pandora/",
+    "metacritic": 72,
+    "downloadLink": "",
+    "metacriticSource": "https://www.metacritic.com/game/avatar-frontiers-of-pandora/",
+    "metacriticChecked": "2026-09-13",
+    "descriptionSource": "https://www.metacritic.com/game/avatar-frontiers-of-pandora/"
   },
   {
     "id": 51,
@@ -899,11 +1147,16 @@ window.GAMES = [
     "future": false,
     "poster": "https://www.imfdb.org/images/thumb/6/66/MwIII-2023.jpg/600px-MwIII-2023.jpg",
     "videoId": "i3IsLrPeZG8",
-    "description": "",
+    "description": "A military shooter combining a cinematic campaign with competitive multiplayer and evolving weapon progression.",
     "ratingUrl": "https://www.metacritic.com/game/call-of-duty-modern-warfare-iii/",
     "posterSource": "https://www.imfdb.org/wiki/Call_of_Duty%3A_Modern_Warfare_III_%282023%29",
     "videoChannel": "Official trailer — source linked",
-    "videoSource": "https://www.playstation.com/en-us/games/call-of-duty-modern-warfare-iii/"
+    "videoSource": "https://www.playstation.com/en-us/games/call-of-duty-modern-warfare-iii/",
+    "metacritic": 56,
+    "downloadLink": "",
+    "metacriticSource": "https://www.metacritic.com/game/call-of-duty-modern-warfare-iii/",
+    "metacriticChecked": "2026-09-13",
+    "descriptionSource": "https://www.metacritic.com/game/call-of-duty-modern-warfare-iii/"
   },
   {
     "id": 52,
@@ -916,11 +1169,16 @@ window.GAMES = [
     "future": false,
     "poster": "https://images.cgames.de/images/gamestar/4/15071-pc-packshot_6203135.jpg",
     "videoId": "Y2-_0bZHJOs",
-    "description": "",
+    "description": "Survive a nightmare aboard the mining ship USG Ishimura in a rebuilt science-fiction horror adventure.",
     "ratingUrl": "https://www.metacritic.com/game/dead-space/",
     "posterSource": "https://www.gamestar.de/spiele/dead-space-remake%2C15071.html",
     "videoChannel": "Official trailer — source linked",
-    "videoSource": "https://www.playstation.com/en-us/games/dead-space/"
+    "videoSource": "https://www.playstation.com/en-us/games/dead-space/",
+    "metacritic": 89,
+    "downloadLink": "",
+    "metacriticSource": "https://www.metacritic.com/game/dead-space/",
+    "metacriticChecked": "2026-09-13",
+    "descriptionSource": "https://www.metacritic.com/game/dead-space/"
   },
   {
     "id": 53,
@@ -933,11 +1191,16 @@ window.GAMES = [
     "future": false,
     "poster": "https://cdn11.bigcommerce.com/s-kqbs9oimhc/images/stencil/1280x1280/products/2376/11932/FAITH_SQEX_PACKSHOT_SEE_500x718_PEGI__88270.1684243831.jpg?c=1",
     "videoId": "aPT26Dd3OzE",
-    "description": "",
+    "description": "A standalone Final Fantasy adventure built around single-player action RPG combat.",
     "ratingUrl": "https://www.metacritic.com/game/final-fantasy-xvi/",
     "posterSource": "https://it.store.square-enix-games.com/final-fantasy-xvi",
     "videoChannel": "Official trailer — source linked",
-    "videoSource": "https://www.playstation.com/en-us/games/final-fantasy-xvi/"
+    "videoSource": "https://www.playstation.com/en-us/games/final-fantasy-xvi/",
+    "metacritic": 87,
+    "downloadLink": "",
+    "metacriticSource": "https://www.metacritic.com/game/final-fantasy-xvi/",
+    "metacriticChecked": "2026-09-13",
+    "descriptionSource": "https://www.metacritic.com/game/final-fantasy-xvi/"
   },
   {
     "id": 54,
@@ -951,11 +1214,16 @@ window.GAMES = [
     "future": false,
     "poster": "https://image.ceneostatic.pl/data/products/138431163/i-hogwarts-legacy-digital.jpg",
     "videoId": "NTnok1LvKUk",
-    "description": "",
+    "description": "Create a student wizard, explore the world around Hogwarts, learn spells and brew potions in an open-world RPG.",
     "ratingUrl": "https://www.metacritic.com/game/hogwarts-legacy/",
     "posterSource": "https://www.ceneo.pl/138431163",
     "videoChannel": "Official trailer — source linked",
-    "videoSource": "https://www.playstation.com/en-us/games/hogwarts-legacy/"
+    "videoSource": "https://www.playstation.com/en-us/games/hogwarts-legacy/",
+    "metacritic": 84,
+    "downloadLink": "",
+    "metacriticSource": "https://www.metacritic.com/game/hogwarts-legacy/",
+    "metacriticChecked": "2026-09-13",
+    "descriptionSource": "https://www.metacritic.com/game/hogwarts-legacy/"
   },
   {
     "id": 55,
@@ -969,11 +1237,16 @@ window.GAMES = [
     "future": false,
     "poster": "https://m.media-amazon.com/images/M/MV5BOWE0Njc5MDAtZTE3OC00M2EzLTg0ODctOWRjYTkzOThlMDY1XkEyXkFqcGc%40._V1_.jpg",
     "videoId": "Lbl2wfyAgxY",
-    "description": "",
+    "description": "Continue Aloy's journey among the volcanic ruins of Los Angeles, facing new machines and a hidden threat.",
     "ratingUrl": "https://www.metacritic.com/game/horizon-forbidden-west-burning-shores/",
     "posterSource": "https://www.imdb.com/title/tt27371351/",
     "videoChannel": "PlayStation",
-    "videoSource": "https://www.youtube.com/watch?v=Lbl2wfyAgxY"
+    "videoSource": "https://www.youtube.com/watch?v=Lbl2wfyAgxY",
+    "metacritic": 81,
+    "downloadLink": "",
+    "metacriticSource": "https://www.metacritic.com/game/horizon-forbidden-west-burning-shores/",
+    "metacriticChecked": "2026-09-13",
+    "descriptionSource": "https://www.metacritic.com/game/horizon-forbidden-west-burning-shores/"
   },
   {
     "id": 56,
@@ -987,11 +1260,16 @@ window.GAMES = [
     "future": false,
     "poster": "https://pnpdistribution.com/i/LIES-OF-P-P5-N.jpg",
     "videoId": "TYr1x25Z1Ak",
-    "description": "",
+    "description": "Play as Pinocchio in the hostile city of Krat, battling toward Geppetto while navigating deception and humanity.",
     "ratingUrl": "https://www.metacritic.com/game/lies-of-p/",
     "posterSource": "https://pnpgamesonline.com/product/lies-of-p-rp-ps5/",
     "videoChannel": "Official trailer — source linked",
-    "videoSource": "https://www.playstation.com/en-us/games/lies-of-p/"
+    "videoSource": "https://www.playstation.com/en-us/games/lies-of-p/",
+    "metacritic": 80,
+    "downloadLink": "",
+    "metacriticSource": "https://www.metacritic.com/game/lies-of-p/",
+    "metacriticChecked": "2026-09-13",
+    "descriptionSource": "https://www.metacritic.com/game/lies-of-p/"
   },
   {
     "id": 57,
@@ -1005,11 +1283,16 @@ window.GAMES = [
     "future": false,
     "poster": "https://metarankings.ru/images/uploads/2023/12/lords-of-the-fallen-boxart-cover.jpg",
     "videoId": "uw_Lskv6ZjQ",
-    "description": "",
+    "description": "Become a Dark Crusader and journey through a dark fantasy world to challenge the demon god Adyr.",
     "ratingUrl": "https://www.metacritic.com/game/lords-of-the-fallen/",
     "posterSource": "https://metarankings.ru/the-lords-of-the-fallen/",
     "videoChannel": "Official trailer — source linked",
-    "videoSource": "https://www.playstation.com/en-us/games/lords-of-the-fallen/"
+    "videoSource": "https://www.playstation.com/en-us/games/lords-of-the-fallen/",
+    "metacritic": 75,
+    "downloadLink": "",
+    "metacriticSource": "https://www.metacritic.com/game/lords-of-the-fallen/",
+    "metacriticChecked": "2026-09-13",
+    "descriptionSource": "https://www.metacritic.com/game/lords-of-the-fallen/"
   },
   {
     "id": 58,
@@ -1023,11 +1306,16 @@ window.GAMES = [
     "future": false,
     "poster": "https://images.cgames.de/images/gamestar/4/15491-pc-packshot_6223205.jpg",
     "videoId": "-L1EuRo54pI",
-    "description": "",
+    "description": "Investigate the disappearance of the president's daughter as Leon Kennedy in a ground-up remake of the survival-horror classic.",
     "ratingUrl": "https://www.metacritic.com/game/resident-evil-4/",
     "posterSource": "https://www.gamestar.de/artikel/resident-evil-4-remake-test-review%2C3391401.html",
     "videoChannel": "Official trailer — source linked",
-    "videoSource": "https://www.playstation.com/en-us/games/resident-evil-4-remake/"
+    "videoSource": "https://www.playstation.com/en-us/games/resident-evil-4-remake/",
+    "metacritic": 93,
+    "downloadLink": "",
+    "metacriticSource": "https://www.metacritic.com/game/resident-evil-4/",
+    "metacriticChecked": "2026-09-13",
+    "descriptionSource": "https://www.metacritic.com/game/resident-evil-4/"
   },
   {
     "id": 59,
@@ -1041,11 +1329,16 @@ window.GAMES = [
     "future": false,
     "poster": "https://store-images.s-microsoft.com/image/apps.58100.14307838718612882.e0c0d680-9047-4793-86d4-78e3dd87e6c2.9c42a5ea-d0d4-4fa0-8ffe-c4382e8313ee",
     "videoId": "QgLwvR37l_M",
-    "description": "",
+    "description": "Continue Cal Kestis's journey as he evades the Empire and faces the burden of being one of the surviving Jedi.",
     "ratingUrl": "https://www.metacritic.com/game/star-wars-jedi-survivor/",
     "posterSource": "https://www.xbox.com/en-US/games/store/star-wars-jedi-survivor-xbox-one/9plrp6phv6xp",
     "videoChannel": "Official trailer — source linked",
-    "videoSource": "https://www.playstation.com/en-us/games/star-wars-jedi-survivor/"
+    "videoSource": "https://www.playstation.com/en-us/games/star-wars-jedi-survivor/",
+    "metacritic": 85,
+    "downloadLink": "",
+    "metacriticSource": "https://www.metacritic.com/game/star-wars-jedi-survivor/",
+    "metacriticChecked": "2026-09-13",
+    "descriptionSource": "https://www.metacritic.com/game/star-wars-jedi-survivor/"
   },
   {
     "id": 60,
@@ -1058,11 +1351,16 @@ window.GAMES = [
     "future": false,
     "poster": "https://shared.steamstatic.com/store_item_assets/steam/apps/2358720/library_600x900_2x.jpg",
     "videoId": "Wl05yGSDpxY",
-    "description": "",
+    "description": "Become the Destined One in an action RPG inspired by Journey to the West and Chinese mythology.",
     "ratingUrl": "https://www.metacritic.com/game/black-myth-wukong/",
     "posterSource": "https://steamdb.info/app/2358720/charts/",
     "videoChannel": "PlayStation",
-    "videoSource": "https://www.youtube.com/watch?v=Wl05yGSDpxY"
+    "videoSource": "https://www.youtube.com/watch?v=Wl05yGSDpxY",
+    "metacritic": 81,
+    "downloadLink": "",
+    "metacriticSource": "https://www.metacritic.com/game/black-myth-wukong/",
+    "metacriticChecked": "2026-09-13",
+    "descriptionSource": "https://www.metacritic.com/game/black-myth-wukong/"
   },
   {
     "id": 61,
@@ -1075,11 +1373,16 @@ window.GAMES = [
     "future": false,
     "poster": "https://image.jeuxvideo.com/medias-md/172018/1720184406-1734-jaquette-avant.jpg",
     "videoId": "GD-kTwaQII8",
-    "description": "",
+    "description": "Enter an early-1990s spy thriller shaped by covert operations and the upheaval following the Cold War.",
     "ratingUrl": "https://www.metacritic.com/game/call-of-duty-black-ops-6/",
     "posterSource": "https://www.jeuxvideo.com/wikis-soluce-astuces/1920540/astuce-et-soluce-call-of-duty-black-ops-6.htm",
     "videoChannel": "Official trailer — source linked",
-    "videoSource": "https://www.playstation.com/en-us/games/call-of-duty-black-ops-6/"
+    "videoSource": "https://www.playstation.com/en-us/games/call-of-duty-black-ops-6/",
+    "metacritic": 82,
+    "downloadLink": "",
+    "metacriticSource": "https://www.metacritic.com/game/call-of-duty-black-ops-6/",
+    "metacriticChecked": "2026-09-13",
+    "descriptionSource": "https://www.metacritic.com/game/call-of-duty-black-ops-6/"
   },
   {
     "id": 62,
@@ -1093,11 +1396,16 @@ window.GAMES = [
     "future": false,
     "poster": "https://dropreference-v3.s3.eu-west-3.amazonaws.com/dev/game-images/dragons-dogma-ii_vertical.jpg",
     "videoId": "6SwRuaVwC8c",
-    "description": "",
+    "description": "Adventure through an expansive fantasy world of swords and magic in the sequel to Dragon's Dogma.",
     "ratingUrl": "https://www.metacritic.com/game/dragons-dogma-2/",
     "posterSource": "https://dropreference.com/en/benchmarks/dragons-dogma-2",
     "videoChannel": "Dragon's Dogma",
-    "videoSource": "https://www.youtube.com/watch?v=6SwRuaVwC8c"
+    "videoSource": "https://www.youtube.com/watch?v=6SwRuaVwC8c",
+    "metacritic": 86,
+    "downloadLink": "",
+    "metacriticSource": "https://www.metacritic.com/game/dragons-dogma-2/",
+    "metacriticChecked": "2026-09-13",
+    "descriptionSource": "https://www.metacritic.com/game/dragons-dogma-2/"
   },
   {
     "id": 63,
@@ -1111,11 +1419,16 @@ window.GAMES = [
     "future": false,
     "poster": "https://media.graphassets.com/MDuDDjJqQo5ASx1IkXyE",
     "videoId": "JugxpebuS_E",
-    "description": "",
+    "description": "An expansion to Elden Ring that gives the Tarnished new challenges and a further path to explore.",
     "ratingUrl": "https://www.metacritic.com/game/elden-ring-shadow-of-the-erdtree/",
     "posterSource": "https://www.bandainamcoent.com/news/elden-ring-shadow-of-the-erdtree-available-now",
     "videoChannel": "Official launch trailer",
-    "videoSource": "https://www.youtube.com/watch?v=JugxpebuS_E"
+    "videoSource": "https://www.youtube.com/watch?v=JugxpebuS_E",
+    "metacritic": 94,
+    "downloadLink": "",
+    "metacriticSource": "https://www.metacritic.com/game/elden-ring-shadow-of-the-erdtree/",
+    "metacriticChecked": "2026-09-13",
+    "descriptionSource": "https://www.metacritic.com/game/elden-ring-shadow-of-the-erdtree/"
   },
   {
     "id": 64,
@@ -1128,11 +1441,16 @@ window.GAMES = [
     "future": false,
     "poster": "https://m.media-amazon.com/images/M/MV5BMjk2MWI2NTctZjFkZS00ZWY2LWE1ZDQtZTY3MzZmNjRjMzBjXkEyXkFqcGc@._V1_.jpg",
     "videoId": "5ZXqcymx0CI",
-    "description": "",
+    "description": "Follow Cloud and his companions beyond Midgar as they pursue Sephiroth in the next chapter of the remake project.",
     "ratingUrl": "https://www.metacritic.com/game/final-fantasy-vii-rebirth/",
     "posterSource": "https://catwithmonocle.com/news/2024/01/04/final-fantasy-vii-rebirth-artwork-wallpaper/",
     "videoChannel": "Official trailer — source linked",
-    "videoSource": "https://www.playstation.com/en-us/games/final-fantasy-vii-rebirth/"
+    "videoSource": "https://www.playstation.com/en-us/games/final-fantasy-vii-rebirth/",
+    "metacritic": 92,
+    "downloadLink": "",
+    "metacriticSource": "https://www.metacritic.com/game/final-fantasy-vii-rebirth/",
+    "metacriticChecked": "2026-09-13",
+    "descriptionSource": "https://www.metacritic.com/game/final-fantasy-vii-rebirth/"
   },
   {
     "id": 65,
@@ -1145,11 +1463,14 @@ window.GAMES = [
     "future": false,
     "poster": "https://image.ceneostatic.pl/data/products/167076784/i-no-rest-for-the-wicked-digital.jpg",
     "videoId": "WBYeRF2XgpE",
-    "description": "",
+    "description": "Explore a plague-stricken kingdom in turmoil as rival powers converge on the troubled island of Isola Sacra.",
     "ratingUrl": "https://www.metacritic.com/search/No%20Rest%20for%20the%20Wicked/",
     "posterSource": "https://www.ceneo.pl/167076784",
     "videoChannel": "Moon Studios",
-    "videoSource": "https://www.youtube.com/watch?v=WBYeRF2XgpE"
+    "videoSource": "https://www.youtube.com/watch?v=WBYeRF2XgpE",
+    "metacritic": null,
+    "downloadLink": "",
+    "descriptionSource": "https://www.metacritic.com/game/no-rest-for-the-wicked/"
   },
   {
     "id": 66,
@@ -1163,11 +1484,16 @@ window.GAMES = [
     "future": false,
     "poster": "https://images.cgames.de/images/gamestar/4/15687-default-packshot_6274616.jpg",
     "videoId": "34FMSgdzzvI",
-    "description": "",
+    "description": "Explore a changing Japan as a masterless warrior whose battles and relationships help shape a new era.",
     "ratingUrl": "https://www.metacritic.com/game/rise-of-the-ronin/",
     "posterSource": "https://www.gamestar.de/spiele/rise-of-the-ronin%2C15687.html",
     "videoChannel": "Official trailer — source linked",
-    "videoSource": "https://www.playstation.com/en-us/games/rise-of-the-ronin/"
+    "videoSource": "https://www.playstation.com/en-us/games/rise-of-the-ronin/",
+    "metacritic": 76,
+    "downloadLink": "",
+    "metacriticSource": "https://www.metacritic.com/game/rise-of-the-ronin/",
+    "metacriticChecked": "2026-09-13",
+    "descriptionSource": "https://www.metacritic.com/game/rise-of-the-ronin/"
   },
   {
     "id": 67,
@@ -1180,11 +1506,16 @@ window.GAMES = [
     "future": false,
     "poster": "https://www.dolby.com/globalassets/gaming/69700bfe-e5ef-4c96-b182-6a81d2372865.jpg",
     "videoId": "_VyeH5uteVk",
-    "description": "",
+    "description": "Fight to save humanity and uncover the mystery behind Earth's collapse in a story-driven action adventure.",
     "ratingUrl": "https://www.metacritic.com/game/stellar-blade/",
     "posterSource": "https://www.dolby.com/zh-cn/experience/stellar-blade/",
     "videoChannel": "PlayStation",
-    "videoSource": "https://www.youtube.com/watch?v=_VyeH5uteVk"
+    "videoSource": "https://www.youtube.com/watch?v=_VyeH5uteVk",
+    "metacritic": 81,
+    "downloadLink": "",
+    "metacriticSource": "https://www.metacritic.com/game/stellar-blade/",
+    "metacriticChecked": "2026-09-13",
+    "descriptionSource": "https://www.metacritic.com/game/stellar-blade/"
   },
   {
     "id": 68,
@@ -1197,11 +1528,16 @@ window.GAMES = [
     "future": false,
     "poster": "https://m.media-amazon.com/images/I/81M8KudPLTL._AC_UF894,1000_QL80_.jpg",
     "videoId": "2ke-ry5N4sU",
-    "description": "",
+    "description": "Take control of DC's Suicide Squad in a third-person action shooter with solo play and four-player online cooperation.",
     "ratingUrl": "https://www.metacritic.com/game/suicide-squad-kill-the-justice-league/",
     "posterSource": "https://en.bdjogos.com.br/game.php?id=18855",
     "videoChannel": "Official trailer — source linked",
-    "videoSource": "https://www.playstation.com/en-us/games/suicide-squad-kill-the-justice-league/"
+    "videoSource": "https://www.playstation.com/en-us/games/suicide-squad-kill-the-justice-league/",
+    "metacritic": 60,
+    "downloadLink": "",
+    "metacriticSource": "https://www.metacritic.com/game/suicide-squad-kill-the-justice-league/",
+    "metacriticChecked": "2026-09-13",
+    "descriptionSource": "https://www.metacritic.com/game/suicide-squad-kill-the-justice-league/"
   },
   {
     "id": 69,
@@ -1215,11 +1551,16 @@ window.GAMES = [
     "future": false,
     "poster": "https://m.media-amazon.com/images/M/MV5BM2I2NmZmMzgtMjJkYi00YmY1LWJhMWUtMWEyYzFlZGUwM2I3XkEyXkFqcGc@._V1_.jpg",
     "videoId": "-llaUBqovHw",
-    "description": "",
+    "description": "Revisit Ellie and Abby's survival story with visual upgrades and the additional No Return roguelike mode.",
     "ratingUrl": "https://www.metacritic.com/game/the-last-of-us-part-ii-remastered/",
     "posterSource": "https://www.pcrichard.com/the-last-of-us-part-ii-remastered-for-ps5/711719553779.html",
     "videoChannel": "Official trailer — source linked",
-    "videoSource": "https://www.playstation.com/en-us/games/the-last-of-us-part-ii-remastered/"
+    "videoSource": "https://www.playstation.com/en-us/games/the-last-of-us-part-ii-remastered/",
+    "metacritic": 90,
+    "downloadLink": "",
+    "metacriticSource": "https://www.metacritic.com/game/the-last-of-us-part-ii-remastered/",
+    "metacriticChecked": "2026-09-13",
+    "descriptionSource": "https://www.metacritic.com/game/the-last-of-us-part-ii-remastered/"
   },
   {
     "id": 70,
@@ -1233,11 +1574,16 @@ window.GAMES = [
     "future": false,
     "poster": "https://m.media-amazon.com/images/M/MV5BODYzNmRmODYtYzU0Zi00ODIwLWFlNDEtODQ5MWIxYmVmOGVlXkEyXkFqcGc@._V1_.jpg",
     "videoId": "2Y1jfEUPyW8",
-    "description": "",
-    "ratingUrl": "https://www.metacritic.com/search/Warhammer%2040%2C000%3A%20Space%20Marine%202/",
+    "description": "Defend the Imperium as a Space Marine, using devastating weapons and abilities to confront overwhelming Tyranid hordes.",
+    "ratingUrl": "https://www.metacritic.com/game/warhammer-40000-space-marine-ii/",
     "posterSource": "https://www.pcgamingwiki.com/wiki/Warhammer_40%2C000%3A_Space_Marine_II",
     "videoChannel": "Official trailer — source linked",
-    "videoSource": "https://www.playstation.com/en-us/games/warhammer-40000-space-marine-2/"
+    "videoSource": "https://www.playstation.com/en-us/games/warhammer-40000-space-marine-2/",
+    "metacritic": 82,
+    "downloadLink": "",
+    "descriptionSource": "https://www.metacritic.com/game/warhammer-40000-space-marine-ii/",
+    "metacriticSource": "https://www.metacritic.com/game/warhammer-40000-space-marine-ii/",
+    "metacriticChecked": "2026-09-13"
   },
   {
     "id": 71,
@@ -1251,11 +1597,16 @@ window.GAMES = [
     "future": false,
     "poster": "https://a.allegroimg.com/original/11dce5/0280e82a45c088c38460da96dbcb/ASSASSIN-S-CREED-SHADOWS-KLUCZ-UPLAY-UBISOFT-CONNECT-CD-KEY-KOD-BEZ-VPN",
     "videoId": "SHaN4MIGqpo",
-    "description": "",
+    "description": "Experience feudal Japan through the intertwined journeys of shinobi Naoe and samurai Yasuke.",
     "ratingUrl": "https://www.metacritic.com/game/assassins-creed-shadows/",
     "posterSource": "https://allegro.pl/produkt/assassins-creed-shadows-pc-ubisoft-connect-kod-klucz-pc-3346e7e0-1d80-446f-abb0-7abe63707479",
     "videoChannel": "Assassin's Creed",
-    "videoSource": "https://www.youtube.com/watch?v=SHaN4MIGqpo"
+    "videoSource": "https://www.youtube.com/watch?v=SHaN4MIGqpo",
+    "metacritic": 81,
+    "downloadLink": "",
+    "metacriticSource": "https://www.metacritic.com/game/assassins-creed-shadows/",
+    "metacriticChecked": "2026-09-13",
+    "descriptionSource": "https://www.metacritic.com/game/assassins-creed-shadows/"
   },
   {
     "id": 72,
@@ -1269,11 +1620,16 @@ window.GAMES = [
     "future": false,
     "poster": "https://mir-s3-cdn-cf.behance.net/project_modules/disp_webp/3d6a07242710203.69724ae514933.jpg",
     "videoId": "APVqejtOsvA",
-    "description": "",
+    "description": "Play as Na'vi warrior So'lek in an expansion focused on vengeance and survival across a devastated Western Frontier.",
     "ratingUrl": "https://www.metacritic.com/game/avatar-frontiers-of-pandora-from-the-ashes/",
     "posterSource": "https://www.behance.net/gallery/242710203/Avatar-Frontiers-of-Pandora-From-the-Ashes",
     "videoChannel": "Official trailer — source linked",
-    "videoSource": "https://www.playstation.com/en-us/games/avatar-frontiers-of-pandora/"
+    "videoSource": "https://www.playstation.com/en-us/games/avatar-frontiers-of-pandora/",
+    "metacritic": 81,
+    "downloadLink": "",
+    "metacriticSource": "https://www.metacritic.com/game/avatar-frontiers-of-pandora-from-the-ashes/",
+    "metacriticChecked": "2026-09-13",
+    "descriptionSource": "https://www.metacritic.com/game/avatar-frontiers-of-pandora-from-the-ashes/"
   },
   {
     "id": 73,
@@ -1286,11 +1642,16 @@ window.GAMES = [
     "future": false,
     "poster": "https://ninostore.com/assets/images/large-thumb-images/battlefield62.jpg",
     "videoId": "wFGEMfyAQtI",
-    "description": "",
+    "description": "Coordinate infantry, tanks and aircraft in large-scale warfare where destruction can create a tactical advantage.",
     "ratingUrl": "https://www.metacritic.com/game/battlefield-6/",
     "posterSource": "https://ninostore.com/default.aspx?MenuId=13&ProductId=24106-1026-0",
     "videoChannel": "Battlefield",
-    "videoSource": "https://www.youtube.com/watch?v=wFGEMfyAQtI"
+    "videoSource": "https://www.youtube.com/watch?v=wFGEMfyAQtI",
+    "metacritic": 83,
+    "downloadLink": "",
+    "metacriticSource": "https://www.metacritic.com/game/battlefield-6/",
+    "metacriticChecked": "2026-09-13",
+    "descriptionSource": "https://www.metacritic.com/game/battlefield-6/"
   },
   {
     "id": 74,
@@ -1303,11 +1664,16 @@ window.GAMES = [
     "future": false,
     "poster": "https://resizer.ladbiblegroup.com/unsafe/rs%3Afit%3A3840%3A0%3A0%3A0/g%3Asm/q%3A70/aHR0cHM6Ly9ldS1pbWFnZXMuY29udGVudHN0YWNrLmNvbS92My9hc3NldHMvYmx0YmMxODc2MTUyZmNkOWYwNy9ibHRjMjRmMzFhMGY0MGRlMWMzLzY5MTFkMGJiZDA2ODcwNGIxNzRiMGQ2Ny9ibG9wc183LmpwZWc.webp",
     "videoId": "9txkGBj_trg",
-    "description": "",
+    "description": "Join David Mason's team in a near-future conflict centered on psychological warfare, with cooperative campaign and multiplayer modes.",
     "ratingUrl": "https://www.metacritic.com/game/call-of-duty-black-ops-7/",
     "posterSource": "https://www.gamingbible.com/news/platform/steam/steam-active-matter-blops-7-comparison-166014-20251110",
     "videoChannel": "Call of Duty",
-    "videoSource": "https://www.youtube.com/watch?v=9txkGBj_trg"
+    "videoSource": "https://www.youtube.com/watch?v=9txkGBj_trg",
+    "metacritic": 65,
+    "downloadLink": "",
+    "metacriticSource": "https://www.metacritic.com/game/call-of-duty-black-ops-7/",
+    "metacriticChecked": "2026-09-13",
+    "descriptionSource": "https://www.metacritic.com/game/call-of-duty-black-ops-7/"
   },
   {
     "id": 75,
@@ -1321,11 +1687,16 @@ window.GAMES = [
     "future": false,
     "poster": "https://www.wog.ch/nas/cover_xl/p5/p5_ghostofyotei.jpg",
     "videoId": "FM08YoziYJs",
-    "description": "",
+    "description": "Follow mercenary Atsu across northern Japan as she hunts the people responsible for killing her family.",
     "ratingUrl": "https://www.metacritic.com/game/ghost-of-yotei/",
     "posterSource": "https://www.wog.ch/en/index.cfm/details/product/203069-Ghost-of-Y-tei",
     "videoChannel": "Official trailer — source linked",
-    "videoSource": "https://www.playstation.com/en-us/games/ghost-of-yotei/"
+    "videoSource": "https://www.playstation.com/en-us/games/ghost-of-yotei/",
+    "metacritic": 86,
+    "downloadLink": "",
+    "metacriticSource": "https://www.metacritic.com/game/ghost-of-yotei/",
+    "metacriticChecked": "2026-09-13",
+    "descriptionSource": "https://www.metacritic.com/game/ghost-of-yotei/"
   },
   {
     "id": 76,
@@ -1339,11 +1710,16 @@ window.GAMES = [
     "future": false,
     "poster": "https://www.gameliebe.com/thumbnail/90/23/7f/1747669768/kingdom_come_deliverance_ii_cover_1920x1920.jpg?ts=1747669768",
     "videoId": "H1Hh_K_PWxw",
-    "description": "",
+    "description": "Continue Henry of Skalitz's journey through civil-war-torn Bohemia in a medieval RPG of revenge and discovery.",
     "ratingUrl": "https://www.metacritic.com/game/kingdom-come-deliverance-ii/",
     "posterSource": "https://www.gameliebe.com/kingdom-come-deliverance-ii-online-kaufen.html",
     "videoChannel": "Official trailer — source linked",
-    "videoSource": "https://www.playstation.com/en-us/games/kingdom-come-deliverance-ii/"
+    "videoSource": "https://www.playstation.com/en-us/games/kingdom-come-deliverance-ii/",
+    "metacritic": 89,
+    "downloadLink": "",
+    "metacriticSource": "https://www.metacritic.com/game/kingdom-come-deliverance-ii/",
+    "metacriticChecked": "2026-09-13",
+    "descriptionSource": "https://www.metacritic.com/game/kingdom-come-deliverance-ii/"
   },
   {
     "id": 77,
@@ -1356,11 +1732,16 @@ window.GAMES = [
     "future": false,
     "poster": "https://img-cdn.heureka.group/v1/c5ce6656-5a1d-5924-8cd2-0838652f37bd.jpg",
     "videoId": "KTmJDf6CuZs",
-    "description": "",
+    "description": "Enter the criminal underworld of early-twentieth-century Sicily in a story about the origins of organized crime.",
     "ratingUrl": "https://www.metacritic.com/game/mafia-the-old-country/",
     "posterSource": "https://hry-pro-pc.heureka.cz/mafia-the-old-country/",
     "videoChannel": "Official trailer — source linked",
-    "videoSource": "https://www.playstation.com/en-us/games/mafia-the-old-country/"
+    "videoSource": "https://www.playstation.com/en-us/games/mafia-the-old-country/",
+    "metacritic": 73,
+    "downloadLink": "",
+    "metacriticSource": "https://www.metacritic.com/game/mafia-the-old-country/",
+    "metacriticChecked": "2026-09-13",
+    "descriptionSource": "https://www.metacritic.com/game/mafia-the-old-country/"
   },
   {
     "id": 78,
@@ -1374,11 +1755,16 @@ window.GAMES = [
     "future": false,
     "poster": "https://m.media-amazon.com/images/M/MV5BYTZlZTMyYmQtNDQ0Zi00ZDA1LWI5OWEtYWM5YzVkMWJiMDUwXkEyXkFqcGc@._V1_.jpg",
     "videoId": "ajh3YHJ6baI",
-    "description": "",
+    "description": "Revisit Snake Eater's jungle espionage in a remake combining stealth, survival and updated audiovisual presentation.",
     "ratingUrl": "https://www.metacritic.com/game/metal-gear-solid-delta-snake-eater/",
     "posterSource": "https://www.gematsu.com/games/metal-gear-solid-delta-snake-eater",
     "videoChannel": "Official trailer — source linked",
-    "videoSource": "https://www.playstation.com/en-us/games/metal-gear-solid-delta-snake-eater/"
+    "videoSource": "https://www.playstation.com/en-us/games/metal-gear-solid-delta-snake-eater/",
+    "metacritic": 85,
+    "downloadLink": "",
+    "metacriticSource": "https://www.metacritic.com/game/metal-gear-solid-delta-snake-eater/",
+    "metacriticChecked": "2026-09-13",
+    "descriptionSource": "https://www.metacritic.com/game/metal-gear-solid-delta-snake-eater/"
   },
   {
     "id": 79,
@@ -1392,11 +1778,16 @@ window.GAMES = [
     "future": false,
     "poster": "https://static.actugaming.net/media/2025/01/ninja-gaiden-2-black-jaquette.jpg",
     "videoId": "MFjWCZIVZDw",
-    "description": "",
+    "description": "Wield Ryu Hayabusa's Dragon Sword in a visually rebuilt version of Ninja Gaiden 2's high-speed combat.",
     "ratingUrl": "https://www.metacritic.com/game/ninja-gaiden-2-black/",
     "posterSource": "https://www.actugaming.net/ninja-gaiden-ii-black-remaster-unreal-engine-5-698497/",
     "videoChannel": "Xbox",
-    "videoSource": "https://www.youtube.com/watch?v=MFjWCZIVZDw"
+    "videoSource": "https://www.youtube.com/watch?v=MFjWCZIVZDw",
+    "metacritic": 80,
+    "downloadLink": "",
+    "metacriticSource": "https://www.metacritic.com/game/ninja-gaiden-2-black/",
+    "metacriticChecked": "2026-09-13",
+    "descriptionSource": "https://www.metacritic.com/game/ninja-gaiden-2-black/"
   },
   {
     "id": 80,
@@ -1410,11 +1801,16 @@ window.GAMES = [
     "future": false,
     "poster": "https://static.wixstatic.com/media/df62c3_1e63d3b63e6548e9856873aa70352403~mv2.jpg/v1/fill/w_798%2Ch_1021%2Cal_c%2Cq_85%2Cenc_avif%2Cquality_auto/df62c3_1e63d3b63e6548e9856873aa70352403~mv2.jpg",
     "videoId": "R4mcnuUWzPQ",
-    "description": "",
+    "description": "Return to fast ninja combat with transforming weapons and Bloodbind Ninjutsu in a new Ninja Gaiden adventure.",
     "ratingUrl": "https://www.metacritic.com/game/ninja-gaiden-4/",
     "posterSource": "https://www.gameplayla.com/product-page/ninja-gaiden-4-playstation-5",
     "videoChannel": "Official trailer — source linked",
-    "videoSource": "https://www.playstation.com/en-us/games/ninja-gaiden-4/"
+    "videoSource": "https://www.playstation.com/en-us/games/ninja-gaiden-4/",
+    "metacritic": 82,
+    "downloadLink": "",
+    "metacriticSource": "https://www.metacritic.com/game/ninja-gaiden-4/",
+    "metacriticChecked": "2026-09-13",
+    "descriptionSource": "https://www.metacritic.com/game/ninja-gaiden-4/"
   },
   {
     "id": 81,
@@ -1427,11 +1823,16 @@ window.GAMES = [
     "future": false,
     "poster": "https://assetsio.gnwcdn.com/co9e1j.jpg?auto=webp&fit=bounds&format=jpg&height=2048&quality=85&width=2048",
     "videoId": "duSFn7ptRIw",
-    "description": "",
+    "description": "Guide Joe Musashi through a hand-drawn action platformer as he seeks vengeance for his destroyed village and cursed clan.",
     "ratingUrl": "https://www.metacritic.com/game/shinobi-art-of-vengeance/",
     "posterSource": "https://www.eurogamer.es/el-nuevo-shinobi-llegara-el-29-de-agosto",
     "videoChannel": "Official trailer — source linked",
-    "videoSource": "https://www.playstation.com/en-us/games/shinobi-art-of-vengeance/"
+    "videoSource": "https://www.playstation.com/en-us/games/shinobi-art-of-vengeance/",
+    "metacritic": 87,
+    "downloadLink": "",
+    "metacriticSource": "https://www.metacritic.com/game/shinobi-art-of-vengeance/",
+    "metacriticChecked": "2026-09-13",
+    "descriptionSource": "https://www.metacritic.com/game/shinobi-art-of-vengeance/"
   },
   {
     "id": 82,
@@ -1445,11 +1846,16 @@ window.GAMES = [
     "future": false,
     "poster": "https://xboxwire.thesourcemediaassets.com/sites/4/apps.57700.14265695181764657.4b73f401-4411-4e71-82f9-faeba27e8039-7735204ba4e8c90b9d43.jpg",
     "videoId": "nvdSisTLPhg",
-    "description": "",
+    "description": "Become the fallen general Khazan and battle to uncover the truth behind his downfall in a demanding action RPG.",
     "ratingUrl": "https://www.metacritic.com/game/the-first-berserker-khazan/",
     "posterSource": "https://news.xbox.com/es-latam/2025/11/27/dias-de-juego-gratis-hypnospace-outlaw-lets-build-a-zoo-biped-2-hammerwatch-2-y-the-first-berserker-khazan/",
     "videoChannel": "Official trailer — source linked",
-    "videoSource": "https://www.playstation.com/en-us/games/the-first-berserker-khazan/"
+    "videoSource": "https://www.playstation.com/en-us/games/the-first-berserker-khazan/",
+    "metacritic": 78,
+    "downloadLink": "",
+    "metacriticSource": "https://www.metacritic.com/game/the-first-berserker-khazan/",
+    "metacriticChecked": "2026-09-13",
+    "descriptionSource": "https://www.metacritic.com/game/the-first-berserker-khazan/"
   },
   {
     "id": 83,
@@ -1463,11 +1869,16 @@ window.GAMES = [
     "future": false,
     "poster": "https://assets.gamerprofiles.com/game/7958x/game_7958x_profileicon_bifrost.webp",
     "videoId": "UjKjY6jkYLg",
-    "description": "",
+    "description": "Explore a martial-arts open world as a swordsman during the political upheaval at the end of China's Ten Kingdoms era.",
     "ratingUrl": "https://www.metacritic.com/game/where-winds-meet/",
     "posterSource": "https://gamerprofiles.com/game/7958x/Where-Winds-Meet",
     "videoChannel": "Official trailer — source linked",
-    "videoSource": "https://www.playstation.com/en-us/games/where-winds-meet/"
+    "videoSource": "https://www.playstation.com/en-us/games/where-winds-meet/",
+    "metacritic": 72,
+    "downloadLink": "",
+    "metacriticSource": "https://www.metacritic.com/game/where-winds-meet/",
+    "metacriticChecked": "2026-09-13",
+    "descriptionSource": "https://www.metacritic.com/game/where-winds-meet/"
   },
   {
     "id": 84,
@@ -1481,11 +1892,16 @@ window.GAMES = [
     "future": false,
     "poster": "https://m.media-amazon.com/images/M/MV5BZmM5N2FmYmUtNWUxMS00Y2VhLWI4ZDctOTJhNzBmNzQ2YjFkXkEyXkFqcGc%40._V1_FMjpg_UX1000_.jpg",
     "videoId": "haD1sEZ3z_8",
-    "description": "",
+    "description": "Explore late-Ming China as supernatural forces turn a world in turmoil into a haunting landscape of danger.",
     "ratingUrl": "https://www.metacritic.com/game/wuchang-fallen-feathers/",
     "posterSource": "https://www.imdb.com/title/tt22015724/",
     "videoChannel": "Official trailer — source linked",
-    "videoSource": "https://www.playstation.com/en-us/games/wuchang-fallen-feathers/"
+    "videoSource": "https://www.playstation.com/en-us/games/wuchang-fallen-feathers/",
+    "metacritic": 74,
+    "downloadLink": "",
+    "metacriticSource": "https://www.metacritic.com/game/wuchang-fallen-feathers/",
+    "metacriticChecked": "2026-09-13",
+    "descriptionSource": "https://www.metacritic.com/game/wuchang-fallen-feathers/"
   },
   {
     "id": 85,
@@ -1499,11 +1915,16 @@ window.GAMES = [
     "future": true,
     "poster": "https://i.playground.ru/i/pix/3707206/image.jpg",
     "videoId": "gDvbGANDH4E",
-    "description": "",
+    "description": "Follow a young James Bond through MI6 training in an espionage adventure exploring the beginnings of his career.",
     "ratingUrl": "https://www.metacritic.com/game/007-first-light/",
     "posterSource": "https://pix.playground.ru/007_first_light/3707206/",
     "videoChannel": "Featured by PlayStation",
-    "videoSource": "https://www.youtube.com/watch?v=gDvbGANDH4E"
+    "videoSource": "https://www.youtube.com/watch?v=gDvbGANDH4E",
+    "metacritic": 87,
+    "downloadLink": "",
+    "metacriticSource": "https://www.metacritic.com/game/007-first-light/",
+    "metacriticChecked": "2026-09-13",
+    "descriptionSource": "https://www.metacritic.com/game/007-first-light/"
   },
   {
     "id": 86,
@@ -1516,11 +1937,14 @@ window.GAMES = [
     "future": true,
     "poster": "https://cdn.gamebezz.com/games/games/cover/castlevania-belmonts-curse/castlevania-belmonts-curse-cover-gamebezz-com.jpg",
     "videoId": "X3-SJLWzjmE",
-    "description": "",
+    "description": "Wield the Vampire Killer whip as a young Belmont defending fifteenth-century Paris from an outbreak of monsters.",
     "ratingUrl": "https://www.metacritic.com/search/Castlevania%3A%20Belmont%E2%80%99s%20Curse/",
     "posterSource": "https://status.technobezz.com/tr/castlevania-belmonts-curse",
     "videoChannel": "Featured by PlayStation",
-    "videoSource": "https://www.youtube.com/watch?v=X3-SJLWzjmE"
+    "videoSource": "https://www.youtube.com/watch?v=X3-SJLWzjmE",
+    "metacritic": null,
+    "downloadLink": "",
+    "descriptionSource": "https://www.metacritic.com/game/castlevania-belmonts-curse/"
   },
   {
     "id": 87,
@@ -1534,11 +1958,14 @@ window.GAMES = [
     "future": true,
     "poster": "https://store-images.s-microsoft.com/image/apps.32700.14465098350874176.0914ad22-3c1c-4978-be8b-5f8afcd893a3.9f48dd5b-a929-4a6b-84f2-dbc85c379ed1?h=600&w=400",
     "videoId": "TAzxTMaA6j4",
-    "description": "",
+    "description": "A new chapter in the Control universe, continuing its mysterious world through an action RPG adventure.",
     "ratingUrl": "https://www.metacritic.com/search/CONTROL%20Resonant/",
     "posterSource": "https://news.xbox.com/en-us/2025/12/11/control-resonant-unveiling-the-next-chapter-in-the-control-universe/",
     "videoChannel": "Featured by PlayStation",
-    "videoSource": "https://www.youtube.com/watch?v=TAzxTMaA6j4"
+    "videoSource": "https://www.youtube.com/watch?v=TAzxTMaA6j4",
+    "metacritic": null,
+    "downloadLink": "",
+    "descriptionSource": "https://www.metacritic.com/game/control-resonant/"
   },
   {
     "id": 88,
@@ -1552,11 +1979,16 @@ window.GAMES = [
     "future": true,
     "poster": "https://image.jeuxvideo.com/medias/177376/1773757034-3785-jaquette-avant.jpg",
     "videoId": "YHhwdyWkwTQ",
-    "description": "",
+    "description": "Experience mercenary life in the war-torn fantasy lands of Pywel, where survival tests loyalties and alliances.",
     "ratingUrl": "https://www.metacritic.com/game/crimson-desert/",
     "posterSource": "https://www.jeuxvideo.com/tous-les-jeux/",
     "videoChannel": "Featured by PlayStation",
-    "videoSource": "https://www.youtube.com/watch?v=YHhwdyWkwTQ"
+    "videoSource": "https://www.youtube.com/watch?v=YHhwdyWkwTQ",
+    "metacritic": 77,
+    "downloadLink": "",
+    "metacriticSource": "https://www.metacritic.com/game/crimson-desert/",
+    "metacriticChecked": "2026-09-13",
+    "descriptionSource": "https://www.metacritic.com/game/crimson-desert/"
   },
   {
     "id": 89,
@@ -1569,11 +2001,16 @@ window.GAMES = [
     "future": true,
     "poster": "https://www.fightersgeneration.com/news2026/char/marvel-tokon/marvel-tokon-fighting-souls-key-art.jpg",
     "videoId": "funfFAMMBBs",
-    "description": "",
+    "description": "Build a team of reimagined Marvel characters in a tag-based fighting game from Arc System Works.",
     "ratingUrl": "https://www.metacritic.com/game/marvel-tokon-fighting-souls/",
     "posterSource": "https://www.fightersgeneration.com/news1/tokon-jun26.htm",
     "videoChannel": "Featured by PlayStation",
-    "videoSource": "https://www.youtube.com/watch?v=funfFAMMBBs"
+    "videoSource": "https://www.youtube.com/watch?v=funfFAMMBBs",
+    "metacritic": 85,
+    "downloadLink": "",
+    "metacriticSource": "https://www.metacritic.com/game/marvel-tokon-fighting-souls/",
+    "metacriticChecked": "2026-09-13",
+    "descriptionSource": "https://www.metacritic.com/game/marvel-tokon-fighting-souls/"
   },
   {
     "id": 90,
@@ -1586,11 +2023,16 @@ window.GAMES = [
     "future": true,
     "poster": "https://pbs.twimg.com/media/HAt3IP9bgAA0iWa.jpg",
     "videoId": "G62QQ42Ewwg",
-    "description": "",
+    "description": "Follow Logan into a new Wolverine adventure as his past draws him back into conflict.",
     "ratingUrl": "https://www.metacritic.com/game/marvels-wolverine/",
     "posterSource": "https://x.com/RinoTheBouncer/status/2020839850711388449",
     "videoChannel": "Featured by PlayStation",
-    "videoSource": "https://www.youtube.com/watch?v=G62QQ42Ewwg"
+    "videoSource": "https://www.youtube.com/watch?v=G62QQ42Ewwg",
+    "metacritic": 78,
+    "downloadLink": "",
+    "metacriticSource": "https://www.metacritic.com/game/marvels-wolverine/",
+    "metacriticChecked": "2026-09-13",
+    "descriptionSource": "https://www.metacritic.com/game/marvels-wolverine/"
   },
   {
     "id": 91,
@@ -1604,11 +2046,16 @@ window.GAMES = [
     "future": true,
     "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/cobf3x.jpg",
     "videoId": "MyenuEg-z1w",
-    "description": "",
+    "description": "Explore hostile open fields, confront yokai and overcome demanding combat challenges in a cursed kingdom.",
     "ratingUrl": "https://www.metacritic.com/game/nioh-3/",
     "posterSource": "https://backloggd.com/games/nioh-3/",
     "videoChannel": "Featured by PlayStation",
-    "videoSource": "https://www.youtube.com/watch?v=MyenuEg-z1w"
+    "videoSource": "https://www.youtube.com/watch?v=MyenuEg-z1w",
+    "metacritic": 86,
+    "downloadLink": "",
+    "metacriticSource": "https://www.metacritic.com/game/nioh-3/",
+    "metacriticChecked": "2026-09-13",
+    "descriptionSource": "https://www.metacritic.com/game/nioh-3/"
   },
   {
     "id": 92,
@@ -1621,11 +2068,16 @@ window.GAMES = [
     "future": true,
     "poster": "https://store-images.s-microsoft.com/image/apps.41113.14284010104803035.834d4f48-b029-4f16-999f-51ac656c2bd6.c703c3dc-537d-433a-b09f-ca365e078fb1?h=600&w=400",
     "videoId": "W9Ct29FeMak",
-    "description": "",
+    "description": "Battle Genma through a darkly transformed Kyoto as a samurai wielding the mystical Oni Gauntlet.",
     "ratingUrl": "https://www.metacritic.com/game/onimusha-way-of-the-sword/",
     "posterSource": "https://news.xbox.com/en-us/2025/08/21/onimusha-way-of-the-sword-hands-on-preview/",
     "videoChannel": "Featured by PlayStation",
-    "videoSource": "https://www.youtube.com/watch?v=W9Ct29FeMak"
+    "videoSource": "https://www.youtube.com/watch?v=W9Ct29FeMak",
+    "metacritic": 85,
+    "downloadLink": "",
+    "metacriticSource": "https://www.metacritic.com/game/onimusha-way-of-the-sword/",
+    "metacriticChecked": "2026-09-13",
+    "descriptionSource": "https://www.metacritic.com/game/onimusha-way-of-the-sword/"
   },
   {
     "id": 93,
@@ -1638,11 +2090,14 @@ window.GAMES = [
     "future": true,
     "poster": "https://m.media-amazon.com/images/M/MV5BODU1YzNiODEtMjg1OS00NDBlLWI5ODQtMmRlNDQzOWM1ODFhXkEyXkFqcGc%40._V1_FMjpg_UX1000_.jpg",
     "videoId": "EZr1HXkEahs",
-    "description": "",
+    "description": "Play as Soul, a warrior with limited time to live, battling assassins and conspiracies in a Wuxia-inspired action adventure.",
     "ratingUrl": "https://www.metacritic.com/search/Phantom%20Blade%20Zero/",
     "posterSource": "https://www.imdb.com/title/tt27916716/",
     "videoChannel": "Featured by PlayStation",
-    "videoSource": "https://www.youtube.com/watch?v=EZr1HXkEahs"
+    "videoSource": "https://www.youtube.com/watch?v=EZr1HXkEahs",
+    "metacritic": null,
+    "downloadLink": "",
+    "descriptionSource": "https://www.metacritic.com/game/phantom-blade-zero/"
   },
   {
     "id": 94,
@@ -1655,11 +2110,16 @@ window.GAMES = [
     "future": true,
     "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co39rf.jpg",
     "videoId": "-croBAQ6Tb8",
-    "description": "",
+    "description": "Play an artificial intelligence trapped in a human body in a dystopian, alternate-1980s action platformer.",
     "ratingUrl": "https://www.metacritic.com/game/replaced/",
     "posterSource": "https://mybacklog.gg/games/replaced/",
     "videoChannel": "Coatsink",
-    "videoSource": "https://www.youtube.com/watch?v=-croBAQ6Tb8"
+    "videoSource": "https://www.youtube.com/watch?v=-croBAQ6Tb8",
+    "metacritic": 76,
+    "downloadLink": "",
+    "metacriticSource": "https://www.metacritic.com/game/replaced/",
+    "metacriticChecked": "2026-09-13",
+    "descriptionSource": "https://www.metacritic.com/game/replaced/"
   },
   {
     "id": 95,
@@ -1672,11 +2132,16 @@ window.GAMES = [
     "future": true,
     "poster": "https://www.igroshop.com/images/detailed/16/RE9_box_art.jpg",
     "videoId": "POz1-EmLsTY",
-    "description": "",
+    "description": "Follow Grace Ashcroft and Leon Kennedy through intertwined survival-horror and action-driven journeys.",
     "ratingUrl": "https://www.metacritic.com/game/resident-evil-requiem/",
     "posterSource": "https://www.igroshop.com/resident-evil-requiem-eu.html?sl=en",
     "videoChannel": "Resident Evil / Capcom",
-    "videoSource": "https://www.youtube.com/watch?v=POz1-EmLsTY"
+    "videoSource": "https://www.youtube.com/watch?v=POz1-EmLsTY",
+    "metacritic": 89,
+    "downloadLink": "",
+    "metacriticSource": "https://www.metacritic.com/game/resident-evil-requiem/",
+    "metacriticChecked": "2026-09-13",
+    "descriptionSource": "https://www.metacritic.com/game/resident-evil-requiem/"
   },
   {
     "id": 96,
@@ -1689,11 +2154,14 @@ window.GAMES = [
     "future": true,
     "poster": "https://images.igdb.com/igdb/image/upload/t_1080p/cobihx.jpg",
     "videoId": "ZGM6N8madfQ",
-    "description": "",
+    "description": "Compete in an underground racing circuit in the Outer Rim, where syndicates, risk and speed shape every run.",
     "ratingUrl": "https://www.metacritic.com/search/Star%20Wars%3A%20Galactic%20Racer/",
     "posterSource": "https://releasecalendar.games/",
     "videoChannel": "Featured by PlayStation",
-    "videoSource": "https://www.youtube.com/watch?v=ZGM6N8madfQ"
+    "videoSource": "https://www.youtube.com/watch?v=ZGM6N8madfQ",
+    "metacritic": null,
+    "downloadLink": "",
+    "descriptionSource": "https://www.metacritic.com/game/star-wars-galactic-racer/"
   },
   {
     "id": 97,
@@ -1706,11 +2174,14 @@ window.GAMES = [
     "future": true,
     "poster": "https://r.res.easebar.com/pic/20250922/077ac8f5-02b9-47fa-89df-5c00e67d1c07.png",
     "videoId": "BMzzXYQ8zoQ",
-    "description": "",
+    "description": "Become an Anti-Chaos Directorate agent and investigate strange phenomena in Nova City while exploring its streets with extraordinary freedom.",
     "ratingUrl": "https://www.metacritic.com/search/ANANTA/",
     "posterSource": "https://www.neteasegames.com/m/",
     "videoChannel": "PlayStation",
-    "videoSource": "https://www.youtube.com/watch?v=BMzzXYQ8zoQ"
+    "videoSource": "https://www.youtube.com/watch?v=BMzzXYQ8zoQ",
+    "metacritic": null,
+    "downloadLink": "",
+    "descriptionSource": "https://www.metacritic.com/game/ananta/"
   },
   {
     "id": 98,
@@ -1724,11 +2195,14 @@ window.GAMES = [
     "future": true,
     "poster": "https://pbs.twimg.com/media/HLhGafTX0AA8mZE.jpg",
     "videoId": "97YBoOR1-Kk",
-    "description": "",
+    "description": "Journey through a collapsing kingdom where the worlds of the living and dead collide under an encroaching darkness.",
     "ratingUrl": "https://www.metacritic.com/search/Lords%20of%20the%20Fallen%20II/",
     "posterSource": "https://x.com/tyminski_marek/status/2069481457337188360",
     "videoChannel": "CI Games",
-    "videoSource": "https://www.youtube.com/watch?v=97YBoOR1-Kk"
+    "videoSource": "https://www.youtube.com/watch?v=97YBoOR1-Kk",
+    "metacritic": null,
+    "downloadLink": "",
+    "descriptionSource": "https://www.metacritic.com/game/lords-of-the-fallen-ii/"
   },
   {
     "id": 99,
@@ -1741,11 +2215,14 @@ window.GAMES = [
     "future": true,
     "poster": "https://i.3djuegos.com/juegos/20821/a_whisper_of_fall_jinyiwei/fotos/ficha/a_whisper_of_fall_jinyiwei-6008724.jpg",
     "videoId": "fC182F2Ja0Y",
-    "description": "",
+    "description": "Infiltrate the Ming Dynasty's Imperial Guard as a boatman, combining martial arts, deduction and shifting timelines.",
     "ratingUrl": "https://www.metacritic.com/search/A%20Whisper%20of%20Fall%3A%20Jinyiwei/",
     "posterSource": "https://www.3djuegos.com/juegos/a-whisper-of-fall-jinyiwei/caratula/",
     "videoChannel": "PlayStation",
-    "videoSource": "https://www.youtube.com/watch?v=fC182F2Ja0Y"
+    "videoSource": "https://www.youtube.com/watch?v=fC182F2Ja0Y",
+    "metacritic": null,
+    "downloadLink": "",
+    "descriptionSource": "https://www.metacritic.com/game/a-whisper-of-fall-jinyiwei/"
   },
   {
     "id": 100,
@@ -1758,11 +2235,14 @@ window.GAMES = [
     "future": true,
     "poster": "https://blackmyth.game/og.png",
     "videoId": "4r1hl2nvAEY",
-    "description": "",
+    "description": "A new Black Myth action RPG drawing on Zhong Kui, with a fresh approach to the series' world and storytelling.",
     "ratingUrl": "https://www.metacritic.com/search/Black%20Myth%3A%20Zhong%20Kui/",
     "posterSource": "https://blackmyth.game/en/wukong/",
     "videoChannel": "IGN — official reveal trailer",
-    "videoSource": "https://www.youtube.com/watch?v=4r1hl2nvAEY"
+    "videoSource": "https://www.youtube.com/watch?v=4r1hl2nvAEY",
+    "metacritic": null,
+    "downloadLink": "",
+    "descriptionSource": "https://www.metacritic.com/game/black-myth-zhong-kui/"
   },
   {
     "id": 101,
@@ -1775,11 +2255,14 @@ window.GAMES = [
     "future": true,
     "poster": "https://i.playground.ru/e/xZBivbzfwHeomNuRHFOFPQ.jpeg",
     "videoId": "OwgpmP1SLbc",
-    "description": "",
+    "description": "Become Nezha in an action RPG based on Chinese creation myths, confronting colossal gods with celestial combat techniques.",
     "ratingUrl": "https://www.metacritic.com/search/Genigods%3A%20Nezha/",
     "posterSource": "https://www.playground.ru/genigods_nezha/users",
     "videoChannel": "PlayStation",
-    "videoSource": "https://www.youtube.com/watch?v=OwgpmP1SLbc"
+    "videoSource": "https://www.youtube.com/watch?v=OwgpmP1SLbc",
+    "metacritic": null,
+    "downloadLink": "",
+    "descriptionSource": "https://www.metacritic.com/game/genigods-nezha/"
   },
   {
     "id": 102,
@@ -1792,11 +2275,14 @@ window.GAMES = [
     "future": true,
     "poster": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3345210/a46e51cf99ad0ad874dd3e9a3b47b3a7905fe9b7/library_600x900_2x.jpg?t=1742895942",
     "videoId": "umyn1D0EzSg",
-    "description": "",
+    "description": "An adaptation of The Outcast that combines contemporary Chinese culture, supernatural folklore and martial-arts action.",
     "ratingUrl": "https://www.metacritic.com/search/Hitori%20No%20Shita%3A%20The%20Outcast/",
     "posterSource": "https://steamdb.info/app/3345210/",
     "videoChannel": "Official gameplay trailer — via Gematsu",
-    "videoSource": "https://www.gematsu.com/2024/12/hitori-no-shita-the-outcast-game-the-hidden-ones-launches-in-2025-for-pc-ios-and-android"
+    "videoSource": "https://www.gematsu.com/2024/12/hitori-no-shita-the-outcast-game-the-hidden-ones-launches-in-2025-for-pc-ios-and-android",
+    "metacritic": null,
+    "downloadLink": "",
+    "descriptionSource": "https://www.metacritic.com/game/the-hidden-ones/"
   },
   {
     "id": 103,
@@ -1809,11 +2295,14 @@ window.GAMES = [
     "future": true,
     "poster": "https://cdn.muakey.com/storage/media/j0STOM3CMrP4KmwkMH4mPIDH0jDpvUCl35S40Iuf.png?hash=b26bfe59",
     "videoId": "C_ajmBbXJlY",
-    "description": "",
+    "description": "An Eastern fantasy action RPG from TiMi Studio Group, expanding the Honor of Kings universe into a multiplayer adventure.",
     "ratingUrl": "https://www.metacritic.com/search/Honor%20of%20Kings%3A%20World/",
     "posterSource": "https://muakey.com/products/honor-of-kings-world",
     "videoChannel": "TiMi / publisher trailer",
-    "videoSource": "https://www.youtube.com/watch?v=C_ajmBbXJlY"
+    "videoSource": "https://www.youtube.com/watch?v=C_ajmBbXJlY",
+    "metacritic": null,
+    "downloadLink": "",
+    "descriptionSource": "https://www.linkedin.com/posts/tencent-games_were-pleased-to-share-that-honor-of-kings-activity-7448359470260314112-_-fp"
   },
   {
     "id": 104,
@@ -1826,11 +2315,14 @@ window.GAMES = [
     "future": true,
     "poster": "https://i.gadgets360cdn.com/products/large/Untitled-John-Wick-Game-1000x1499-1773299690.jpg?downsize=%2A%3A308",
     "videoId": "Ap5JlQ680E8",
-    "description": "",
+    "description": "Enter an original John Wick story set before the Impossible Task, expanding the film universe through a new action adventure.",
     "ratingUrl": "https://www.metacritic.com/search/John%20Wick%20(AAA%20game%20by%20Saber%20Interactive)/",
     "posterSource": "https://www.gadgets360.com/games/untitled-john-wick-game-135905",
     "videoChannel": "Saber Interactive",
-    "videoSource": "https://www.youtube.com/watch?v=Ap5JlQ680E8"
+    "videoSource": "https://www.youtube.com/watch?v=Ap5JlQ680E8",
+    "metacritic": null,
+    "downloadLink": "",
+    "descriptionSource": "https://www.metacritic.com/game/untitled-john-wick-game/"
   },
   {
     "id": 105,
@@ -1843,11 +2335,14 @@ window.GAMES = [
     "future": true,
     "poster": "https://www.chosun.com/resizer/v2/FZH7HJ2AAVF7BCCNHULUVHEHWA.jpg?auth=e0b8cc2b518e260ee0bcb6b3fab9eb7c9ac697b0b4b987461e2b95560d52bdb3&height=821&smart=true&width=616",
     "videoId": "wNjXDVfyBBk",
-    "description": "",
+    "description": "Explore a fantasy world inspired by The Bird That Drinks Tears, fighting large-scale battles as a powerful Rekon warrior.",
     "ratingUrl": "https://www.metacritic.com/search/Project%20Windless/",
     "posterSource": "https://www.chosun.com/english/industry-en/2026/03/05/V6XXFYDRWVHVRKOMOYGISJD42U/",
     "videoChannel": "KRAFTON",
-    "videoSource": "https://www.youtube.com/watch?v=wNjXDVfyBBk"
+    "videoSource": "https://www.youtube.com/watch?v=wNjXDVfyBBk",
+    "metacritic": null,
+    "downloadLink": "",
+    "descriptionSource": "https://blog.playstation.com/2026/02/12/announcing-open-world-action-rpg-project-windless-for-ps5/"
   },
   {
     "id": 106,
@@ -1860,11 +2355,14 @@ window.GAMES = [
     "future": true,
     "poster": "https://image.api.playstation.com/vulcan/ap/rnd/202512/1702/bc05687adde7d727b0d67f8aaed4aa036e4f8f1a5885af54.jpg",
     "videoId": "pyS909TVyQY",
-    "description": "",
+    "description": "Challenge the Celestials as an elemental warrior in a steampunk city, developing powers and alliances to avenge your family.",
     "ratingUrl": "https://www.metacritic.com/search/The%20God%20Slayer/",
     "posterSource": "https://store.playstation.com/en-us/concept/10018066",
     "videoChannel": "PlayStation",
-    "videoSource": "https://www.youtube.com/watch?v=pyS909TVyQY"
+    "videoSource": "https://www.youtube.com/watch?v=pyS909TVyQY",
+    "metacritic": null,
+    "downloadLink": "",
+    "descriptionSource": "https://store.steampowered.com/app/2536510/"
   },
   {
     "id": 107,
@@ -1877,11 +2375,14 @@ window.GAMES = [
     "future": true,
     "poster": "https://i.3djuegos.com/juegos/20209/tides_of_annihilation/fotos/ficha/tides_of_annihilation-5945317.jpg",
     "videoId": "JJ3fDz_xCio",
-    "description": "",
+    "description": "Fight beside spectral knights as Gwendolyn in a shattered London, confronting an otherworldly invasion inspired by Arthurian legend.",
     "ratingUrl": "https://www.metacritic.com/search/Tides%20of%20Annihilation/",
     "posterSource": "https://www.3djuegos.com/juegos/tides-of-annihilation/caratula/",
     "videoChannel": "Featured by PlayStation",
-    "videoSource": "https://www.youtube.com/watch?v=JJ3fDz_xCio"
+    "videoSource": "https://www.youtube.com/watch?v=JJ3fDz_xCio",
+    "metacritic": null,
+    "downloadLink": "",
+    "descriptionSource": "https://www.metacritic.com/game/tides-of-annihilation/"
   },
   {
     "id": 108,
@@ -1894,11 +2395,16 @@ window.GAMES = [
     "future": false,
     "poster": "https://static.driffle.com/images/70e6c9f9-e10c-4e9d-9206-2b293bd1602b.webp",
     "videoId": "bxatjnLDRMU",
-    "description": "",
+    "description": "Continue the mature fantasy RPG series based on Andrzej Sapkowski's stories in this second Witcher adventure.",
     "ratingUrl": "https://www.metacritic.com/game/the-witcher-2-assassins-of-kings/",
     "posterSource": "https://driffle.com/the-witcher-2-assassins-of-kings-enhanced-edition-pc-steam-digital-code-p20072",
     "videoChannel": "Official Enhanced Edition trailer — via COGconnected",
-    "videoSource": "https://cogconnected.com/video/the-witcher-2-assassins-of-kings-enhanced-edition-launch-trailer/"
+    "videoSource": "https://cogconnected.com/video/the-witcher-2-assassins-of-kings-enhanced-edition-launch-trailer/",
+    "metacritic": 88,
+    "downloadLink": "",
+    "metacriticSource": "https://www.metacritic.com/game/the-witcher-2-assassins-of-kings/",
+    "metacriticChecked": "2026-09-13",
+    "descriptionSource": "https://www.metacritic.com/game/the-witcher-2-assassins-of-kings/"
   },
   {
     "id": 109,
@@ -1911,11 +2417,16 @@ window.GAMES = [
     "future": false,
     "poster": "https://static.actugaming.net/media/2016/03/call-of-duty-advanced-warfare-jaquette-e1572230211573.jpg",
     "videoId": "YSp8ZqIKEIM",
-    "description": "",
+    "description": "Fight in a future where advanced military technology changes the tactics and consequences of warfare.",
     "ratingUrl": "https://www.metacritic.com/game/call-of-duty-advanced-warfare/",
     "posterSource": "https://www.actugaming.net/call-of-duty-advance-warfare-2-sortirait-en-2025-525623/",
     "videoChannel": "Call of Duty",
-    "videoSource": "https://www.codforums.com/threads/advanced-warfare-launch-trailer-released.5164/"
+    "videoSource": "https://www.codforums.com/threads/advanced-warfare-launch-trailer-released.5164/",
+    "metacritic": 81,
+    "downloadLink": "",
+    "metacriticSource": "https://www.metacritic.com/game/call-of-duty-advanced-warfare/",
+    "metacriticChecked": "2026-09-13",
+    "descriptionSource": "https://www.metacritic.com/game/call-of-duty-advanced-warfare/"
   },
   {
     "id": 110,
@@ -1928,11 +2439,16 @@ window.GAMES = [
     "future": false,
     "poster": "https://i.insider.com/57aa2fb4dd08953d118b45ca?auto=webp&format=jpeg&width=600",
     "videoId": "7SREM6E4Fvs",
-    "description": "",
+    "description": "Lead a party against dragons and demonic forces, blending direct combat with tactical coordination in a changing fantasy world.",
     "ratingUrl": "https://www.metacritic.com/game/dragon-age-inquisition/",
     "posterSource": "https://www.businessinsider.com/these-are-the-20-best-games-for-less-than-20-2016-8",
     "videoChannel": "Official launch trailer — via COGconnected",
-    "videoSource": "https://cogconnected.com/video/dragon-age-inquisition-gameplay-launch-trailer-a-wonderful-world/"
+    "videoSource": "https://cogconnected.com/video/dragon-age-inquisition-gameplay-launch-trailer-a-wonderful-world/",
+    "metacritic": 85,
+    "downloadLink": "",
+    "metacriticSource": "https://www.metacritic.com/game/dragon-age-inquisition/",
+    "metacriticChecked": "2026-09-13",
+    "descriptionSource": "https://www.metacritic.com/game/dragon-age-inquisition/"
   },
   {
     "id": 111,
@@ -1946,11 +2462,16 @@ window.GAMES = [
     "future": false,
     "poster": "https://gamefinity.pl/public/uploads/2020/06/91ovwqq23gl_ac_sl1500_.jpg",
     "videoId": "Uz1gWM-YEQk",
-    "description": "",
+    "description": "Return to Kyrat as Ajay Ghale and become entangled in a rebellion against the ruler Pagan Min.",
     "ratingUrl": "https://www.metacritic.com/game/far-cry-4/",
     "posterSource": "https://gamefinity.pl/produkt/far-cry-4-ps4-1",
     "videoChannel": "PlayStation",
-    "videoSource": "https://www.youtube.com/watch?v=Uz1gWM-YEQk"
+    "videoSource": "https://www.youtube.com/watch?v=Uz1gWM-YEQk",
+    "metacritic": 85,
+    "downloadLink": "",
+    "metacriticSource": "https://www.metacritic.com/game/far-cry-4/",
+    "metacriticChecked": "2026-09-13",
+    "descriptionSource": "https://www.metacritic.com/game/far-cry-4/"
   },
   {
     "id": 112,
@@ -1963,11 +2484,16 @@ window.GAMES = [
     "future": false,
     "poster": "https://http2.mlstatic.com/D_984356-MLA99933251705_112025-C.jpg",
     "videoId": "dwjKMjIE1rs",
-    "description": "",
+    "description": "Fight a technologically advanced Nazi regime in an alternate history where the Allies lost World War II.",
     "ratingUrl": "https://www.metacritic.com/game/wolfenstein-the-new-order/",
     "posterSource": "https://lista.mercadolivre.com.br/wolfenstein-the-new-order-ps4",
     "videoChannel": "PlayStation",
-    "videoSource": "https://www.youtube.com/watch?v=dwjKMjIE1rs"
+    "videoSource": "https://www.youtube.com/watch?v=dwjKMjIE1rs",
+    "metacritic": 79,
+    "downloadLink": "",
+    "metacriticSource": "https://www.metacritic.com/game/wolfenstein-the-new-order/",
+    "metacriticChecked": "2026-09-13",
+    "descriptionSource": "https://www.metacritic.com/game/wolfenstein-the-new-order/"
   },
   {
     "id": 113,
@@ -1980,11 +2506,16 @@ window.GAMES = [
     "future": false,
     "poster": "https://cdn11.bigcommerce.com/s-ymgqt/images/stencil/1280x1280/products/46650/41879/Call-of-Duty-Black-Ops-III-__14178.1713019108.jpg?c=2",
     "videoId": "qAUYNIDEJ6o",
-    "description": "",
+    "description": "Combine gunplay with thrust jumps, slides and wall runs in a shooter built around advanced movement.",
     "ratingUrl": "https://www.metacritic.com/game/call-of-duty-black-ops-iii/",
     "posterSource": "https://www.dkoldies.com/call-of-duty-black-ops-iii-xbox-one-game/",
     "videoChannel": "PlayStation",
-    "videoSource": "https://www.youtube.com/watch?v=qAUYNIDEJ6o"
+    "videoSource": "https://www.youtube.com/watch?v=qAUYNIDEJ6o",
+    "metacritic": 81,
+    "downloadLink": "",
+    "metacriticSource": "https://www.metacritic.com/game/call-of-duty-black-ops-iii/",
+    "metacriticChecked": "2026-09-13",
+    "descriptionSource": "https://www.metacritic.com/game/call-of-duty-black-ops-iii/"
   },
   {
     "id": 114,
@@ -1998,11 +2529,16 @@ window.GAMES = [
     "future": false,
     "poster": "https://i.gadgets360cdn.com/products/large/metal-gear-solid-v-the-phantom-pain-review-pc-490828-2-1000x1227-1654779104.jpg",
     "videoId": "PsBNgQaXq5s",
-    "description": "",
+    "description": "Follow Big Boss into open-world espionage, choosing how to approach missions in the concluding Metal Gear Solid V chapter.",
     "ratingUrl": "https://www.metacritic.com/game/metal-gear-solid-v-the-phantom-pain/",
     "posterSource": "https://www.gadgets360.com/metal-gear-solid-5-the-phantom-pain-109849",
     "videoChannel": "Featured by Konami",
-    "videoSource": "https://www.konami.com/games/eu/en/topics/305/"
+    "videoSource": "https://www.konami.com/games/eu/en/topics/305/",
+    "metacritic": 93,
+    "downloadLink": "",
+    "metacriticSource": "https://www.metacritic.com/game/metal-gear-solid-v-the-phantom-pain/",
+    "metacriticChecked": "2026-09-13",
+    "descriptionSource": "https://www.metacritic.com/game/metal-gear-solid-v-the-phantom-pain/"
   },
   {
     "id": 115,
@@ -2016,11 +2552,16 @@ window.GAMES = [
     "future": false,
     "poster": "https://ss423.liverpool.com.mx/xl/1082122105.jpg",
     "videoId": "LUIQR2iK7uI",
-    "description": "",
+    "description": "Survive an interconnected dark fantasy world through demanding sword-and-sorcery combat as an apocalypse approaches.",
     "ratingUrl": "https://www.metacritic.com/game/dark-souls-iii/",
     "posterSource": "https://www.liverpool.com.mx/tienda/pdp/Dark-Souls-Iii-est%C3%A1ndar-para-PS4/1082122105",
     "videoChannel": "Bandai Namco Entertainment America",
-    "videoSource": "https://commons.wikimedia.org/wiki/File:Dark_Souls_III_-_Launch_Trailer_-_no_audio.webm"
+    "videoSource": "https://commons.wikimedia.org/wiki/File:Dark_Souls_III_-_Launch_Trailer_-_no_audio.webm",
+    "metacritic": 89,
+    "downloadLink": "",
+    "metacriticSource": "https://www.metacritic.com/game/dark-souls-iii/",
+    "metacriticChecked": "2026-09-13",
+    "descriptionSource": "https://www.metacritic.com/game/dark-souls-iii/"
   },
   {
     "id": 116,
@@ -2034,11 +2575,16 @@ window.GAMES = [
     "future": false,
     "poster": "https://m.media-amazon.com/images/M/MV5BMjE2NTAyNTItZDIwYi00YWE4LThjYTEtZmVlZTYwY2JlMWYwXkEyXkFqcGc%40._V1_.jpg",
     "videoId": "vD1ccSM9qiA",
-    "description": "",
+    "description": "Take charge of the Horizon Festival and explore Australia behind the wheel of a wide range of cars.",
     "ratingUrl": "https://www.metacritic.com/game/forza-horizon-3/",
     "posterSource": "https://www.imdb.com/title/tt6321266/mediaindex/",
     "videoChannel": "Featured by Xbox",
-    "videoSource": "https://news.xbox.com/en-us/2016/09/20/get-ready-to-race-with-the-forza-horizon-3-launch-trailer/"
+    "videoSource": "https://news.xbox.com/en-us/2016/09/20/get-ready-to-race-with-the-forza-horizon-3-launch-trailer/",
+    "metacritic": 91,
+    "downloadLink": "",
+    "metacriticSource": "https://www.metacritic.com/game/forza-horizon-3/",
+    "metacriticChecked": "2026-09-13",
+    "descriptionSource": "https://www.metacritic.com/game/forza-horizon-3/"
   },
   {
     "id": 117,
@@ -2051,11 +2597,16 @@ window.GAMES = [
     "future": false,
     "poster": "https://www.bruneiclick.com/cdn/shop/products/hellblade-senuas-sacrifice-576253.9.jpg?v=1593546066",
     "videoId": "jeYZDXMBdaM",
-    "description": "",
+    "description": "Journey with Senua through a personal nightmare of dangerous creatures and intense sword combat.",
     "ratingUrl": "https://www.metacritic.com/game/hellblade-senuas-sacrifice/",
     "posterSource": "https://www.bruneiclick.com/products/hellblade-senuas-sacrifice-playstation-4-us",
     "videoChannel": "Ninja Theory — Steam announcement",
-    "videoSource": "https://store.steampowered.com/news/posts/?appids=414340&enddate=1498489880"
+    "videoSource": "https://store.steampowered.com/news/posts/?appids=414340&enddate=1498489880",
+    "metacritic": 81,
+    "downloadLink": "",
+    "metacriticSource": "https://www.metacritic.com/game/hellblade-senuas-sacrifice/",
+    "metacriticChecked": "2026-09-13",
+    "descriptionSource": "https://www.metacritic.com/game/hellblade-senuas-sacrifice/"
   },
   {
     "id": 118,
@@ -2069,11 +2620,16 @@ window.GAMES = [
     "future": false,
     "poster": "https://i.playground.ru/e/_ItsEMdzGwiJTfMvOfin0g.jpeg",
     "videoId": "adP9TPxb9z8",
-    "description": "",
+    "description": "An open-world RPG with a nonlinear story and first-person melee combat.",
     "ratingUrl": "https://www.metacritic.com/game/kingdom-come-deliverance/",
     "posterSource": "https://www.playground.ru/kingdom_come_deliverance/forum/truslivyj_rytsar-1553022",
     "videoChannel": "Featured by PlayStation",
-    "videoSource": "https://www.youtube.com/watch?v=adP9TPxb9z8"
+    "videoSource": "https://www.youtube.com/watch?v=adP9TPxb9z8",
+    "metacritic": 76,
+    "downloadLink": "",
+    "metacriticSource": "https://www.metacritic.com/game/kingdom-come-deliverance/",
+    "metacriticChecked": "2026-09-13",
+    "descriptionSource": "https://www.metacritic.com/game/kingdom-come-deliverance/"
   },
   {
     "id": 119,
@@ -2087,11 +2643,16 @@ window.GAMES = [
     "future": false,
     "poster": "https://i5.walmartimages.com/asr/bc7a7e5f-f4e1-42c5-a5f8-5625f4078519.7524b452df55ca4ecf2721386fba6da9.jpeg?odnBg=FFFFFF&odnHeight=768&odnWidth=768",
     "videoId": "ekTPEQypkjw",
-    "description": "",
+    "description": "Explore a chaotic wasteland with powerful weapons, supernatural abilities and explosive first-person combat.",
     "ratingUrl": "https://www.metacritic.com/game/rage-2/",
     "posterSource": "https://www.walmart.com/ip/491637261",
     "videoChannel": "Featured by PlayStation",
-    "videoSource": "https://www.youtube.com/watch?v=ekTPEQypkjw"
+    "videoSource": "https://www.youtube.com/watch?v=ekTPEQypkjw",
+    "metacritic": 73,
+    "downloadLink": "",
+    "metacriticSource": "https://www.metacritic.com/game/rage-2/",
+    "metacriticChecked": "2026-09-13",
+    "descriptionSource": "https://www.metacritic.com/game/rage-2/"
   },
   {
     "id": 120,
@@ -2105,11 +2666,16 @@ window.GAMES = [
     "future": false,
     "poster": "https://m.media-amazon.com/images/M/MV5BNjc4ZWI4ZWUtMDY0Ni00MTkyLWE5NjQtMTU0MGNiZGI0ZGZhXkEyXkFqcGc%40._V1_FMjpg_UX1000_.jpg",
     "videoId": "emLEsdK19PE",
-    "description": "",
+    "description": "Face an otherworldly invasion alone or with two companions while fighting to reclaim a ruined world.",
     "ratingUrl": "https://www.metacritic.com/game/remnant-from-the-ashes/",
     "posterSource": "https://www.imdb.com/title/tt10907818/reviews/",
     "videoChannel": "Featured by PlayStation",
-    "videoSource": "https://www.youtube.com/watch?v=emLEsdK19PE"
+    "videoSource": "https://www.youtube.com/watch?v=emLEsdK19PE",
+    "metacritic": 78,
+    "downloadLink": "",
+    "metacriticSource": "https://www.metacritic.com/game/remnant-from-the-ashes/",
+    "metacriticChecked": "2026-09-13",
+    "descriptionSource": "https://www.metacritic.com/game/remnant-from-the-ashes/"
   },
   {
     "id": 121,
@@ -2123,11 +2689,14 @@ window.GAMES = [
     "future": false,
     "poster": "https://imgix.ranker.com/user_node_img/4404/88078099/original/88078099-photo-u248102644?auto=format&dpr=2&fit=crop&fm=pjpg&q=60&w=500",
     "videoId": "0E44DClsX5Q",
-    "description": "",
+    "description": "A free-to-play Call of Duty battle royale focused on surviving large-scale gunfights.",
     "ratingUrl": "https://www.metacritic.com/game/call-of-duty-warzone/",
     "posterSource": "https://www.ranker.com/list/best-ps5-free-to-play-games-ranked/david-de-la-riva",
     "videoChannel": "Official trailer featured by Gematsu",
-    "videoSource": "https://www.youtube.com/watch?v=0E44DClsX5Q"
+    "videoSource": "https://www.youtube.com/watch?v=0E44DClsX5Q",
+    "metacritic": null,
+    "downloadLink": "",
+    "descriptionSource": "https://www.metacritic.com/game/call-of-duty-warzone/"
   },
   {
     "id": 122,
@@ -2141,11 +2710,16 @@ window.GAMES = [
     "future": false,
     "poster": "https://e.snmc.io/lk/f/x/59d775183782bd2ec894941a3eda5b0f/9469306",
     "videoId": "1HDLr8SyY8Q",
-    "description": "",
+    "description": "Investigate strange phenomena in a futuristic world with fast-paced combat blending shooting and action mechanics.",
     "ratingUrl": "https://www.metacritic.com/game/bright-memory-infinite/",
     "posterSource": "https://thebinarymessiah.com/2022/06/28/bright-memory-infinite/",
     "videoChannel": "Featured by PLAYISM",
-    "videoSource": "https://playism.com/en/game/bright-memory-infinite/"
+    "videoSource": "https://playism.com/en/game/bright-memory-infinite/",
+    "metacritic": 67,
+    "downloadLink": "",
+    "metacriticSource": "https://www.metacritic.com/game/bright-memory-infinite/",
+    "metacriticChecked": "2026-09-13",
+    "descriptionSource": "https://www.metacritic.com/game/bright-memory-infinite/"
   },
   {
     "id": 123,
@@ -2159,11 +2733,16 @@ window.GAMES = [
     "future": false,
     "poster": "https://freaktoyz.com/cdn/shop/files/328bc410-ebbc-4c88-a4aa-46af41cfa846.2ac7925aab3e4527a7fe69cc2a052696.jpg?v=1767115421",
     "videoId": "FxgwIP4Cqpc",
-    "description": "",
+    "description": "Hunt targets across Blackreef as an assassin trapped in a time loop, experimenting with ways to break the cycle.",
     "ratingUrl": "https://www.metacritic.com/game/deathloop/",
     "posterSource": "https://freaktoyz.com/products/deathloop",
     "videoChannel": "Featured by PlayStation",
-    "videoSource": "https://www.youtube.com/watch?v=FxgwIP4Cqpc"
+    "videoSource": "https://www.youtube.com/watch?v=FxgwIP4Cqpc",
+    "metacritic": 88,
+    "downloadLink": "",
+    "metacriticSource": "https://www.metacritic.com/game/deathloop/",
+    "metacriticChecked": "2026-09-13",
+    "descriptionSource": "https://www.metacritic.com/game/deathloop/"
   },
   {
     "id": 124,
@@ -2177,11 +2756,16 @@ window.GAMES = [
     "future": false,
     "poster": "https://cdn.awsli.com.br/800x800/53/53761/produto/133652987/abaaa4a889.jpg",
     "videoId": "3ofwv2IuU1o",
-    "description": "",
-    "ratingUrl": "https://www.metacritic.com/search/Demon%20Slayer%3A%20The%20Hinokami%20Chronicles/",
+    "description": "Relive Tanjiro’s battles from Demon Slayer through the Mugen Train arc, with a separate mode for two-character tag teams.",
+    "ratingUrl": "https://www.metacritic.com/game/demon-slayer-kimetsu-no-yaiba-the-hinokami/",
     "posterSource": "https://www.gamegames.com.br/demon-slayer-the-hinokami-chronicles-ps4",
     "videoChannel": "Featured by PlayStation",
-    "videoSource": "https://www.youtube.com/watch?v=3ofwv2IuU1o"
+    "videoSource": "https://www.youtube.com/watch?v=3ofwv2IuU1o",
+    "metacritic": 69,
+    "downloadLink": "",
+    "descriptionSource": "https://www.metacritic.com/game/demon-slayer-kimetsu-no-yaiba-the-hinokami/",
+    "metacriticSource": "https://www.metacritic.com/game/demon-slayer-kimetsu-no-yaiba-the-hinokami/",
+    "metacriticChecked": "2026-09-13"
   },
   {
     "id": 125,
@@ -2194,11 +2778,16 @@ window.GAMES = [
     "future": false,
     "poster": "https://images.cgames.de/images/gsgp/4/14459-playstation-5-packshot_6103049.jpg",
     "videoId": "pWh5388AEHw",
-    "description": "",
+    "description": "Explore a spirit-filled world with Kena and her tiny Rot companions, using their abilities in combat and environmental puzzles.",
     "ratingUrl": "https://www.metacritic.com/game/kena-bridge-of-spirits/",
     "posterSource": "https://www.gamepro.de/spiele/kena-bridge-of-spirits%2C14459.html",
     "videoChannel": "Featured by PlayStation",
-    "videoSource": "https://www.youtube.com/watch?v=pWh5388AEHw"
+    "videoSource": "https://www.youtube.com/watch?v=pWh5388AEHw",
+    "metacritic": 81,
+    "downloadLink": "",
+    "metacriticSource": "https://www.metacritic.com/game/kena-bridge-of-spirits/",
+    "metacriticChecked": "2026-09-13",
+    "descriptionSource": "https://www.metacritic.com/game/kena-bridge-of-spirits/"
   },
   {
     "id": 126,
@@ -2211,11 +2800,16 @@ window.GAMES = [
     "future": false,
     "poster": "https://www.igroshop.com/images/detailed/9/Mass-Effect-Legendary-Edition.png",
     "videoId": "Jh37cTUuSdQ",
-    "description": "",
+    "description": "Revisit Commander Shepard's adventures in a collection that updates the original Mass Effect trilogy's presentation.",
     "ratingUrl": "https://www.metacritic.com/game/mass-effect-legendary-edition/",
     "posterSource": "https://www.igroshop.com/mass-effect-legendary-edition.html?sl=en",
     "videoChannel": "Featured by PlayStation",
-    "videoSource": "https://www.youtube.com/watch?v=Jh37cTUuSdQ"
+    "videoSource": "https://www.youtube.com/watch?v=Jh37cTUuSdQ",
+    "metacritic": 87,
+    "downloadLink": "",
+    "metacriticSource": "https://www.metacritic.com/game/mass-effect-legendary-edition/",
+    "metacriticChecked": "2026-09-13",
+    "descriptionSource": "https://www.metacritic.com/game/mass-effect-legendary-edition/"
   },
   {
     "id": 127,
@@ -2229,11 +2823,16 @@ window.GAMES = [
     "future": false,
     "poster": "https://m.media-amazon.com/images/M/MV5BODY4ZjRlNDItZmViZC00ZjE3LWE3NjEtY2IxMTAyMzU3YmMxXkEyXkFqcGc%40._V1_FMjpg_UX1000_.jpg",
     "videoId": "IBad1ZGvQzs",
-    "description": "",
+    "description": "Follow two people from opposing worlds as they seek freedom from centuries of oppression in an action RPG.",
     "ratingUrl": "https://www.metacritic.com/game/tales-of-arise/",
     "posterSource": "https://www.imdb.com/title/tt11061762/",
     "videoChannel": "Featured by PlayStation",
-    "videoSource": "https://www.youtube.com/watch?v=IBad1ZGvQzs"
+    "videoSource": "https://www.youtube.com/watch?v=IBad1ZGvQzs",
+    "metacritic": 87,
+    "downloadLink": "",
+    "metacriticSource": "https://www.metacritic.com/game/tales-of-arise/",
+    "metacriticChecked": "2026-09-13",
+    "descriptionSource": "https://www.metacritic.com/game/tales-of-arise/"
   },
   {
     "id": 128,
@@ -2246,11 +2845,16 @@ window.GAMES = [
     "future": false,
     "poster": "https://s.pacn.ws/1/p/14l/gungrave-g-o-r-e-730963.7.jpg?v=rlobvy",
     "videoId": "u-VYm9XAooA",
-    "description": "",
+    "description": "Play as Grave and tear through enemies with relentless gunfire in a third-person action story of vengeance and loyalty.",
     "ratingUrl": "https://www.metacritic.com/search/Gungrave%20G.O.R.E/",
     "posterSource": "https://www.play-asia.com/en/gungrave-gore/13/70fo0j",
     "videoChannel": "PlayStation",
-    "videoSource": "https://www.youtube.com/watch?v=u-VYm9XAooA"
+    "videoSource": "https://www.youtube.com/watch?v=u-VYm9XAooA",
+    "metacritic": 57,
+    "downloadLink": "",
+    "metacriticSource": "https://www.metacritic.com/game/gungrave-gore/",
+    "metacriticChecked": "2026-09-13",
+    "descriptionSource": "https://www.metacritic.com/game/gungrave-gore/"
   },
   {
     "id": 129,
@@ -2263,11 +2867,16 @@ window.GAMES = [
     "future": false,
     "poster": "https://images.igdb.com/igdb/image/upload/t_720p/co989y.jpg",
     "videoId": "vvnU0GvZw3c",
-    "description": "",
+    "description": "Battle through New York and Dimension X with the Ninja Turtles in a colorful, retro-inspired side-scrolling brawler.",
     "ratingUrl": "https://www.metacritic.com/search/TMNT%3A%20Shredder%E2%80%99s%20Revenge/",
     "posterSource": "https://games.asobulo.com/games/teenage-mutant-ninja-turtles-shredders-revenge-special-edition",
     "videoChannel": "Featured by PlayStation",
-    "videoSource": "https://www.youtube.com/watch?v=vvnU0GvZw3c"
+    "videoSource": "https://www.youtube.com/watch?v=vvnU0GvZw3c",
+    "metacritic": 85,
+    "downloadLink": "",
+    "metacriticSource": "https://www.metacritic.com/game/teenage-mutant-ninja-turtles-shredders-revenge/",
+    "metacriticChecked": "2026-09-13",
+    "descriptionSource": "https://www.metacritic.com/game/teenage-mutant-ninja-turtles-shredders-revenge/"
   },
   {
     "id": 130,
@@ -2281,11 +2890,14 @@ window.GAMES = [
     "future": false,
     "poster": "https://cdn.mobygames.com/covers/20149570-hitman-iii-xbox-one-front-cover.png",
     "videoId": "Z9Q4wAvWBAg",
-    "description": "",
+    "description": "Explore detailed assassination sandboxes across the modern Hitman trilogy, choosing creative approaches to each mission.",
     "ratingUrl": "https://www.metacritic.com/search/Hitman%3A%20World%20of%20Assassination/",
     "posterSource": "https://www.mobygames.com/game/157629/hitman-iii/",
     "videoChannel": "PlayStation",
-    "videoSource": "https://www.youtube.com/watch?v=Z9Q4wAvWBAg"
+    "videoSource": "https://www.youtube.com/watch?v=Z9Q4wAvWBAg",
+    "metacritic": null,
+    "downloadLink": "",
+    "descriptionSource": "https://www.playstation.com/en-dk/games/hitman-3/"
   },
   {
     "id": 131,
@@ -2299,11 +2911,16 @@ window.GAMES = [
     "future": false,
     "poster": "https://cdn.thegamesdb.net/images/original/boxart/front/104362-1.jpg",
     "videoId": "uHGShqcAHlQ",
-    "description": "",
+    "description": "Explore Hyrule and its sky islands, using Link's new abilities to solve problems and confront threats to the kingdom.",
     "ratingUrl": "https://www.metacritic.com/game/the-legend-of-zelda-tears-of-the-kingdom/",
     "posterSource": "https://thegamesdb.net/game.php?id=104362",
     "videoChannel": "Nintendo",
-    "videoSource": "https://www.youtube.com/watch?v=uHGShqcAHlQ"
+    "videoSource": "https://www.youtube.com/watch?v=uHGShqcAHlQ",
+    "metacritic": 96,
+    "downloadLink": "",
+    "metacriticSource": "https://www.metacritic.com/game/the-legend-of-zelda-tears-of-the-kingdom/",
+    "metacriticChecked": "2026-09-13",
+    "descriptionSource": "https://www.metacritic.com/game/the-legend-of-zelda-tears-of-the-kingdom/"
   },
   {
     "id": 132,
@@ -2317,11 +2934,16 @@ window.GAMES = [
     "future": false,
     "poster": "https://store-images.s-microsoft.com/image/apps.49238.13739435340883540.5769dd81-ea40-4ffd-9253-32bb306955bf.27334fd9-ff86-41f0-8b5c-e238c02bc752",
     "videoId": "MybFEV0VQxg",
-    "description": "",
+    "description": "Journey through Kenzera with the God of Death in a metroidvania about reclaiming a father's spirit.",
     "ratingUrl": "https://www.metacritic.com/game/tales-of-kenzera-zau/",
     "posterSource": "https://www.xbox.com/en-IN/games/store/tales-of-kenzera-zau/9NNNMBXFFG4W",
     "videoChannel": "Featured by PlayStation",
-    "videoSource": "https://www.youtube.com/watch?v=MybFEV0VQxg"
+    "videoSource": "https://www.youtube.com/watch?v=MybFEV0VQxg",
+    "metacritic": 76,
+    "downloadLink": "",
+    "metacriticSource": "https://www.metacritic.com/game/tales-of-kenzera-zau/",
+    "metacriticChecked": "2026-09-13",
+    "descriptionSource": "https://www.metacritic.com/game/tales-of-kenzera-zau/"
   },
   {
     "id": 133,
@@ -2335,11 +2957,16 @@ window.GAMES = [
     "future": false,
     "poster": "https://images.igdb.com/igdb/image/upload/t_1080p/cob4qg.jpg",
     "videoId": "hRhVca9Aeu4",
-    "description": "",
+    "description": "Awaken as the Rover and explore a story-driven open world filled with unfamiliar sights and technology.",
     "ratingUrl": "https://www.metacritic.com/game/wuthering-waves/",
     "posterSource": "https://pcgamesguide.co.uk/games/wuthering-waves/",
     "videoChannel": "Wuthering Waves",
-    "videoSource": "https://www.youtube.com/watch?v=hRhVca9Aeu4"
+    "videoSource": "https://www.youtube.com/watch?v=hRhVca9Aeu4",
+    "metacritic": 71,
+    "downloadLink": "",
+    "metacriticSource": "https://www.metacritic.com/game/wuthering-waves/",
+    "metacriticChecked": "2026-09-13",
+    "descriptionSource": "https://www.metacritic.com/game/wuthering-waves/"
   },
   {
     "id": 134,
@@ -2353,11 +2980,16 @@ window.GAMES = [
     "future": false,
     "poster": "https://kritikanstvo.ru/games/a/absolum_1/covers/1760224312.jpg",
     "videoId": "FiDO41Sziss",
-    "description": "",
+    "description": "A fantasy beat ’em up that combines arcade-style combat with roguelite progression and hand-drawn animation.",
     "ratingUrl": "https://www.metacritic.com/game/absolum/",
     "posterSource": "https://kritikanstvo.ru/games/absolum/",
     "videoChannel": "PlayStation",
-    "videoSource": "https://www.youtube.com/watch?v=FiDO41Sziss"
+    "videoSource": "https://www.youtube.com/watch?v=FiDO41Sziss",
+    "metacritic": 87,
+    "downloadLink": "",
+    "metacriticSource": "https://www.metacritic.com/game/absolum/",
+    "metacriticChecked": "2026-09-13",
+    "descriptionSource": "https://www.dotemu.com/games/absolum/"
   },
   {
     "id": 135,
@@ -2371,11 +3003,16 @@ window.GAMES = [
     "future": false,
     "poster": "https://images.ctfassets.net/5owu3y35gz1g/4ZhfhuAegpeSC9m7cCrTj0/e918b36f3a0f69067d51dba5ab7a1533/HADESII_Cover_CMYK_Website.png?w=450&h=620&q=100",
     "videoId": "ppEKFy83w-o",
-    "description": "",
+    "description": "Use Melinoe's dark magic and Olympian powers to battle the Titan of Time in a replayable mythological adventure.",
     "ratingUrl": "https://www.metacritic.com/game/hades-ii/",
     "posterSource": "https://hades.fandom.com/wiki/Hades_II",
     "videoChannel": "Supergiant Games",
-    "videoSource": "https://www.youtube.com/watch?v=ppEKFy83w-o"
+    "videoSource": "https://www.youtube.com/watch?v=ppEKFy83w-o",
+    "metacritic": 95,
+    "downloadLink": "",
+    "metacriticSource": "https://www.metacritic.com/game/hades-ii/",
+    "metacriticChecked": "2026-09-13",
+    "descriptionSource": "https://www.metacritic.com/game/hades-ii/"
   },
   {
     "id": 136,
@@ -2389,11 +3026,16 @@ window.GAMES = [
     "future": false,
     "poster": "https://images.static-bluray.com/products/16/1_2_large.jpg",
     "videoId": "Xu81znuI8tw",
-    "description": "",
+    "description": "Follow former outlaw John Marston across the American frontier as government power encroaches on the fading Wild West.",
     "ratingUrl": "https://www.metacritic.com/game/red-dead-redemption/",
     "posterSource": "https://www.blu-ray.com/Red-Dead-Redemption-PS3/12183/",
     "videoChannel": "Featured by PlayStation",
-    "videoSource": "https://www.youtube.com/watch?v=Xu81znuI8tw"
+    "videoSource": "https://www.youtube.com/watch?v=Xu81znuI8tw",
+    "metacritic": 95,
+    "downloadLink": "",
+    "metacriticSource": "https://www.metacritic.com/game/red-dead-redemption/",
+    "metacriticChecked": "2026-09-13",
+    "descriptionSource": "https://www.metacritic.com/game/red-dead-redemption/"
   },
   {
     "id": 137,
@@ -2406,11 +3048,16 @@ window.GAMES = [
     "future": false,
     "poster": "https://2.bp.blogspot.com/-IqRRa2tKAG4/UiCfmdMWnII/AAAAAAAAAHM/a5V3Ej8tATQ/s1600/1346156382_Battlefield3gamecover.jpg",
     "videoId": "cSweJ9u7Ak4",
-    "description": "",
+    "description": "Fight as a U.S. Marine through international campaign missions and competitive multiplayer battles with destructible environments.",
     "ratingUrl": "https://www.metacritic.com/game/battlefield-3/",
     "posterSource": "https://gamesbylegend.blogspot.com/2013/08/battlefield-3-free-download-full.html",
     "videoChannel": "Official launch trailer — via Gematsu",
-    "videoSource": "https://www.gematsu.com/2011/10/battlefield-3-launch-trailer"
+    "videoSource": "https://www.gematsu.com/2011/10/battlefield-3-launch-trailer",
+    "metacritic": 89,
+    "downloadLink": "",
+    "metacriticSource": "https://www.metacritic.com/game/battlefield-3/",
+    "metacriticChecked": "2026-09-13",
+    "descriptionSource": "https://www.metacritic.com/game/battlefield-3/"
   },
   {
     "id": 138,
@@ -2424,11 +3071,16 @@ window.GAMES = [
     "future": false,
     "poster": "https://assetsio.gnwcdn.com/co2e3z.jpg?auto=webp&fit=bounds&format=jpg&height=2048&quality=85&width=2048",
     "videoId": "fbwtPtxzURA",
-    "description": "",
+    "description": "Infiltrate Hong Kong's criminal underworld as undercover officer Wei Shen, combining martial arts with open-world exploration.",
     "ratingUrl": "https://www.metacritic.com/game/sleeping-dogs/",
     "posterSource": "https://www.eurogamer.pt/os-requisitos-para-jogarem-sleeping-dogs-no-pc",
     "videoChannel": "PS3 launch trailer",
-    "videoSource": "https://www.youtube.com/watch?v=fbwtPtxzURA"
+    "videoSource": "https://www.youtube.com/watch?v=fbwtPtxzURA",
+    "metacritic": 80,
+    "downloadLink": "",
+    "metacriticSource": "https://www.metacritic.com/game/sleeping-dogs/",
+    "metacriticChecked": "2026-09-13",
+    "descriptionSource": "https://www.metacritic.com/game/sleeping-dogs/"
   },
   {
     "id": 139,
@@ -2441,11 +3093,16 @@ window.GAMES = [
     "future": false,
     "poster": "https://www.lukiegames.com/assets/images/PS4/ps4_battlefield_4_p_6wrwh0.jpg",
     "videoId": "2jbfnhb0ws0",
-    "description": "",
+    "description": "Use vehicles and destructible environments in a military shooter with a character-led campaign and large-scale multiplayer battles.",
     "ratingUrl": "https://www.metacritic.com/game/battlefield-4/",
     "posterSource": "https://www.lukiegames.com/battlefield-4-playstation-4-game",
     "videoChannel": "IGN — official story trailer",
-    "videoSource": "https://www.youtube.com/watch?v=2jbfnhb0ws0"
+    "videoSource": "https://www.youtube.com/watch?v=2jbfnhb0ws0",
+    "metacritic": 81,
+    "downloadLink": "",
+    "metacriticSource": "https://www.metacritic.com/game/battlefield-4/",
+    "metacriticChecked": "2026-09-13",
+    "descriptionSource": "https://www.metacritic.com/game/battlefield-4/"
   },
   {
     "id": 140,
@@ -2459,11 +3116,16 @@ window.GAMES = [
     "future": false,
     "poster": "https://retroislandny.com/cdn/shop/files/grand-theft-auto-v-playstation-3-817582.jpg?v=1712588140&width=1946",
     "videoId": "tV95N0TIltc",
-    "description": "",
+    "description": "Follow three criminals through Los Santos as they pursue money and survival in a sprawling open-world crime story.",
     "ratingUrl": "https://www.metacritic.com/game/grand-theft-auto-v/",
     "posterSource": "https://retroislandny.com/products/grand-theft-auto-v-playstation-3",
     "videoChannel": "Featured by PlayStation",
-    "videoSource": "https://www.youtube.com/watch?v=tV95N0TIltc"
+    "videoSource": "https://www.youtube.com/watch?v=tV95N0TIltc",
+    "metacritic": 97,
+    "downloadLink": "",
+    "metacriticSource": "https://www.metacritic.com/game/grand-theft-auto-v/",
+    "metacriticChecked": "2026-09-13",
+    "descriptionSource": "https://www.metacritic.com/game/grand-theft-auto-v/"
   },
   {
     "id": 141,
@@ -2477,11 +3139,16 @@ window.GAMES = [
     "future": false,
     "poster": "https://m.media-amazon.com/images/M/MV5BZmEwNzMyOWQtYmU5Mi00YjhkLWIxNGYtZDRjZjZmNTQ4NzhiXkEyXkFqcGc@._V1_.jpg",
     "videoId": "o3U3vOqgjmU",
-    "description": "",
+    "description": "Take control of Raiden in an action-focused Metal Gear adventure developed with PlatinumGames.",
     "ratingUrl": "https://www.metacritic.com/game/metal-gear-rising-revengeance/",
     "posterSource": "https://www.creativeuncut.com/gallery-22/mgrr-box-art.html",
     "videoChannel": "GameSpot — launch trailer",
-    "videoSource": "https://www.youtube.com/watch?v=o3U3vOqgjmU"
+    "videoSource": "https://www.youtube.com/watch?v=o3U3vOqgjmU",
+    "metacritic": 80,
+    "downloadLink": "",
+    "metacriticSource": "https://www.metacritic.com/game/metal-gear-rising-revengeance/",
+    "metacriticChecked": "2026-09-13",
+    "descriptionSource": "https://www.metacritic.com/game/metal-gear-rising-revengeance/"
   },
   {
     "id": 142,
@@ -2494,11 +3161,16 @@ window.GAMES = [
     "future": false,
     "poster": "https://media.gamestop.com/i/gamestop/10088915/Tomb-Raider",
     "videoId": "RN7_8Yholm4",
-    "description": "",
+    "description": "Experience Lara Croft's first struggle for survival as she explores a dangerous island and uncovers its history.",
     "ratingUrl": "https://www.metacritic.com/game/tomb-raider/",
     "posterSource": "https://www.gamestop.com/video-games/retro-gaming/products/tomb-raider---playstation-3/10088914-10088915.html",
     "videoChannel": "Tomb Raider",
-    "videoSource": "https://www.youtube.com/watch?v=RN7_8Yholm4"
+    "videoSource": "https://www.youtube.com/watch?v=RN7_8Yholm4",
+    "metacritic": 86,
+    "downloadLink": "",
+    "metacriticSource": "https://www.metacritic.com/game/tomb-raider/",
+    "metacriticChecked": "2026-09-13",
+    "descriptionSource": "https://www.metacritic.com/game/tomb-raider/"
   },
   {
     "id": 143,
@@ -2512,11 +3184,16 @@ window.GAMES = [
     "future": false,
     "poster": "https://cdn11.bigcommerce.com/s-ymgqt/images/stencil/1000w/products/40748/33165/shadows_of_mordor__04606.1679585752.jpg?c=2",
     "videoId": "ndh1gWlwiiQ",
-    "description": "",
+    "description": "Fight through Mordor, investigate a mysterious spirit and challenge Sauron's forces in a Middle-earth adventure.",
     "ratingUrl": "https://www.metacritic.com/game/middle-earth-shadow-of-mordor/",
     "posterSource": "https://www.dkoldies.com/shadows-of-mordor-ps4-game/",
     "videoChannel": "Official launch trailer",
-    "videoSource": "https://www.youtube.com/watch?v=ndh1gWlwiiQ"
+    "videoSource": "https://www.youtube.com/watch?v=ndh1gWlwiiQ",
+    "metacritic": 84,
+    "downloadLink": "",
+    "metacriticSource": "https://www.metacritic.com/game/middle-earth-shadow-of-mordor/",
+    "metacriticChecked": "2026-09-13",
+    "descriptionSource": "https://www.metacritic.com/game/middle-earth-shadow-of-mordor/"
   },
   {
     "id": 144,
@@ -2530,11 +3207,16 @@ window.GAMES = [
     "future": false,
     "poster": "https://media.gamestop.com/i/gamestop/10113909/Batman-Arkham-Knight",
     "videoId": "JeGAQXY2FzI",
-    "description": "",
+    "description": "Defend Gotham from Scarecrow and his allies, using Batman's combat skills, gadgets and drivable Batmobile.",
     "ratingUrl": "https://www.metacritic.com/game/batman-arkham-knight/",
     "posterSource": "https://www.gamestop.com/video-games/products/batman-arkham-knight/10113909.html",
     "videoChannel": "PlayStation",
-    "videoSource": "https://www.youtube.com/watch?v=JeGAQXY2FzI"
+    "videoSource": "https://www.youtube.com/watch?v=JeGAQXY2FzI",
+    "metacritic": 87,
+    "downloadLink": "",
+    "metacriticSource": "https://www.metacritic.com/game/batman-arkham-knight/",
+    "metacriticChecked": "2026-09-13",
+    "descriptionSource": "https://www.metacritic.com/game/batman-arkham-knight/"
   },
   {
     "id": 145,
@@ -2547,11 +3229,16 @@ window.GAMES = [
     "future": false,
     "poster": "https://syltefar.com/covers_medium/rise_of_the_tomb_raider_ps4.jpg",
     "videoId": "SDlUfL7uwc0",
-    "description": "",
+    "description": "Guide Lara through hazardous wilderness and ancient tombs, crafting equipment and using the environment to overcome enemies.",
     "ratingUrl": "https://www.metacritic.com/game/rise-of-the-tomb-raider/",
     "posterSource": "https://syltefar.com/game/?id=3061",
     "videoChannel": "Tomb Raider — 20 Year Celebration",
-    "videoSource": "https://www.youtube.com/watch?v=SDlUfL7uwc0"
+    "videoSource": "https://www.youtube.com/watch?v=SDlUfL7uwc0",
+    "metacritic": 86,
+    "downloadLink": "",
+    "metacriticSource": "https://www.metacritic.com/game/rise-of-the-tomb-raider/",
+    "metacriticChecked": "2026-09-13",
+    "descriptionSource": "https://www.metacritic.com/game/rise-of-the-tomb-raider/"
   },
   {
     "id": 146,
@@ -2564,11 +3251,16 @@ window.GAMES = [
     "future": false,
     "poster": "https://m.media-amazon.com/images/M/MV5BNTVmNTY5OTgtZWEwMC00YjE0LWIwNTEtMDg2MWE1ZjJiYmE2XkEyXkFqcGc%40._V1_.jpg",
     "videoId": "ktw2k3m7Qko",
-    "description": "",
+    "description": "Form a bond with a veteran Titan behind enemy lines in a shooter combining agile pilot combat and powerful machines.",
     "ratingUrl": "https://www.metacritic.com/game/titanfall-2/",
     "posterSource": "https://www.imdb.com/title/tt3612274/mediaindex/",
     "videoChannel": "GameSpot",
-    "videoSource": "https://www.youtube.com/watch?v=ktw2k3m7Qko"
+    "videoSource": "https://www.youtube.com/watch?v=ktw2k3m7Qko",
+    "metacritic": 89,
+    "downloadLink": "",
+    "metacriticSource": "https://www.metacritic.com/game/titanfall-2/",
+    "metacriticChecked": "2026-09-13",
+    "descriptionSource": "https://www.metacritic.com/game/titanfall-2/"
   },
   {
     "id": 147,
@@ -2581,11 +3273,16 @@ window.GAMES = [
     "future": false,
     "poster": "https://cdn.kanobu.ru/games/6497a30a-f602-4d09-9e8a-a7aafe389cb7.webp",
     "videoId": "4ezuTDZO1qM",
-    "description": "",
+    "description": "Recruit resistance fighters across Nazi-controlled America and battle the regime with an expanded arsenal.",
     "ratingUrl": "https://www.metacritic.com/game/wolfenstein-ii-the-new-colossus/",
     "posterSource": "https://kanobu.ru/games/wolfenstein-new-colossus/",
     "videoChannel": "Official launch trailer",
-    "videoSource": "https://www.youtube.com/watch?v=4ezuTDZO1qM"
+    "videoSource": "https://www.youtube.com/watch?v=4ezuTDZO1qM",
+    "metacritic": 87,
+    "downloadLink": "",
+    "metacriticSource": "https://www.metacritic.com/game/wolfenstein-ii-the-new-colossus/",
+    "metacriticChecked": "2026-09-13",
+    "descriptionSource": "https://www.metacritic.com/game/wolfenstein-ii-the-new-colossus/"
   },
   {
     "id": 148,
@@ -2598,11 +3295,16 @@ window.GAMES = [
     "future": false,
     "poster": "https://i.ebayimg.com/images/g/MNMAAOSws~pb5U9T/s-l1200.jpg",
     "videoId": "r_WbvIDAcA4",
-    "description": "",
+    "description": "Master jungle survival and explore dangerous tombs as Lara races to prevent a Maya apocalypse.",
     "ratingUrl": "https://www.metacritic.com/game/shadow-of-the-tomb-raider/",
     "posterSource": "https://www.ebay.com/itm/183526352837",
     "videoChannel": "Tomb Raider — launch trailer",
-    "videoSource": "https://www.youtube.com/watch?v=r_WbvIDAcA4"
+    "videoSource": "https://www.youtube.com/watch?v=r_WbvIDAcA4",
+    "metacritic": 75,
+    "downloadLink": "",
+    "metacriticSource": "https://www.metacritic.com/game/shadow-of-the-tomb-raider/",
+    "metacriticChecked": "2026-09-13",
+    "descriptionSource": "https://www.metacritic.com/game/shadow-of-the-tomb-raider/"
   },
   {
     "id": 149,
@@ -2616,11 +3318,16 @@ window.GAMES = [
     "future": false,
     "poster": "https://media.gamestop.com/i/gamestop/10165019/Control---PlayStation-4?fmt=auto&h=768&w=768",
     "videoId": "uvKAHpIvbl8",
-    "description": "",
+    "description": "Become the director of a secretive agency and fight an otherworldly invasion in a supernatural third-person adventure.",
     "ratingUrl": "https://www.metacritic.com/game/control/",
     "posterSource": "https://www.gamestop.com/video-games/playstation-4/products/control---playstation-4/10165016-10165019.html",
     "videoChannel": "Control / Remedy",
-    "videoSource": "https://www.youtube.com/watch?v=uvKAHpIvbl8"
+    "videoSource": "https://www.youtube.com/watch?v=uvKAHpIvbl8",
+    "metacritic": 82,
+    "downloadLink": "",
+    "metacriticSource": "https://www.metacritic.com/game/control/",
+    "metacriticChecked": "2026-09-13",
+    "descriptionSource": "https://www.metacritic.com/game/control/"
   },
   {
     "id": 150,
@@ -2634,11 +3341,16 @@ window.GAMES = [
     "future": false,
     "poster": "https://m.media-amazon.com/images/M/MV5BZWM1YzdiMTMtZWEwNy00MTk3LWJkMTgtNmM5ZTA5NDc1OTEyXkEyXkFqcGc%40._V1_.jpg",
     "videoId": "rXMX4YJ7Lks",
-    "description": "",
+    "description": "Face deadly conflict in Sengoku-era Japan in FromSoftware's demanding third-person action adventure.",
     "ratingUrl": "https://www.metacritic.com/game/sekiro-shadows-die-twice/",
     "posterSource": "https://www.imdb.com/title/tt8558306/mediaindex/",
     "videoChannel": "PlayStation",
-    "videoSource": "https://www.youtube.com/watch?v=rXMX4YJ7Lks"
+    "videoSource": "https://www.youtube.com/watch?v=rXMX4YJ7Lks",
+    "metacritic": 90,
+    "downloadLink": "",
+    "metacriticSource": "https://www.metacritic.com/game/sekiro-shadows-die-twice/",
+    "metacriticChecked": "2026-09-13",
+    "descriptionSource": "https://www.metacritic.com/game/sekiro-shadows-die-twice/"
   },
   {
     "id": 151,
@@ -2651,11 +3363,16 @@ window.GAMES = [
     "future": false,
     "poster": "https://media.gamestop.com/i/gamestop/10172927/DRAGON-BALL-Z-KAKAROT---PlayStation-4",
     "videoId": "mw40u02Ks60",
-    "description": "",
+    "description": "Relive Goku's Dragon Ball Z journey through major battles, exploration, training and quieter moments with fellow heroes.",
     "ratingUrl": "https://www.metacritic.com/game/dragon-ball-z-kakarot/",
     "posterSource": "https://www.gamestop.com/video-games/playstation-4/products/dragon-ball-z-kakarot---playstation-4/10172926-10172927.html",
     "videoChannel": "PS4 launch trailer",
-    "videoSource": "https://www.youtube.com/watch?v=mw40u02Ks60"
+    "videoSource": "https://www.youtube.com/watch?v=mw40u02Ks60",
+    "metacritic": 73,
+    "downloadLink": "",
+    "metacriticSource": "https://www.metacritic.com/game/dragon-ball-z-kakarot/",
+    "metacriticChecked": "2026-09-13",
+    "descriptionSource": "https://www.metacritic.com/game/dragon-ball-z-kakarot/"
   },
   {
     "id": 152,
@@ -2668,11 +3385,16 @@ window.GAMES = [
     "future": false,
     "poster": "https://cdn.xzone.cz/p/aaa/mafia-definitive-edition/mafia-definitive-edition-pc-600w.png",
     "videoId": "SKbJm44NZXg",
-    "description": "",
+    "description": "Rise from taxi driver to mobster as Tommy Angelo in a rebuilt crime story set during Prohibition.",
     "ratingUrl": "https://www.metacritic.com/game/mafia-definitive-edition/",
     "posterSource": "https://www.xzone.cz/mafia-definitive-edition-pc-21",
     "videoChannel": "Featured by PlayStation",
-    "videoSource": "https://www.youtube.com/watch?v=SKbJm44NZXg"
+    "videoSource": "https://www.youtube.com/watch?v=SKbJm44NZXg",
+    "metacritic": 78,
+    "downloadLink": "",
+    "metacriticSource": "https://www.metacritic.com/game/mafia-definitive-edition/",
+    "metacriticChecked": "2026-09-13",
+    "descriptionSource": "https://www.metacritic.com/game/mafia-definitive-edition/"
   },
   {
     "id": 153,
@@ -2685,11 +3407,16 @@ window.GAMES = [
     "future": false,
     "poster": "https://image.jeuxvideo.com/medias/155368/1553678016-8072-jaquette-avant.jpg",
     "videoId": "owbKz1qcnUI",
-    "description": "",
+    "description": "Return to the Streets of Rage series in a modern continuation of its side-scrolling arcade brawling.",
     "ratingUrl": "https://www.metacritic.com/game/streets-of-rage-4/",
     "posterSource": "https://www.jeuxvideo.com/jeux/pc/jeu-908778/",
     "videoChannel": "Dotemu",
-    "videoSource": "https://www.youtube.com/watch?v=owbKz1qcnUI"
+    "videoSource": "https://www.youtube.com/watch?v=owbKz1qcnUI",
+    "metacritic": 84,
+    "downloadLink": "",
+    "metacriticSource": "https://www.metacritic.com/game/streets-of-rage-4/",
+    "metacriticChecked": "2026-09-13",
+    "descriptionSource": "https://www.metacritic.com/game/streets-of-rage-4/"
   },
   {
     "id": 154,
@@ -2703,11 +3430,16 @@ window.GAMES = [
     "future": false,
     "poster": "https://blizzstoreperu.com/cdn/shop/products/fifa-main.jpg?v=1664677211",
     "videoId": "o3V-GvvzjE4",
-    "description": "",
+    "description": "A football simulation featuring online competition, Ultimate Team and supported cross-platform multiplayer modes.",
     "ratingUrl": "https://www.metacritic.com/game/fifa-23/",
     "posterSource": "https://blizzstoreperu.com/products/fifa-23-playstation",
     "videoChannel": "EA Sports",
-    "videoSource": "https://www.youtube.com/watch?v=o3V-GvvzjE4"
+    "videoSource": "https://www.youtube.com/watch?v=o3V-GvvzjE4",
+    "metacritic": 76,
+    "downloadLink": "",
+    "metacriticSource": "https://www.metacritic.com/game/fifa-23/",
+    "metacriticChecked": "2026-09-13",
+    "descriptionSource": "https://www.metacritic.com/game/fifa-23/"
   },
   {
     "id": 155,
@@ -2720,11 +3452,16 @@ window.GAMES = [
     "future": false,
     "poster": "https://i5.walmartimages.com/asr/dc1aa991-5e12-409e-9fae-59680b2bc711.bde30305467e05a7aa7fdf72ee90f1a0.jpeg",
     "videoId": "HLD8UTxVUAg",
-    "description": "",
+    "description": "Protect Gotham as Batgirl, Nightwing, Red Hood or Robin in an open-world action RPG following Batman's death.",
     "ratingUrl": "https://www.metacritic.com/game/gotham-knights/",
     "posterSource": "https://www.walmart.ca/en/ip/Gotham-Knights-PlayStation-5/31JGVBU6A40P",
     "videoChannel": "Featured by PlayStation",
-    "videoSource": "https://www.youtube.com/watch?v=HLD8UTxVUAg"
+    "videoSource": "https://www.youtube.com/watch?v=HLD8UTxVUAg",
+    "metacritic": 67,
+    "downloadLink": "",
+    "metacriticSource": "https://www.metacritic.com/game/gotham-knights/",
+    "metacriticChecked": "2026-09-13",
+    "descriptionSource": "https://www.metacritic.com/game/gotham-knights/"
   },
   {
     "id": 156,
@@ -2737,11 +3474,16 @@ window.GAMES = [
     "future": false,
     "poster": "https://images.launchbox-app.com/a327d7a4-0b39-4780-a36c-7e3a6d5cc987.jpg",
     "videoId": "c0_NLEpJfwc",
-    "description": "",
+    "description": "Master Dragon Ball fighters and their transformations in arena battles where powerful attacks reshape the surroundings.",
     "ratingUrl": "https://www.metacritic.com/game/dragon-ball-sparking-zero/",
     "posterSource": "https://gamesdb.launchbox-app.com/games/images/409727-dragon-ball-sparking-zero",
     "videoChannel": "Publisher trailer featured by PlayStation",
-    "videoSource": "https://www.youtube.com/watch?v=c0_NLEpJfwc"
+    "videoSource": "https://www.youtube.com/watch?v=c0_NLEpJfwc",
+    "metacritic": 81,
+    "downloadLink": "",
+    "metacriticSource": "https://www.metacritic.com/game/dragon-ball-sparking-zero/",
+    "metacriticChecked": "2026-09-13",
+    "descriptionSource": "https://www.metacritic.com/game/dragon-ball-sparking-zero/"
   },
   {
     "id": 157,
@@ -2755,11 +3497,16 @@ window.GAMES = [
     "future": false,
     "poster": "https://cdn.idealo.com/folder/Product/202894/0/202894045/s4_produktbild_max_4/prince-of-persia-the-lost-crown-ps4.jpg",
     "videoId": "n4vaxKwZ5rQ",
-    "description": "",
+    "description": "Explore a mythological Persian world with time-manipulation abilities, demanding platforming and fast-paced combat.",
     "ratingUrl": "https://www.metacritic.com/game/prince-of-persia-the-lost-crown/",
     "posterSource": "https://www.idealo.fr/prix/202894045/prince-of-persia-the-lost-crown-ps4.html",
     "videoChannel": "Ubisoft",
-    "videoSource": "https://www.youtube.com/watch?v=n4vaxKwZ5rQ"
+    "videoSource": "https://www.youtube.com/watch?v=n4vaxKwZ5rQ",
+    "metacritic": 86,
+    "downloadLink": "",
+    "metacriticSource": "https://www.metacritic.com/game/prince-of-persia-the-lost-crown/",
+    "metacriticChecked": "2026-09-13",
+    "descriptionSource": "https://www.metacritic.com/game/prince-of-persia-the-lost-crown/"
   },
   {
     "id": 158,
@@ -2772,11 +3519,16 @@ window.GAMES = [
     "future": false,
     "poster": "https://m.media-amazon.com/images/M/MV5BYWUyZTY1NDItOThhYy00NTk3LTk4NzItYTVjNDkxZjhjZWNmXkEyXkFqcGc%40._V1_FMjpg_UX1000_.jpg",
     "videoId": "VIguUSVN_q8",
-    "description": "",
+    "description": "Follow Jinwoo's rise as a hunter, customizing weapons and skills while experiencing stories from the Solo Leveling webtoon.",
     "ratingUrl": "https://www.metacritic.com/game/solo-leveling-arise/",
     "posterSource": "https://www.imdb.com/title/tt32431840/fullcredits/",
     "videoChannel": "GameSpot Trailers — official trailer",
-    "videoSource": "https://www.youtube.com/watch?v=VIguUSVN_q8"
+    "videoSource": "https://www.youtube.com/watch?v=VIguUSVN_q8",
+    "metacritic": 70,
+    "downloadLink": "",
+    "metacriticSource": "https://www.metacritic.com/game/solo-leveling-arise/",
+    "metacriticChecked": "2026-09-13",
+    "descriptionSource": "https://www.metacritic.com/game/solo-leveling-arise/"
   },
   {
     "id": 159,
@@ -2789,11 +3541,16 @@ window.GAMES = [
     "future": false,
     "poster": "https://de.gamesplanet.com/acache/73/21/1/de/packshot-66c121b8c4a36b9becfa5ef6f5b8f922.jpg",
     "videoId": "2VaLOc1FpSo",
-    "description": "",
+    "description": "Lead Expedition 33 against the Paintress in a turn-based RPG where real-time actions influence combat.",
     "ratingUrl": "https://www.metacritic.com/game/clair-obscur-expedition-33/",
     "posterSource": "https://www.gameswelt.ch/clair-obscur-expedition-33/news/verkaufszahlen-klettern-munter-weiter-330648",
     "videoChannel": "PlayStation",
-    "videoSource": "https://www.youtube.com/watch?v=2VaLOc1FpSo"
+    "videoSource": "https://www.youtube.com/watch?v=2VaLOc1FpSo",
+    "metacritic": 92,
+    "downloadLink": "",
+    "metacriticSource": "https://www.metacritic.com/game/clair-obscur-expedition-33/",
+    "metacriticChecked": "2026-09-13",
+    "descriptionSource": "https://www.metacritic.com/game/clair-obscur-expedition-33/"
   },
   {
     "id": 160,
@@ -2807,11 +3564,16 @@ window.GAMES = [
     "future": false,
     "poster": "https://store-images.s-microsoft.com/image/apps.29242.13613564669646876.7aa324c7-9740-4cd1-9231-9f7560aa017a.381b7de6-9be3-4172-9a12-8220c0794c3c",
     "videoId": "CILpBNZAkZE",
-    "description": "",
+    "description": "Manage a team of reformed supervillains from a dispatch center in a superhero workplace comedy driven by choices.",
     "ratingUrl": "https://www.metacritic.com/game/dispatch/",
     "posterSource": "https://www.xbox.com/en-gb/games/store/Dispatch/9NDJSV855T3P",
     "videoChannel": "Featured by PlayStation",
-    "videoSource": "https://www.youtube.com/watch?v=CILpBNZAkZE"
+    "videoSource": "https://www.youtube.com/watch?v=CILpBNZAkZE",
+    "metacritic": 87,
+    "downloadLink": "",
+    "metacriticSource": "https://www.metacritic.com/game/dispatch/",
+    "metacriticChecked": "2026-09-13",
+    "descriptionSource": "https://www.metacritic.com/game/dispatch/"
   },
   {
     "id": 161,
@@ -2824,11 +3586,16 @@ window.GAMES = [
     "future": false,
     "poster": "https://i0.wp.com/wheartm.com/wp-content/uploads/2025/11/1106998_front.jpg?ssl=1",
     "videoId": "XQdELftTay0",
-    "description": "",
+    "description": "Pair Marvel heroes in a pixel-art brawler, battling Annihilus across Earth and space with cooperative tag-team combat.",
     "ratingUrl": "https://www.metacritic.com/game/marvel-cosmic-invasion/",
     "posterSource": "https://wheartm.com/2025/11/17/weekend-gamer-marvel-cosmic-invasion/",
     "videoChannel": "Featured by PlayStation",
-    "videoSource": "https://www.youtube.com/watch?v=XQdELftTay0"
+    "videoSource": "https://www.youtube.com/watch?v=XQdELftTay0",
+    "metacritic": 81,
+    "downloadLink": "",
+    "metacriticSource": "https://www.metacritic.com/game/marvel-cosmic-invasion/",
+    "metacriticChecked": "2026-09-13",
+    "descriptionSource": "https://www.metacritic.com/game/marvel-cosmic-invasion/"
   },
   {
     "id": 162,
@@ -2843,11 +3610,16 @@ window.GAMES = [
     "future": false,
     "poster": "https://img.lootbar.com/file/6a30c358a95b3891909b5a5dQ6VS4FE803",
     "videoId": "WLh1dRXr_Io",
-    "description": "",
+    "description": "Return as Edward Kenway to sail the Jackdaw, board enemy ships and navigate the conflict between Assassins and Templars.",
     "ratingUrl": null,
     "posterSource": "https://www.lootbar.com/game-key/assassins-creed-black-flag-resynced",
     "videoChannel": "Featured by PlayStation",
-    "videoSource": "https://www.youtube.com/watch?v=WLh1dRXr_Io"
+    "videoSource": "https://www.youtube.com/watch?v=WLh1dRXr_Io",
+    "metacritic": 83,
+    "downloadLink": "",
+    "metacriticSource": "https://www.metacritic.com/game/assassins-creed-black-flag-resynced/",
+    "metacriticChecked": "2026-09-13",
+    "descriptionSource": "https://www.metacritic.com/game/assassins-creed-black-flag-resynced/"
   },
   {
     "id": 163,
@@ -2860,7 +3632,7 @@ window.GAMES = [
     "future": false,
     "poster": "https://images.igdb.com/igdb/image/upload/t_1080p_2x/cobzwk.webp",
     "videoId": "VcRDa5yKpRg",
-    "description": "",
+    "description": "Build a three-character superhero team and fight through brutal tag battles set in the Invincible universe.",
     "ratingUrl": "https://www.metacritic.com/game/invincible-vs/",
     "posterSource": "https://stash.games/games/invincible-vs",
     "videoChannel": "Featured by PlayStation",

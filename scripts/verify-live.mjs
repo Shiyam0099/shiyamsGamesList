@@ -1,0 +1,23 @@
+import {createClient} from '@supabase/supabase-js';
+import {required,serverURL,run} from './environment.mjs';
+await run(async()=>{
+ const client=createClient(serverURL(),required('VITE_SUPABASE_PUBLISHABLE_KEY'),{auth:{persistSession:false,autoRefreshToken:false}});
+ const {data,error,count}=await client.from('games').select('id,title,status',{count:'exact'}).order('id');if(error)throw error;
+ console.log(`Public API connected: ${count} games; ${data.filter(g=>g.status==='playing').length} currently playing.`);
+ const denied=await client.rpc('update_my_username',{new_username:'Unauthorized'});
+ if(!denied.error)throw new Error('Anonymous write unexpectedly permitted');
+ console.log('Anonymous privileged RPC denied.');
+ const {data:session,error:loginError}=await client.auth.signInWithPassword({email:required('SUPER_ADMIN_EMAIL'),password:required('SUPER_ADMIN_PASSWORD')});if(loginError)throw loginError;
+ const {data:profile,error:profileError}=await client.from('admin_profiles').select('role,is_active').eq('id',session.user.id).single();if(profileError)throw profileError;
+ if(profile.role!=='super_admin' || !profile.is_active)throw new Error('Invalid Super Admin profile');
+ console.log('Super Admin sign-in and active profile verified.');
+ const origin=required('ADMIN_ORIGIN');
+ const endpoint=serverURL()+'/functions/v1/manage-admins';
+ const headers={Origin:origin,'Content-Type':'application/json',apikey:required('VITE_SUPABASE_PUBLISHABLE_KEY')};
+ const anonymous=await fetch(endpoint,{method:'POST',headers,body:JSON.stringify({action:'verify-no-write'})});
+ if(anonymous.status!==401)throw {code:'EDGE_ANONYMOUS_'+anonymous.status};
+ const authenticated=await fetch(endpoint,{method:'POST',headers:{...headers,Authorization:'Bearer '+session.session.access_token},body:JSON.stringify({action:'verify-no-write'})});
+ if(authenticated.status!==400 || (await authenticated.json()).error!=='Unsupported action.')throw {code:'EDGE_AUTH_'+authenticated.status};
+ console.log('Live Edge Function rejects anonymous access and verifies the active Super Admin (no accounts changed).');
+ await client.auth.signOut({scope:'local'});
+});

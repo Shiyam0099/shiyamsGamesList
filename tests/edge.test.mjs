@@ -1,0 +1,25 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import vm from 'node:vm';
+import {stripTypeScriptTypes} from 'node:module';
+import {readFile} from 'node:fs/promises';
+const source=stripTypeScriptTypes((await readFile(new URL('../supabase/functions/manage-admins/index.ts',import.meta.url),'utf8')).replace(/^import .*;\n/,''));
+test('Edge Function verifies JWT and current role before privileged Auth calls',async()=>{
+ let handler,validToken=true,role='admin',active=true,targetRole='admin',profileInsertFails=false,created=0,deleted=0;
+ const actorId='00000000-0000-0000-0000-000000000001',targetId='00000000-0000-0000-0000-000000000002';
+ const client={auth:{getUser:async()=>({data:{user:validToken?{id:actorId}:null},error:validToken?null:{}}),admin:{createUser:async()=>{created++;return {data:{user:{id:targetId,email:'new@example.test'}}};},deleteUser:async()=>{deleted++;return {};}}},from:()=>({select:()=>({eq:(_,id)=>({single:async()=>({data:id===actorId?{role,is_active:active}:{role:targetRole}})})}),insert:async()=>({error:profileInsertFails?{}:null})})};
+ vm.runInNewContext(source,{Request,Response,createClient:()=>client,Deno:{env:{get:key=>key==='ADMIN_ORIGIN'?'https://games.example.test':'server-only'},serve:fn=>handler=fn}});
+ const invoke=(body,origin='https://games.example.test',auth='Bearer test')=>handler(new Request('https://project.supabase.co/functions/v1/manage-admins',{method:'POST',headers:{Origin:origin,Authorization:auth,'Content-Type':'application/json'},body:JSON.stringify(body)}));
+ const create={action:'create',username:'New Admin',email:'new@example.test',password:'temporary-password'};
+ assert.equal((await invoke(create,'https://evil.example')).status,403);
+ assert.equal((await invoke(create,undefined,'')).status,401);
+ validToken=false;assert.equal((await invoke(create)).status,401);validToken=true;
+ assert.equal((await invoke(create)).status,403);assert.equal(created,0);
+ role='super_admin';active=false;assert.equal((await invoke(create)).status,403);active=true;
+ assert.equal((await invoke({...create,role:'super_admin'})).status,400);
+ assert.equal((await invoke({...create,password:'short'})).status,400);
+ assert.equal((await invoke(create)).status,201);assert.equal(created,1);
+ profileInsertFails=true;assert.equal((await invoke(create)).status,409);assert.equal(deleted,1);
+ targetRole='super_admin';assert.equal((await invoke({action:'delete',userId:targetId})).status,403);assert.equal(deleted,1);
+ targetRole='admin';assert.equal((await invoke({action:'delete',userId:targetId})).status,200);assert.equal(deleted,2);
+});

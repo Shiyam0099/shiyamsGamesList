@@ -1,0 +1,21 @@
+import {readFile} from 'node:fs/promises';
+import {required,serverURL,run} from './environment.mjs';
+await run(async()=>{
+ const project=new URL(serverURL()).hostname.split('.')[0];
+ if(!/^[a-z0-9]{20}$/.test(project))throw new Error('Invalid Supabase project URL');
+ const origin=required('ADMIN_ORIGIN');
+ const parsed=new URL(origin);
+ if(parsed.origin!==origin || (parsed.protocol!=='https:' && !['localhost','127.0.0.1'].includes(parsed.hostname)))throw new Error('ADMIN_ORIGIN must be an exact HTTPS website origin (or local development origin).');
+ const headers={Authorization:'Bearer '+required('SUPABASE_ACCESS_TOKEN')};
+ const endpoint=`https://api.supabase.com/v1/projects/${project}`;
+ const secretResponse=await fetch(endpoint+'/secrets',{method:'POST',headers:{...headers,'Content-Type':'application/json'},body:JSON.stringify([{name:'ADMIN_ORIGIN',value:origin}])});
+ if(!secretResponse.ok)throw {code:'SECRETS_HTTP_'+secretResponse.status};
+ const form=new FormData();
+ form.append('metadata',JSON.stringify({name:'manage-admins',entrypoint_path:'index.ts',verify_jwt:false}));
+ form.append('file',new Blob([await readFile(new URL('../supabase/functions/manage-admins/index.ts',import.meta.url),'utf8')],{type:'application/typescript'}),'index.ts');
+ const response=await fetch(endpoint+'/functions/deploy?slug=manage-admins',{method:'POST',headers,body:form});
+ if(!response.ok)throw {code:'DEPLOY_HTTP_'+response.status};
+ const deployed=await response.json();
+ if(deployed.verify_jwt!==false)throw {code:'VERIFY_JWT_CONFIGURATION'};
+ console.log(`manage-admins deployed (${deployed.status}); allowed origin configured. The handler validates user JWTs and database roles.`);
+});
