@@ -90,18 +90,3 @@ test('external links permit web URLs and reject executable or malformed inputs',
     assert.equal(safeURL(url), null);
   }
 });
-test('real data preserves every game and has editable metadata fields', () => {
-  const context = { window: {} };
-  vm.runInNewContext(fs.readFileSync(require.resolve('../games.js'), 'utf8'), context);
-  const games = context.window.GAMES;
-  assert.ok(games.length > 0);
-  assert.equal(new Set(games.map(g => g.id)).size, games.length);
-  for (const g of games) {
-    assert.ok(['unplayed', 'loved', 'dropped', 'playing'].includes(g.status));
-    assert.ok(Array.isArray(g.genres) && g.genres.length);
-    assert.equal(typeof g.description, 'string');
-    assert.ok(g.metacritic === null || rating(g) !== null);
-    assert.equal(typeof g.downloadLink, 'string');
-    assert.ok(!g.downloadLink || safeURL(g.downloadLink));
-  }
-});

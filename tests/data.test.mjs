@@ -7,7 +7,7 @@ const context={window:{}};vm.runInNewContext(readFileSync(new URL('../games.js',
 const games=JSON.parse(JSON.stringify(context.window.GAMES));
 test('all original game fields survive database mapping',()=>{
  for(const game of games){const mapped=fromRow(toRow(validateGame(game),true));for(const [key,value] of Object.entries(game))assert.deepEqual(mapped[key],value,`${game.title}: ${key}`);}
- assert.equal(games.length,163);
+ assert.equal(games.length,164);
  assert.equal(games.find(g=>g.title==='Evil West').status,'playing');
  assert.equal(games.find(g=>g.title==='A Plague Tale: Innocence').status,'playing');
 });
