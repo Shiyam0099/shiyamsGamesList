@@ -35,7 +35,7 @@ const placeholder =
   encodeURIComponent(
     '<svg xmlns="http://www.w3.org/2000/svg" width="400" height="560"><rect width="400" height="560" fill="#25301e"/><text x="200" y="270" font-family="Arial" font-size="25" text-anchor="middle" fill="#cefa69">SHIYAM`S GAMES LIST</text><text x="200" y="308" font-family="Arial" font-size="16" text-anchor="middle" fill="#a2aa9b">Artwork unavailable</text></svg>',
   );
-let selected = "unplayed",
+let selected = "all",
   selectedAge = null,
   recommendation = null;
 function imgError(event) {
