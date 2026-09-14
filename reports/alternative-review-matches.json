@@ -1,0 +1,585 @@
+{
+  "checkedOn": "2026-09-14",
+  "gamesChecked": 43,
+  "matched": [
+    {
+      "id": 1,
+      "title": "Assassin’s Creed Unity",
+      "previousUrl": null,
+      "url": "https://www.youtube.com/watch?v=pBJhzmHF5rs",
+      "videoTitle": "Assassin's Creed Unity Review",
+      "publishedAt": "2014-11-11T09:30:09-08:00",
+      "source": "IGN",
+      "channelId": "UCKy1dAqELo0zrOtPkf0eTMw",
+      "candidates": [
+        {
+          "url": "https://www.youtube.com/watch?v=pBJhzmHF5rs",
+          "title": "Assassin's Creed Unity Review",
+          "publishedAt": "2014-11-11T09:30:09-08:00"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Infamous Second Son",
+      "previousUrl": null,
+      "url": "https://www.youtube.com/watch?v=gACPlAiFlRo",
+      "videoTitle": "Infamous: Second Son Review",
+      "publishedAt": "2014-03-20T10:42:58-07:00",
+      "source": "IGN",
+      "channelId": "UCKy1dAqELo0zrOtPkf0eTMw",
+      "candidates": [
+        {
+          "url": "https://www.youtube.com/watch?v=gACPlAiFlRo",
+          "title": "Infamous: Second Son Review",
+          "publishedAt": "2014-03-20T10:42:58-07:00"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Bloodborne",
+      "previousUrl": null,
+      "url": "https://www.youtube.com/watch?v=X1iKYjVFigM",
+      "videoTitle": "Bloodborne Review",
+      "publishedAt": "2015-03-27T20:00:01-07:00",
+      "source": "IGN",
+      "channelId": "UCKy1dAqELo0zrOtPkf0eTMw",
+      "candidates": [
+        {
+          "url": "https://www.youtube.com/watch?v=X1iKYjVFigM",
+          "title": "Bloodborne Review",
+          "publishedAt": "2015-03-27T20:00:01-07:00"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Ori and the Blind Forest",
+      "previousUrl": null,
+      "url": "https://www.youtube.com/watch?v=yZOqrskZ6lI",
+      "videoTitle": "Ori and the Blind Forest Review",
+      "publishedAt": "2015-03-09T19:58:00-07:00",
+      "source": "IGN",
+      "channelId": "UCKy1dAqELo0zrOtPkf0eTMw",
+      "candidates": [
+        {
+          "url": "https://www.youtube.com/watch?v=yZOqrskZ6lI",
+          "title": "Ori and the Blind Forest Review",
+          "publishedAt": "2015-03-09T19:58:00-07:00"
+        }
+      ]
+    },
+    {
+      "id": 47,
+      "title": "Uncharted: Legacy of Thieves Collection",
+      "previousUrl": null,
+      "url": "https://www.youtube.com/watch?v=hhr3UFtJpsQ",
+      "videoTitle": "Uncharted: Legacy of Thieves Collection PC Review - The Final Verdict",
+      "publishedAt": "2022-10-18T08:01:58-07:00",
+      "source": "GamingBolt",
+      "channelId": "UCXa_bzvv7Oo1glaW9FldDhQ",
+      "candidates": [
+        {
+          "url": "https://www.youtube.com/watch?v=hhr3UFtJpsQ",
+          "title": "Uncharted: Legacy of Thieves Collection PC Review - The Final Verdict",
+          "publishedAt": "2022-10-18T08:01:58-07:00"
+        }
+      ]
+    },
+    {
+      "id": 81,
+      "title": "Shinobi: Art of Vengeance",
+      "previousUrl": null,
+      "url": "https://www.youtube.com/watch?v=Mkx1zrvUIfM",
+      "videoTitle": "SHINOBI: Art of Vengeance Review",
+      "publishedAt": "2025-08-25T05:00:42-07:00",
+      "source": "IGN",
+      "channelId": "UCKy1dAqELo0zrOtPkf0eTMw",
+      "candidates": [
+        {
+          "url": "https://www.youtube.com/watch?v=Mkx1zrvUIfM",
+          "title": "SHINOBI: Art of Vengeance Review",
+          "publishedAt": "2025-08-25T05:00:42-07:00"
+        }
+      ]
+    },
+    {
+      "id": 103,
+      "title": "Honor of Kings: World",
+      "previousUrl": null,
+      "url": "https://www.youtube.com/watch?v=mxi2vkoOoL4",
+      "videoTitle": "Honor of Kings: World - Review and Rating",
+      "publishedAt": "2026-05-28T09:00:15-07:00",
+      "source": "Kanon",
+      "channelId": "UCtF90wyZYze6xc-9OnCs_IQ",
+      "candidates": [
+        {
+          "url": "https://www.youtube.com/watch?v=mxi2vkoOoL4",
+          "title": "Honor of Kings: World - Review and Rating",
+          "publishedAt": "2026-05-28T09:00:15-07:00"
+        }
+      ]
+    },
+    {
+      "id": 108,
+      "title": "The Witcher 2: Assassins of Kings",
+      "previousUrl": null,
+      "url": "https://www.youtube.com/watch?v=miPGSGUVgSg",
+      "videoTitle": "GameSpot Reviews - The Witcher 2: Assassins of Kings - Review (PC)",
+      "publishedAt": "2011-05-23T19:53:39-07:00",
+      "source": "GameSpot",
+      "channelId": "UCbu2SsF-Or3Rsn3NxqODImw",
+      "candidates": [
+        {
+          "url": "https://www.youtube.com/watch?v=miPGSGUVgSg",
+          "title": "GameSpot Reviews - The Witcher 2: Assassins of Kings - Review (PC)",
+          "publishedAt": "2011-05-23T19:53:39-07:00"
+        }
+      ]
+    },
+    {
+      "id": 109,
+      "title": "Call of Duty: Advanced Warfare",
+      "previousUrl": null,
+      "url": "https://www.youtube.com/watch?v=cqlqRnz1oHQ",
+      "videoTitle": "Call of Duty: Advanced Warfare Review",
+      "publishedAt": "2014-11-03T18:30:03-08:00",
+      "source": "IGN",
+      "channelId": "UCKy1dAqELo0zrOtPkf0eTMw",
+      "candidates": [
+        {
+          "url": "https://www.youtube.com/watch?v=cqlqRnz1oHQ",
+          "title": "Call of Duty: Advanced Warfare Review",
+          "publishedAt": "2014-11-03T18:30:03-08:00"
+        }
+      ]
+    },
+    {
+      "id": 110,
+      "title": "Dragon Age: Inquisition",
+      "previousUrl": null,
+      "url": "https://www.youtube.com/watch?v=m3GoS77dnzY",
+      "videoTitle": "Dragon Age: Inquisition Review",
+      "publishedAt": "2014-11-11T17:30:21-08:00",
+      "source": "IGN",
+      "channelId": "UCKy1dAqELo0zrOtPkf0eTMw",
+      "candidates": [
+        {
+          "url": "https://www.youtube.com/watch?v=m3GoS77dnzY",
+          "title": "Dragon Age: Inquisition Review",
+          "publishedAt": "2014-11-11T17:30:21-08:00"
+        }
+      ]
+    },
+    {
+      "id": 111,
+      "title": "Far Cry 4",
+      "previousUrl": null,
+      "url": "https://www.youtube.com/watch?v=1Rg-ZO0069M",
+      "videoTitle": "Far Cry 4 Review Discussion",
+      "publishedAt": "2014-11-19T13:30:06-08:00",
+      "source": "IGN",
+      "channelId": "UCKy1dAqELo0zrOtPkf0eTMw",
+      "candidates": [
+        {
+          "url": "https://www.youtube.com/watch?v=1Rg-ZO0069M",
+          "title": "Far Cry 4 Review Discussion",
+          "publishedAt": "2014-11-19T13:30:06-08:00"
+        }
+      ]
+    },
+    {
+      "id": 112,
+      "title": "Wolfenstein: The New Order",
+      "previousUrl": null,
+      "url": "https://www.youtube.com/watch?v=eU2mC9NBjtg",
+      "videoTitle": "Wolfenstein: The New Order - Review",
+      "publishedAt": "2014-05-19T21:00:02-07:00",
+      "source": "IGN",
+      "channelId": "UCKy1dAqELo0zrOtPkf0eTMw",
+      "candidates": [
+        {
+          "url": "https://www.youtube.com/watch?v=eU2mC9NBjtg",
+          "title": "Wolfenstein: The New Order - Review",
+          "publishedAt": "2014-05-19T21:00:02-07:00"
+        }
+      ]
+    },
+    {
+      "id": 118,
+      "title": "Kingdom Come: Deliverance",
+      "previousUrl": null,
+      "url": "https://www.youtube.com/watch?v=hqcVwaJSxyw",
+      "videoTitle": "Kingdom Come: Deliverance Review",
+      "publishedAt": "2018-02-16T17:51:08-08:00",
+      "source": "IGN",
+      "channelId": "UCKy1dAqELo0zrOtPkf0eTMw",
+      "candidates": [
+        {
+          "url": "https://www.youtube.com/watch?v=hqcVwaJSxyw",
+          "title": "Kingdom Come: Deliverance Review",
+          "publishedAt": "2018-02-16T17:51:08-08:00"
+        }
+      ]
+    },
+    {
+      "id": 124,
+      "title": "Demon Slayer: The Hinokami Chronicles",
+      "previousUrl": null,
+      "url": "https://www.youtube.com/watch?v=oWGOd9nzMrc",
+      "videoTitle": "Demon Slayer: Kimetsu no Yaiba - The Hinokami Chronicles Review",
+      "publishedAt": "2021-10-13T09:00:24-07:00",
+      "source": "IGN",
+      "channelId": "UCKy1dAqELo0zrOtPkf0eTMw",
+      "candidates": [
+        {
+          "url": "https://www.youtube.com/watch?v=oWGOd9nzMrc",
+          "title": "Demon Slayer: Kimetsu no Yaiba - The Hinokami Chronicles Review",
+          "publishedAt": "2021-10-13T09:00:24-07:00"
+        }
+      ]
+    },
+    {
+      "id": 128,
+      "title": "Gungrave G.O.R.E",
+      "previousUrl": null,
+      "url": "https://www.youtube.com/watch?v=abgFQpUmEFw",
+      "videoTitle": "Gungrave G.O.R.E Review",
+      "publishedAt": "2022-11-22T18:35:30-08:00",
+      "source": "IGN",
+      "channelId": "UCKy1dAqELo0zrOtPkf0eTMw",
+      "candidates": [
+        {
+          "url": "https://www.youtube.com/watch?v=abgFQpUmEFw",
+          "title": "Gungrave G.O.R.E Review",
+          "publishedAt": "2022-11-22T18:35:30-08:00"
+        }
+      ]
+    },
+    {
+      "id": 130,
+      "title": "Hitman: World of Assassination",
+      "previousUrl": null,
+      "url": "https://www.youtube.com/watch?v=fYURWrK3uCw",
+      "videoTitle": "The Best Puzzle Game Ever Made  |  Hitman: World of Assassination Review",
+      "publishedAt": "2026-05-23T13:00:19-07:00",
+      "source": "RottenBeef",
+      "channelId": "UCm2Fl6QrekZYSsGTV2T5wJA",
+      "candidates": [
+        {
+          "url": "https://www.youtube.com/watch?v=fYURWrK3uCw",
+          "title": "The Best Puzzle Game Ever Made  |  Hitman: World of Assassination Review",
+          "publishedAt": "2026-05-23T13:00:19-07:00"
+        }
+      ]
+    },
+    {
+      "id": 132,
+      "title": "Tales of Kenzera: ZAU",
+      "previousUrl": null,
+      "url": "https://www.youtube.com/watch?v=g0TBPPxAhfw",
+      "videoTitle": "Tales of Kenzera: Zau Review",
+      "publishedAt": "2024-04-22T17:21:46-07:00",
+      "source": "IGN",
+      "channelId": "UCKy1dAqELo0zrOtPkf0eTMw",
+      "candidates": [
+        {
+          "url": "https://www.youtube.com/watch?v=g0TBPPxAhfw",
+          "title": "Tales of Kenzera: Zau Review",
+          "publishedAt": "2024-04-22T17:21:46-07:00"
+        }
+      ]
+    },
+    {
+      "id": 133,
+      "title": "Wuthering Waves",
+      "previousUrl": null,
+      "url": "https://www.youtube.com/watch?v=5mP4IdmzYJs",
+      "videoTitle": "Wuthering Waves Review",
+      "publishedAt": "2024-06-07T19:10:27-07:00",
+      "source": "IGN",
+      "channelId": "UCKy1dAqELo0zrOtPkf0eTMw",
+      "candidates": [
+        {
+          "url": "https://www.youtube.com/watch?v=5mP4IdmzYJs",
+          "title": "Wuthering Waves Review",
+          "publishedAt": "2024-06-07T19:10:27-07:00"
+        }
+      ]
+    },
+    {
+      "id": 134,
+      "title": "Absolum",
+      "previousUrl": null,
+      "url": "https://www.youtube.com/watch?v=NHONnA_kS_M",
+      "videoTitle": "Absolum Nintendo Switch Review - Is It Worth It?",
+      "publishedAt": "2025-11-10T10:30:20-08:00",
+      "source": "Nintendo Life",
+      "channelId": "UCl7ZXbZUCWI2Hz--OrO4bsA",
+      "candidates": [
+        {
+          "url": "https://www.youtube.com/watch?v=NHONnA_kS_M",
+          "title": "Absolum Nintendo Switch Review - Is It Worth It?",
+          "publishedAt": "2025-11-10T10:30:20-08:00"
+        }
+      ]
+    },
+    {
+      "id": 137,
+      "title": "Battlefield 3",
+      "previousUrl": null,
+      "url": "https://www.youtube.com/watch?v=_3Qtc9y_S4g",
+      "videoTitle": "IGN Reviews - Battlefield 3 Console Review",
+      "publishedAt": "2011-10-26T16:59:32-07:00",
+      "source": "IGN",
+      "channelId": "UCKy1dAqELo0zrOtPkf0eTMw",
+      "candidates": [
+        {
+          "url": "https://www.youtube.com/watch?v=_3Qtc9y_S4g",
+          "title": "IGN Reviews - Battlefield 3 Console Review",
+          "publishedAt": "2011-10-26T16:59:32-07:00"
+        }
+      ]
+    },
+    {
+      "id": 138,
+      "title": "Sleeping Dogs",
+      "previousUrl": null,
+      "url": "https://www.youtube.com/watch?v=KHm2wh8vGO0",
+      "videoTitle": "Sleeping Dogs: Definitive Edition Review",
+      "publishedAt": "2014-10-08T16:37:17-07:00",
+      "source": "IGN",
+      "channelId": "UCKy1dAqELo0zrOtPkf0eTMw",
+      "candidates": [
+        {
+          "url": "https://www.youtube.com/watch?v=KHm2wh8vGO0",
+          "title": "Sleeping Dogs: Definitive Edition Review",
+          "publishedAt": "2014-10-08T16:37:17-07:00"
+        }
+      ]
+    },
+    {
+      "id": 139,
+      "title": "Battlefield 4",
+      "previousUrl": null,
+      "url": "https://www.youtube.com/watch?v=8nASpvb96iM",
+      "videoTitle": "Battlefield 4 - Review (PC, 360, PS3)",
+      "publishedAt": "2013-10-28T21:00:02-07:00",
+      "source": "IGN",
+      "channelId": "UCKy1dAqELo0zrOtPkf0eTMw",
+      "candidates": [
+        {
+          "url": "https://www.youtube.com/watch?v=8nASpvb96iM",
+          "title": "Battlefield 4 - Review (PC, 360, PS3)",
+          "publishedAt": "2013-10-28T21:00:02-07:00"
+        }
+      ]
+    },
+    {
+      "id": 141,
+      "title": "Metal Gear Rising: Revengeance",
+      "previousUrl": null,
+      "url": "https://www.youtube.com/watch?v=N7ewIPRICCk",
+      "videoTitle": "IGN Reviews - Metal Gear Rising: Revengeance Video Review",
+      "publishedAt": "2013-02-19T00:00:11-08:00",
+      "source": "IGN",
+      "channelId": "UCKy1dAqELo0zrOtPkf0eTMw",
+      "candidates": [
+        {
+          "url": "https://www.youtube.com/watch?v=N7ewIPRICCk",
+          "title": "IGN Reviews - Metal Gear Rising: Revengeance Video Review",
+          "publishedAt": "2013-02-19T00:00:11-08:00"
+        }
+      ]
+    },
+    {
+      "id": 142,
+      "title": "Tomb Raider",
+      "previousUrl": null,
+      "url": "https://www.youtube.com/watch?v=91g_a9JjQYg",
+      "videoTitle": "Tomb Raider Review (2013)",
+      "publishedAt": "2013-02-25T07:14:00-08:00",
+      "source": "IGN",
+      "channelId": "UCKy1dAqELo0zrOtPkf0eTMw",
+      "candidates": [
+        {
+          "url": "https://www.youtube.com/watch?v=91g_a9JjQYg",
+          "title": "Tomb Raider Review (2013)",
+          "publishedAt": "2013-02-25T07:14:00-08:00"
+        }
+      ]
+    },
+    {
+      "id": 143,
+      "title": "Middle-earth: Shadow of Mordor",
+      "previousUrl": null,
+      "url": "https://www.youtube.com/watch?v=-OOd1SrDDH0",
+      "videoTitle": "Middle-earth: Shadow of Mordor Review",
+      "publishedAt": "2014-09-25T21:00:02-07:00",
+      "source": "IGN",
+      "channelId": "UCKy1dAqELo0zrOtPkf0eTMw",
+      "candidates": [
+        {
+          "url": "https://www.youtube.com/watch?v=-OOd1SrDDH0",
+          "title": "Middle-earth: Shadow of Mordor Review",
+          "publishedAt": "2014-09-25T21:00:02-07:00"
+        }
+      ]
+    },
+    {
+      "id": 153,
+      "title": "Streets of Rage 4",
+      "previousUrl": null,
+      "url": "https://www.youtube.com/watch?v=SBDJRiIpgG8",
+      "videoTitle": "Streets of Rage 4 Review",
+      "publishedAt": "2020-04-29T08:00:15-07:00",
+      "source": "IGN",
+      "channelId": "UCKy1dAqELo0zrOtPkf0eTMw",
+      "candidates": [
+        {
+          "url": "https://www.youtube.com/watch?v=SBDJRiIpgG8",
+          "title": "Streets of Rage 4 Review",
+          "publishedAt": "2020-04-29T08:00:15-07:00"
+        }
+      ]
+    },
+    {
+      "id": 154,
+      "title": "FIFA 23",
+      "previousUrl": null,
+      "url": "https://www.youtube.com/watch?v=Ye1Go-Ke1r4",
+      "videoTitle": "FIFA 23 Review",
+      "publishedAt": "2022-09-30T15:09:44-07:00",
+      "source": "IGN",
+      "channelId": "UCKy1dAqELo0zrOtPkf0eTMw",
+      "candidates": [
+        {
+          "url": "https://www.youtube.com/watch?v=Ye1Go-Ke1r4",
+          "title": "FIFA 23 Review",
+          "publishedAt": "2022-09-30T15:09:44-07:00"
+        }
+      ]
+    },
+    {
+      "id": 158,
+      "title": "Solo Leveling: ARISE",
+      "previousUrl": null,
+      "url": "https://www.youtube.com/watch?v=jxhkc-KE2_g",
+      "videoTitle": "I Do Not Recommend | Solo Leveling: Arise",
+      "publishedAt": "2024-09-18T07:45:05-07:00",
+      "source": "Pseychie",
+      "channelId": "UCB_XGgMh_pdtc35LQUdXAFA",
+      "candidates": [
+        {
+          "url": "https://www.youtube.com/watch?v=jxhkc-KE2_g",
+          "title": "I Do Not Recommend | Solo Leveling: Arise",
+          "publishedAt": "2024-09-18T07:45:05-07:00"
+        }
+      ]
+    },
+    {
+      "id": 164,
+      "title": "Mad Max",
+      "previousUrl": "https://www.youtube.com/watch?v=10kxLACQWjc",
+      "url": "https://www.youtube.com/watch?v=doo0U34L0lY",
+      "videoTitle": "Mad Max Review",
+      "publishedAt": "2015-08-31T16:15:00-07:00",
+      "source": "IGN",
+      "channelId": "UCKy1dAqELo0zrOtPkf0eTMw",
+      "candidates": [
+        {
+          "url": "https://www.youtube.com/watch?v=doo0U34L0lY",
+          "title": "Mad Max Review",
+          "publishedAt": "2015-08-31T16:15:00-07:00"
+        }
+      ]
+    }
+  ],
+  "unmatched": [
+    {
+      "id": 86,
+      "title": "Castlevania: Belmont’s Curse",
+      "existingUrl": null,
+      "reason": "No verified game review found; available coverage was previews, trailers, reactions, or unrelated titles."
+    },
+    {
+      "id": 87,
+      "title": "CONTROL Resonant",
+      "existingUrl": null,
+      "reason": "No verified game review found; available coverage was previews, trailers, reactions, or unrelated titles."
+    },
+    {
+      "id": 93,
+      "title": "Phantom Blade Zero",
+      "existingUrl": null,
+      "reason": "No verified game review found; available coverage was previews, trailers, reactions, or unrelated titles."
+    },
+    {
+      "id": 96,
+      "title": "Star Wars: Galactic Racer",
+      "existingUrl": null,
+      "reason": "No verified game review found; available coverage was previews, trailers, reactions, or unrelated titles."
+    },
+    {
+      "id": 97,
+      "title": "ANANTA",
+      "existingUrl": null,
+      "reason": "No verified game review found; available coverage was previews, trailers, reactions, or unrelated titles."
+    },
+    {
+      "id": 98,
+      "title": "Lords of the Fallen II",
+      "existingUrl": null,
+      "reason": "No verified game review found; available coverage was previews, trailers, reactions, or unrelated titles."
+    },
+    {
+      "id": 99,
+      "title": "A Whisper of Fall: Jinyiwei",
+      "existingUrl": null,
+      "reason": "No verified game review found; available coverage was previews, trailers, reactions, or unrelated titles."
+    },
+    {
+      "id": 100,
+      "title": "Black Myth: Zhong Kui",
+      "existingUrl": null,
+      "reason": "No verified game review found; available coverage was previews, trailers, reactions, or unrelated titles."
+    },
+    {
+      "id": 101,
+      "title": "Genigods: Nezha",
+      "existingUrl": null,
+      "reason": "No verified game review found; available coverage was previews, trailers, reactions, or unrelated titles."
+    },
+    {
+      "id": 102,
+      "title": "Hitori No Shita: The Outcast",
+      "existingUrl": null,
+      "reason": "No verified game review found; available coverage was previews, trailers, reactions, or unrelated titles."
+    },
+    {
+      "id": 104,
+      "title": "John Wick (AAA game by Saber Interactive)",
+      "existingUrl": null,
+      "reason": "No verified game review found; available coverage was previews, trailers, reactions, or unrelated titles."
+    },
+    {
+      "id": 105,
+      "title": "Project Windless",
+      "existingUrl": null,
+      "reason": "No verified game review found; available coverage was previews, trailers, reactions, or unrelated titles."
+    },
+    {
+      "id": 106,
+      "title": "The God Slayer",
+      "existingUrl": null,
+      "reason": "No verified game review found; available coverage was previews, trailers, reactions, or unrelated titles."
+    },
+    {
+      "id": 107,
+      "title": "Tides of Annihilation",
+      "existingUrl": null,
+      "reason": "No verified game review found; available coverage was previews, trailers, reactions, or unrelated titles."
+    }
+  ]
+}

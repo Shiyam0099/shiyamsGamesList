@@ -8,11 +8,17 @@ test('PostgreSQL enforces public, admin, inactive and single-Super-Admin boundar
  try{
   await db.exec(`create role anon;create role authenticated;create role service_role bypassrls;create schema auth;create table auth.users(id uuid primary key,email text);create function auth.uid() returns uuid language sql stable as $$select nullif(current_setting('request.jwt.claim.sub',true),'')::uuid$$;grant usage on schema public,auth to anon,authenticated,service_role;grant execute on function auth.uid() to public;`);
   await db.exec(await readFile(new URL('../supabase/migrations/202609130001_initial.sql',import.meta.url),'utf8'));
+  await db.exec(await readFile(new URL('../supabase/migrations/202609140001_discovery_cache.sql',import.meta.url),'utf8'));
   await db.query('insert into auth.users values ($1,$2),($3,$4),($5,$6)',[superId,'super@example.test',adminId,'admin@example.test',strangerId,'stranger@example.test']);
   await db.query('select public.bootstrap_super_admin($1,$2)',[superId,'Super']);
   await db.query("insert into public.admin_profiles(id,email,username) values($1,'admin@example.test','Admin')",[adminId]);
   await db.exec("insert into public.games(id,title,genres,status) values(1,'One',array['RPG'],'playing'),(2,'Two',array['Action'],'unplayed'),(3,'Three',array['Puzzle'],'loved')");
   async function as(role,id,sql,params=[]){await db.exec(`set role ${role}`);try{await db.query("select set_config('request.jwt.claim.sub',$1,false)",[id || '']);return await db.query(sql,params);}finally{await db.exec('reset role');await db.query("select set_config('request.jwt.claim.sub','',false)");}}
+  await t.test('discovery cache is writable only by the server role',async()=>{
+   for(const role of ['anon','authenticated']){await assert.rejects(as(role,null,'select * from discovery_cache'));await assert.rejects(as(role,null,"insert into discovery_cache(key,payload,expires_at) values('test','{}',now())"));}
+   await as('service_role',null,"insert into discovery_cache(key,payload,expires_at) values('test','{}',now())");
+   assert.equal((await as('service_role',null,'select * from discovery_cache')).rows.length,1);
+  });
   await t.test('anonymous can read games and cannot write or read private profiles',async()=>{
    assert.equal((await as('anon',null,'select * from games')).rows.length,3);
    await assert.rejects(as('anon',null,"insert into games(title,genres) values('bad',array['RPG'])"));

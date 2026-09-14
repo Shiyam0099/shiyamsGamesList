@@ -1,1 +1,28 @@
-{"rewrites":[{"source":"/admin/:path*","destination":"/index.html"}]}
+{
+  "rewrites": [
+    {
+      "source": "/admin/:path*",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/news",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/reviews",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/radar",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/top250",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/calendar",
+      "destination": "/index.html"
+    }
+  ]
+}

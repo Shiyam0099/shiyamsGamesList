@@ -1,3 +1,5 @@
+import {animateCollection,animateTabSelection} from './lib/motion.mjs';
+import {collectionGenreFilter} from './lib/collection-genre.mjs';
 import {icon} from './lib/ui.mjs';
 export function initPublic(games) {
 const { statusNames, rating, safeURL, statistics, createRecommender } = window.GameLogic;
@@ -29,7 +31,7 @@ $$("[data-status]").forEach(
   (b) => (b.querySelector("span").textContent = collectionCounts[b.dataset.status]),
 );
 const genreList = [...new Set(games.flatMap((g) => g.genres))].sort();
-genreList.forEach((g) => $("#genre").add(new Option(g, g)));
+const genreFilter=collectionGenreFilter($("#genre"),genreList);
 const placeholder =
   "data:image/svg+xml," +
   encodeURIComponent(
@@ -43,6 +45,7 @@ function imgError(event) {
   if (event.target.src !== placeholder) event.target.src = placeholder;
 }
 function render() {
+  genreFilter.sync();
   const q = $("#search").value.toLowerCase().trim(),
     genre = $("#genre").value;
   let list = games.filter(
@@ -92,6 +95,9 @@ function render() {
   $$("#grid img").forEach((i) => i.addEventListener("error", imgError));
 }
 function switchTab(button, age = null) {
+  const order = ["all", "unplayed", "loved", "dropped"];
+  const direction = order.indexOf(button.dataset.status) >= order.indexOf(selected) ? 1 : -1;
+  if (selected === button.dataset.status && selectedAge === age) return;
   selected = button.dataset.status;
   selectedAge = age;
   $$("[role=tab]").forEach((b) => {
@@ -99,6 +105,7 @@ function switchTab(button, age = null) {
     b.tabIndex = b === button ? 0 : -1;
   });
   render();
+  animateCollection($("#grid"), direction);
 }
 $$("[role=tab]").forEach((b, i, all) => {
   b.tabIndex = b.dataset.status === selected ? 0 : -1;
@@ -116,6 +123,7 @@ $$("[role=tab]").forEach((b, i, all) => {
     }
   });
 });
+animateTabSelection($("#collection .tabs"));
 $("#search").addEventListener("input", render);
 $("#genre").addEventListener("change", render);
 $("#sort").addEventListener("change", render);

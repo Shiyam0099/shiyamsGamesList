@@ -1,3 +1,10 @@
 [functions.manage-admins]
 # The handler verifies the bearer JWT with Auth and checks the current DB role.
 verify_jwt = false
+
+[functions.gaming-feed]
+# Read-only public aggregation endpoint with fixed upstream sources.
+verify_jwt = false
+
+[functions.gaming-radar]
+verify_jwt = false

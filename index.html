@@ -11,21 +11,28 @@
     <link rel="icon"
         href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='10' fill='%23cefa69'/%3E%3Ctext x='10' y='29' font-family='Arial' font-weight='900' font-size='28'%3ES%3C/text%3E%3C/svg%3E">
     <link rel="stylesheet" href="./styles.css">
+    <script>
+        // Native transitions may be skipped by rapid navigation or a viewport change.
+        for (const name of ['pagereveal', 'pageswap']) {
+            addEventListener(name, event => event.viewTransition?.ready.catch(() => {}));
+        }
+    </script>
     <script type="module" src="./main.mjs"></script>
 </head>
 
 <body><div id="load-state" role="status"><span class="boot-spinner" aria-hidden="true"></span><span class="boot-label">Loading collection…</span></div><div id="admin-app" hidden></div><div id="public-app" hidden><a class="skip" href="#collection">Skip to collection</a>
     <header><a class="brand" href="#"><span class="brand-mark">S<span>+</span></span><span>SHIYAM`S<span
                     class="brand-sub">GAMES LIST</span></span></a>
-        <nav aria-label="Main navigation"><a href="#collection">Collection</a><a href="#recommendations">Discover</a><a
+        <nav aria-label="Main navigation"><a href="#collection">Collection</a><a href="#recommendations">Discover</a><a href="/radar">Gaming Radar</a><a href="/top250">All-time top 250</a><a href="/calendar">Release Calendar</a><a href="/news">News</a><a href="/reviews">Reviews</a><a
                 href="#about">About me</a></nav><a class="avatar-link" href="#about"><img src="./assets/profile.jpg"
                 alt="About the curator"></a>
     </header>
     <main>
-        <section class="intro">
+        <section id="cinematic-hero" class="cinematic-hero" aria-label="Most anticipated upcoming games"></section>
+        <section id="personal-save-file" class="intro" aria-labelledby="intro-title">
             <div>
                 <p class="eyebrow">THE PERSONAL SAVE FILE</p>
-                <h1>Good games.<br><span>Great memories.</span></h1>
+                <h2 id="intro-title">Good games.<br><span class="lime">Great memories.</span></h2>
                 <p class="lead">The next adventure. The unforgettable ones.<br>And the games that just weren’t for me.
                 </p>
             </div>
@@ -111,10 +118,7 @@
                     class="search"><input id="search" type="search" placeholder="Find a game…"
                         aria-label="Find a game"></label>
             </div>
-            <div class="filter-row"><span id="collection-note">The adventures still ahead.</span><label>Genre <select
-                        id="genre">
-                        <option value="">All genres</option>
-                    </select></label><label>Sort <select id="sort">
+            <div class="filter-row"><span id="collection-note">The adventures still ahead.</span><div class="collection-genre-field"><span>Genre</span><input type="hidden" id="genre" value=""></div><label>Sort <select id="sort">
                         <option value="oldest" selected>Oldest year first</option>
                         <option value="newest">Newest year first</option>
                         <option value="title">Title A–Z</option>

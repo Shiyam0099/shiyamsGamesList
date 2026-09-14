@@ -1,0 +1,20 @@
+/* Native same-origin document transitions preserve links, history and browser shortcuts. */
+@view-transition{navigation:auto}
+::view-transition-old(root){animation:page-out 180ms ease both}
+::view-transition-new(root){animation:page-in 320ms cubic-bezier(.2,.8,.2,1) both}
+@keyframes page-out{to{opacity:0}}
+@keyframes page-in{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.tabs button,.radar-tabs button,.calendar-months button,.library-links a,header nav a{transition:background-color .22s,color .22s,border-color .22s}
+@media(prefers-reduced-motion:reduce){@view-transition{navigation:none}::view-transition-old(root),::view-transition-new(root){animation:none}}
+
+#collection .tabs{position:relative;isolation:isolate}
+#collection .tab-indicator-track{position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:1}
+#collection .tab-indicator{position:absolute;left:0;bottom:0;height:3px;border-radius:3px;background:var(--lime);box-shadow:0 -3px 16px #cefa6928;pointer-events:none;z-index:1}
+#collection .tabs[data-indicator-ready] .tab-indicator{transition:transform 420ms cubic-bezier(.22,1,.36,1),width 420ms cubic-bezier(.22,1,.36,1)}
+#collection .tabs[data-indicator-ready] button[aria-selected=true]{border-bottom-color:transparent;background:#cefa6909}
+#collection .tabs button{transition:color .2s,background-color .25s,transform .18s}
+#collection .tabs button:hover{color:var(--lime);background:#cefa6907}
+#collection .tabs button:active{transform:translateY(1px) scale(.98)}
+#collection .tabs button span{transition:background-color .25s,color .25s}
+#collection .tabs button[aria-selected=true] span{background:#cefa691c;color:var(--lime)}
+@media(prefers-reduced-motion:reduce){#collection .tabs button:active{transform:none}#collection .tabs .tab-indicator{transition:none}}

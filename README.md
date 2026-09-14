@@ -58,7 +58,7 @@ npm run preview
 
 The production base is `/shiyamsGamesList/`, matching the supplied GitHub Pages project URL. The build creates `404.html` as an app-shell fallback so direct admin links load on GitHub Pages (the initial HTTP response for these nested routes is 404, after which the app handles the route). Local development uses `/`.
 
-For this repository, select **Settings → Pages → Source → GitHub Actions**. Add repository **Actions variables** `VITE_SUPABASE_URL` and `VITE_SUPABASE_PUBLISHABLE_KEY` using the public values in your local configuration. The prepared `.github/workflows/pages.yml` tests, builds, and publishes only `dist/` on pushes to `main` or a manual workflow run. Do not add database passwords or service keys to these public variables. The workflow has not been pushed or run by the local setup scripts.
+For this repository, select **Settings → Pages → Source → GitHub Actions**. Add repository **Actions secrets** `VITE_SUPABASE_URL` and `VITE_SUPABASE_PUBLISHABLE_KEY` using the public values in your local configuration. The prepared `.github/workflows/pages.yml` tests, builds, and publishes only `dist/` on pushes to `main` or a manual workflow run. Only the public Supabase URL and publishable/anon key belong in these two build secrets; never use a service-role key. The existing workflow has successful deployments. Commit all new frontend modules and assets along with updates, then push to `main`; only `dist/` is uploaded, and `keyfile.env` stays local.
 
 The deployed admin sign-in URL will be `https://shiyam0099.github.io/shiyamsGamesList/admin/login`.
 
@@ -140,3 +140,89 @@ SITE_URL=http://127.0.0.1:4174 node tests/admin-smoke.cjs
 ```
 
 Provide `PLAYWRIGHT_MODULE` and `CHROME_EXECUTABLE` to use an existing installation, or install Playwright separately. The public suite exercises all seven recommendation modes, sorting, filters, age drill-down, dialogs, missing metadata, safe downloads, and seven viewport widths. The admin suite covers login/logout, route guards, CRUD, multiple playing games, settings, Super Admin user management, deactivation, error states, and mobile layouts. API mocks verify frontend behavior; the separate PostgreSQL suite verifies actual authorization rules. `npm run verify:live` checks the configured public API and Super Admin sign-in without changing game data.
+
+## Genre consistency
+
+`lib/genres.mjs` is the shared genre vocabulary and normalization layer for the picker and game saves. Case, spacing, and hyphen variations resolve to one label. Compound legacy labels are split without losing the game type: `Open-world RPG` becomes `Open World` + `RPG`; `Open-world Action RPG` becomes `Open World` + `Action RPG`. Distinct genres such as Roguelike and Roguelite remain separate. Existing and custom genres are normalized and deduplicated.
+
+The live cleanup updated 105 games and verified all 164 records on September 13, 2026. Original genre arrays were backed up locally before the transactional update. To inspect or repeat normalization safely:
+
+```sh
+node scripts/normalize-genres.mjs
+node scripts/normalize-genres.mjs --apply
+```
+
+## Gaming News and Latest Reviews
+
+Public `/news` and `/reviews` pages use the **gaming-feed** Supabase Edge Function, a read-only JSON API backed by freely accessible publisher RSS feeds:
+
+- [GameSpot news](https://www.gamespot.com/feeds/news/)
+- [GameSpot reviews](https://www.gamespot.com/feeds/reviews/)
+- [PC Gamer RSS](https://www.pcgamer.com/rss/), filtered to gaming news or game reviews (hardware and sponsored entries excluded)
+
+No extra paid news service or publisher API key is required. Requests use the existing Supabase project and count toward its normal hosting/function limits. Each function instance caches results for ten minutes and combines concurrent requests; browsers cache responses for five minutes. Upstream failures can use a recent saved response, clearly marked as stale. The interface includes publication and headline filters, latest-first ordering, pagination, loading/error/empty states, and direct links to the original articles. Only headlines, attributed thumbnails, and short excerpts are displayed; full reviews stay at their publishers, and review scores are not invented when feeds omit them.
+
+The function only fetches fixed publisher URLs, bounds upstream response sizes, rejects XML entity declarations and unsafe article links, and never exposes server credentials. News/reviews pages work with the existing GitHub Pages subdirectory and 404 app-shell fallback.
+
+```sh
+npm run feed:deploy
+node scripts/verify-feed.mjs
+```
+
+The function is already deployed and verified. The local frontend must still be published through the existing Pages workflow for these pages to appear on the hosted site.
+
+## Gaming Radar
+
+The `/radar` page (Radar in the navigation) uses the deployed `gaming-radar` Edge Function:
+
+- **Most played right now:** up to 20 games from the first 25 entries in Steam's public most-played chart, sorted by `GetNumberOfCurrentPlayers`. This measures current online Steam players within that chart sample, not global cross-platform popularity. Non-game software is excluded.
+- **Releasing this month:** up to 40 RAWG release highlights selected by community list additions, then displayed by release date within the current UTC calendar month.
+- **Anticipated this year:** upcoming dated releases from today through December 31, ordered by RAWG list additions. This is an interest signal, not a critic score. Unknown release dates and next-year releases are excluded.
+
+[RAWG's free personal/hobby plan](https://rawg.io/apidocs) provides up to 20,000 requests per month and requires attribution. Put `RAWG_API_KEY` in ignored `keyfile.env`; `npm run radar:deploy` installs it as an Edge Function secret. It is never included in Vite/browser code. Steam player counts need no new API key.
+
+The service-role-only `discovery_cache` table shares cached results across cold starts: Steam 10 minutes, RAWG 6 hours. The page checks again every 10 minutes while visible and when returning to the tab. It also has a manual Refresh button, keyboard-accessible category tabs, image fallbacks and loading/error/empty states. Source failures can show explicitly marked saved data up to 24 hours old; date-based cache keys prevent carrying last month's or year's releases into the next period. Caching reduces API usage but does not guarantee a quota under arbitrarily high concurrency.
+
+```sh
+npm run db:migrate
+npm run radar:deploy
+npm run radar:verify
+npm run build
+```
+
+The API and cache migration are deployed. Publish the frontend through the existing Pages workflow to expose `/radar` on the hosted website.
+
+## YouTube critic reviews
+
+Reviewed mappings and unmatched titles are recorded in `reports/before-you-buy-matches.md` and `reports/alternative-review-matches.md`, with JSON manifests for repeatable imports. The first pass saved 121 Gameranx links; the alternative pass saved 29 links. Fourteen games remain without verified reviews; trailers, previews and unrelated anime/sequel reviews were not substituted. Imports update only `critic_video_url`, preserve other fields, create a private local backup, and stop if a review was edited since matching.
+
+```sh
+node scripts/import-critic-reviews.mjs --alternatives     # dry run
+node scripts/import-critic-reviews.mjs --alternatives --apply
+```
+
+## Cinematic anticipation hero
+
+The collection opens with a cinematic showcase of up to ten games from Radar's anticipated list, filtered again in the browser to releases from today through December 31 (UTC), ranked by RAWG community list additions. Full-width artwork crossfades with continuous camera drift, staggered text reveals, and a glass artwork preview of the next game. Numbered chapter controls select games directly; selecting manually pauses autoplay. Autoplay advances every five seconds and pauses while hovering over controls, on keyboard focus, when offscreen, or when the tab is hidden. Reduced-motion users start paused and receive static transitions. A pause/play control is always available when multiple games are listed.
+
+The hero refreshes release data every ten minutes while the page is visible, preserves its state across collection realtime refreshes, preloads the next artwork, and provides safe empty/error/image-fallback states. It does not block loading or using the collection when Radar is unavailable. After the hero, the personal introduction ("The Personal Save File") is restored, followed by statistics, currently playing, Discover, collection, and About. No additional API key or deployment step is needed.
+
+The hero reserves enough space for its tallest featured game at the current width, including the next-game preview. This is recalculated when the list, viewport width, or fonts change, so game transitions do not move the sections below or clip long titles.
+
+## Top 250, last-year favorites, and release calendar
+
+- `/top250` shows 250 games ranked by Metacritic scores supplied by RAWG, with search across the complete ranking and 40-card display batches. Ties retain RAWG ordering; unscored games are excluded. This is a site ranking built from RAWG data, not an official RAWG chart.
+- Radar includes **Popular last year**, immediately after **Anticipated this year**. It uses the previous UTC calendar year, ranks by RAWG list additions, and shows up to 40 games.
+- `/calendar` provides month navigation, a month picker, selectable days, a current-month shortcut, and releases grouped by date. It retrieves 40 releases per page with **Load more games**, rather than treating a highlights list as a complete calendar. Dates may change and undated releases are excluded.
+
+All three use the existing `gaming-radar` Edge Function and server-only RAWG key. The updated function is deployed. Ranking requests retrieve seven RAWG pages and cache the combined 250 games for six hours; last-year and calendar responses also cache for six hours. Calendar cache keys include month/day/page, and stale fallback never crosses date selections. Each page links back to RAWG. The new routes use the existing GitHub Pages base path and `404.html` fallback; pushing the frontend through the Pages workflow publishes their navigation links.
+
+Validation: `npm test`, `npm run build`, `npm run radar:verify`, and the Playwright suites `tests/radar-smoke.cjs` / `tests/library-smoke.cjs`. The browser suites cover ranking pagination/search, calendar leap day and year rollover, mobile widths, keyboard tabs, and empty/error/stale recovery.
+
+### Compact calendar, filtering, and motion
+
+Navigation labels are Gaming Radar, All-time top 250, and Release Calendar. The calendar shows all twelve months and a year selector; **Choose a day** expands a compact day picker that starts collapsed. Order by supports earliest/latest release, popularity, Metacritic score, and title. Platform filters cover PC, PlayStation, Xbox, Nintendo, iOS, Android, macOS and Linux. **Popular only** keeps games with at least 100 RAWG list additions. RAWG ordering/platform filtering happens before pagination; popularity/content exclusions apply to each loaded page. Counts explicitly distinguish matching loaded games from RAWG’s total, and empty filtered pages can still offer Load more. Cache keys include every filter.
+
+External game data is filtered by the shared `supabase/functions/_shared/content-policy.mjs` before the server caches or returns it. It excludes adult-only ESRB ratings, explicit sexual/nudity tags and titles, and Steam sexual-content descriptors; it does not exclude general mature/violent ratings alone. News/reviews also screen titles. Browser rendering screens titles/metadata again, including cached responses. Existing server cache entries are bypassed with a new policy version. Missing or inaccurate upstream metadata can still allow unmarked content through; this is not image classification. The curated personal collection is preserved.
+
+Collection/Radar tabs and new calendar results use short fade/slide animations. Same-origin page navigation uses native cross-document view transitions where supported, with content entrance animation as a fallback. Normal links, history, and browser shortcuts remain intact; reduced-motion preferences disable these animations.
