@@ -13,7 +13,7 @@ test('all original game fields survive database mapping',()=>{
  assert.equal(games.find(g=>g.title==='A Plague Tale: Innocence').status,'playing');
 });
 test('game validation rejects invalid inputs and unsafe links',()=>{
- const game=games[0];for(const change of [{year:'20'},{year:'10000'},{status:'admin'},{metacritic:101},{metacritic:4.2},{genres:[]},{downloadLink:'javascript:alert(1)'},{poster:'https://user:password@example.com'},{videoId:'invalid'}])assert.throws(()=>validateGame({...game,...change}));
+ const game=games[0];for(const change of [{year:'20'},{year:'10000'},{status:'admin'},{metacritic:101},{metacritic:4.2},{genres:[]},{rawgId:-1},{releaseDate:'2026-02-30'},{poster:'https://user:password@example.com'},{videoId:'invalid'}])assert.throws(()=>validateGame({...game,...change}));
  assert.equal(videoID('https://www.youtube.com/watch?v=abcdefghijk'),'abcdefghijk');
  assert.throws(()=>videoID('https://attacker.example/watch?v=abcdefghijk'));
 });
@@ -22,3 +22,5 @@ test('game API reads beyond the Supabase response limit',async()=>{
  const client={from:()=>({select:()=>({order:()=>({range:async(start,end)=>{requests++;return {data:rows.slice(start,end+1)};}})})})};
  assert.equal((await gameService(client).getGames()).length,1201);assert.equal(requests,3);
 });
+
+test("retired download fields are not returned or saved",()=>{assert.equal(fromRow({download_link:"https://example.com/old"}).downloadLink,undefined);assert.equal(toRow({...games[0],downloadLink:"https://example.com/old"}).download_link,undefined);});

@@ -8,3 +8,10 @@ verify_jwt = false
 
 [functions.gaming-radar]
 verify_jwt = false
+
+[functions.game-metadata]
+# Verifies the caller JWT and active admin profile; writes use caller RLS.
+verify_jwt = false
+
+[functions.member-api]
+verify_jwt = false

@@ -18,7 +18,6 @@ window.GAMES = [
     "videoChannel": "PlayStation Europe",
     "videoSource": "https://www.youtube.com/watch?v=m7Tb1pFl5_8",
     "metacritic": 72,
-    "downloadLink": "",
     "metacriticSource": "https://www.metacritic.com/game/assassins-creed-unity/",
     "metacriticChecked": "2026-09-13",
     "descriptionSource": "https://www.metacritic.com/game/assassins-creed-unity/"
@@ -41,7 +40,6 @@ window.GAMES = [
     "videoChannel": "PlayStation",
     "videoSource": "https://www.youtube.com/watch?v=MlNfJvFnzc8",
     "metacritic": 80,
-    "downloadLink": "",
     "metacriticSource": "https://www.metacritic.com/game/infamous-second-son/",
     "metacriticChecked": "2026-09-13",
     "descriptionSource": "https://www.metacritic.com/game/infamous-second-son/"
@@ -65,7 +63,6 @@ window.GAMES = [
     "videoChannel": "Digic Pictures — cinematic trailer creator",
     "videoSource": "https://www.youtube.com/watch?v=USwkJtDkg2g",
     "metacritic": 76,
-    "downloadLink": "",
     "metacriticSource": "https://www.metacritic.com/game/assassins-creed-syndicate/",
     "metacriticChecked": "2026-09-13",
     "descriptionSource": "https://www.metacritic.com/game/assassins-creed-syndicate/"
@@ -88,7 +85,6 @@ window.GAMES = [
     "videoChannel": "PlayStationES",
     "videoSource": "https://www.youtube.com/watch?v=A31h3J-pPdU",
     "metacritic": 92,
-    "downloadLink": "",
     "metacriticSource": "https://www.metacritic.com/game/bloodborne/",
     "metacriticChecked": "2026-09-13",
     "descriptionSource": "https://www.metacritic.com/game/bloodborne/"
@@ -111,7 +107,6 @@ window.GAMES = [
     "videoChannel": "Xbox",
     "videoSource": "https://www.youtube.com/watch?v=cklw-Yu3moE",
     "metacritic": 88,
-    "downloadLink": "",
     "metacriticSource": "https://www.metacritic.com/game/ori-and-the-blind-forest/",
     "metacriticChecked": "2026-09-13",
     "descriptionSource": "https://www.metacritic.com/game/ori-and-the-blind-forest/"
@@ -133,7 +128,6 @@ window.GAMES = [
     "videoChannel": "Official trailer — source linked",
     "videoSource": "https://www.youtube.com/watch?v=c7nRTF2SowQ",
     "metacritic": 88,
-    "downloadLink": "",
     "metacriticSource": "https://www.metacritic.com/game/battlefield-1/",
     "metacriticChecked": "2026-09-13",
     "descriptionSource": "https://www.metacritic.com/game/battlefield-1/"
@@ -156,7 +150,6 @@ window.GAMES = [
     "videoChannel": "PS4 promotional trailer",
     "videoSource": "https://www.youtube.com/watch?v=IiI7SMQA59Q",
     "metacritic": 81,
-    "downloadLink": "",
     "metacriticSource": "https://www.metacritic.com/game/final-fantasy-xv/",
     "metacriticChecked": "2026-09-13",
     "descriptionSource": "https://www.metacritic.com/game/final-fantasy-xv/"
@@ -179,7 +172,6 @@ window.GAMES = [
     "videoChannel": "Official trailer — source linked",
     "videoSource": "https://www.gematsu.com/2017/10/assassins-creed-origins-launch-trailer",
     "metacritic": 81,
-    "downloadLink": "",
     "metacriticSource": "https://www.metacritic.com/game/assassins-creed-origins/",
     "metacriticChecked": "2026-09-13",
     "descriptionSource": "https://www.metacritic.com/game/assassins-creed-origins/"
@@ -201,7 +193,6 @@ window.GAMES = [
     "videoChannel": "Call of Duty",
     "videoSource": "https://www.youtube.com/watch?v=D4Q_XYVescc",
     "metacritic": 79,
-    "downloadLink": "",
     "metacriticSource": "https://www.metacritic.com/game/call-of-duty-wwii/",
     "metacriticChecked": "2026-09-13",
     "descriptionSource": "https://www.metacritic.com/game/call-of-duty-wwii/"
@@ -224,7 +215,6 @@ window.GAMES = [
     "videoChannel": "Official trailer — source linked",
     "videoSource": "https://www.gematsu.com/2017/02/horizon-zero-dawn-launch-trailer",
     "metacritic": 89,
-    "downloadLink": "",
     "metacriticSource": "https://www.metacritic.com/game/horizon-zero-dawn/",
     "metacriticChecked": "2026-09-13",
     "descriptionSource": "https://www.metacritic.com/game/horizon-zero-dawn/"
@@ -247,7 +237,6 @@ window.GAMES = [
     "videoChannel": "GameSpot Trailers — Definitive Edition",
     "videoSource": "https://www.youtube.com/watch?v=jh29z5EHA7M",
     "metacritic": 80,
-    "downloadLink": "",
     "metacriticSource": "https://www.metacritic.com/game/middle-earth-shadow-of-war/",
     "metacriticChecked": "2026-09-13",
     "descriptionSource": "https://www.metacritic.com/game/middle-earth-shadow-of-war/"
@@ -269,7 +258,6 @@ window.GAMES = [
     "videoChannel": "PlayStation",
     "videoSource": "https://www.youtube.com/watch?v=ARHVKZ5K1b0",
     "metacritic": 88,
-    "downloadLink": "",
     "metacriticSource": "https://www.metacritic.com/game/nier-automata/",
     "metacriticChecked": "2026-09-13",
     "descriptionSource": "https://www.metacritic.com/game/nier-automata/"
@@ -292,7 +280,6 @@ window.GAMES = [
     "videoChannel": "Official trailer — source linked",
     "videoSource": "https://www.playstation.com/en-us/games/assassins-creed-odyssey/",
     "metacritic": 83,
-    "downloadLink": "",
     "metacriticSource": "https://www.metacritic.com/game/assassins-creed-odyssey/",
     "metacriticChecked": "2026-09-13",
     "descriptionSource": "https://www.metacritic.com/game/assassins-creed-odyssey/"
@@ -314,7 +301,6 @@ window.GAMES = [
     "videoChannel": "GameSpot — official reveal trailer",
     "videoSource": "https://www.youtube.com/watch?v=a7ZpQadiyqs",
     "metacritic": 81,
-    "downloadLink": "",
     "metacriticSource": "https://www.metacritic.com/game/battlefield-v/",
     "metacriticChecked": "2026-09-13",
     "descriptionSource": "https://www.metacritic.com/game/battlefield-v/"
@@ -337,7 +323,6 @@ window.GAMES = [
     "videoChannel": "Ubisoft",
     "videoSource": "https://www.youtube.com/watch?v=Kdaoe4hbMso",
     "metacritic": 81,
-    "downloadLink": "",
     "metacriticSource": "https://www.metacritic.com/game/far-cry-5/",
     "metacriticChecked": "2026-09-13",
     "descriptionSource": "https://www.metacritic.com/game/far-cry-5/"
@@ -359,7 +344,6 @@ window.GAMES = [
     "videoChannel": "Official trailer — source linked",
     "videoSource": "https://www.playstation.com/en-us/games/god-of-war/",
     "metacritic": 94,
-    "downloadLink": "",
     "metacriticSource": "https://www.metacritic.com/game/god-of-war/",
     "metacriticChecked": "2026-09-13",
     "descriptionSource": "https://www.metacritic.com/game/god-of-war/"
@@ -382,7 +366,6 @@ window.GAMES = [
     "videoChannel": "Marvel",
     "videoSource": "https://www.youtube.com/watch?v=M6oWk1tmt7c",
     "metacritic": 87,
-    "downloadLink": "",
     "metacriticSource": "https://www.metacritic.com/game/marvels-spider-man-remastered/",
     "metacriticChecked": "2026-09-13",
     "descriptionSource": "https://www.metacritic.com/game/marvels-spider-man-remastered/"
@@ -405,7 +388,6 @@ window.GAMES = [
     "videoChannel": "Official trailer — source linked",
     "videoSource": "https://www.playstation.com/en-us/games/red-dead-redemption-2/",
     "metacritic": 97,
-    "downloadLink": "",
     "metacriticSource": "https://www.metacritic.com/game/red-dead-redemption-2/",
     "metacriticChecked": "2026-09-13",
     "descriptionSource": "https://www.metacritic.com/game/red-dead-redemption-2/"
@@ -428,7 +410,6 @@ window.GAMES = [
     "videoChannel": "Official trailer — source linked",
     "videoSource": "https://www.playstation.com/en-us/games/a-plague-tale-innocence/",
     "metacritic": 81,
-    "downloadLink": "https://www.1337x.to/torrent/3760788/A-Plague-Tale-Innocence-Coats-of-Arms-DLC-MULTi11-FitGirl-Repack-Selective-Download-from-10-1-GB/",
     "metacriticSource": "https://www.metacritic.com/game/a-plague-tale-innocence/",
     "metacriticChecked": "2026-09-13",
     "descriptionSource": "https://www.metacritic.com/game/a-plague-tale-innocence/"
@@ -450,7 +431,6 @@ window.GAMES = [
     "videoChannel": "Call of Duty",
     "videoSource": "https://www.youtube.com/watch?v=bH1lHCirCGI",
     "metacritic": 80,
-    "downloadLink": "",
     "metacriticSource": "https://www.metacritic.com/game/call-of-duty-modern-warfare/",
     "metacriticChecked": "2026-09-13",
     "descriptionSource": "https://www.metacritic.com/game/call-of-duty-modern-warfare/"
@@ -474,7 +454,6 @@ window.GAMES = [
     "videoChannel": "Featured by PlayStation Access",
     "videoSource": "https://www.youtube.com/watch?v=s_7yRpVu5n8",
     "metacritic": 71,
-    "downloadLink": "",
     "metacriticSource": "https://www.metacritic.com/game/days-gone/",
     "metacriticChecked": "2026-09-13",
     "descriptionSource": "https://www.metacritic.com/game/days-gone/"
@@ -496,7 +475,6 @@ window.GAMES = [
     "videoChannel": "Xbox",
     "videoSource": "https://www.youtube.com/watch?v=h35_KOgslkM",
     "metacritic": 84,
-    "downloadLink": "",
     "metacriticSource": "https://www.metacritic.com/game/gears-5/",
     "metacriticChecked": "2026-09-13",
     "descriptionSource": "https://www.metacritic.com/game/gears-5/"
@@ -520,7 +498,6 @@ window.GAMES = [
     "videoChannel": "IGN — story trailer",
     "videoSource": "https://www.youtube.com/watch?v=taktGrh0_Tw",
     "metacritic": 82,
-    "downloadLink": "",
     "metacriticSource": "https://www.metacritic.com/game/metro-exodus/",
     "metacriticChecked": "2026-09-13",
     "descriptionSource": "https://www.metacritic.com/game/metro-exodus/"
@@ -543,7 +520,6 @@ window.GAMES = [
     "videoChannel": "Official trailer — source linked",
     "videoSource": "https://www.gematsu.com/2019/10/star-wars-jedi-fallen-order-launch-trailer",
     "metacritic": 79,
-    "downloadLink": "",
     "metacriticSource": "https://www.metacritic.com/game/star-wars-jedi-fallen-order/",
     "metacriticChecked": "2026-09-13",
     "descriptionSource": "https://www.metacritic.com/game/star-wars-jedi-fallen-order/"
@@ -566,7 +542,6 @@ window.GAMES = [
     "videoChannel": "Official trailer — source linked",
     "videoSource": "https://www.playstation.com/en-us/games/assassins-creed-valhalla/",
     "metacritic": 80,
-    "downloadLink": "",
     "metacriticSource": "https://www.metacritic.com/game/assassins-creed-valhalla/",
     "metacriticChecked": "2026-09-13",
     "descriptionSource": "https://www.metacritic.com/game/assassins-creed-valhalla/"
@@ -588,7 +563,6 @@ window.GAMES = [
     "videoChannel": "Call of Duty",
     "videoSource": "https://www.youtube.com/watch?v=aTS9n_m7TW0",
     "metacritic": 76,
-    "downloadLink": "",
     "metacriticSource": "https://www.metacritic.com/game/call-of-duty-black-ops-cold-war/",
     "metacriticChecked": "2026-09-13",
     "descriptionSource": "https://www.metacritic.com/game/call-of-duty-black-ops-cold-war/"
@@ -611,7 +585,6 @@ window.GAMES = [
     "videoChannel": "Official trailer — source linked",
     "videoSource": "https://www.playstation.com/en-us/games/cyberpunk-2077/",
     "metacritic": 86,
-    "downloadLink": "",
     "metacriticSource": "https://www.metacritic.com/game/cyberpunk-2077/",
     "metacriticChecked": "2026-09-13",
     "descriptionSource": "https://www.metacritic.com/game/cyberpunk-2077/"
@@ -633,7 +606,6 @@ window.GAMES = [
     "videoChannel": "Official trailer — source linked",
     "videoSource": "https://www.playstation.com/en-us/games/doom-eternal/",
     "metacritic": 88,
-    "downloadLink": "",
     "metacriticSource": "https://www.metacritic.com/game/doom-eternal/",
     "metacriticChecked": "2026-09-13",
     "descriptionSource": "https://www.metacritic.com/game/doom-eternal/"
@@ -655,7 +627,6 @@ window.GAMES = [
     "videoChannel": "Official trailer — source linked",
     "videoSource": "https://www.playstation.com/en-us/games/final-fantasy-vii-remake/",
     "metacritic": 87,
-    "downloadLink": "",
     "metacriticSource": "https://www.metacritic.com/game/final-fantasy-vii-remake/",
     "metacriticChecked": "2026-09-13",
     "descriptionSource": "https://www.metacritic.com/game/final-fantasy-vii-remake/"
@@ -678,7 +649,6 @@ window.GAMES = [
     "videoChannel": "Official launch trailer — via Gematsu",
     "videoSource": "https://www.youtube.com/watch?v=piApenO8SsE",
     "metacritic": 83,
-    "downloadLink": "",
     "metacriticSource": "https://www.metacritic.com/game/ghost-of-tsushima/",
     "metacriticChecked": "2026-09-13",
     "descriptionSource": "https://www.metacritic.com/game/ghost-of-tsushima/"
@@ -701,7 +671,6 @@ window.GAMES = [
     "videoChannel": "Official launch trailer — via Gematsu",
     "videoSource": "https://www.youtube.com/watch?v=x91lpMZ_wWk",
     "metacritic": 67,
-    "downloadLink": "",
     "metacriticSource": "https://www.metacritic.com/game/marvels-avengers/",
     "metacriticChecked": "2026-09-13",
     "descriptionSource": "https://www.metacritic.com/game/marvels-avengers/"
@@ -724,7 +693,6 @@ window.GAMES = [
     "videoChannel": "Official trailer — source linked",
     "videoSource": "https://www.playstation.com/en-us/games/marvels-spider-man-miles-morales/",
     "metacritic": 85,
-    "downloadLink": "",
     "metacriticSource": "https://www.metacritic.com/game/marvels-spider-man-miles-morales/",
     "metacriticChecked": "2026-09-13",
     "descriptionSource": "https://www.metacritic.com/game/marvels-spider-man-miles-morales/"
@@ -747,7 +715,6 @@ window.GAMES = [
     "videoChannel": "IGN — E3 reveal trailer",
     "videoSource": "https://www.youtube.com/watch?v=9n10rZayLw0",
     "metacritic": 90,
-    "downloadLink": "",
     "metacriticSource": "https://www.metacritic.com/game/ori-and-the-will-of-the-wisps/",
     "metacriticChecked": "2026-09-13",
     "descriptionSource": "https://www.metacritic.com/game/ori-and-the-will-of-the-wisps/"
@@ -769,7 +736,6 @@ window.GAMES = [
     "videoChannel": "Official trailer — source linked",
     "videoSource": "https://www.playstation.com/en-us/games/call-of-duty-vanguard/",
     "metacritic": 73,
-    "downloadLink": "",
     "metacriticSource": "https://www.metacritic.com/game/call-of-duty-vanguard/",
     "metacriticChecked": "2026-09-13",
     "descriptionSource": "https://www.metacritic.com/game/call-of-duty-vanguard/"
@@ -792,7 +758,6 @@ window.GAMES = [
     "videoChannel": "Official trailer — source linked",
     "videoSource": "https://www.playstation.com/en-us/games/far-cry-6/",
     "metacritic": 73,
-    "downloadLink": "",
     "metacriticSource": "https://www.metacritic.com/game/far-cry-6/",
     "metacriticChecked": "2026-09-13",
     "descriptionSource": "https://www.metacritic.com/game/far-cry-6/"
@@ -815,7 +780,6 @@ window.GAMES = [
     "videoChannel": "Official trailer — source linked",
     "videoSource": "https://www.playstation.com/en-us/games/forza-horizon-5/",
     "metacritic": 92,
-    "downloadLink": "",
     "metacriticSource": "https://www.metacritic.com/game/forza-horizon-5/",
     "metacriticChecked": "2026-09-13",
     "descriptionSource": "https://www.metacritic.com/game/forza-horizon-5/"
@@ -837,7 +801,6 @@ window.GAMES = [
     "videoChannel": "Official trailer — source linked",
     "videoSource": "https://www.playstation.com/en-us/games/marvels-guardians-of-the-galaxy/",
     "metacritic": 80,
-    "downloadLink": "",
     "metacriticSource": "https://www.metacritic.com/game/marvels-guardians-of-the-galaxy/",
     "metacriticChecked": "2026-09-13",
     "descriptionSource": "https://www.metacritic.com/game/marvels-guardians-of-the-galaxy/"
@@ -860,7 +823,6 @@ window.GAMES = [
     "videoChannel": "Official trailer — source linked",
     "videoSource": "https://www.playstation.com/en-us/games/a-plague-tale-requiem/",
     "metacritic": 82,
-    "downloadLink": "",
     "metacriticSource": "https://www.metacritic.com/game/a-plague-tale-requiem/",
     "metacriticChecked": "2026-09-13",
     "descriptionSource": "https://www.metacritic.com/game/a-plague-tale-requiem/"
@@ -882,7 +844,6 @@ window.GAMES = [
     "videoChannel": "Call of Duty",
     "videoSource": "https://www.youtube.com/watch?v=r72GP1PIZa0",
     "metacritic": 75,
-    "downloadLink": "",
     "metacriticSource": "https://www.metacritic.com/game/call-of-duty-modern-warfare-ii/",
     "metacriticChecked": "2026-09-13",
     "descriptionSource": "https://www.metacritic.com/game/call-of-duty-modern-warfare-ii/"
@@ -905,7 +866,6 @@ window.GAMES = [
     "videoChannel": "Official trailer — source linked",
     "videoSource": "https://www.youtube.com/watch?v=E3Huy2cdih0",
     "metacritic": 96,
-    "downloadLink": "",
     "metacriticSource": "https://www.metacritic.com/game/elden-ring/",
     "metacriticChecked": "2026-09-13",
     "descriptionSource": "https://www.metacritic.com/game/elden-ring/"
@@ -928,7 +888,6 @@ window.GAMES = [
     "videoChannel": "Focus Entertainment",
     "videoSource": "https://www.youtube.com/watch?v=2O35NOsTIoE",
     "metacritic": 73,
-    "downloadLink": "",
     "metacriticSource": "https://www.metacritic.com/game/evil-west/",
     "metacriticChecked": "2026-09-13",
     "descriptionSource": "https://www.metacritic.com/game/evil-west/"
@@ -950,7 +909,6 @@ window.GAMES = [
     "videoChannel": "PlayStation",
     "videoSource": "https://www.youtube.com/watch?v=hfJ4Km46A-0",
     "metacritic": 94,
-    "downloadLink": "",
     "metacriticSource": "https://www.metacritic.com/game/god-of-war-ragnarok/",
     "metacriticChecked": "2026-09-13",
     "descriptionSource": "https://www.metacritic.com/game/god-of-war-ragnarok/"
@@ -973,7 +931,6 @@ window.GAMES = [
     "videoChannel": "Official trailer — source linked",
     "videoSource": "https://www.playstation.com/en-us/games/horizon-forbidden-west/",
     "metacritic": 88,
-    "downloadLink": "",
     "metacriticSource": "https://www.metacritic.com/game/horizon-forbidden-west/",
     "metacriticChecked": "2026-09-13",
     "descriptionSource": "https://www.metacritic.com/game/horizon-forbidden-west/"
@@ -996,7 +953,6 @@ window.GAMES = [
     "videoChannel": "Official trailer — source linked",
     "videoSource": "https://www.playstation.com/en-us/games/need-for-speed-unbound/",
     "metacritic": 77,
-    "downloadLink": "",
     "metacriticSource": "https://www.metacritic.com/game/need-for-speed-unbound/",
     "metacriticChecked": "2026-09-13",
     "descriptionSource": "https://www.metacritic.com/game/need-for-speed-unbound/"
@@ -1019,7 +975,6 @@ window.GAMES = [
     "videoChannel": "Official trailer — source linked",
     "videoSource": "https://www.playstation.com/en-us/games/the-last-of-us-part-i/",
     "metacritic": 89,
-    "downloadLink": "",
     "metacriticSource": "https://www.metacritic.com/game/the-last-of-us-part-i/",
     "metacriticChecked": "2026-09-13",
     "descriptionSource": "https://www.metacritic.com/game/the-last-of-us-part-i/"
@@ -1042,7 +997,6 @@ window.GAMES = [
     "videoChannel": "Official trailer — source linked",
     "videoSource": "https://www.playstation.com/en-us/games/the-witcher-3-wild-hunt/",
     "metacritic": null,
-    "downloadLink": "",
     "descriptionSource": "https://www.metacritic.com/game/the-witcher-3-wild-hunt/"
   },
   {
@@ -1062,7 +1016,6 @@ window.GAMES = [
     "videoChannel": "Official trailer — source linked",
     "videoSource": "https://www.playstation.com/en-us/games/uncharted-legacy-of-thieves-collection/",
     "metacritic": 87,
-    "downloadLink": "",
     "metacriticSource": "https://www.metacritic.com/game/uncharted-legacy-of-thieves-collection/",
     "metacriticChecked": "2026-09-13",
     "descriptionSource": "https://www.metacritic.com/game/uncharted-legacy-of-thieves-collection/"
@@ -1085,7 +1038,6 @@ window.GAMES = [
     "videoChannel": "Official trailer — source linked",
     "videoSource": "https://www.playstation.com/en-us/games/assassins-creed-mirage/",
     "metacritic": 76,
-    "downloadLink": "",
     "metacriticSource": "https://www.metacritic.com/game/assassins-creed-mirage/",
     "metacriticChecked": "2026-09-13",
     "descriptionSource": "https://www.metacritic.com/game/assassins-creed-mirage/"
@@ -1108,7 +1060,6 @@ window.GAMES = [
     "videoChannel": "PlayStation",
     "videoSource": "https://www.youtube.com/watch?v=JJbVvjviXOc",
     "metacritic": 64,
-    "downloadLink": "",
     "metacriticSource": "https://www.metacritic.com/game/atlas-fallen/",
     "metacriticChecked": "2026-09-13",
     "descriptionSource": "https://www.metacritic.com/game/atlas-fallen/"
@@ -1131,7 +1082,6 @@ window.GAMES = [
     "videoChannel": "Official trailer — source linked",
     "videoSource": "https://www.playstation.com/en-us/games/avatar-frontiers-of-pandora/",
     "metacritic": 72,
-    "downloadLink": "",
     "metacriticSource": "https://www.metacritic.com/game/avatar-frontiers-of-pandora/",
     "metacriticChecked": "2026-09-13",
     "descriptionSource": "https://www.metacritic.com/game/avatar-frontiers-of-pandora/"
@@ -1153,7 +1103,6 @@ window.GAMES = [
     "videoChannel": "Official trailer — source linked",
     "videoSource": "https://www.playstation.com/en-us/games/call-of-duty-modern-warfare-iii/",
     "metacritic": 56,
-    "downloadLink": "",
     "metacriticSource": "https://www.metacritic.com/game/call-of-duty-modern-warfare-iii/",
     "metacriticChecked": "2026-09-13",
     "descriptionSource": "https://www.metacritic.com/game/call-of-duty-modern-warfare-iii/"
@@ -1175,7 +1124,6 @@ window.GAMES = [
     "videoChannel": "Official trailer — source linked",
     "videoSource": "https://www.playstation.com/en-us/games/dead-space/",
     "metacritic": 89,
-    "downloadLink": "",
     "metacriticSource": "https://www.metacritic.com/game/dead-space/",
     "metacriticChecked": "2026-09-13",
     "descriptionSource": "https://www.metacritic.com/game/dead-space/"
@@ -1197,7 +1145,6 @@ window.GAMES = [
     "videoChannel": "Official trailer — source linked",
     "videoSource": "https://www.playstation.com/en-us/games/final-fantasy-xvi/",
     "metacritic": 87,
-    "downloadLink": "",
     "metacriticSource": "https://www.metacritic.com/game/final-fantasy-xvi/",
     "metacriticChecked": "2026-09-13",
     "descriptionSource": "https://www.metacritic.com/game/final-fantasy-xvi/"
@@ -1220,7 +1167,6 @@ window.GAMES = [
     "videoChannel": "Official trailer — source linked",
     "videoSource": "https://www.playstation.com/en-us/games/hogwarts-legacy/",
     "metacritic": 84,
-    "downloadLink": "",
     "metacriticSource": "https://www.metacritic.com/game/hogwarts-legacy/",
     "metacriticChecked": "2026-09-13",
     "descriptionSource": "https://www.metacritic.com/game/hogwarts-legacy/"
@@ -1243,7 +1189,6 @@ window.GAMES = [
     "videoChannel": "PlayStation",
     "videoSource": "https://www.youtube.com/watch?v=Lbl2wfyAgxY",
     "metacritic": 81,
-    "downloadLink": "",
     "metacriticSource": "https://www.metacritic.com/game/horizon-forbidden-west-burning-shores/",
     "metacriticChecked": "2026-09-13",
     "descriptionSource": "https://www.metacritic.com/game/horizon-forbidden-west-burning-shores/"
@@ -1266,7 +1211,6 @@ window.GAMES = [
     "videoChannel": "Official trailer — source linked",
     "videoSource": "https://www.playstation.com/en-us/games/lies-of-p/",
     "metacritic": 80,
-    "downloadLink": "",
     "metacriticSource": "https://www.metacritic.com/game/lies-of-p/",
     "metacriticChecked": "2026-09-13",
     "descriptionSource": "https://www.metacritic.com/game/lies-of-p/"
@@ -1289,7 +1233,6 @@ window.GAMES = [
     "videoChannel": "Official trailer — source linked",
     "videoSource": "https://www.playstation.com/en-us/games/lords-of-the-fallen/",
     "metacritic": 75,
-    "downloadLink": "",
     "metacriticSource": "https://www.metacritic.com/game/lords-of-the-fallen/",
     "metacriticChecked": "2026-09-13",
     "descriptionSource": "https://www.metacritic.com/game/lords-of-the-fallen/"
@@ -1312,7 +1255,6 @@ window.GAMES = [
     "videoChannel": "Official trailer — source linked",
     "videoSource": "https://www.playstation.com/en-us/games/resident-evil-4-remake/",
     "metacritic": 93,
-    "downloadLink": "",
     "metacriticSource": "https://www.metacritic.com/game/resident-evil-4/",
     "metacriticChecked": "2026-09-13",
     "descriptionSource": "https://www.metacritic.com/game/resident-evil-4/"
@@ -1335,7 +1277,6 @@ window.GAMES = [
     "videoChannel": "Official trailer — source linked",
     "videoSource": "https://www.playstation.com/en-us/games/star-wars-jedi-survivor/",
     "metacritic": 85,
-    "downloadLink": "",
     "metacriticSource": "https://www.metacritic.com/game/star-wars-jedi-survivor/",
     "metacriticChecked": "2026-09-13",
     "descriptionSource": "https://www.metacritic.com/game/star-wars-jedi-survivor/"
@@ -1357,7 +1298,6 @@ window.GAMES = [
     "videoChannel": "PlayStation",
     "videoSource": "https://www.youtube.com/watch?v=Wl05yGSDpxY",
     "metacritic": 81,
-    "downloadLink": "",
     "metacriticSource": "https://www.metacritic.com/game/black-myth-wukong/",
     "metacriticChecked": "2026-09-13",
     "descriptionSource": "https://www.metacritic.com/game/black-myth-wukong/"
@@ -1379,7 +1319,6 @@ window.GAMES = [
     "videoChannel": "Official trailer — source linked",
     "videoSource": "https://www.playstation.com/en-us/games/call-of-duty-black-ops-6/",
     "metacritic": 82,
-    "downloadLink": "",
     "metacriticSource": "https://www.metacritic.com/game/call-of-duty-black-ops-6/",
     "metacriticChecked": "2026-09-13",
     "descriptionSource": "https://www.metacritic.com/game/call-of-duty-black-ops-6/"
@@ -1402,7 +1341,6 @@ window.GAMES = [
     "videoChannel": "Dragon's Dogma",
     "videoSource": "https://www.youtube.com/watch?v=6SwRuaVwC8c",
     "metacritic": 86,
-    "downloadLink": "",
     "metacriticSource": "https://www.metacritic.com/game/dragons-dogma-2/",
     "metacriticChecked": "2026-09-13",
     "descriptionSource": "https://www.metacritic.com/game/dragons-dogma-2/"
@@ -1425,7 +1363,6 @@ window.GAMES = [
     "videoChannel": "Official launch trailer",
     "videoSource": "https://www.youtube.com/watch?v=JugxpebuS_E",
     "metacritic": 94,
-    "downloadLink": "",
     "metacriticSource": "https://www.metacritic.com/game/elden-ring-shadow-of-the-erdtree/",
     "metacriticChecked": "2026-09-13",
     "descriptionSource": "https://www.metacritic.com/game/elden-ring-shadow-of-the-erdtree/"
@@ -1447,7 +1384,6 @@ window.GAMES = [
     "videoChannel": "Official trailer — source linked",
     "videoSource": "https://www.playstation.com/en-us/games/final-fantasy-vii-rebirth/",
     "metacritic": 92,
-    "downloadLink": "",
     "metacriticSource": "https://www.metacritic.com/game/final-fantasy-vii-rebirth/",
     "metacriticChecked": "2026-09-13",
     "descriptionSource": "https://www.metacritic.com/game/final-fantasy-vii-rebirth/"
@@ -1469,7 +1405,6 @@ window.GAMES = [
     "videoChannel": "Moon Studios",
     "videoSource": "https://www.youtube.com/watch?v=WBYeRF2XgpE",
     "metacritic": null,
-    "downloadLink": "",
     "descriptionSource": "https://www.metacritic.com/game/no-rest-for-the-wicked/"
   },
   {
@@ -1490,7 +1425,6 @@ window.GAMES = [
     "videoChannel": "Official trailer — source linked",
     "videoSource": "https://www.playstation.com/en-us/games/rise-of-the-ronin/",
     "metacritic": 76,
-    "downloadLink": "",
     "metacriticSource": "https://www.metacritic.com/game/rise-of-the-ronin/",
     "metacriticChecked": "2026-09-13",
     "descriptionSource": "https://www.metacritic.com/game/rise-of-the-ronin/"
@@ -1512,7 +1446,6 @@ window.GAMES = [
     "videoChannel": "PlayStation",
     "videoSource": "https://www.youtube.com/watch?v=_VyeH5uteVk",
     "metacritic": 81,
-    "downloadLink": "",
     "metacriticSource": "https://www.metacritic.com/game/stellar-blade/",
     "metacriticChecked": "2026-09-13",
     "descriptionSource": "https://www.metacritic.com/game/stellar-blade/"
@@ -1534,7 +1467,6 @@ window.GAMES = [
     "videoChannel": "Official trailer — source linked",
     "videoSource": "https://www.playstation.com/en-us/games/suicide-squad-kill-the-justice-league/",
     "metacritic": 60,
-    "downloadLink": "",
     "metacriticSource": "https://www.metacritic.com/game/suicide-squad-kill-the-justice-league/",
     "metacriticChecked": "2026-09-13",
     "descriptionSource": "https://www.metacritic.com/game/suicide-squad-kill-the-justice-league/"
@@ -1557,7 +1489,6 @@ window.GAMES = [
     "videoChannel": "Official trailer — source linked",
     "videoSource": "https://www.playstation.com/en-us/games/the-last-of-us-part-ii-remastered/",
     "metacritic": 90,
-    "downloadLink": "",
     "metacriticSource": "https://www.metacritic.com/game/the-last-of-us-part-ii-remastered/",
     "metacriticChecked": "2026-09-13",
     "descriptionSource": "https://www.metacritic.com/game/the-last-of-us-part-ii-remastered/"
@@ -1580,7 +1511,6 @@ window.GAMES = [
     "videoChannel": "Official trailer — source linked",
     "videoSource": "https://www.playstation.com/en-us/games/warhammer-40000-space-marine-2/",
     "metacritic": 82,
-    "downloadLink": "",
     "descriptionSource": "https://www.metacritic.com/game/warhammer-40000-space-marine-ii/",
     "metacriticSource": "https://www.metacritic.com/game/warhammer-40000-space-marine-ii/",
     "metacriticChecked": "2026-09-13"
@@ -1603,7 +1533,6 @@ window.GAMES = [
     "videoChannel": "Assassin's Creed",
     "videoSource": "https://www.youtube.com/watch?v=SHaN4MIGqpo",
     "metacritic": 81,
-    "downloadLink": "",
     "metacriticSource": "https://www.metacritic.com/game/assassins-creed-shadows/",
     "metacriticChecked": "2026-09-13",
     "descriptionSource": "https://www.metacritic.com/game/assassins-creed-shadows/"
@@ -1626,7 +1555,6 @@ window.GAMES = [
     "videoChannel": "Official trailer — source linked",
     "videoSource": "https://www.playstation.com/en-us/games/avatar-frontiers-of-pandora/",
     "metacritic": 81,
-    "downloadLink": "",
     "metacriticSource": "https://www.metacritic.com/game/avatar-frontiers-of-pandora-from-the-ashes/",
     "metacriticChecked": "2026-09-13",
     "descriptionSource": "https://www.metacritic.com/game/avatar-frontiers-of-pandora-from-the-ashes/"
@@ -1648,7 +1576,6 @@ window.GAMES = [
     "videoChannel": "Battlefield",
     "videoSource": "https://www.youtube.com/watch?v=wFGEMfyAQtI",
     "metacritic": 83,
-    "downloadLink": "",
     "metacriticSource": "https://www.metacritic.com/game/battlefield-6/",
     "metacriticChecked": "2026-09-13",
     "descriptionSource": "https://www.metacritic.com/game/battlefield-6/"
@@ -1670,7 +1597,6 @@ window.GAMES = [
     "videoChannel": "Call of Duty",
     "videoSource": "https://www.youtube.com/watch?v=9txkGBj_trg",
     "metacritic": 65,
-    "downloadLink": "",
     "metacriticSource": "https://www.metacritic.com/game/call-of-duty-black-ops-7/",
     "metacriticChecked": "2026-09-13",
     "descriptionSource": "https://www.metacritic.com/game/call-of-duty-black-ops-7/"
@@ -1693,7 +1619,6 @@ window.GAMES = [
     "videoChannel": "Official trailer — source linked",
     "videoSource": "https://www.playstation.com/en-us/games/ghost-of-yotei/",
     "metacritic": 86,
-    "downloadLink": "",
     "metacriticSource": "https://www.metacritic.com/game/ghost-of-yotei/",
     "metacriticChecked": "2026-09-13",
     "descriptionSource": "https://www.metacritic.com/game/ghost-of-yotei/"
@@ -1716,7 +1641,6 @@ window.GAMES = [
     "videoChannel": "Official trailer — source linked",
     "videoSource": "https://www.playstation.com/en-us/games/kingdom-come-deliverance-ii/",
     "metacritic": 89,
-    "downloadLink": "",
     "metacriticSource": "https://www.metacritic.com/game/kingdom-come-deliverance-ii/",
     "metacriticChecked": "2026-09-13",
     "descriptionSource": "https://www.metacritic.com/game/kingdom-come-deliverance-ii/"
@@ -1738,7 +1662,6 @@ window.GAMES = [
     "videoChannel": "Official trailer — source linked",
     "videoSource": "https://www.playstation.com/en-us/games/mafia-the-old-country/",
     "metacritic": 73,
-    "downloadLink": "",
     "metacriticSource": "https://www.metacritic.com/game/mafia-the-old-country/",
     "metacriticChecked": "2026-09-13",
     "descriptionSource": "https://www.metacritic.com/game/mafia-the-old-country/"
@@ -1761,7 +1684,6 @@ window.GAMES = [
     "videoChannel": "Official trailer — source linked",
     "videoSource": "https://www.playstation.com/en-us/games/metal-gear-solid-delta-snake-eater/",
     "metacritic": 85,
-    "downloadLink": "",
     "metacriticSource": "https://www.metacritic.com/game/metal-gear-solid-delta-snake-eater/",
     "metacriticChecked": "2026-09-13",
     "descriptionSource": "https://www.metacritic.com/game/metal-gear-solid-delta-snake-eater/"
@@ -1784,7 +1706,6 @@ window.GAMES = [
     "videoChannel": "Xbox",
     "videoSource": "https://www.youtube.com/watch?v=MFjWCZIVZDw",
     "metacritic": 80,
-    "downloadLink": "",
     "metacriticSource": "https://www.metacritic.com/game/ninja-gaiden-2-black/",
     "metacriticChecked": "2026-09-13",
     "descriptionSource": "https://www.metacritic.com/game/ninja-gaiden-2-black/"
@@ -1807,7 +1728,6 @@ window.GAMES = [
     "videoChannel": "Official trailer — source linked",
     "videoSource": "https://www.playstation.com/en-us/games/ninja-gaiden-4/",
     "metacritic": 82,
-    "downloadLink": "",
     "metacriticSource": "https://www.metacritic.com/game/ninja-gaiden-4/",
     "metacriticChecked": "2026-09-13",
     "descriptionSource": "https://www.metacritic.com/game/ninja-gaiden-4/"
@@ -1829,7 +1749,6 @@ window.GAMES = [
     "videoChannel": "Official trailer — source linked",
     "videoSource": "https://www.playstation.com/en-us/games/shinobi-art-of-vengeance/",
     "metacritic": 87,
-    "downloadLink": "",
     "metacriticSource": "https://www.metacritic.com/game/shinobi-art-of-vengeance/",
     "metacriticChecked": "2026-09-13",
     "descriptionSource": "https://www.metacritic.com/game/shinobi-art-of-vengeance/"
@@ -1852,7 +1771,6 @@ window.GAMES = [
     "videoChannel": "Official trailer — source linked",
     "videoSource": "https://www.playstation.com/en-us/games/the-first-berserker-khazan/",
     "metacritic": 78,
-    "downloadLink": "",
     "metacriticSource": "https://www.metacritic.com/game/the-first-berserker-khazan/",
     "metacriticChecked": "2026-09-13",
     "descriptionSource": "https://www.metacritic.com/game/the-first-berserker-khazan/"
@@ -1875,7 +1793,6 @@ window.GAMES = [
     "videoChannel": "Official trailer — source linked",
     "videoSource": "https://www.playstation.com/en-us/games/where-winds-meet/",
     "metacritic": 72,
-    "downloadLink": "",
     "metacriticSource": "https://www.metacritic.com/game/where-winds-meet/",
     "metacriticChecked": "2026-09-13",
     "descriptionSource": "https://www.metacritic.com/game/where-winds-meet/"
@@ -1898,7 +1815,6 @@ window.GAMES = [
     "videoChannel": "Official trailer — source linked",
     "videoSource": "https://www.playstation.com/en-us/games/wuchang-fallen-feathers/",
     "metacritic": 74,
-    "downloadLink": "",
     "metacriticSource": "https://www.metacritic.com/game/wuchang-fallen-feathers/",
     "metacriticChecked": "2026-09-13",
     "descriptionSource": "https://www.metacritic.com/game/wuchang-fallen-feathers/"
@@ -1921,7 +1837,6 @@ window.GAMES = [
     "videoChannel": "Featured by PlayStation",
     "videoSource": "https://www.youtube.com/watch?v=gDvbGANDH4E",
     "metacritic": 87,
-    "downloadLink": "",
     "metacriticSource": "https://www.metacritic.com/game/007-first-light/",
     "metacriticChecked": "2026-09-13",
     "descriptionSource": "https://www.metacritic.com/game/007-first-light/"
@@ -1943,7 +1858,6 @@ window.GAMES = [
     "videoChannel": "Featured by PlayStation",
     "videoSource": "https://www.youtube.com/watch?v=X3-SJLWzjmE",
     "metacritic": null,
-    "downloadLink": "",
     "descriptionSource": "https://www.metacritic.com/game/castlevania-belmonts-curse/"
   },
   {
@@ -1964,7 +1878,6 @@ window.GAMES = [
     "videoChannel": "Featured by PlayStation",
     "videoSource": "https://www.youtube.com/watch?v=TAzxTMaA6j4",
     "metacritic": null,
-    "downloadLink": "",
     "descriptionSource": "https://www.metacritic.com/game/control-resonant/"
   },
   {
@@ -1985,7 +1898,6 @@ window.GAMES = [
     "videoChannel": "Featured by PlayStation",
     "videoSource": "https://www.youtube.com/watch?v=YHhwdyWkwTQ",
     "metacritic": 77,
-    "downloadLink": "",
     "metacriticSource": "https://www.metacritic.com/game/crimson-desert/",
     "metacriticChecked": "2026-09-13",
     "descriptionSource": "https://www.metacritic.com/game/crimson-desert/"
@@ -2007,7 +1919,6 @@ window.GAMES = [
     "videoChannel": "Featured by PlayStation",
     "videoSource": "https://www.youtube.com/watch?v=funfFAMMBBs",
     "metacritic": 85,
-    "downloadLink": "",
     "metacriticSource": "https://www.metacritic.com/game/marvel-tokon-fighting-souls/",
     "metacriticChecked": "2026-09-13",
     "descriptionSource": "https://www.metacritic.com/game/marvel-tokon-fighting-souls/"
@@ -2029,7 +1940,6 @@ window.GAMES = [
     "videoChannel": "Featured by PlayStation",
     "videoSource": "https://www.youtube.com/watch?v=G62QQ42Ewwg",
     "metacritic": 78,
-    "downloadLink": "",
     "metacriticSource": "https://www.metacritic.com/game/marvels-wolverine/",
     "metacriticChecked": "2026-09-13",
     "descriptionSource": "https://www.metacritic.com/game/marvels-wolverine/"
@@ -2052,7 +1962,6 @@ window.GAMES = [
     "videoChannel": "Featured by PlayStation",
     "videoSource": "https://www.youtube.com/watch?v=MyenuEg-z1w",
     "metacritic": 86,
-    "downloadLink": "",
     "metacriticSource": "https://www.metacritic.com/game/nioh-3/",
     "metacriticChecked": "2026-09-13",
     "descriptionSource": "https://www.metacritic.com/game/nioh-3/"
@@ -2074,7 +1983,6 @@ window.GAMES = [
     "videoChannel": "Featured by PlayStation",
     "videoSource": "https://www.youtube.com/watch?v=W9Ct29FeMak",
     "metacritic": 85,
-    "downloadLink": "",
     "metacriticSource": "https://www.metacritic.com/game/onimusha-way-of-the-sword/",
     "metacriticChecked": "2026-09-13",
     "descriptionSource": "https://www.metacritic.com/game/onimusha-way-of-the-sword/"
@@ -2096,7 +2004,6 @@ window.GAMES = [
     "videoChannel": "Featured by PlayStation",
     "videoSource": "https://www.youtube.com/watch?v=EZr1HXkEahs",
     "metacritic": null,
-    "downloadLink": "",
     "descriptionSource": "https://www.metacritic.com/game/phantom-blade-zero/"
   },
   {
@@ -2116,7 +2023,6 @@ window.GAMES = [
     "videoChannel": "Coatsink",
     "videoSource": "https://www.youtube.com/watch?v=-croBAQ6Tb8",
     "metacritic": 76,
-    "downloadLink": "",
     "metacriticSource": "https://www.metacritic.com/game/replaced/",
     "metacriticChecked": "2026-09-13",
     "descriptionSource": "https://www.metacritic.com/game/replaced/"
@@ -2138,7 +2044,6 @@ window.GAMES = [
     "videoChannel": "Resident Evil / Capcom",
     "videoSource": "https://www.youtube.com/watch?v=POz1-EmLsTY",
     "metacritic": 89,
-    "downloadLink": "",
     "metacriticSource": "https://www.metacritic.com/game/resident-evil-requiem/",
     "metacriticChecked": "2026-09-13",
     "descriptionSource": "https://www.metacritic.com/game/resident-evil-requiem/"
@@ -2160,7 +2065,6 @@ window.GAMES = [
     "videoChannel": "Featured by PlayStation",
     "videoSource": "https://www.youtube.com/watch?v=ZGM6N8madfQ",
     "metacritic": null,
-    "downloadLink": "",
     "descriptionSource": "https://www.metacritic.com/game/star-wars-galactic-racer/"
   },
   {
@@ -2180,7 +2084,6 @@ window.GAMES = [
     "videoChannel": "PlayStation",
     "videoSource": "https://www.youtube.com/watch?v=BMzzXYQ8zoQ",
     "metacritic": null,
-    "downloadLink": "",
     "descriptionSource": "https://www.metacritic.com/game/ananta/"
   },
   {
@@ -2201,7 +2104,6 @@ window.GAMES = [
     "videoChannel": "CI Games",
     "videoSource": "https://www.youtube.com/watch?v=97YBoOR1-Kk",
     "metacritic": null,
-    "downloadLink": "",
     "descriptionSource": "https://www.metacritic.com/game/lords-of-the-fallen-ii/"
   },
   {
@@ -2221,7 +2123,6 @@ window.GAMES = [
     "videoChannel": "PlayStation",
     "videoSource": "https://www.youtube.com/watch?v=fC182F2Ja0Y",
     "metacritic": null,
-    "downloadLink": "",
     "descriptionSource": "https://www.metacritic.com/game/a-whisper-of-fall-jinyiwei/"
   },
   {
@@ -2241,7 +2142,6 @@ window.GAMES = [
     "videoChannel": "IGN — official reveal trailer",
     "videoSource": "https://www.youtube.com/watch?v=4r1hl2nvAEY",
     "metacritic": null,
-    "downloadLink": "",
     "descriptionSource": "https://www.metacritic.com/game/black-myth-zhong-kui/"
   },
   {
@@ -2261,7 +2161,6 @@ window.GAMES = [
     "videoChannel": "PlayStation",
     "videoSource": "https://www.youtube.com/watch?v=OwgpmP1SLbc",
     "metacritic": null,
-    "downloadLink": "",
     "descriptionSource": "https://www.metacritic.com/game/genigods-nezha/"
   },
   {
@@ -2281,7 +2180,6 @@ window.GAMES = [
     "videoChannel": "Official gameplay trailer — via Gematsu",
     "videoSource": "https://www.gematsu.com/2024/12/hitori-no-shita-the-outcast-game-the-hidden-ones-launches-in-2025-for-pc-ios-and-android",
     "metacritic": null,
-    "downloadLink": "",
     "descriptionSource": "https://www.metacritic.com/game/the-hidden-ones/"
   },
   {
@@ -2301,7 +2199,6 @@ window.GAMES = [
     "videoChannel": "TiMi / publisher trailer",
     "videoSource": "https://www.youtube.com/watch?v=C_ajmBbXJlY",
     "metacritic": null,
-    "downloadLink": "",
     "descriptionSource": "https://www.linkedin.com/posts/tencent-games_were-pleased-to-share-that-honor-of-kings-activity-7448359470260314112-_-fp"
   },
   {
@@ -2321,7 +2218,6 @@ window.GAMES = [
     "videoChannel": "Saber Interactive",
     "videoSource": "https://www.youtube.com/watch?v=Ap5JlQ680E8",
     "metacritic": null,
-    "downloadLink": "",
     "descriptionSource": "https://www.metacritic.com/game/untitled-john-wick-game/"
   },
   {
@@ -2341,7 +2237,6 @@ window.GAMES = [
     "videoChannel": "KRAFTON",
     "videoSource": "https://www.youtube.com/watch?v=wNjXDVfyBBk",
     "metacritic": null,
-    "downloadLink": "",
     "descriptionSource": "https://blog.playstation.com/2026/02/12/announcing-open-world-action-rpg-project-windless-for-ps5/"
   },
   {
@@ -2361,7 +2256,6 @@ window.GAMES = [
     "videoChannel": "PlayStation",
     "videoSource": "https://www.youtube.com/watch?v=pyS909TVyQY",
     "metacritic": null,
-    "downloadLink": "",
     "descriptionSource": "https://store.steampowered.com/app/2536510/"
   },
   {
@@ -2381,7 +2275,6 @@ window.GAMES = [
     "videoChannel": "Featured by PlayStation",
     "videoSource": "https://www.youtube.com/watch?v=JJ3fDz_xCio",
     "metacritic": null,
-    "downloadLink": "",
     "descriptionSource": "https://www.metacritic.com/game/tides-of-annihilation/"
   },
   {
@@ -2401,7 +2294,6 @@ window.GAMES = [
     "videoChannel": "Official Enhanced Edition trailer — via COGconnected",
     "videoSource": "https://cogconnected.com/video/the-witcher-2-assassins-of-kings-enhanced-edition-launch-trailer/",
     "metacritic": 88,
-    "downloadLink": "",
     "metacriticSource": "https://www.metacritic.com/game/the-witcher-2-assassins-of-kings/",
     "metacriticChecked": "2026-09-13",
     "descriptionSource": "https://www.metacritic.com/game/the-witcher-2-assassins-of-kings/"
@@ -2423,7 +2315,6 @@ window.GAMES = [
     "videoChannel": "Call of Duty",
     "videoSource": "https://www.codforums.com/threads/advanced-warfare-launch-trailer-released.5164/",
     "metacritic": 81,
-    "downloadLink": "",
     "metacriticSource": "https://www.metacritic.com/game/call-of-duty-advanced-warfare/",
     "metacriticChecked": "2026-09-13",
     "descriptionSource": "https://www.metacritic.com/game/call-of-duty-advanced-warfare/"
@@ -2445,7 +2336,6 @@ window.GAMES = [
     "videoChannel": "Official launch trailer — via COGconnected",
     "videoSource": "https://cogconnected.com/video/dragon-age-inquisition-gameplay-launch-trailer-a-wonderful-world/",
     "metacritic": 85,
-    "downloadLink": "",
     "metacriticSource": "https://www.metacritic.com/game/dragon-age-inquisition/",
     "metacriticChecked": "2026-09-13",
     "descriptionSource": "https://www.metacritic.com/game/dragon-age-inquisition/"
@@ -2468,7 +2358,6 @@ window.GAMES = [
     "videoChannel": "PlayStation",
     "videoSource": "https://www.youtube.com/watch?v=Uz1gWM-YEQk",
     "metacritic": 85,
-    "downloadLink": "",
     "metacriticSource": "https://www.metacritic.com/game/far-cry-4/",
     "metacriticChecked": "2026-09-13",
     "descriptionSource": "https://www.metacritic.com/game/far-cry-4/"
@@ -2490,7 +2379,6 @@ window.GAMES = [
     "videoChannel": "PlayStation",
     "videoSource": "https://www.youtube.com/watch?v=dwjKMjIE1rs",
     "metacritic": 79,
-    "downloadLink": "",
     "metacriticSource": "https://www.metacritic.com/game/wolfenstein-the-new-order/",
     "metacriticChecked": "2026-09-13",
     "descriptionSource": "https://www.metacritic.com/game/wolfenstein-the-new-order/"
@@ -2512,7 +2400,6 @@ window.GAMES = [
     "videoChannel": "PlayStation",
     "videoSource": "https://www.youtube.com/watch?v=qAUYNIDEJ6o",
     "metacritic": 81,
-    "downloadLink": "",
     "metacriticSource": "https://www.metacritic.com/game/call-of-duty-black-ops-iii/",
     "metacriticChecked": "2026-09-13",
     "descriptionSource": "https://www.metacritic.com/game/call-of-duty-black-ops-iii/"
@@ -2535,7 +2422,6 @@ window.GAMES = [
     "videoChannel": "Featured by Konami",
     "videoSource": "https://www.konami.com/games/eu/en/topics/305/",
     "metacritic": 93,
-    "downloadLink": "",
     "metacriticSource": "https://www.metacritic.com/game/metal-gear-solid-v-the-phantom-pain/",
     "metacriticChecked": "2026-09-13",
     "descriptionSource": "https://www.metacritic.com/game/metal-gear-solid-v-the-phantom-pain/"
@@ -2558,7 +2444,6 @@ window.GAMES = [
     "videoChannel": "Bandai Namco Entertainment America",
     "videoSource": "https://commons.wikimedia.org/wiki/File:Dark_Souls_III_-_Launch_Trailer_-_no_audio.webm",
     "metacritic": 89,
-    "downloadLink": "",
     "metacriticSource": "https://www.metacritic.com/game/dark-souls-iii/",
     "metacriticChecked": "2026-09-13",
     "descriptionSource": "https://www.metacritic.com/game/dark-souls-iii/"
@@ -2581,7 +2466,6 @@ window.GAMES = [
     "videoChannel": "Featured by Xbox",
     "videoSource": "https://news.xbox.com/en-us/2016/09/20/get-ready-to-race-with-the-forza-horizon-3-launch-trailer/",
     "metacritic": 91,
-    "downloadLink": "",
     "metacriticSource": "https://www.metacritic.com/game/forza-horizon-3/",
     "metacriticChecked": "2026-09-13",
     "descriptionSource": "https://www.metacritic.com/game/forza-horizon-3/"
@@ -2603,7 +2487,6 @@ window.GAMES = [
     "videoChannel": "Ninja Theory — Steam announcement",
     "videoSource": "https://store.steampowered.com/news/posts/?appids=414340&enddate=1498489880",
     "metacritic": 81,
-    "downloadLink": "",
     "metacriticSource": "https://www.metacritic.com/game/hellblade-senuas-sacrifice/",
     "metacriticChecked": "2026-09-13",
     "descriptionSource": "https://www.metacritic.com/game/hellblade-senuas-sacrifice/"
@@ -2626,7 +2509,6 @@ window.GAMES = [
     "videoChannel": "Featured by PlayStation",
     "videoSource": "https://www.youtube.com/watch?v=adP9TPxb9z8",
     "metacritic": 76,
-    "downloadLink": "",
     "metacriticSource": "https://www.metacritic.com/game/kingdom-come-deliverance/",
     "metacriticChecked": "2026-09-13",
     "descriptionSource": "https://www.metacritic.com/game/kingdom-come-deliverance/"
@@ -2649,7 +2531,6 @@ window.GAMES = [
     "videoChannel": "Featured by PlayStation",
     "videoSource": "https://www.youtube.com/watch?v=ekTPEQypkjw",
     "metacritic": 73,
-    "downloadLink": "",
     "metacriticSource": "https://www.metacritic.com/game/rage-2/",
     "metacriticChecked": "2026-09-13",
     "descriptionSource": "https://www.metacritic.com/game/rage-2/"
@@ -2672,7 +2553,6 @@ window.GAMES = [
     "videoChannel": "Featured by PlayStation",
     "videoSource": "https://www.youtube.com/watch?v=emLEsdK19PE",
     "metacritic": 78,
-    "downloadLink": "",
     "metacriticSource": "https://www.metacritic.com/game/remnant-from-the-ashes/",
     "metacriticChecked": "2026-09-13",
     "descriptionSource": "https://www.metacritic.com/game/remnant-from-the-ashes/"
@@ -2695,7 +2575,6 @@ window.GAMES = [
     "videoChannel": "Official trailer featured by Gematsu",
     "videoSource": "https://www.youtube.com/watch?v=0E44DClsX5Q",
     "metacritic": null,
-    "downloadLink": "",
     "descriptionSource": "https://www.metacritic.com/game/call-of-duty-warzone/"
   },
   {
@@ -2716,7 +2595,6 @@ window.GAMES = [
     "videoChannel": "Featured by PLAYISM",
     "videoSource": "https://playism.com/en/game/bright-memory-infinite/",
     "metacritic": 67,
-    "downloadLink": "",
     "metacriticSource": "https://www.metacritic.com/game/bright-memory-infinite/",
     "metacriticChecked": "2026-09-13",
     "descriptionSource": "https://www.metacritic.com/game/bright-memory-infinite/"
@@ -2739,7 +2617,6 @@ window.GAMES = [
     "videoChannel": "Featured by PlayStation",
     "videoSource": "https://www.youtube.com/watch?v=FxgwIP4Cqpc",
     "metacritic": 88,
-    "downloadLink": "",
     "metacriticSource": "https://www.metacritic.com/game/deathloop/",
     "metacriticChecked": "2026-09-13",
     "descriptionSource": "https://www.metacritic.com/game/deathloop/"
@@ -2762,7 +2639,6 @@ window.GAMES = [
     "videoChannel": "Featured by PlayStation",
     "videoSource": "https://www.youtube.com/watch?v=3ofwv2IuU1o",
     "metacritic": 69,
-    "downloadLink": "",
     "descriptionSource": "https://www.metacritic.com/game/demon-slayer-kimetsu-no-yaiba-the-hinokami/",
     "metacriticSource": "https://www.metacritic.com/game/demon-slayer-kimetsu-no-yaiba-the-hinokami/",
     "metacriticChecked": "2026-09-13"
@@ -2784,7 +2660,6 @@ window.GAMES = [
     "videoChannel": "Featured by PlayStation",
     "videoSource": "https://www.youtube.com/watch?v=pWh5388AEHw",
     "metacritic": 81,
-    "downloadLink": "",
     "metacriticSource": "https://www.metacritic.com/game/kena-bridge-of-spirits/",
     "metacriticChecked": "2026-09-13",
     "descriptionSource": "https://www.metacritic.com/game/kena-bridge-of-spirits/"
@@ -2806,7 +2681,6 @@ window.GAMES = [
     "videoChannel": "Featured by PlayStation",
     "videoSource": "https://www.youtube.com/watch?v=Jh37cTUuSdQ",
     "metacritic": 87,
-    "downloadLink": "",
     "metacriticSource": "https://www.metacritic.com/game/mass-effect-legendary-edition/",
     "metacriticChecked": "2026-09-13",
     "descriptionSource": "https://www.metacritic.com/game/mass-effect-legendary-edition/"
@@ -2829,7 +2703,6 @@ window.GAMES = [
     "videoChannel": "Featured by PlayStation",
     "videoSource": "https://www.youtube.com/watch?v=IBad1ZGvQzs",
     "metacritic": 87,
-    "downloadLink": "",
     "metacriticSource": "https://www.metacritic.com/game/tales-of-arise/",
     "metacriticChecked": "2026-09-13",
     "descriptionSource": "https://www.metacritic.com/game/tales-of-arise/"
@@ -2851,7 +2724,6 @@ window.GAMES = [
     "videoChannel": "PlayStation",
     "videoSource": "https://www.youtube.com/watch?v=u-VYm9XAooA",
     "metacritic": 57,
-    "downloadLink": "",
     "metacriticSource": "https://www.metacritic.com/game/gungrave-gore/",
     "metacriticChecked": "2026-09-13",
     "descriptionSource": "https://www.metacritic.com/game/gungrave-gore/"
@@ -2873,7 +2745,6 @@ window.GAMES = [
     "videoChannel": "Featured by PlayStation",
     "videoSource": "https://www.youtube.com/watch?v=vvnU0GvZw3c",
     "metacritic": 85,
-    "downloadLink": "",
     "metacriticSource": "https://www.metacritic.com/game/teenage-mutant-ninja-turtles-shredders-revenge/",
     "metacriticChecked": "2026-09-13",
     "descriptionSource": "https://www.metacritic.com/game/teenage-mutant-ninja-turtles-shredders-revenge/"
@@ -2896,7 +2767,6 @@ window.GAMES = [
     "videoChannel": "PlayStation",
     "videoSource": "https://www.youtube.com/watch?v=Z9Q4wAvWBAg",
     "metacritic": null,
-    "downloadLink": "",
     "descriptionSource": "https://www.playstation.com/en-dk/games/hitman-3/"
   },
   {
@@ -2917,7 +2787,6 @@ window.GAMES = [
     "videoChannel": "Nintendo",
     "videoSource": "https://www.youtube.com/watch?v=uHGShqcAHlQ",
     "metacritic": 96,
-    "downloadLink": "",
     "metacriticSource": "https://www.metacritic.com/game/the-legend-of-zelda-tears-of-the-kingdom/",
     "metacriticChecked": "2026-09-13",
     "descriptionSource": "https://www.metacritic.com/game/the-legend-of-zelda-tears-of-the-kingdom/"
@@ -2940,7 +2809,6 @@ window.GAMES = [
     "videoChannel": "Featured by PlayStation",
     "videoSource": "https://www.youtube.com/watch?v=MybFEV0VQxg",
     "metacritic": 76,
-    "downloadLink": "",
     "metacriticSource": "https://www.metacritic.com/game/tales-of-kenzera-zau/",
     "metacriticChecked": "2026-09-13",
     "descriptionSource": "https://www.metacritic.com/game/tales-of-kenzera-zau/"
@@ -2963,7 +2831,6 @@ window.GAMES = [
     "videoChannel": "Wuthering Waves",
     "videoSource": "https://www.youtube.com/watch?v=hRhVca9Aeu4",
     "metacritic": 71,
-    "downloadLink": "",
     "metacriticSource": "https://www.metacritic.com/game/wuthering-waves/",
     "metacriticChecked": "2026-09-13",
     "descriptionSource": "https://www.metacritic.com/game/wuthering-waves/"
@@ -2986,7 +2853,6 @@ window.GAMES = [
     "videoChannel": "PlayStation",
     "videoSource": "https://www.youtube.com/watch?v=FiDO41Sziss",
     "metacritic": 87,
-    "downloadLink": "",
     "metacriticSource": "https://www.metacritic.com/game/absolum/",
     "metacriticChecked": "2026-09-13",
     "descriptionSource": "https://www.dotemu.com/games/absolum/"
@@ -3009,7 +2875,6 @@ window.GAMES = [
     "videoChannel": "Supergiant Games",
     "videoSource": "https://www.youtube.com/watch?v=ppEKFy83w-o",
     "metacritic": 95,
-    "downloadLink": "",
     "metacriticSource": "https://www.metacritic.com/game/hades-ii/",
     "metacriticChecked": "2026-09-13",
     "descriptionSource": "https://www.metacritic.com/game/hades-ii/"
@@ -3032,7 +2897,6 @@ window.GAMES = [
     "videoChannel": "Featured by PlayStation",
     "videoSource": "https://www.youtube.com/watch?v=Xu81znuI8tw",
     "metacritic": 95,
-    "downloadLink": "",
     "metacriticSource": "https://www.metacritic.com/game/red-dead-redemption/",
     "metacriticChecked": "2026-09-13",
     "descriptionSource": "https://www.metacritic.com/game/red-dead-redemption/"
@@ -3054,7 +2918,6 @@ window.GAMES = [
     "videoChannel": "Official launch trailer — via Gematsu",
     "videoSource": "https://www.gematsu.com/2011/10/battlefield-3-launch-trailer",
     "metacritic": 89,
-    "downloadLink": "",
     "metacriticSource": "https://www.metacritic.com/game/battlefield-3/",
     "metacriticChecked": "2026-09-13",
     "descriptionSource": "https://www.metacritic.com/game/battlefield-3/"
@@ -3077,7 +2940,6 @@ window.GAMES = [
     "videoChannel": "PS3 launch trailer",
     "videoSource": "https://www.youtube.com/watch?v=fbwtPtxzURA",
     "metacritic": 80,
-    "downloadLink": "",
     "metacriticSource": "https://www.metacritic.com/game/sleeping-dogs/",
     "metacriticChecked": "2026-09-13",
     "descriptionSource": "https://www.metacritic.com/game/sleeping-dogs/"
@@ -3099,7 +2961,6 @@ window.GAMES = [
     "videoChannel": "IGN — official story trailer",
     "videoSource": "https://www.youtube.com/watch?v=2jbfnhb0ws0",
     "metacritic": 81,
-    "downloadLink": "",
     "metacriticSource": "https://www.metacritic.com/game/battlefield-4/",
     "metacriticChecked": "2026-09-13",
     "descriptionSource": "https://www.metacritic.com/game/battlefield-4/"
@@ -3122,7 +2983,6 @@ window.GAMES = [
     "videoChannel": "Featured by PlayStation",
     "videoSource": "https://www.youtube.com/watch?v=tV95N0TIltc",
     "metacritic": 97,
-    "downloadLink": "",
     "metacriticSource": "https://www.metacritic.com/game/grand-theft-auto-v/",
     "metacriticChecked": "2026-09-13",
     "descriptionSource": "https://www.metacritic.com/game/grand-theft-auto-v/"
@@ -3145,7 +3005,6 @@ window.GAMES = [
     "videoChannel": "GameSpot — launch trailer",
     "videoSource": "https://www.youtube.com/watch?v=o3U3vOqgjmU",
     "metacritic": 80,
-    "downloadLink": "",
     "metacriticSource": "https://www.metacritic.com/game/metal-gear-rising-revengeance/",
     "metacriticChecked": "2026-09-13",
     "descriptionSource": "https://www.metacritic.com/game/metal-gear-rising-revengeance/"
@@ -3167,7 +3026,6 @@ window.GAMES = [
     "videoChannel": "Tomb Raider",
     "videoSource": "https://www.youtube.com/watch?v=RN7_8Yholm4",
     "metacritic": 86,
-    "downloadLink": "",
     "metacriticSource": "https://www.metacritic.com/game/tomb-raider/",
     "metacriticChecked": "2026-09-13",
     "descriptionSource": "https://www.metacritic.com/game/tomb-raider/"
@@ -3190,7 +3048,6 @@ window.GAMES = [
     "videoChannel": "Official launch trailer",
     "videoSource": "https://www.youtube.com/watch?v=ndh1gWlwiiQ",
     "metacritic": 84,
-    "downloadLink": "",
     "metacriticSource": "https://www.metacritic.com/game/middle-earth-shadow-of-mordor/",
     "metacriticChecked": "2026-09-13",
     "descriptionSource": "https://www.metacritic.com/game/middle-earth-shadow-of-mordor/"
@@ -3213,7 +3070,6 @@ window.GAMES = [
     "videoChannel": "PlayStation",
     "videoSource": "https://www.youtube.com/watch?v=JeGAQXY2FzI",
     "metacritic": 87,
-    "downloadLink": "",
     "metacriticSource": "https://www.metacritic.com/game/batman-arkham-knight/",
     "metacriticChecked": "2026-09-13",
     "descriptionSource": "https://www.metacritic.com/game/batman-arkham-knight/"
@@ -3235,7 +3091,6 @@ window.GAMES = [
     "videoChannel": "Tomb Raider — 20 Year Celebration",
     "videoSource": "https://www.youtube.com/watch?v=SDlUfL7uwc0",
     "metacritic": 86,
-    "downloadLink": "",
     "metacriticSource": "https://www.metacritic.com/game/rise-of-the-tomb-raider/",
     "metacriticChecked": "2026-09-13",
     "descriptionSource": "https://www.metacritic.com/game/rise-of-the-tomb-raider/"
@@ -3257,7 +3112,6 @@ window.GAMES = [
     "videoChannel": "GameSpot",
     "videoSource": "https://www.youtube.com/watch?v=ktw2k3m7Qko",
     "metacritic": 89,
-    "downloadLink": "",
     "metacriticSource": "https://www.metacritic.com/game/titanfall-2/",
     "metacriticChecked": "2026-09-13",
     "descriptionSource": "https://www.metacritic.com/game/titanfall-2/"
@@ -3279,7 +3133,6 @@ window.GAMES = [
     "videoChannel": "Official launch trailer",
     "videoSource": "https://www.youtube.com/watch?v=4ezuTDZO1qM",
     "metacritic": 87,
-    "downloadLink": "",
     "metacriticSource": "https://www.metacritic.com/game/wolfenstein-ii-the-new-colossus/",
     "metacriticChecked": "2026-09-13",
     "descriptionSource": "https://www.metacritic.com/game/wolfenstein-ii-the-new-colossus/"
@@ -3301,7 +3154,6 @@ window.GAMES = [
     "videoChannel": "Tomb Raider — launch trailer",
     "videoSource": "https://www.youtube.com/watch?v=r_WbvIDAcA4",
     "metacritic": 75,
-    "downloadLink": "",
     "metacriticSource": "https://www.metacritic.com/game/shadow-of-the-tomb-raider/",
     "metacriticChecked": "2026-09-13",
     "descriptionSource": "https://www.metacritic.com/game/shadow-of-the-tomb-raider/"
@@ -3324,7 +3176,6 @@ window.GAMES = [
     "videoChannel": "Control / Remedy",
     "videoSource": "https://www.youtube.com/watch?v=uvKAHpIvbl8",
     "metacritic": 82,
-    "downloadLink": "",
     "metacriticSource": "https://www.metacritic.com/game/control/",
     "metacriticChecked": "2026-09-13",
     "descriptionSource": "https://www.metacritic.com/game/control/"
@@ -3347,7 +3198,6 @@ window.GAMES = [
     "videoChannel": "PlayStation",
     "videoSource": "https://www.youtube.com/watch?v=rXMX4YJ7Lks",
     "metacritic": 90,
-    "downloadLink": "",
     "metacriticSource": "https://www.metacritic.com/game/sekiro-shadows-die-twice/",
     "metacriticChecked": "2026-09-13",
     "descriptionSource": "https://www.metacritic.com/game/sekiro-shadows-die-twice/"
@@ -3369,7 +3219,6 @@ window.GAMES = [
     "videoChannel": "PS4 launch trailer",
     "videoSource": "https://www.youtube.com/watch?v=mw40u02Ks60",
     "metacritic": 73,
-    "downloadLink": "",
     "metacriticSource": "https://www.metacritic.com/game/dragon-ball-z-kakarot/",
     "metacriticChecked": "2026-09-13",
     "descriptionSource": "https://www.metacritic.com/game/dragon-ball-z-kakarot/"
@@ -3391,7 +3240,6 @@ window.GAMES = [
     "videoChannel": "Featured by PlayStation",
     "videoSource": "https://www.youtube.com/watch?v=SKbJm44NZXg",
     "metacritic": 78,
-    "downloadLink": "",
     "metacriticSource": "https://www.metacritic.com/game/mafia-definitive-edition/",
     "metacriticChecked": "2026-09-13",
     "descriptionSource": "https://www.metacritic.com/game/mafia-definitive-edition/"
@@ -3413,7 +3261,6 @@ window.GAMES = [
     "videoChannel": "Dotemu",
     "videoSource": "https://www.youtube.com/watch?v=owbKz1qcnUI",
     "metacritic": 84,
-    "downloadLink": "",
     "metacriticSource": "https://www.metacritic.com/game/streets-of-rage-4/",
     "metacriticChecked": "2026-09-13",
     "descriptionSource": "https://www.metacritic.com/game/streets-of-rage-4/"
@@ -3436,7 +3283,6 @@ window.GAMES = [
     "videoChannel": "EA Sports",
     "videoSource": "https://www.youtube.com/watch?v=o3V-GvvzjE4",
     "metacritic": 76,
-    "downloadLink": "",
     "metacriticSource": "https://www.metacritic.com/game/fifa-23/",
     "metacriticChecked": "2026-09-13",
     "descriptionSource": "https://www.metacritic.com/game/fifa-23/"
@@ -3458,7 +3304,6 @@ window.GAMES = [
     "videoChannel": "Featured by PlayStation",
     "videoSource": "https://www.youtube.com/watch?v=HLD8UTxVUAg",
     "metacritic": 67,
-    "downloadLink": "",
     "metacriticSource": "https://www.metacritic.com/game/gotham-knights/",
     "metacriticChecked": "2026-09-13",
     "descriptionSource": "https://www.metacritic.com/game/gotham-knights/"
@@ -3480,7 +3325,6 @@ window.GAMES = [
     "videoChannel": "Publisher trailer featured by PlayStation",
     "videoSource": "https://www.youtube.com/watch?v=c0_NLEpJfwc",
     "metacritic": 81,
-    "downloadLink": "",
     "metacriticSource": "https://www.metacritic.com/game/dragon-ball-sparking-zero/",
     "metacriticChecked": "2026-09-13",
     "descriptionSource": "https://www.metacritic.com/game/dragon-ball-sparking-zero/"
@@ -3503,7 +3347,6 @@ window.GAMES = [
     "videoChannel": "Ubisoft",
     "videoSource": "https://www.youtube.com/watch?v=n4vaxKwZ5rQ",
     "metacritic": 86,
-    "downloadLink": "",
     "metacriticSource": "https://www.metacritic.com/game/prince-of-persia-the-lost-crown/",
     "metacriticChecked": "2026-09-13",
     "descriptionSource": "https://www.metacritic.com/game/prince-of-persia-the-lost-crown/"
@@ -3525,7 +3368,6 @@ window.GAMES = [
     "videoChannel": "GameSpot Trailers — official trailer",
     "videoSource": "https://www.youtube.com/watch?v=VIguUSVN_q8",
     "metacritic": 70,
-    "downloadLink": "",
     "metacriticSource": "https://www.metacritic.com/game/solo-leveling-arise/",
     "metacriticChecked": "2026-09-13",
     "descriptionSource": "https://www.metacritic.com/game/solo-leveling-arise/"
@@ -3547,7 +3389,6 @@ window.GAMES = [
     "videoChannel": "PlayStation",
     "videoSource": "https://www.youtube.com/watch?v=2VaLOc1FpSo",
     "metacritic": 92,
-    "downloadLink": "",
     "metacriticSource": "https://www.metacritic.com/game/clair-obscur-expedition-33/",
     "metacriticChecked": "2026-09-13",
     "descriptionSource": "https://www.metacritic.com/game/clair-obscur-expedition-33/"
@@ -3570,7 +3411,6 @@ window.GAMES = [
     "videoChannel": "Featured by PlayStation",
     "videoSource": "https://www.youtube.com/watch?v=CILpBNZAkZE",
     "metacritic": 87,
-    "downloadLink": "",
     "metacriticSource": "https://www.metacritic.com/game/dispatch/",
     "metacriticChecked": "2026-09-13",
     "descriptionSource": "https://www.metacritic.com/game/dispatch/"
@@ -3592,7 +3432,6 @@ window.GAMES = [
     "videoChannel": "Featured by PlayStation",
     "videoSource": "https://www.youtube.com/watch?v=XQdELftTay0",
     "metacritic": 81,
-    "downloadLink": "",
     "metacriticSource": "https://www.metacritic.com/game/marvel-cosmic-invasion/",
     "metacriticChecked": "2026-09-13",
     "descriptionSource": "https://www.metacritic.com/game/marvel-cosmic-invasion/"
@@ -3616,7 +3455,6 @@ window.GAMES = [
     "videoChannel": "Featured by PlayStation",
     "videoSource": "https://www.youtube.com/watch?v=WLh1dRXr_Io",
     "metacritic": 83,
-    "downloadLink": "",
     "metacriticSource": "https://www.metacritic.com/game/assassins-creed-black-flag-resynced/",
     "metacriticChecked": "2026-09-13",
     "descriptionSource": "https://www.metacritic.com/game/assassins-creed-black-flag-resynced/"

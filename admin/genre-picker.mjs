@@ -40,5 +40,7 @@ export function bindGenrePicker(root,initial=[],existing=[]){
  });
  root.addEventListener('focusout',event=>{if(event.relatedTarget && root.contains(event.relatedTarget))return;setTimeout(()=>{if(!root.contains(document.activeElement))setOpen(false);},0);});
  renderSelection();renderOptions();
- return ()=>[...selected];
+ const get=()=>[...selected];
+ get.set=values=>{selected.clear();for(const value of normalizeGenres(values).slice(0,30)){selected.add(value);if(!choices.includes(value))choices.push(value);}choices.sort((a,b)=>a.localeCompare(b));renderSelection();renderOptions();};
+ return get;
 }

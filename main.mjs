@@ -7,6 +7,7 @@ import {initPublic} from './app.js';
 import {getSupabase} from './lib/supabase.mjs';
 import {gameService} from './lib/game-data.mjs';
 import {startCinematicHero} from './lib/cinematic-hero.mjs';
+import {initMembers,member,refreshMember,personalGames,personalize,memberHeader} from './members/client.mjs';
 const loading=document.querySelector('#load-state');
 const publicRoot=document.querySelector('#public-app');
 loading.innerHTML=loader();
@@ -21,22 +22,25 @@ async function start(){
       loading.hidden=true; document.querySelector('#admin-app').hidden=false;
       await startAdmin(client); return;
     }
+    await initMembers(client);
     const editorialKind=localPath().replace(/\/$/,'').slice(1);
-    if(['top250','calendar'].includes(editorialKind)){const {startLibrary}=await import('./editorial/library.mjs');await startLibrary(client,editorialKind);return;}
-    if(editorialKind==='radar'){const {startRadar}=await import('./editorial/radar.mjs');await startRadar(client);return;}
-    if(['news','reviews'].includes(editorialKind)){const {startEditorial}=await import('./editorial/editorial.mjs');await startEditorial(client,editorialKind);return;}
+    if(editorialKind==='account'){const {startAccount}=await import('./members/account.mjs');await startAccount(client);return;}
+    if(['top250','calendar'].includes(editorialKind)){const {startLibrary}=await import('./editorial/library.mjs');await startLibrary(client,editorialKind);memberHeader();return;}
+    if(editorialKind==='radar'){const {startRadar}=await import('./editorial/radar.mjs');await startRadar(client);memberHeader();return;}
+    if(['news','reviews'].includes(editorialKind)){const {startEditorial}=await import('./editorial/editorial.mjs');await startEditorial(client,editorialKind);memberHeader();return;}
     const service=gameService(client), template=publicRoot.innerHTML;
     let previous='',busy=false,heroNode;
     async function refresh(){
       if(busy || document.querySelector('#game-dialog')?.open)return;
       busy=true;
       try {
-        const games=await service.getGames(), serialized=JSON.stringify(games);
+        await refreshMember();
+        const games=member()?await personalGames():await service.getGames({featuredOnly:true}), serialized=JSON.stringify([games,member()?.profile]);
         if(serialized!==previous){
           const age=document.querySelector('[data-age][aria-pressed="true"]')?.dataset.age;
           const active=document.querySelector('[data-status][aria-selected="true"]')?.dataset.status;
           const filters=Object.fromEntries(['search','genre','sort','rec-mode','rec-genre'].map(id=>[id,document.getElementById(id)?.value]));
-          publicRoot.innerHTML=template;initPublic(games);publicRoot.hidden=false;pageReady(publicRoot);
+          publicRoot.innerHTML=template;initPublic(games);personalize(publicRoot);publicRoot.hidden=false;pageReady(publicRoot);
           if(heroNode)publicRoot.querySelector('#cinematic-hero').replaceWith(heroNode);
           else{heroNode=publicRoot.querySelector('#cinematic-hero');startCinematicHero(heroNode,client);}
           if(previous){

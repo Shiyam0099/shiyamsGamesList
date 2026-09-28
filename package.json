@@ -15,7 +15,12 @@
     "auth:configure": "node scripts/configure-auth.mjs",
     "feed:deploy": "node scripts/deploy-feed.mjs",
     "radar:deploy": "node scripts/deploy-radar.mjs",
-    "radar:verify": "node scripts/verify-radar.mjs"
+    "radar:verify": "node scripts/verify-radar.mjs",
+    "metadata:deploy": "node scripts/deploy-metadata.mjs",
+    "metadata:verify": "node scripts/verify-metadata.mjs",
+    "members:deploy": "node scripts/deploy-members.mjs",
+    "members:configure": "node scripts/configure-members.mjs --apply",
+    "members:verify": "node scripts/verify-members.mjs"
   },
   "engines": {
     "node": ">=22.17.0"

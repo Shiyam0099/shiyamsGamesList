@@ -281,12 +281,10 @@ function showGame(id) {
     <small>${metascore === null ? "Not rated" : "Critic score / 100"}</small>
     ${game.metacriticPlatform && metascore !== null ? `<small>${escapeHTML(game.metacriticPlatform)}</small>` : ""}</span>`;
   const reviews = safeURL(game.ratingUrl) || safeURL(game.metacriticSource);
-  const download = safeURL(game.downloadLink) || safeURL(game["Download Link"]);
   $("#dialog-links").innerHTML = [
     safeURL(game.criticVideoUrl) ? `<a class="button-link" href="${escapeHTML(safeURL(game.criticVideoUrl))}" target="_blank" rel="noopener noreferrer">Watch Critic Reviews</a>` : "",
     reviews ? `<a class="button-link" href="${escapeHTML(reviews)}" target="_blank" rel="noopener noreferrer">View Critic Reviews</a>` : "",
-    download ? `<a class="button-link primary" href="${escapeHTML(download)}" target="_blank" rel="noopener noreferrer"
-      aria-label="Torrent for ${escapeHTML(game.title)} (opens in a new tab)">Torrent</a>` : `<button class="button-link primary" disabled title="No download link available">Torrent</button>`,
+
   ].join("");
   dialog.showModal();
   $("#close-dialog").focus();

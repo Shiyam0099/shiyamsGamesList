@@ -1,0 +1,15 @@
+import test from 'node:test';import assert from 'node:assert/strict';import vm from 'node:vm';import {readFile} from 'node:fs/promises';import {stripTypeScriptTypes} from 'node:module';
+import {exactMatch,metadata,monthlyPatch} from '../supabase/functions/game-metadata/metadata.mjs';import {excludedExternalContent} from '../supabase/functions/_shared/content-policy.mjs';
+const source=stripTypeScriptTypes((await readFile(new URL('../supabase/functions/game-metadata/index.ts',import.meta.url),'utf8')).replace(/^import .*;\n/gm,''));
+test('metadata API rejects unauthorized calls and writes with caller JWT plus optimistic timestamp',async()=>{
+ let handler,valid=true,active=true,role='admin',writes=0,fetches=0,conflict=false,updatePatch,filters=[],callerAuth='';
+ const today=new Date().toISOString().slice(0,10),row={id:1,title:'Test',release_year:Number(today.slice(0,4)),rawg_id:42,updated_at:'2026-09-01T00:00:00Z',status:'loved',poster:'custom',genres:['RPG']};
+ const db={auth:{getUser:async()=>({data:{user:valid?{id:'admin'}:null}})},from:table=>({select:()=>({eq:()=>({maybeSingle:async()=>({data:table==='admin_profiles'?{role,is_active:active}:null})})}),upsert:async()=>({})})};
+ const client={from:()=>({select:()=>({eq:()=>({single:async()=>({data:row})})}),update:patch=>{writes++;updatePatch=patch;const builder={eq:(...f)=>{filters.push(f);return builder;},select:()=>({maybeSingle:async()=>({data:conflict?null:{id:1}})})};return builder;}})};
+ vm.runInNewContext(source,{Request,Response,URL,URLSearchParams,AbortSignal,createClient:(_url,_key,options)=>{if(options?.global){callerAuth=options.global.headers.Authorization;return client;}return db;},excludedExternalContent,exactMatch,metadata,monthlyPatch,fetch:async()=>{fetches++;return new Response(JSON.stringify({id:42,name:'Test',released:today,metacritic:88}));},Deno:{env:{get:k=>k==='ADMIN_ORIGIN'?'https://games.example.test':'server-only'},serve:fn=>handler=fn}});
+ const invoke=(body,token='Bearer jwt',origin='https://games.example.test')=>handler(new Request('https://project/functions/v1/game-metadata',{method:'POST',headers:{Authorization:token,Origin:origin},body:JSON.stringify(body)}));
+ const request={action:'sync-game',gameId:1};assert.equal((await invoke(request,'')).status,401);valid=false;assert.equal((await invoke(request)).status,401);valid=true;active=false;assert.equal((await invoke(request)).status,403);active=true;role='viewer';assert.equal((await invoke(request)).status,403);role='admin';assert.equal((await invoke(request,undefined,'https://evil.example')).status,403);assert.equal(fetches,0);assert.equal(writes,0);
+ assert.equal((await invoke({action:'details',rawgId:'../secrets'})).status,400);
+ const response=await invoke(request);assert.equal(response.status,200);assert.equal((await response.json()).status,'updated');assert.equal(callerAuth,'Bearer jwt');assert.equal(updatePatch.status,undefined);assert.ok(filters.some(([key,v])=>key==='updated_at'&&v===row.updated_at));
+ conflict=true;assert.equal((await (await invoke(request)).json()).status,'conflict');
+});

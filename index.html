@@ -14,7 +14,12 @@
     <script>
         // Native transitions may be skipped by rapid navigation or a viewport change.
         for (const name of ['pagereveal', 'pageswap']) {
-            addEventListener(name, event => event.viewTransition?.ready.catch(() => {}));
+            addEventListener(name, event => {
+                const transition = event.viewTransition;
+                for (const promise of [transition?.ready, transition?.finished, transition?.updateCallbackDone]) {
+                    promise?.catch(() => {});
+                }
+            });
         }
     </script>
     <script type="module" src="./main.mjs"></script>
@@ -149,7 +154,7 @@
     </main>
     <footer><a class="brand" href="#">SHIYAM`S<span class="muted">GAMES LIST</span></a><span>One more game. One more
             story.</span><a href="#">Back to top <svg class="ui-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M12 20V4m-6 6 6-6 6 6"/></svg></a>
-        <p>Unofficial personal fan collection. Game artwork, titles and trailers belong to their respective owners.</p>
+        <p>Unofficial personal fan collection. Game artwork, titles and trailers belong to their respective owners. Game metadata supplied in part by <a href="https://rawg.io/" target="_blank" rel="noopener noreferrer">RAWG</a>.</p>
     </footer>
     <dialog id="game-dialog" aria-labelledby="dialog-title">
         <div class="dialog-top"><span class="eyebrow">NOW SHOWING</span><button id="close-dialog"

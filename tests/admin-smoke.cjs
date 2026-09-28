@@ -11,7 +11,7 @@ const path=require('node:path');
  let role='admin',active=true,failGames=false,functionsCalls=0;
  let games=[toRow({id:1,title:'First Game',year:'2020',genres:['RPG'],status:'playing',videoId:'',description:'First description'},true),toRow({id:2,title:'Second Game',year:'2023',genres:['Action'],status:'unplayed'},true)];
  let profile={id:adminId,email:'admin@example.test',username:'Curator',role,is_active:true};
- let users=[];
+ let users=[];let members=[{id:otherId,display_name:'Member Test',avatar_id:1,is_active:true,created_at:new Date().toISOString()}],resetPassword='';
  const user={id:adminId,aud:'authenticated',role:'authenticated',email:profile.email,app_metadata:{provider:'email'},user_metadata:{},created_at:new Date().toISOString()};
  const b64=value=>Buffer.from(JSON.stringify(value)).toString('base64url');
  const token=b64({alg:'HS256',typ:'JWT'})+'.'+b64({sub:adminId,role:'authenticated',exp:Math.floor(Date.now()/1000)+3600})+'.test-signature';
@@ -37,6 +37,19 @@ const path=require('node:path');
    return respond(null);
   }
   if(url.pathname.includes('/functions/v1/')){
+   if(url.pathname.endsWith('/member-api')){
+    if(body.action==='members')return respond({members,hasMore:false});
+    if(body.action==='collection')return respond({entries:[{status:'playing',games:{title:'Member game'}}]});
+    if(body.action==='block'||body.action==='unblock')members[0].is_active=body.action==='unblock';
+    if(body.action==='reset-password')resetPassword=body.password;
+    if(body.action==='delete')members=[];
+    return respond({success:true});
+   }
+   if(url.pathname.endsWith('/game-metadata')){
+    if(body.action==='search')return respond({items:[{rawgId:42,title:'Autofill Game',year:'2026'}]});
+    if(body.action==='details')return respond({game:{rawgId:42,title:'Autofill Game',year:'2026',releaseDate:'2026-09-20',future:false,genres:['Action','RPG'],poster:'https://media.rawg.io/media/test.jpg',description:'Imported description.',metacritic:89,ratingUrl:'https://www.metacritic.com/game/autofill-game/',source:'https://rawg.io/games/autofill-game'}});
+    if(body.action==='sync-game'){if(body.gameId===1){games[0]={...games[0],metacritic:90,future:false};return respond({status:'updated',message:'Score updated.'});}return respond({status:'unmatched',message:'No unique match.'});}
+   }
    functionsCalls++;
    if(body.action==='create')users.push({id:otherId,email:body.email,username:body.username,role:'admin',is_active:true});
    if(body.action==='delete')users=users.filter(u=>u.id!==body.userId);
@@ -66,8 +79,21 @@ const path=require('node:path');
  await page.getByRole('link',{name:'Add game',exact:true}).click();await page.locator('[name=title]').fill('New Game');await page.locator('#genres-toggle').click();await page.locator('#genre-search').fill('RPG');await page.locator('#genre-options input[value="RPG"]').check();await page.locator('#genre-search').fill('Puzzle');await page.locator('#genre-options input[value="Puzzle"]').check();await page.locator('#genre-search').fill('Custom Genre');await page.locator('.genre-add').click();await page.getByRole('button',{name:'Remove Custom Genre',exact:true}).click();await page.keyboard.press('Escape');await page.locator('[name=year]').fill('2024');await page.locator('textarea[name=description]').fill('A new adventure.');await page.locator('[name=metacritic]').fill('91');await page.locator('[name=criticVideoUrl]').fill('https://www.youtube.com/watch?v=abcdefghijk');
  await page.getByRole('button',{name:'Add game',exact:true}).click();await page.waitForURL('**/admin/games/3/edit');await page.getByText('Game added successfully.').waitFor();assert.deepEqual(games.find(g=>g.id===3).genres,['RPG','Puzzle']);assert.equal(await page.locator('.genre-chip').count(),2);await page.locator('#genres-toggle').click();await page.locator('#genre-search').fill('RPG');assert.ok(await page.locator('#genre-options input[value="RPG"]').isChecked());await page.keyboard.press('Escape');
  await page.locator('[name=title]').fill('Edited Game');await page.getByRole('button',{name:'Save changes',exact:true}).click();await page.getByText('Game saved.').waitFor();assert.equal(games.find(g=>g.id===3).title,'Edited Game');
+ assert.equal(await page.locator('[name=downloadLink]').count(),0);
+ await page.locator('#metadata-search').fill('Autofill');await page.locator('[data-rawg="42"]').click();await page.getByText(/Filled from Autofill Game/).waitFor();
+ assert.equal(await page.locator('[name=title]').inputValue(),'Autofill Game');assert.equal(await page.locator('[name=releaseDate]').inputValue(),'2026-09-20');assert.equal(await page.locator('[name=metacritic]').inputValue(),'89');assert.equal(await page.locator('[name=criticVideoUrl]').inputValue(),'https://www.youtube.com/watch?v=abcdefghijk');assert.equal(await page.locator('[name=future]').isChecked(),false);assert.equal(await page.locator('[name=rawgId]').inputValue(),'42');assert.equal(await page.locator('.genre-chip').count(),2);
+ for(const width of [320,390,768,1440]){await page.setViewportSize({width,height:1000});assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),'autofill overflow '+width);}
+ await page.getByRole('button',{name:'Save changes',exact:true}).click();await page.getByText('Game saved.').waitFor();assert.equal(games.find(g=>g.id===3).rawg_id,42);
+ await page.getByRole('link',{name:'Games',exact:true}).click();await page.locator('#metadata-sync').click();await page.getByText(/Finished: 3\/3 checked/).waitFor();assert.match(await page.locator('#metadata-progress').textContent(),/1 updated/);assert.equal(games[0].status,'playing');assert.equal(games[0].metacritic,90);
  await page.getByRole('link',{name:'Currently playing',exact:true}).click();await page.locator('#playing-list').waitFor();await page.locator('#playing-list input[value="2"]').check();await page.locator('#playing-search').fill('First');await page.getByRole('button',{name:'Save selection'}).click();await page.getByText('Currently playing selection saved.').waitFor();assert.equal(games.filter(g=>g.status==='playing').length,2);
  await page.getByRole('link',{name:'Games',exact:true}).click();await page.locator('[data-delete="3"]').click();await page.getByRole('button',{name:'Cancel',exact:true}).click();assert.equal(games.length,3);await page.locator('[data-delete="3"]').click();await page.locator('[data-confirm]').click();await page.getByText('Game deleted.').waitFor();assert.equal(games.length,2);
+ await page.getByRole('link',{name:'Members',exact:true}).click();await page.getByRole('heading',{name:'Member Test',exact:true}).waitFor();
+ await page.locator('[data-action=collection]').click();await page.getByText('Member game · playing').waitFor();
+ await page.locator('[data-action=block]').click();await page.locator('[data-action=unblock]').waitFor();assert.equal(members[0].is_active,false);
+ await page.locator('[data-action=unblock]').click();await page.locator('[data-action=block]').waitFor();
+ await page.locator('[data-action=reset-password]').click();await page.locator('#member-reset-form [name=password]').fill('temporary-password-456');await page.getByRole('button',{name:'Set password',exact:true}).click();await page.getByText('Temporary password saved. Share it securely with the member.').waitFor();assert.equal(resetPassword,'temporary-password-456');
+ for(const width of [320,390,768,1440]){await page.setViewportSize({width,height:1000});assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),'member management overflow '+width);}
+ page.once('dialog',d=>d.accept());await page.locator('[data-action=delete]').click();await page.getByText('No members on this page.').waitFor();assert.equal(members.length,0);
  await page.getByRole('link',{name:'Settings',exact:true}).click();await page.locator('#username-form [name=username]').fill('New Curator');await page.getByRole('button',{name:'Save username'}).click();await page.getByText('Username saved.',{exact:false}).waitFor();assert.equal(profile.username,'New Curator');
  await page.locator('[name=current]').fill('test-password-123');await page.locator('#password-form [name=password]').fill('different-password');await page.locator('[name=confirm]').fill('does-not-match');await page.getByRole('button',{name:'Change password',exact:true}).click();await page.getByText('New passwords do not match.').waitFor();await page.locator('[name=confirm]').fill('different-password');await page.getByRole('button',{name:'Change password',exact:true}).click();await page.getByText('Password changed successfully.').waitFor();
  role='super_admin';await page.goto(site+'/admin/users');await page.getByRole('heading',{name:'Add admin'}).waitFor();

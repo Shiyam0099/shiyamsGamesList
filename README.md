@@ -77,13 +77,23 @@ Admin routes: `/admin/login`, `/admin`, `/admin/games`, `/admin/games/new`, `/ad
 | Other admins | None | None | Create, edit username, activate/deactivate, delete ordinary admins |
 | Activity log | None | Read | Read |
 
-RLS is enabled on all three exposed tables. Roles come from protected `admin_profiles`, never editable Auth metadata. Inactive profiles immediately lose write permission even with an existing valid JWT. No browser role can directly modify profile permissions. A unique partial index prevents a second Super Admin; triggers prohibit removing, deactivating, demoting, or cascading away that account. Setup begins with no admin until bootstrap; after bootstrap the single account is protected. There is no promotion or transfer UI.
+RLS is enabled on exposed application tables. Roles come from protected `admin_profiles`, never editable Auth metadata. Inactive profiles immediately lose write permission even with an existing valid JWT. No browser role can directly modify profile permissions. A unique partial index prevents a second Super Admin; triggers prohibit removing, deactivating, demoting, or cascading away that account. Setup begins with no admin until bootstrap; after bootstrap the single account is protected. There is no promotion or transfer UI.
 
-The `games` mapping in `lib/game-data.mjs` preserves the original concepts: numeric `id`; `title`; `year` mapped to nullable integer `release_year` (null displays as TBA); `genres` as a text array; `status` as `unplayed`, `loved`, `dropped`, or `playing`; `future`; artwork, trailer ID, descriptions, Metacritic score and all source/verification metadata. `downloadLink` maps to `download_link`; optional `criticVideoUrl` maps to `critic_video_url`. The shared add/edit form exposes these fields. HTTP/HTTPS URLs and YouTube trailer IDs are validated; external links open with `noopener noreferrer`.
+The `games` mapping in `lib/game-data.mjs` preserves the original concepts: numeric `id`; `title`; `year` mapped to nullable integer `release_year` (null displays as TBA); `genres` as a text array; `status` as `unplayed`, `loved`, `dropped`, or `playing`; `future`; artwork, trailer ID, descriptions, Metacritic score and source/verification metadata. Optional `criticVideoUrl` maps to `critic_video_url`; `rawgId` and `releaseDate` retain the selected external match. HTTP/HTTPS URLs and YouTube trailer IDs are validated; external links open with `noopener noreferrer`.
 
 Currently Playing is stored only in each game’s status. Saving its multi-selection moves deselected playing games to `unplayed` and leaves other unselected statuses unchanged. Public data refreshes through Realtime, on window focus, and every minute while visible. Open game dialogs defer refresh until closed. Search, tabs, age filters and recommendation controls are retained across updates.
 
-The migration backup includes Evil West and A Plague Tale: Innocence as playing, plus the supplied Plague Tale Torrent URL. Every game dialog displays a Torrent button, disabled when no valid link exists. Metadata is a curated snapshot: 163 descriptions and 144 scored entries with source links, originally checked September 13, 2026. Missing/edition-ambiguous scores stay null.
+The migration backup includes Evil West and A Plague Tale: Innocence as playing. Torrent buttons and download fields have been removed from the public site, admin forms, browser data model and seed data. The unused legacy database column remains for compatibility with older deployed clients. Missing/edition-ambiguous scores stay null.
+
+## Admin game autofill and monthly refresh
+
+In **Add game** or **Edit game**, use **Find a game to autofill**, then choose the matching title and year. RAWG supplies available title, artwork, release date/year, future flag, normalized genres, description, Metacritic score and critic-page URL. Review the editable fields and save. Missing metadata leaves existing fields intact; play status and YouTube links are preserved. Unknown release dates are treated as future/TBA. Editing the title manually clears its RAWG match.
+
+In **Games**, click **Update this month’s details**. This checks listed games and updates those with a RAWG release date (or a previously saved release date) in the current UTC month, including upcoming releases and newly delayed games. It refreshes release metadata, future flags, available scores and critic-page links, and fills missing artwork/descriptions. It does not add games to the collection or overwrite play statuses, existing artwork/descriptions or YouTube links. Games without a saved RAWG ID need a unique exact title/year match; select ambiguous matches manually in Edit game. The report shows updated, unchanged, skipped, unmatched, conflicting and failed records. Keep the page open; Stop finishes requests already in flight. Concurrent edits are skipped, and rerunning is safe.
+
+The free RAWG metadata does not reliably supply YouTube critic/trailer URLs, so these remain manual. Scores and other fields depend on RAWG coverage and may lag publication. Metadata responses are cached privately for one hour.
+
+For a new deployment, run `npm run db:migrate` and `npm run metadata:deploy`, then publish the frontend. The `game-metadata` Edge Function requires the existing server-side `RAWG_API_KEY` and `ADMIN_ORIGIN` secrets. It verifies active admin access on every request and writes using the caller’s permissions, preserving audit attribution. `npm run metadata:verify` checks live authentication, search, details and schema without changing collection records. Credentials remain in ignored local environment files and Supabase secrets.
 
 ## Project structure
 
@@ -139,7 +149,7 @@ SITE_URL=http://127.0.0.1:4174 node tests/browser-smoke.cjs
 SITE_URL=http://127.0.0.1:4174 node tests/admin-smoke.cjs
 ```
 
-Provide `PLAYWRIGHT_MODULE` and `CHROME_EXECUTABLE` to use an existing installation, or install Playwright separately. The public suite exercises all seven recommendation modes, sorting, filters, age drill-down, dialogs, missing metadata, safe downloads, and seven viewport widths. The admin suite covers login/logout, route guards, CRUD, multiple playing games, settings, Super Admin user management, deactivation, error states, and mobile layouts. API mocks verify frontend behavior; the separate PostgreSQL suite verifies actual authorization rules. `npm run verify:live` checks the configured public API and Super Admin sign-in without changing game data.
+Provide `PLAYWRIGHT_MODULE` and `CHROME_EXECUTABLE` to use an existing installation, or install Playwright separately. The public suite exercises all seven recommendation modes, sorting, filters, age drill-down, dialogs, missing metadata, removal of download controls, and seven viewport widths. The admin suite covers login/logout, route guards, CRUD, metadata autofill and refresh, multiple playing games, settings, Super Admin user management, deactivation, error states, and mobile layouts. API mocks verify frontend behavior; the separate PostgreSQL suite verifies actual authorization rules. `npm run verify:live` checks the configured public API and Super Admin sign-in without changing game data.
 
 ## Genre consistency
 
@@ -226,3 +236,32 @@ Navigation labels are Gaming Radar, All-time top 250, and Release Calendar. The 
 External game data is filtered by the shared `supabase/functions/_shared/content-policy.mjs` before the server caches or returns it. It excludes adult-only ESRB ratings, explicit sexual/nudity tags and titles, and Steam sexual-content descriptors; it does not exclude general mature/violent ratings alone. News/reviews also screen titles. Browser rendering screens titles/metadata again, including cached responses. Existing server cache entries are bypassed with a new policy version. Missing or inaccurate upstream metadata can still allow unmarked content through; this is not image classification. The curated personal collection is preserved.
 
 Collection/Radar tabs and new calendar results use short fade/slide animations. Same-origin page navigation uses native cross-document view transitions where supported, with content entrance animation as a fallback. Normal links, history, and browser shortcuts remain intact; reduced-motion preferences disable these animations.
+
+## Visitor accounts and personal collections
+
+Visitors can use **Sign in / Join** → **Create account** at `/account`. Registration checks email syntax and requires a password of at least 12 characters. Supabase email auto-confirmation is enabled at the owner's request: signup starts a session immediately, without sending a verification email or requiring SMTP. This does not verify ownership of the supplied email address. Forgotten passwords are handled by administrators; the visitor UI does not promise an email-based recovery service.
+
+Signed-out visitors see the existing featured collection and original About section. Signed-in members see their own collection, statistics, statuses, display name, story and chosen avatar. Empty stories fall back to the default writing. The 50 fixed character-inspired SVG portraits are original vector illustrations, not uploaded or externally loaded profile photos. Profiles are editable at **My account**. There is no file-upload or arbitrary avatar-URL input.
+
+**My account** searches the shared catalog first and optionally includes RAWG suggestions. Adding a shared game creates only a personal collection entry. RAWG additions fetch details in the server-only `member-api` function; members cannot submit or edit game metadata. Play statuses belong to each collection. Removing a game from a personal collection does not delete its shared catalog record.
+
+Gaming Radar, All-time top 250 and Release Calendar show **Add to my collection** when signed in. Steam trending cards use **Find & add to collection** to select the correct catalog/RAWG edition rather than assume Steam IDs are RAWG IDs. Discovery links are also available in admin navigation; administrators use the same personal-collection actions.
+
+`games` is the shared catalog. `collection_entries` has a `(user_id, game_id)` primary key. RAWG IDs are unique; imports are serialized and reuse matching RAWG IDs or normalized title/year identities. Concurrent requests cannot create duplicate memberships. Differently named editions or inaccurate RAWG identities can still need an administrator's review. Metadata edits remain restricted to active admins. `member_profiles` is private to its owner and administrators; collection rows are readable only by their owner and administrators. Guests can read only `is_featured` games. The Super Admin's collection is seeded from the original collection and synchronizes with the featured public list and legacy admin status controls.
+
+Database quotas permit 100 collection additions per member/day, 20 new RAWG imports per member/day, 1,000 games per collection, and 300 new catalog imports globally/day. Member API requests are limited to 60/minute per account; profile and status mutations have additional limits. Re-adding an existing membership is idempotent. Supabase also applies its Auth rate limits. These controls limit abuse but are not a guarantee against coordinated account creation.
+
+**Admin → Members** supports collection inspection, blocking/unblocking, temporary-password resets, and account deletion. Blocking revokes collection access through database policy immediately and bans Auth login. Password reset sets a temporary password without sending email; share it securely, then have the member change it in My account. Account deletion cascades to the profile and all personal collection entries. Shared catalog games remain intact for other users; global game deletion is a separate admin operation. Administrator accounts remain protected by the existing Admin users workflow.
+
+For a fresh deployment:
+
+```sh
+npm run db:migrate
+npm run members:deploy
+npm run members:configure
+npm run build
+```
+
+The first three steps require existing local server credentials in ignored environment files. RAWG and service-role keys remain server-side. Publishing the frontend uses the existing GitHub Pages workflow and `/shiyamsGamesList/` base path. The new schema and member API are already deployed to the configured Supabase project.
+
+Validation: `npm test` covers database ownership, quotas, duplicate reuse, blocked accounts, role boundaries, server-fetched metadata and password-reset authorization. `tests/members-smoke.cjs` covers immediate signup, personal landing content, profile/avatar editing, responsive layouts and discovery additions; `tests/admin-smoke.cjs` covers admin member controls. `npm run members:verify` explicitly creates two temporary accounts, exercises real signup and access controls without sending emails, verifies the public catalog is unchanged, and deletes the test accounts in cleanup. Do not treat it as a read-only health check.

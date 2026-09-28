@@ -1,0 +1,64 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {readFile} from 'node:fs/promises';
+import {PGlite} from '@electric-sql/pglite';
+import {characters,avatarURL} from '../members/avatars.mjs';
+test('50 distinct fixed SVG avatars and safe fallback',()=>{assert.equal(characters.length,50);assert.equal(new Set(characters.map((_,i)=>avatarURL(i))).size,50);assert.equal(avatarURL('<script>'),avatarURL(0));assert.ok(characters.every((_,i)=>decodeURIComponent(avatarURL(i)).includes('<svg')));});
+test('member collections enforce ownership, verified access, deduplication, quotas and deletion isolation',async()=>{
+ const db=new PGlite(),owner='00000000-0000-0000-0000-000000000001',one='00000000-0000-0000-0000-000000000002',two='00000000-0000-0000-0000-000000000003',unverified='00000000-0000-0000-0000-000000000004';
+ try{
+  await db.exec(`create role anon;create role authenticated;create role service_role bypassrls;create schema auth;create table auth.users(id uuid primary key,email text,email_confirmed_at timestamptz default now());create function auth.uid() returns uuid language sql stable as $$select nullif(current_setting('request.jwt.claim.sub',true),'')::uuid$$;grant usage on schema public,auth to anon,authenticated,service_role;grant execute on function auth.uid() to public;`);
+  for(const file of ['202609130001_initial','202609140001_discovery_cache','202609200001_game_metadata'])await db.exec(await readFile(new URL('../supabase/migrations/'+file+'.sql',import.meta.url),'utf8'));
+  await db.query('insert into auth.users(id,email) values($1,$2)',[owner,'owner@example.test']);await db.query("select bootstrap_super_admin($1,'Owner')",[owner]);
+  await db.exec("insert into games(title,genres,status) values('Original',array['RPG'],'loved')");
+  await db.exec(await readFile(new URL('../supabase/migrations/202609200002_member_collections.sql',import.meta.url),'utf8'));
+  await db.query('insert into auth.users(id,email) values($1,$2),($3,$4),($5,$6)',[one,'one@example.test',two,'two@example.test',unverified,'unverified@example.test']);
+  await db.query('update auth.users set email_confirmed_at=null where id=$1',[unverified]);
+  async function as(role,id,sql,args=[]){await db.exec('set role '+role);try{await db.query("select set_config('request.jwt.claim.sub',$1,false)",[id||'']);return await db.query(sql,args);}finally{await db.exec('reset role');await db.query("select set_config('request.jwt.claim.sub','',false)");}}
+  assert.equal((await db.query('select * from member_profiles')).rows.length,4);
+  assert.equal((await as('authenticated',owner,'select * from collection_entries')).rows.length,1);
+  await assert.rejects(as('anon',null,'select add_collection_game(1)'));
+  await assert.rejects(as('authenticated',unverified,'select add_collection_game(1)'));
+  await as('authenticated',one,'select add_collection_game(1)');await as('authenticated',one,'select add_collection_game(1)');
+  assert.equal((await as('authenticated',one,'select * from collection_entries')).rows.length,1);
+  assert.equal((await as('authenticated',two,'select * from collection_entries')).rows.length,0);
+  await assert.rejects(as('authenticated',one,"insert into collection_entries(user_id,game_id) values($1,1)",[two]));
+  await assert.rejects(as('authenticated',one,"insert into games(title,genres) values('Injected',array['RPG'])"));
+  assert.equal((await as('authenticated',one,"update games set title='Injected' returning id")).rows.length,0);
+  await assert.rejects(as('authenticated',one,"update member_profiles set is_active=true where id=$1",[one]));
+  await assert.rejects(as('authenticated',one,"select update_member_profile('Name','Story',50)"));
+  await as('authenticated',one,"select update_member_profile('Collector','My story',49)");
+  assert.equal((await as('authenticated',one,'select display_name from member_profiles')).rows[0].display_name,'Collector');
+  await as('authenticated',one,"select set_collection_status(1,'playing')");
+  assert.equal((await db.query('select status from games where id=1')).rows[0].status,'loved');
+  const details={rawgId:123,title:'New game',year:'2026',genres:['Action'],releaseDate:'2026-09-20',future:false,poster:'',description:'RAWG description',source:'https://rawg.io/games/new-game',metacritic:80,ratingUrl:''};
+  await assert.rejects(as('authenticated',one,'select import_member_game($1,$2)',[one,details]));
+  const imported=(await as('service_role',null,'select import_member_game($1,$2) as id',[one,details])).rows[0].id;
+  await as('service_role',null,'select import_member_game($1,$2)',[two,details]);
+  assert.equal((await db.query('select * from games where rawg_id=123')).rows.length,1);
+  assert.equal((await as('anon',null,'select * from games')).rows.length,1);
+  await as('authenticated',owner,'select add_collection_game($1)',[imported]);
+  assert.equal((await as('anon',null,'select * from games')).rows.length,2);
+  await as('authenticated',owner,"select set_collection_status($1,'playing')",[imported]);
+  assert.equal((await db.query('select status from games where id=$1',[imported])).rows[0].status,'playing');
+  await as('authenticated',owner,'select remove_collection_game($1)',[imported]);
+  assert.equal((await as('anon',null,'select * from games')).rows.length,1);
+  // Alternate RAWG records with the same normalized name/year reuse the catalog.
+  await as('service_role',null,'select import_member_game($1,$2)',[two,{...details,rawgId:124,title:'NEW GAME!'}]);
+  assert.equal((await db.query('select * from games')).rows.length,2);
+  await db.query('update member_profiles set is_active=false where id=$1',[one]);
+  await assert.rejects(as('authenticated',one,'select add_collection_game(1)'));
+  await assert.rejects(as('authenticated',one,"select update_member_profile('Blocked','',0)"));
+  assert.equal((await as('authenticated',one,'select * from collection_entries')).rows.length,0);
+  await db.query('delete from auth.users where id=$1',[one]);
+  assert.equal((await db.query('select * from collection_entries where user_id=$1',[one])).rows.length,0);
+  assert.equal((await as('authenticated',two,'select * from collection_entries')).rows.length,1);
+  assert.equal((await db.query('select * from games where id=$1',[imported])).rows.length,1);
+  await db.query("insert into private.member_limits values($1,'catalog-import',date_trunc('day',now()),20)",[two]);
+  await assert.rejects(as('service_role',null,'select import_member_game($1,$2)',[two,{...details,rawgId:999,title:'Quota rejected'}]));
+  assert.equal((await db.query('select * from games where rawg_id=999')).rows.length,0);
+  await db.query("insert into private.member_limits values($1,'catalog-api',date_trunc('minute',now()),60)",[two]);
+  await assert.rejects(as('service_role',null,'select member_api_limit($1)',[two]));
+  await as('service_role',null,'select import_member_game($1,$2)',[two,details]);
+ }finally{await db.close();}
+});
