@@ -1,3 +1,4 @@
+import {extraPortraits,extraPortraitSVG} from './extra-portraits.mjs';
 import {characterDetail,outfits} from './character-details.mjs';
 // Original vector portraits inspired by recognizable game-character silhouettes.
 // Fixed selections only: no upload, remote URL or user-supplied SVG is accepted.
@@ -11,11 +12,15 @@ export const characters=[
  ['Princess Zelda','#eccd72','crown'],['Princess Peach','#edbd65','crown'],['Luigi','#4eac65','cap'],['Bowser','#d7a747','spike'],['Yoshi','#67b861','orb'],
  ['Nathan Drake','#624333','hair'],['Ellie','#875b43','hair'],['Joel Miller','#776a60','hair'],['Jin Sakai','#252e36','band'],['2B','#eee9df','mask'],
  ['Senua','#534335','warrior'],['Commander Shepard','#373c48','warrior'],['Marcus Fenix','#566579','band'],['Gordon Freeman','#926640','glasses'],['GLaDOS','#e4e7de','robot'],
- ['Tracer','#906139','glasses'],['Mercy','#e7d18f','crown'],['Steve','#785334','square'],['Sans','#f1f2eb','skull'],['Hollow Knight','#e7e9dc','horns']
+ ['Tracer','#906139','glasses'],['Mercy','#e7d18f','crown'],['Steve','#785334','square'],['Sans','#f1f2eb','skull'],['Hollow Knight','#e7e9dc','horns'],
+ ...extraPortraits.map(p=>[p.name,p.color,'custom'])
 ];
+export const avatarCategories=[['game','Game'],['anime','Anime'],['superhero','Superhero']];
+export const avatarCategory=id=>Number(id)<50?'game':extraPortraits[Number(id)-50]?.category||'game';
 export const defaultBio='New worlds. Late nights. One more quest. This is my save file, and every game has a story.';
 export function avatarURL(id=0){
- const n=Number.isInteger(Number(id))&&Number(id)>=0&&Number(id)<50?Number(id):0;
+ const n=Number.isInteger(Number(id))&&Number(id)>=0&&Number(id)<characters.length?Number(id):0;
+ if(n>=50)return 'data:image/svg+xml;charset=utf-8,'+encodeURIComponent(extraPortraitSVG(n-50));
  const [name,color,kind]=characters[n],accent=['#d4ff72','#80d4fc','#ffb996','#baa6ff','#f2c764'][n%5];
  const skin='#e8ba94';
  let detail='';

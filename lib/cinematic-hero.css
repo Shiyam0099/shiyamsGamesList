@@ -2,11 +2,13 @@
 .hero-scene{position:absolute;inset:0;z-index:-4;opacity:0;transition:opacity 1.4s cubic-bezier(.4,0,.2,1);background:radial-gradient(ellipse at 75% 25%,#5d7238,#18291c 45%,#0e140f 80%)}
 .hero-scene.is-active{opacity:1}
 /* Each artwork keeps drifting through its outgoing fade; removing is-active never resets its camera. */
-.hero-scene img{height:100%;width:100%;object-fit:cover;object-position:center;filter:saturate(.9);animation:hero-drift 9s linear both;will-change:transform}
+.hero-scene img{position:absolute;left:50%;top:50%;height:100%;width:100%;max-width:none;object-fit:cover;object-position:center;transform:translate(-50%,-50%) scale(1.015);animation:hero-pan-landscape 9s linear both;will-change:transform}
 .hero-motion-paused .hero-scene img{animation-play-state:paused}
-@keyframes hero-drift{from{transform:scale(1.09) translateX(.6%)}to{transform:scale(1.015) translateX(-.3%)}}
+/* Use the decoded artwork dimensions, independent of the viewport shape. */
+.hero-scene img[data-orientation=portrait]{animation-name:hero-pan-portrait}
+@keyframes hero-pan-portrait{from{transform:translate(-50%,calc(-50% - var(--hero-pan-y,0px))) scale(1.015)}to{transform:translate(-50%,calc(-50% + var(--hero-pan-y,0px))) scale(1.015)}}
+@keyframes hero-pan-landscape{from{transform:translate(calc(-50% + var(--hero-pan-x,0px)),-50%) scale(1.015)}to{transform:translate(calc(-50% - var(--hero-pan-x,0px)),-50%) scale(1.015)}}
 .hero-shade{position:absolute;inset:0;z-index:-3;background:linear-gradient(90deg,#07100eed 0%,#0a130fa6 38%,#0d160d08 80%),linear-gradient(0deg,#0b140fff 0%,#0b140f99 22%,transparent 63%,#08110d66 100%)}
-.hero-grain{position:absolute;inset:0;pointer-events:none;z-index:-2;opacity:.12;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Cpath fill='%23fff' filter='url(%23n)' opacity='.4' d='M0 0h180v180H0z'/%3E%3C/svg%3E")}
 .hero-frame{position:absolute;inset:18px;pointer-events:none;border:1px solid #ffffff0c;z-index:-1}
 .hero-frame:before,.hero-frame:after{content:'';position:absolute;width:26px;height:26px;border-color:#cefa6980;border-style:solid}
 .hero-frame:before{top:-1px;left:-1px;border-width:1px 0 0 1px}.hero-frame:after{bottom:-1px;right:-1px;border-width:0 1px 1px 0}
@@ -42,3 +44,4 @@
 @media(max-width:760px){.cinematic-hero{margin-left:-20px;margin-right:-20px;margin-bottom:32px;min-height:730px}.hero-topline{padding:26px 24px}.hero-edition{display:none}.hero-stage{padding:32px 24px}.hero-side{display:none!important}.hero-copy h1,.hero-copy h1.hero-long-title{font-size:clamp(49px,11.5vw,82px);max-width:17ch;line-height:.94}.hero-meta{font-size:11px;gap:10px}.hero-kicker{font-size:9px;letter-spacing:.13em}.hero-description{font-size:13px;max-width:280px}.hero-footer{padding:0 24px 26px}.hero-chapters{gap:8px}.hero-bottom{align-items:start;flex-direction:column;gap:12px}.hero-shade{background:linear-gradient(90deg,#08110ed9,#08110e55),linear-gradient(0deg,#08110fff 0%,#08110e44 75%,#08110e55)}.hero-scene img{object-position:60% center}.hero-source{font-size:9px}.hero-controls{gap:12px}.hero-frame{inset:10px}}
 @media(max-width:380px){.cinematic-hero{margin-left:-16px;margin-right:-16px}.hero-stage,.hero-topline{padding-left:20px;padding-right:20px}.hero-footer{padding-left:20px;padding-right:20px}.hero-copy h1,.hero-copy h1.hero-long-title{font-size:46px}.hero-chapters{gap:6px}}
 @media(prefers-reduced-motion:reduce){.hero-scene,.hero-scene img,.hero-cta,.hero-cta .ui-icon,.hero-next,.hero-next-art{transition:none;transform:none!important;animation:none!important}.hero-running .hero-chapter.is-current .hero-chapter-line i{animation:none}}
+@media(prefers-reduced-motion:reduce){.hero-scene img{transform:translate(-50%,-50%)!important}}

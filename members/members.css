@@ -10,3 +10,9 @@ header:has(>.member-account-link){height:auto;min-height:100px;flex-wrap:wrap;ga
 @media(max-width:800px){#account-app .member-auth-mode{padding:36px 22px}.auth-layout{gap:26px;grid-template-columns:1fr}.auth-story{padding:0}.auth-story h1{max-width:none;font-size:64px}.auth-art{display:none}.auth-story>p:not(.eyebrow){max-width:500px}.auth-perks{margin-top:18px}.auth-panel{max-width:540px;justify-self:center}.member-signout{padding:8px;font-size:11px}}
 @media(prefers-reduced-motion:reduce){.profile-edit-button:hover{transform:none}}
 .auth-story h1{max-width:none;font-size:clamp(58px,6.2vw,88px)}
+/* Icon-only account actions; sign out is appended last in the header. */
+header .member-icon-control{position:relative;display:inline-flex;align-items:center;justify-content:center;width:42px;height:42px;flex:0 0 42px;padding:0;border-radius:50%;color:#c6d4b9;background:#cefa6905;border:1px solid #cefa6935}
+header .member-icon-control>.ui-icon{width:19px;height:19px}
+header .member-icon-control:hover,header .member-icon-control:focus-visible{color:#cefa69;border-color:#cefa69;background:#cefa6912}
+.member-control-tooltip{position:absolute;top:calc(100% + 9px);right:0;z-index:100;padding:6px 10px;border:1px solid #cefa6940;border-radius:7px;background:#202a1b;color:#f0f5e9;font-size:11px;font-weight:600;line-height:1.4;white-space:nowrap;box-shadow:0 6px 18px #0005;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(-3px);transition:opacity .15s,transform .15s,visibility .15s}
+.member-icon-control:hover .member-control-tooltip,.member-icon-control:focus-visible .member-control-tooltip{opacity:1;visibility:visible;transform:translateY(0)}

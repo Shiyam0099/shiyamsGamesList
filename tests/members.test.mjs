@@ -2,8 +2,9 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
 import {PGlite} from '@electric-sql/pglite';
-import {characters,avatarURL} from '../members/avatars.mjs';
-test('50 distinct fixed SVG avatars and safe fallback',()=>{assert.equal(characters.length,50);assert.equal(new Set(characters.map((_,i)=>avatarURL(i))).size,50);assert.equal(avatarURL('<script>'),avatarURL(0));assert.ok(characters.every((_,i)=>decodeURIComponent(avatarURL(i)).includes('<svg')));});
+import {characters,avatarURL,avatarCategory} from '../members/avatars.mjs';
+test('110 distinct fixed SVG avatars and safe fallback',()=>{assert.equal(characters.length,110);assert.equal(new Set(characters.map((_,i)=>avatarURL(i))).size,110);assert.equal(avatarURL('<script>'),avatarURL(0));assert.ok(characters.every((_,i)=>decodeURIComponent(avatarURL(i)).includes('<svg')));});
+test('avatar categories preserve game IDs and group new choices',()=>{assert.equal(avatarCategory(0),'game');assert.equal(avatarCategory(49),'game');assert.equal(avatarCategory(50),'anime');assert.equal(avatarCategory(57),'anime');assert.equal(avatarCategory(58),'superhero');assert.equal(avatarCategory(65),'superhero');for(const id of [66,85,106,107])assert.equal(avatarCategory(id),'anime');for(const id of [86,105,108,109])assert.equal(avatarCategory(id),'superhero');assert.equal(avatarURL(110),avatarURL(0));assert.equal(avatarURL(-1),avatarURL(0));});
 test('member collections enforce ownership, verified access, deduplication, quotas and deletion isolation',async()=>{
  const db=new PGlite(),owner='00000000-0000-0000-0000-000000000001',one='00000000-0000-0000-0000-000000000002',two='00000000-0000-0000-0000-000000000003',unverified='00000000-0000-0000-0000-000000000004';
  try{
@@ -12,6 +13,9 @@ test('member collections enforce ownership, verified access, deduplication, quot
   await db.query('insert into auth.users(id,email) values($1,$2)',[owner,'owner@example.test']);await db.query("select bootstrap_super_admin($1,'Owner')",[owner]);
   await db.exec("insert into games(title,genres,status) values('Original',array['RPG'],'loved')");
   await db.exec(await readFile(new URL('../supabase/migrations/202609200002_member_collections.sql',import.meta.url),'utf8'));
+  await db.exec(await readFile(new URL('../supabase/migrations/202610090001_expand_avatar_catalog.sql',import.meta.url),'utf8'));
+  await db.exec(await readFile(new URL('../supabase/migrations/202610090002_expand_avatar_catalog.sql',import.meta.url),'utf8'));
+  await db.exec(await readFile(new URL('../supabase/migrations/202610090003_expand_avatar_catalog.sql',import.meta.url),'utf8'));
   await db.query('insert into auth.users(id,email) values($1,$2),($3,$4),($5,$6)',[one,'one@example.test',two,'two@example.test',unverified,'unverified@example.test']);
   await db.query('update auth.users set email_confirmed_at=null where id=$1',[unverified]);
   async function as(role,id,sql,args=[]){await db.exec('set role '+role);try{await db.query("select set_config('request.jwt.claim.sub',$1,false)",[id||'']);return await db.query(sql,args);}finally{await db.exec('reset role');await db.query("select set_config('request.jwt.claim.sub','',false)");}}
@@ -26,7 +30,8 @@ test('member collections enforce ownership, verified access, deduplication, quot
   await assert.rejects(as('authenticated',one,"insert into games(title,genres) values('Injected',array['RPG'])"));
   assert.equal((await as('authenticated',one,"update games set title='Injected' returning id")).rows.length,0);
   await assert.rejects(as('authenticated',one,"update member_profiles set is_active=true where id=$1",[one]));
-  await assert.rejects(as('authenticated',one,"select update_member_profile('Name','Story',50)"));
+  await assert.rejects(as('authenticated',one,"select update_member_profile('Name','Story',110)"));
+  for(const avatar of [49,50,57,58,65,66,85,86,105,106,107,108,109])await as('authenticated',one,"select update_member_profile('Collector','My story',$1)",[avatar]);
   await as('authenticated',one,"select update_member_profile('Collector','My story',49)");
   assert.equal((await as('authenticated',one,'select display_name from member_profiles')).rows[0].display_name,'Collector');
   await as('authenticated',one,"select set_collection_status(1,'playing')");

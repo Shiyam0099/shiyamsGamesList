@@ -1,0 +1,57 @@
+/* Account surfaces: light belongs to panels, not every row inside them. */
+#account-app{min-height:100svh;display:flex;flex-direction:column}
+#account-app>.member-main{
+ flex:1 0 auto;width:100%;min-height:0;margin:0 auto;
+ padding:40px 24px 20px;
+}
+#account-app .member-welcome{padding:12px 0 20px;background:none}
+#account-app #account-message:empty{display:none}
+#account-app .member-panel{
+ background:linear-gradient(135deg,#1c261d,#172018);
+ border:1px solid #b8ce9728;
+ box-shadow:inset 0 1px 0 #efffde08,0 6px 18px #00000018;
+ margin:20px 0;
+}
+#account-app .member-panel:last-child{margin-bottom:0}
+#account-app .member-panel>h2{margin-bottom:18px}
+#account-app :is(.member-game-row,.avatar-choice){box-shadow:none}
+#account-app .avatar-choice:hover{box-shadow:none;background:#cefa6906}
+#account-app .avatar-choice:has(input:checked){box-shadow:inset 0 0 0 1px #cefa6912;background:#cefa690b}
+#account-app .member-results{padding:0 4px}
+#account-app .member-game-row:last-child{border-bottom:0}
+#account-app input:not([type=checkbox]):not([type=radio]),
+#account-app select,#account-app textarea{box-shadow:inset 0 1px 3px #00000018}
+#account-app :is(input,select,textarea):focus-visible{box-shadow:0 0 0 3px #cefa690c}
+#account-app .member-main button{box-shadow:inset 0 1px 0 #ffffff0a,0 2px 5px #00000016}
+#account-app .member-main .member-text-button{box-shadow:none}
+#account-app .member-main .member-primary{box-shadow:inset 0 1px 0 #ffffff25,0 3px 8px #00000020}
+#account-app>.member-main.member-auth-mode{padding:40px 32px 24px}
+#account-app .auth-panel{background:radial-gradient(ellipse at 100% 0,#cefa690a,transparent 65%),#192219;margin:0}
+#account-app .auth-panel:before{background:linear-gradient(90deg,transparent,#cefa6950,transparent)}
+#account-app>footer{
+ flex:0 0 auto;margin:0 auto;width:calc(100% - 48px);max-width:1052px;
+ padding:16px 0 18px;gap:10px 16px;
+ background:none;box-shadow:none;border-top:1px solid #b8ce9720;
+}
+#account-app>footer p{margin:0}
+@media(max-width:640px){
+ #account-app>.member-main{padding:24px 14px 16px}
+ #account-app>.member-main.member-auth-mode{padding:28px 20px 20px}
+ #account-app>footer{width:calc(100% - 28px);padding:14px 0 16px}
+ #account-app .member-panel{margin:16px 0}
+}
+
+/* Keep painted/positioned descendants within the account's real page bounds.
+   Stop touch/trackpad overscroll from revealing an empty area after the footer. */
+html:has(#account-app){overscroll-behavior-y:none}
+body:has(#account-app){margin:0;padding:0;overscroll-behavior-y:none;display:flow-root}
+#account-app{position:relative;overflow:clip;min-height:100dvh}
+
+#account-app .avatar-tabs{display:flex;gap:5px;padding:5px;margin:0 0 14px;background:#101810;border:1px solid #aecb8520;border-radius:12px}
+#account-app .avatar-tabs button{flex:1;display:flex;align-items:center;justify-content:center;gap:8px;padding:10px 8px;border:1px solid transparent;background:transparent;font-size:12px;border-radius:8px;color:#aebfa0;box-shadow:none}
+#account-app .avatar-tabs button span{font-size:10px;padding:1px 6px;border-radius:5px;background:#c4df8a0b}
+#account-app .avatar-tabs button[aria-selected=true]{background:#cefa6912;border-color:#cefa6940;color:#dcffa0}
+#account-app .avatar-tabs button:hover{border-color:#cefa6950}
+#account-app .avatar-selection{font-size:12px;color:#c3dba6;margin:12px 0 0}
+#account-app .avatar-grid{align-content:start;scrollbar-gutter:stable}
+@media(max-width:380px){#account-app .avatar-tabs button{font-size:11px;gap:4px;padding:9px 5px}}

@@ -98,9 +98,8 @@ const siteURL = process.env.SITE_URL || 'http://127.0.0.1:4174';
   assert.ok(await page.locator('#age-filter').isHidden());
   assert.equal(await page.locator('#grid .card').count(), total);
   await page.click('#tab-unplayed');
-  for (const mode of ['random', 'rated', 'newest', 'oldest', 'genre', 'surprise', 'taste']) {
+  for (const mode of ['random', 'rated', 'newest', 'oldest', 'surprise', 'taste']) {
     await page.selectOption('#rec-mode', mode);
-    if (mode === 'genre') await page.selectOption('#rec-genre', 'Action RPG');
     const before = await page.locator('#rec-info h3').textContent();
     assert.notEqual(before, 'A little pause.');
     await page.click('#next-rec');
@@ -108,9 +107,7 @@ const siteURL = process.env.SITE_URL || 'http://127.0.0.1:4174';
     const after = await page.locator('#rec-info h3').textContent();
     if (!['rated'].includes(mode)) assert.notEqual(before, after, mode);
   }
-  await page.selectOption('#rec-mode', 'genre'); await page.selectOption('#rec-genre', 'Football');
-  assert.match(await page.locator('#rec-info').textContent(), /No unplayed games found in this genre/);
-  assert.equal(await page.locator('#rec-trailer').isDisabled(), true);
+  assert.equal(await page.locator('#rec-mode option[value=genre]').count(),0);
   await page.selectOption('#rec-mode', 'random');
   await page.evaluate(() => { window.previousArtwork = document.querySelector('#rec-image'); });
   await page.click('#next-rec');
@@ -157,7 +154,7 @@ const siteURL = process.env.SITE_URL || 'http://127.0.0.1:4174';
   assert.equal(await review.getAttribute('target'),'_blank');assert.equal(await review.getAttribute('rel'),'noopener noreferrer');
   assert.equal(await page.getByRole('link',{name:/Torrent/}).count(),0);
   await page.keyboard.press('Escape');
-  for (const mode of ['random','rated','newest','oldest','genre','surprise','taste']) {
+  for (const mode of ['random','rated','newest','oldest','surprise','taste']) {
     await page.selectOption('#rec-mode',mode);await page.click('#next-rec');assert.match(await page.locator('#rec-info h3').textContent(),/very long/);
   }
   await fixture([g(1,{'Download Link':'https://example.com/legacy'})]);
@@ -165,7 +162,7 @@ const siteURL = process.env.SITE_URL || 'http://127.0.0.1:4174';
   await fixture([g(1,{downloadLink:'javascript:alert(1)'})]);
   await page.click('#rec-trailer');assert.equal(await page.getByRole('link',{name:/Torrent for/}).count(),0);assert.equal(await page.getByRole('button',{name:'Torrent',exact:true}).count(),0);
   assert.match(await page.locator('#dialog-rating').textContent(),/N\/A/);
-  assert.ok(await page.locator('#dialog-description').isHidden());assert.ok(await page.locator('#video-slot').isHidden());
+  assert.match(await page.locator('#dialog-description').textContent(),/chapter/);assert.ok(await page.locator('#video-slot').isHidden());
   await page.keyboard.press('Escape');
   await page.selectOption('#rec-mode','rated');
   assert.match(await page.locator('#rec-info').textContent(), /No rated unplayed games/);
@@ -178,6 +175,6 @@ const siteURL = process.env.SITE_URL || 'http://127.0.0.1:4174';
   await page.click('#next-rec');
   assert.equal(await page.locator('#rec-info').evaluate(el=>el.getAnimations().length),0);
   assert.deepEqual(errors,[]);
-  console.log('PASS: real collection, all 7 recommendation modes, filters, sorting, keyboard tabs, dialogs, stats, 7 viewport sizes, active counts 0/1/3, empty and singleton libraries, missing metadata, safe review links and removal of retired download controls. No page errors.');
+  console.log('PASS: real collection, all 6 recommendation modes, filters, sorting, keyboard tabs, dialogs, stats, 7 viewport sizes, active counts 0/1/3, empty and singleton libraries, missing metadata, safe review links and removal of retired download controls. No page errors.');
   await browser.close();
 })().catch(e=>{console.error(e);process.exit(1)});

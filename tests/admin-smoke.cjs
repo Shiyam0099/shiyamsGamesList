@@ -6,15 +6,17 @@ const path=require('node:path');
  const browser=await chromium.launch({executablePath:process.env.CHROME_EXECUTABLE || undefined,headless:true});
  const page=await browser.newPage({viewport:{width:1440,height:1000}}),errors=[];
  page.on('pageerror',e=>errors.push(e.message));
+ if(process.env.TEST_THEME==='light')await page.addInitScript(()=>localStorage.setItem('shiyams-theme','light'));
  const site=process.env.SITE_URL || 'http://127.0.0.1:4174';
  const adminId='00000000-0000-0000-0000-000000000001',otherId='00000000-0000-0000-0000-000000000002';
  let role='admin',active=true,failGames=false,functionsCalls=0;
- let games=[toRow({id:1,title:'First Game',year:'2020',genres:['RPG'],status:'playing',videoId:'',description:'First description'},true),toRow({id:2,title:'Second Game',year:'2023',genres:['Action'],status:'unplayed'},true)];
+ let games=[toRow({id:1,title:'First Game',poster:'https://art.example.test/game.svg',year:'2020',genres:['RPG'],status:'playing',videoId:'',description:'First description'},true),toRow({id:2,title:'Second Game',year:'2023',genres:['Action'],status:'unplayed'},true)];
  let profile={id:adminId,email:'admin@example.test',username:'Curator',role,is_active:true};
  let users=[];let members=[{id:otherId,display_name:'Member Test',avatar_id:1,is_active:true,created_at:new Date().toISOString()}],resetPassword='';
  const user={id:adminId,aud:'authenticated',role:'authenticated',email:profile.email,app_metadata:{provider:'email'},user_metadata:{},created_at:new Date().toISOString()};
  const b64=value=>Buffer.from(JSON.stringify(value)).toString('base64url');
  const token=b64({alg:'HS256',typ:'JWT'})+'.'+b64({sub:adminId,role:'authenticated',exp:Math.floor(Date.now()/1000)+3600})+'.test-signature';
+ await page.route('https://art.example.test/game.svg',route=>route.fulfill({contentType:'image/svg+xml',body:'<svg xmlns="http://www.w3.org/2000/svg" width="64" height="78"><rect width="64" height="78" fill="#719956"/></svg>'}));
  await page.route('**/*.supabase.co/**',async route=>{
   const req=route.request(),url=new URL(req.url()),method=req.method(),body=req.postData()?JSON.parse(req.postData()):{};
   const respond=(data,status=200)=>route.fulfill({status,contentType:'application/json',body:JSON.stringify(data)});
@@ -25,6 +27,7 @@ const path=require('node:path');
   }
   if(url.pathname.endsWith('/user'))return respond(user);
   if(url.pathname.endsWith('/logout'))return respond({});
+  if(url.pathname.includes('/rest/v1/member_profiles'))return respond({id:adminId,is_active:true});
   if(url.pathname.includes('/rest/v1/admin_profiles')){
    profile={...profile,role,is_active:active};
    return respond(url.searchParams.has('id')?profile:[profile,...users]);
@@ -37,6 +40,7 @@ const path=require('node:path');
    return respond(null);
   }
   if(url.pathname.includes('/functions/v1/')){
+   if(url.pathname.endsWith('/gaming-radar'))return respond({items:[{id:42,title:'Discovery Game',url:'https://rawg.io/games/test',platforms:['PC'],metacritic:90,players:1000,releaseDate:'2026-10-15'}],updatedAt:new Date().toISOString()});
    if(url.pathname.endsWith('/member-api')){
     if(body.action==='members')return respond({members,hasMore:false});
     if(body.action==='collection')return respond({entries:[{status:'playing',games:{title:'Member game'}}]});
@@ -71,9 +75,14 @@ const path=require('node:path');
  await page.getByText('Unable to sign in. Check your email and password.').waitFor();
  await page.locator('[name=password]').fill('test-password-123');await page.getByRole('button',{name:'Sign in',exact:true}).click();
  await page.getByRole('heading',{name:'Overview',exact:true}).waitFor();
+ assert.equal(await page.locator('.admin-header .brand').getAttribute('href'),new URL(site+'/').pathname);
+ assert.equal(await page.locator('.admin-header .brand').getAttribute('data-route'),null,'logo must leave the admin router');
+ await page.locator('.admin-header .brand').click();await page.waitForURL(site+'/');
+ await page.goto(site+'/admin');await page.getByRole('heading',{name:'Overview',exact:true}).waitFor();
  assert.equal(await page.getByRole('link',{name:'Admin users',exact:true}).count(),0);
  await page.goto(site+'/admin/users');await page.getByText('Only the Super Admin can manage administrator accounts.').waitFor();assert.equal(functionsCalls,0);
  await page.getByRole('link',{name:'Games',exact:true}).click();await page.getByRole('heading',{name:'First Game'}).waitFor();
+ assert.equal(await page.locator('.catalog-art img').getAttribute('src'),'https://art.example.test/game.svg');
  await page.locator('#game-search').fill('Second');assert.equal(await page.locator('.admin-row').count(),1);await page.locator('#game-search').fill('');
  await page.locator('[data-status-id="2"]').selectOption('loved');await page.getByText('Status updated.').waitFor();assert.equal(games[1].status,'loved');
  await page.getByRole('link',{name:'Add game',exact:true}).click();await page.locator('[name=title]').fill('New Game');await page.locator('#genres-toggle').click();await page.locator('#genre-search').fill('RPG');await page.locator('#genre-options input[value="RPG"]').check();await page.locator('#genre-search').fill('Puzzle');await page.locator('#genre-options input[value="Puzzle"]').check();await page.locator('#genre-search').fill('Custom Genre');await page.locator('.genre-add').click();await page.getByRole('button',{name:'Remove Custom Genre',exact:true}).click();await page.keyboard.press('Escape');await page.locator('[name=year]').fill('2024');await page.locator('textarea[name=description]').fill('A new adventure.');await page.locator('[name=metacritic]').fill('91');await page.locator('[name=criticVideoUrl]').fill('https://www.youtube.com/watch?v=abcdefghijk');
@@ -105,6 +114,22 @@ const path=require('node:path');
  await page.setViewportSize({width:1440,height:1000});await page.screenshot({path:path.join(require('node:os').tmpdir(),'shiyams-admin-users.png')});
  await page.getByRole('link',{name:'Games',exact:true}).click();await page.locator('#admin-games').waitFor();await page.setViewportSize({width:390,height:844});assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));await page.screenshot({path:path.join(require('node:os').tmpdir(),'shiyams-admin-mobile.png'),fullPage:true});
  failGames=true;await page.getByRole('link',{name:'Overview',exact:true}).click();await page.getByRole('heading',{name:'Unable to load this page'}).waitFor();assert.doesNotMatch(await page.locator('body').textContent(),/private internal/);failGames=false;await page.getByRole('button',{name:'Retry',exact:true}).click();await page.getByRole('heading',{name:'Overview',exact:true}).waitFor();
+ await page.setViewportSize({width:1440,height:1000});
+ const headerBox=await page.locator('.admin-header').boundingBox();
+ for(const [name,route] of [['Gaming Radar','radar'],['All-time top 250','top250'],['Release Calendar','calendar']]){
+  await page.getByRole('link',{name,exact:true}).click();await page.waitForURL('**/admin/'+route);
+  await page.getByRole('heading',{name:'Discovery Game',exact:true}).waitFor();
+  const box=await page.locator('.admin-header').boundingBox();assert.equal(box.x,headerBox.x);assert.equal(box.y,headerBox.y);assert.equal(box.height,headerBox.height);
+  assert.equal(await page.locator('.admin-discovery header').count(),0);
+  if(route!=='radar'){
+   const add=page.getByRole('button',{name:'Add to my collection',exact:true});const card=await page.locator('.radar-card').boundingBox(),button=await add.boundingBox();assert.ok(button.y+button.height<=card.y+card.height,'collection action is not clipped');
+   await add.click();await page.getByRole('button',{name:'In your collection',exact:true}).waitFor();
+  }
+  for(const width of [320,390,768,1440]){await page.setViewportSize({width,height:1000});assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),'admin discovery overflow '+route+' '+width);}
+ }
+ await page.reload();await page.getByRole('heading',{name:'Discovery Game',exact:true}).waitFor();
+ await page.getByRole('link',{name:'Admin users',exact:true}).click();await page.locator('#create-admin').waitFor();
+ for(const width of [320,390,768,1440]){await page.setViewportSize({width,height:1000});const input=await page.locator('#create-admin [name=password]').boundingBox(),button=await page.getByRole('button',{name:'Create admin',exact:true}).boundingBox();assert.ok(button.y>=input.y+input.height+16,'create admin action spacing '+width);}
  role='admin';active=false;await page.goto(site+'/admin/games');await page.waitForURL('**/admin/login');assert.equal(await page.locator('.admin-row').count(),0);
  await page.locator('[name=email]').fill(profile.email);await page.locator('[name=password]').fill('test-password-123');await page.getByRole('button',{name:'Sign in',exact:true}).click();await page.getByText('This account is not an active administrator. Contact the Super Admin.').waitFor();
  active=true;await page.locator('[name=password]').fill('test-password-123');await page.getByRole('button',{name:'Sign in',exact:true}).click();await page.getByRole('button',{name:'Sign out',exact:true}).click();await page.waitForURL('**/admin/login');await page.goto(site+'/admin/settings');await page.waitForURL('**/admin/login');

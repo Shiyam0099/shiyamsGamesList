@@ -1,0 +1,232 @@
+:root{color-scheme:dark}
+body .theme-toggle{position:relative;flex:0 0 42px;display:inline-grid;place-items:center;width:42px;height:42px;min-height:42px;padding:0;border:1px solid var(--line);border-radius:50%;color:var(--ink);background:var(--panel);cursor:pointer}
+body .theme-toggle .ui-icon{width:19px;height:19px}
+body .theme-toggle:focus-visible{outline:2px solid var(--lime);outline-offset:4px}
+body .theme-toggle:hover .member-control-tooltip,body .theme-toggle:focus-visible .member-control-tooltip{opacity:1;visibility:visible;transform:none}
+.admin-login{position:relative}
+html[data-theme=light]{color-scheme:light;--bg:#f4f6ef;--panel:#fff;--line:#ccd5c3;--lime:#426b16;--ink:#202c1b;--muted:#58664f;--glass-edge:#81977355;--glass-rim:inset 0 1px 0 #fff,inset 1px 0 0 #ffffffb3,inset -1px 0 0 #bccfb533,inset 0 -1px 0 #afc29f33;--surface-light:inset 0 1px 0 #fff;--surface-depth:0 8px 28px #293a1c0c;--surface-hover:inset 0 1px 0 #fff,0 8px 24px #293a1c15}
+html[data-theme=light] body{background:var(--bg);color:var(--ink)}
+/* Solid reading surfaces, with the same hierarchy as the dark palette. */
+html[data-theme=light] body :is(#public-app,#admin-app,#account-app,#radar-app,#library-app,#editorial-app)
+:is(.stats,.rate,.dashboard-panel,.playing-card,.playing-empty,.member-panel,.member-welcome,.auth-panel,.admin-panel,.admin-toolbar,.admin-row,.workspace-welcome,.workspace-stat,.settings-summary,.metadata-lookup,.metadata-sync,.radar-card,.article-card,.calendar-controls,.editorial-empty,.genre-dropdown,.collection-genre-panel,.member-game-row,.avatar-choice,.member-results,.admin-notice){background:#fff;color:var(--ink);border-color:var(--line);box-shadow:var(--surface-light),var(--surface-depth)}
+html[data-theme=light] body :is(dialog,#game-dialog,.genre-dropdown,.collection-genre-panel,#member-toast){background:#fff;color:var(--ink);border-color:var(--line);box-shadow:0 18px 60px #20301926}
+html[data-theme=light] body :is(dialog)::backdrop{background:#17211280}
+html[data-theme=light] body :is(#public-app,#admin-app,#account-app,#radar-app,#library-app,#editorial-app)
+:where(input:not([type=checkbox]):not([type=radio]),textarea,select,button:where(:not(.cover-button):not(.playing-card):not(.hero-chapter)),.button-link,.profile-edit-button,.member-account-link,.editorial-mark,.workspace-heading-icon){color:var(--ink);border-color:var(--line);background-color:#f8faf4;box-shadow:inset 0 1px 0 #fff,0 2px 6px #24331b08}
+html[data-theme=light] body :is(#public-app,#admin-app,#account-app,#radar-app,#library-app,#editorial-app)
+:is(.primary,.member-primary,.hero-cta,.play-icon){background:#c9ee91;color:#213411;border-color:#93b863}
+html[data-theme=light] body :is(#public-app,#admin-app,#account-app,#radar-app,#library-app,#editorial-app)
+:is(button[aria-selected=true],button[aria-pressed=true],.admin-nav a[aria-current],.avatar-choice:has(input:checked)){background:#e3f0d1;color:#355b12;border-color:#779c50}
+html[data-theme=light] body :is(#public-app,#admin-app,#account-app,#radar-app,#library-app,#editorial-app)
+:is(.muted,.fine,.lead,.rec-meta,.rec-reason,.stat span,.stat small,.admin-panel p,.admin-panel label,.admin-row small,.member-game-row small,.workspace-description,.workspace-note,.workspace-description,.workspace-welcome p,.settings-help,.settings-summary p,.admin-header>div,.admin-nav a,.member-welcome p,.auth-copy p,.member-panel p,.playing-copy>.muted,.about p:not(.eyebrow),.about-tags span,.radar-meta,.radar-metric,.calendar-filters label,.avatar-choice span){color:var(--muted)}
+html[data-theme=light] body :is(#public-app,#admin-app,#account-app,#radar-app,#library-app,#editorial-app)
+:is(h1,h2,h3,.admin-row strong,.member-game-row strong,.settings-summary h2,.workspace-stat strong){color:var(--ink)}
+html[data-theme=light] body :is(.eyebrow,.lime,.card-tag,.radar-link,.role-badge,.status-pill,.score-inline,.admin-nav-label,.settings-avatar,.workspace-heading-icon .ui-icon){color:#426b16}
+html[data-theme=light] body :is(.tabs span,.role-badge,.status-pill,.score-inline,.about-tags span,.calendar-popular,.avatar-tabs,.member-tabs,.settings-avatar,.workspace-note){background-color:#e8efdf;border-color:var(--line)}
+html[data-theme=light] body .member-control-tooltip{background:#fff;color:#26351f;border-color:#b9cbaa;box-shadow:0 5px 18px #20301920}
+html[data-theme=light] body :is(header,footer,.admin-nav,.collection-controls,.editorial-tabs,.member-game-row){border-color:var(--line)}
+html[data-theme=light] body .admin-nav a:hover{background:#e9efdf;color:#315619}
+html[data-theme=light] body .member-main button:hover:not(:disabled){background:#e3edda}
+html[data-theme=light] body #public-app #about{background:linear-gradient(125deg,#fff,#eef3e6);border-color:var(--line);color:var(--ink);box-shadow:var(--surface-depth)}
+html[data-theme=light] body #public-app .collection-shortcut{background:#f8fff0;color:#314d19;border-color:#93ad79;box-shadow:0 5px 20px #273b2024}
+/* Artwork remains full color. The cinematic hero deliberately retains a dark
+   scrim for legibility over changing images in either theme. */
+html[data-theme=light] body #public-app .cinematic-hero{--lime:#cefa69;--ink:#f2f4eb;--muted:#c6cfbf;color:#f2f4eb}
+html[data-theme=light] body #public-app .cinematic-hero :is(h1,h2,h3){color:#f2f4eb}
+html[data-theme=light] body #public-app .cinematic-hero .eyebrow{color:#cefa69}
+html[data-theme=light] body #public-app .cinematic-hero .hero-pause{background:#18241dd9;color:#edf5e6;border-color:#ffffff50}
+html[data-theme=light] body #public-app .cinematic-hero .hero-next{background:#172219a6;color:#edf5e6;border-color:#ffffff40}
+html[data-theme=light] body #public-app .cinematic-hero .hero-chapter{background:transparent;color:#bcc9b1;box-shadow:none}
+html[data-theme=light] body #public-app .cinematic-hero .hero-chapter.is-current{color:#cefa69}
+html[data-theme=light] body #public-app #recommendations{background:#f0f4e9;border-color:var(--line);box-shadow:var(--surface-depth)}
+html[data-theme=light] body #public-app #recommendations .rec-art:after{background:linear-gradient(90deg,#f0f4e970,transparent 35%),linear-gradient(0deg,#f0f4e980,transparent 45%)}
+html[data-theme=light] body #public-app #recommendations .rec-label{color:#f2f4eb;background:#172112b3}
+html[data-theme=light] body :is(.cover-index,.cover-play,.article-type,.radar-rank){color:#f1f6eb}
+html[data-theme=light] body .article-type{color:#cefa69}
+html[data-theme=light] body :is(.boot-label,.loader-label,.loader-title){color:var(--ink)}
+html[data-theme=light] body #load-state{background:var(--bg);color:var(--ink)}
+@media(max-width:760px){html[data-theme=light] body #public-app #recommendations .rec-art:after{background:linear-gradient(180deg,#f0f4e905 15%,#f0f4e970 60%,#f0f4e9)}}
+@media(forced-colors:active){body .theme-toggle{border:1px solid ButtonText}}
+
+html[data-theme=light] body #admin-app{background:radial-gradient(ellipse at 95% 0,#dbe8cc70,transparent 50%),var(--bg)}
+html[data-theme=light] body #account-app .auth-story{background:transparent;box-shadow:none}
+html[data-theme=light] body #account-app :is(.auth-save,.auth-perks,.auth-footnote){color:#536a40}
+html[data-theme=light] body #account-app .auth-save .ui-icon{color:#426b16}
+html[data-theme=light] body :is(#account-app,#admin-app) :is(.avatar-tabs button[aria-selected=true],.member-tabs button[aria-pressed=true]){background:#dcebc9;color:#294c0e;border-color:#8dab70}
+html[data-theme=light] body :is(#public-app,#account-app,#admin-app,#radar-app,#library-app,#editorial-app) :is(.primary,.member-primary):hover:not(:disabled){background:#badf7d;color:#213411}
+
+html[data-theme=light] body :is(#public-app,#admin-app,#account-app,#radar-app,#library-app,#editorial-app) .brand{color:var(--ink)}
+html[data-theme=light] body #account-app .member-welcome{background:none;box-shadow:none}
+html[data-theme=light] body #account-app .avatar-tabs{background:#e8efdf;border-color:var(--line)}
+html[data-theme=light] body #account-app #account-message{color:#355d19;background:#edf5e3;border-color:#b8cea2}
+html[data-theme=light] body #admin-app :is(.admin-nav a[aria-current] .ui-icon,.workspace-note .ui-icon,.admin-panel h2>.ui-icon){color:#4a6d2c}
+html[data-theme=light] body #admin-app :is(.workspace-stat span,.workspace-stat small,.activity-list,.metadata-sync p,.settings-grid small){color:var(--muted)}
+
+/* Light-only soft relief: sage porcelain, recessed fields, raised panels. */
+html[data-theme=light]{
+ --bg:#eef1eb;--panel:#eef1eb;--line:#c7d0c1;--ink:#26332b;--muted:#56665a;--lime:#3f684a;
+ --neu-raised:7px 7px 18px #cad2c6,-7px -7px 18px #ffffff;
+ --neu-small:3px 3px 8px #cbd3c7,-3px -3px 8px #ffffff;
+ --neu-inset:inset 3px 3px 7px #d0d7cc,inset -3px -3px 7px #ffffff;
+ --surface-depth:var(--neu-raised);--surface-hover:5px 5px 14px #c5cfc1,-5px -5px 14px #fff;
+}
+html[data-theme=light] body :is(#public-app,#admin-app,#account-app,#radar-app,#library-app,#editorial-app)
+:is(.stats,.dashboard-panel,.playing-card,.playing-empty,.member-panel,.auth-panel,.admin-panel,.admin-toolbar,.workspace-welcome,.workspace-stat,.settings-summary,.metadata-sync,.radar-card,.article-card,.calendar-controls,.editorial-empty){
+ background:var(--panel);border-color:#ffffffa6;box-shadow:var(--neu-raised);
+}
+html[data-theme=light] body :is(#public-app,#admin-app,#account-app,#radar-app,#library-app,#editorial-app)
+:is(.rate,.admin-row,.avatar-choice,.metadata-lookup){background:var(--panel);border-color:#d3dbcd;box-shadow:var(--neu-small)}
+html[data-theme=light] body :is(#public-app,#admin-app,#account-app,#radar-app,#library-app,#editorial-app)
+:is(input:not([type=checkbox]):not([type=radio]):not([type=hidden]),textarea,select){background:var(--bg);border-color:#cad3c5;box-shadow:var(--neu-inset);color:var(--ink)}
+html[data-theme=light] body :is(#public-app,#admin-app,#account-app,#radar-app,#library-app,#editorial-app)
+:where(button:not(.cover-button):not(.hero-chapter):not(.hero-next):not(.hero-pause):not(.playing-card):not([role=option]),.button-link,.profile-edit-button){background-color:var(--panel);border-color:#d1dacb;box-shadow:var(--neu-small)}
+html[data-theme=light] body :is(#public-app,#admin-app,#account-app,#radar-app,#library-app,#editorial-app)
+:is(.primary,.member-primary){background:#3e624a;color:#fff;border-color:#3e624a;box-shadow:3px 3px 9px #c5cfc1,-3px -3px 9px #fff}
+html[data-theme=light] body :is(#public-app,#admin-app,#account-app,#radar-app,#library-app,#editorial-app)
+:is(.primary,.member-primary):hover:not(:disabled){background:#31543b;color:#fff}
+html[data-theme=light] body :is(#public-app,#admin-app,#account-app,#radar-app,#library-app,#editorial-app)
+:is(button[aria-selected=true],button[aria-pressed=true],.admin-nav a[aria-current],.avatar-choice:has(input:checked)){background:#e0e9da;color:#31563c;border-color:#7d9c72;box-shadow:var(--neu-inset)}
+html[data-theme=light] body :is(#public-app,#admin-app,#account-app,#radar-app,#library-app,#editorial-app)
+:is(.eyebrow,.lime,.card-tag,.radar-link,.role-badge,.status-pill,.score-inline){color:#3f684a}
+html[data-theme=light] body #public-app :is(#about,#recommendations){background:var(--panel);border-color:#ffffffa6;box-shadow:var(--neu-raised)}
+html[data-theme=light] body #public-app #recommendations .rec-art:after{background:linear-gradient(90deg,#eef1eb70,transparent 35%),linear-gradient(0deg,#eef1eb80,transparent 45%)}
+html[data-theme=light] body #admin-app{background:var(--bg)}
+html[data-theme=light] body :is(.member-game-row,.member-results){box-shadow:none;background:transparent}
+html[data-theme=light] body :is(.admin-notice.error,.danger){color:#9a352e}
+html[data-theme=light] body :is(button,input,select,textarea,a):focus-visible{outline:2px solid #416c4e;outline-offset:4px}
+/* One shared box and baseline for all header actions, including the avatar. */
+html[data-theme=light] body :is(#public-app,#admin-app,#account-app,#radar-app,#library-app,#editorial-app) header :is(.member-icon-control,.theme-toggle,.avatar-link){
+ width:42px;height:42px;min-height:42px;flex:0 0 42px;padding:0;margin-top:0;margin-bottom:0;align-self:center;vertical-align:middle;line-height:0;box-sizing:border-box;border-radius:50%;
+}
+html[data-theme=light] body :is(#public-app,#admin-app,#account-app,#radar-app,#library-app,#editorial-app) header :is(.member-icon-control,.theme-toggle){
+ display:inline-flex;align-items:center;justify-content:center;background:var(--panel);color:#405b45;border:1px solid #d3dbcf;box-shadow:var(--neu-small);backdrop-filter:none;
+}
+html[data-theme=light] body header .avatar-link img{display:block;width:42px;height:42px;margin:0;border-radius:50%;border:2px solid #eef1eb;box-shadow:var(--neu-small)}
+html[data-theme=light] body header .member-icon-control>.ui-icon{display:block;width:19px;height:19px;flex:0 0 19px;margin:0}
+html[data-theme=light] body .admin-header>div{align-items:center;column-gap:12px}
+/* The hero stays cinematic; its selected chapter must remain visible even
+   at the very start of the animated progress fill. */
+html[data-theme=light] body #public-app #cinematic-hero .hero-chapter{background:transparent;color:#d3ddc9;box-shadow:none;border-color:transparent}
+html[data-theme=light] body #public-app #cinematic-hero .hero-chapter.is-current{color:#dcff9c;background:transparent;box-shadow:none;font-weight:700;text-shadow:0 0 14px #cefa6950}
+html[data-theme=light] body #public-app #cinematic-hero .hero-chapter.is-current .hero-chapter-line{background:#cefa6959;box-shadow:0 0 0 1px #cefa6970,0 0 10px #cefa6930}
+html[data-theme=light] body #public-app #cinematic-hero .hero-chapter-line i{background:#cefa69}
+html[data-theme=light] body #public-app #cinematic-hero .hero-chapter-line{background:#ffffff40}
+html[data-theme=light] body #public-app #cinematic-hero .hero-pause{background:#18241dd9;color:#edf5e6;border-color:#ffffff50;box-shadow:none}
+/* Dark green gives the animated loader real contrast on the pale canvas. */
+html[data-theme=light] body .loading-experience{color:var(--ink)}
+html[data-theme=light] body .loading-kicker{color:#416c4e}
+html[data-theme=light] body .loading-copy p{color:#56665a}
+html[data-theme=light] body .orbit-ring{border-color:#b9c9b4}
+html[data-theme=light] body .orbit-ring:before{border-top-color:#416c4e;border-right-color:#416c4e}
+html[data-theme=light] body .orbit-ring:after{border-bottom-color:#799d65;border-left-color:#799d65}
+html[data-theme=light] body .orbit-core{background:var(--panel);border-color:#acbea4;box-shadow:var(--neu-small)}
+html[data-theme=light] body .orbit-core .ui-icon{color:#416c4e}
+html[data-theme=light] body .orbit-dot:after{background:#416c4e;box-shadow:0 0 10px #416c4e40}
+html[data-theme=light] body .loading-track{height:3px;background:#cbd7c5}
+html[data-theme=light] body .loading-track>span{background:linear-gradient(90deg,transparent,#416c4e,transparent)}
+html[data-theme=light] body .boot-spinner{border-color:#c0ceba;border-top-color:#416c4e}
+html[data-theme=light] body :is(button:disabled,[aria-disabled=true]){box-shadow:none}
+@media(max-width:760px){html[data-theme=light] body #public-app #recommendations .rec-art:after{background:linear-gradient(180deg,#eef1eb05 15%,#eef1eb70 60%,#eef1eb)}}
+@media(forced-colors:active){html[data-theme=light] body *{box-shadow:none!important}html[data-theme=light] body :is(button,input,select,textarea){border-color:ButtonText}}
+
+/* Header geometry is shared by both themes; include min/max dimensions so
+   generic button rules cannot stretch a circular control. */
+html body :is(#public-app,#admin-app,#account-app,#radar-app,#library-app,#editorial-app) header :is(.avatar-link,.member-icon-control,.theme-toggle){
+ width:42px;height:42px;min-width:42px;max-width:42px;min-height:42px;max-height:42px;
+ flex:0 0 42px;box-sizing:border-box;padding:0;margin:0;align-self:center;vertical-align:middle;line-height:0;border-radius:50%;
+}
+html body :is(#public-app,#admin-app,#account-app,#radar-app,#library-app,#editorial-app) header :is(.member-icon-control,.theme-toggle){display:inline-flex;align-items:center;justify-content:center}
+html body header .avatar-link img{display:block;width:42px;height:42px;min-width:42px;max-width:42px;min-height:42px;max-height:42px;box-sizing:border-box;object-fit:cover;margin:0;border-radius:50%}
+html body header .member-icon-control>.ui-icon{display:block;width:19px;height:19px;flex:0 0 19px;margin:0}
+
+/* One persistent control outside page roots survives navigation and rerenders. */
+body>.floating-theme-toggle{position:fixed;right:max(18px,env(safe-area-inset-right));top:50%;transform:translateY(-50%);z-index:80;width:48px;height:48px;min-height:48px;display:grid;place-items:center;background:#202b1eeF;border:1px solid #cde6b54d;color:#e3f4d2;box-shadow:inset 0 1px 0 #ffffff20,0 6px 22px #0005}
+body>.floating-theme-toggle .member-control-tooltip{top:50%;right:calc(100% + 12px);transform:translateY(-50%);line-height:1.4}
+body>.floating-theme-toggle:hover .member-control-tooltip,body>.floating-theme-toggle:focus-visible .member-control-tooltip{transform:translateY(-50%)}
+html[data-theme=light] body>.floating-theme-toggle{background:var(--panel);color:#405b45;border-color:#d3dbcf;box-shadow:var(--neu-small)}
+@media(max-width:760px){body>.floating-theme-toggle{right:max(12px,env(safe-area-inset-right));top:auto;bottom:calc(94px + env(safe-area-inset-bottom));transform:none;width:44px;height:44px;min-height:44px}}
+@media(forced-colors:active){body>.floating-theme-toggle{background:ButtonFace;color:ButtonText;border-color:ButtonText;box-shadow:none}}
+
+/* Gaming switch: a sliding illuminated plate in an asymmetric chassis. */
+body>.floating-theme-toggle{width:88px;height:46px;min-height:46px;padding:4px;border-radius:8px 17px 8px 17px;background:linear-gradient(135deg,#34412b,#18221a);box-shadow:inset 0 1px 0 #e5ffcd35,0 5px 20px #0005;transition:background .3s,box-shadow .3s}
+.theme-switch-track{display:grid;grid-template-columns:1fr 1fr;position:relative;width:100%;height:100%;isolation:isolate}
+.theme-switch-thumb{position:absolute;inset:0 auto 0 0;width:50%;border-radius:4px 12px 4px 12px;background:#cefa69;box-shadow:0 0 14px #cefa6930;z-index:-1;transition:transform .5s cubic-bezier(.22,1,.36,1),background .3s}
+.theme-switch-slot{display:grid;place-items:center;color:#a2b793;transition:color .3s}
+body>.floating-theme-toggle[data-mode=dark] .theme-switch-moon{color:#1d3016}
+body>.floating-theme-toggle[data-mode=light] .theme-switch-thumb{transform:translateX(100%)}
+body>.floating-theme-toggle[data-mode=light] .theme-switch-sun{color:#fff}
+body>.floating-theme-toggle .ui-icon{transition:transform .5s cubic-bezier(.22,1,.36,1)}
+body>.floating-theme-toggle[data-mode=light] .theme-switch-sun .ui-icon{transform:rotate(90deg)}
+html[data-theme=light] body>.floating-theme-toggle{background:var(--panel);border-color:#b7c5b0;box-shadow:var(--neu-small)}
+html[data-theme=light] body>.floating-theme-toggle .theme-switch-thumb{background:#41664c;box-shadow:0 2px 6px #2d4b2825}
+html[data-theme=light] body>.floating-theme-toggle .theme-switch-moon{color:#60745b}
+@media(max-width:760px){body>.floating-theme-toggle{width:80px;height:44px;min-height:44px}}
+@media(prefers-reduced-motion:reduce){body>.floating-theme-toggle,body>.floating-theme-toggle *{transition:none!important}}
+@media(forced-colors:active){body>.floating-theme-toggle{background:ButtonFace}.theme-switch-thumb{background:Highlight!important}.theme-switch-slot{color:ButtonText!important}}
+
+/* Targeted light-theme corrections, including components with ID-specific rules. */
+html[data-theme=light] body #load-state:not([hidden]){background:var(--bg);color:var(--ink)}
+html[data-theme=light] body :is(#public-app,#admin-app,#account-app,#radar-app,#library-app,#editorial-app) header .member-icon-control:is(:hover,:focus-visible){background:#dce6d5;color:#274d33;border-color:#879e7d;box-shadow:var(--neu-inset)}
+html[data-theme=light] body #public-app #about p:not(.eyebrow){color:#526153}
+html[data-theme=light] body #public-app #about .about-tags span{background:#e2e9dc;border-color:#c0cdb7;color:#435e40}
+html[data-theme=light] body #public-app #about .portrait{background:#e3e9dd;border-color:#bfccb5;box-shadow:var(--neu-small)}
+html[data-theme=light] body #game-dialog .dialog-summary p,html[data-theme=light] body #game-dialog #dialog-description{color:#465749}
+html[data-theme=light] body #game-dialog .metacritic>strong{background:#dce9cf;border-color:#aac394;color:#315423;box-shadow:var(--neu-inset)}
+html[data-theme=light] body #game-dialog :is(.metacritic span,.metacritic small,#dialog-meta){color:#53644f}
+html[data-theme=light] body #account-app :is(.member-game-row,.member-results){background:transparent;box-shadow:none}
+html[data-theme=light] body #public-app #playing-games .playing-card{background:var(--panel);color:var(--ink);border-color:#d0d9c9;box-shadow:var(--neu-raised)}
+html[data-theme=light] body #admin-app .playing-options label{background:var(--panel);color:var(--ink);border-color:#c8d2bf;box-shadow:var(--neu-small)}
+html[data-theme=light] body #admin-app .playing-options label:has(:checked){background:#dfe9d6;color:#31563c;border-color:#8fa77d;box-shadow:var(--neu-inset)}
+html[data-theme=light] body #admin-app .playing-options label:has(:checked)>span{color:#31563c}
+html[data-theme=light] body #admin-app :is(.workspace-welcome h2 span,.workspace-emblem .ui-icon,.stat-top>.ui-icon){color:#41664c}
+html[data-theme=light] body #admin-app .workspace-emblem{border-color:#bbcab0;background:#e6ecdf;box-shadow:var(--neu-small)}
+html[data-theme=light] body #admin-app .stat-meter{background:#c9d5c0}
+html[data-theme=light] body #admin-app .stat-meter i{background:#557c43}
+html[data-theme=light] body #public-app #personal-save-file{background:none;box-shadow:none}
+/* Searchable genre triggers use the same recessed finish as native selects. */
+html[data-theme=light] body :is(#public-app,#admin-app,#account-app,#radar-app,#library-app,#editorial-app) :is(select,#collection-genre-toggle,#genres-toggle){background-color:var(--bg);color:var(--ink);border:1px solid #cad3c5;border-radius:9px;box-shadow:var(--neu-inset);font-size:13px;font-weight:400;min-height:44px}
+html[data-theme=light] body #public-app :is(#sort,#collection-genre-toggle){height:44px;border-radius:9px;background-color:var(--bg);box-shadow:var(--neu-inset);border-color:#cad3c5}
+html[data-theme=light] body :is(#public-app,#admin-app,#account-app,#radar-app,#library-app,#editorial-app) :is(select,#collection-genre-toggle,#genres-toggle):is(:hover,:focus){border-color:#a5b49b;box-shadow:var(--neu-inset);outline:none}
+html[data-theme=light] body :is(#public-app,#admin-app,#account-app,#radar-app,#library-app,#editorial-app) :is(select,#collection-genre-toggle,#genres-toggle):focus-visible{outline:2px solid #738b77;outline-offset:3px;border-color:#a5b49b;box-shadow:var(--neu-inset)}
+
+/* Vertical switch keeps the floating control close to the screen edge. */
+body>.floating-theme-toggle{width:46px;height:84px;min-height:84px}
+body>.floating-theme-toggle .theme-switch-track{grid-template-columns:1fr;grid-template-rows:1fr 1fr}
+body>.floating-theme-toggle .theme-switch-thumb{width:100%;height:50%;bottom:auto}
+body>.floating-theme-toggle[data-mode=light] .theme-switch-thumb{transform:translateY(100%)}
+@media(max-width:760px){body>.floating-theme-toggle{width:44px;height:80px;min-height:80px}}
+html[data-theme=light] body #admin-app .workspace-note{background:none;box-shadow:none}
+
+/* Theme snapshots use their own animation, independent of page navigation. */
+html.theme-transition::view-transition-group(root){animation:none}
+html.theme-transition::view-transition-old(root),
+html.theme-transition::view-transition-new(root){animation:none;mix-blend-mode:normal;transform:none;opacity:1}
+html.theme-transition::view-transition-old(root){z-index:1}
+html.theme-transition::view-transition-new(root){z-index:2}
+html.theme-transition::view-transition{pointer-events:none}
+
+/* Animate the mask scale, leaving page text crisp inside the revealed area. */
+@property --theme-smoke-size{syntax:"<length>";inherits:false;initial-value:0px}
+html.theme-transition.theme-smoke::view-transition-new(root){
+ mask-image:url("../assets/theme-smoke-mask.png");
+ mask-mode:alpha;mask-repeat:no-repeat;
+ mask-size:var(--theme-smoke-size) var(--theme-smoke-size);
+ mask-position:calc(var(--theme-smoke-x) - var(--theme-smoke-size)/2) calc(var(--theme-smoke-y) - var(--theme-smoke-size)/2);
+}
+
+/* Keep the live switch on its own snapshot layer, above the page smoke. */
+html.theme-transition body>.floating-theme-toggle{view-transition-name:theme-control}
+html.theme-transition::view-transition-group(theme-control){animation:none;z-index:3}
+html.theme-transition::view-transition-old(theme-control){display:none}
+html.theme-transition::view-transition-new(theme-control){animation:none;mix-blend-mode:normal}
+/* Compact sound preference, separate from the theme action and saved per browser. */
+body>.theme-sound-toggle{position:fixed;z-index:80;right:max(25px,calc(env(safe-area-inset-right) + 7px));top:calc(50% + 52px);width:32px;height:32px;display:grid;place-items:center;padding:0;border-radius:9px;background:#202b1eef;color:#d6e8c7;border:1px solid #b8d39650;box-shadow:0 3px 12px #0003}
+body>.theme-sound-toggle .ui-icon{width:17px;height:17px}
+body>.theme-sound-toggle:focus-visible{outline:2px solid var(--lime);outline-offset:4px}
+html[data-theme=light] body>.theme-sound-toggle{background:var(--panel);color:#405b45;border-color:#bac8b1;box-shadow:var(--neu-small)}
+html.theme-transition body>.theme-sound-toggle{view-transition-name:theme-sound}
+html.theme-transition::view-transition-group(theme-sound){animation:none;z-index:3}
+html.theme-transition::view-transition-old(theme-sound){display:none}
+html.theme-transition::view-transition-new(theme-sound){animation:none;mix-blend-mode:normal}
+@media(max-width:760px){body>.theme-sound-toggle{right:max(18px,calc(env(safe-area-inset-right) + 6px));top:auto;bottom:calc(182px + env(safe-area-inset-bottom));width:32px;height:32px}}
+@media(forced-colors:active){body>.theme-sound-toggle{background:ButtonFace;color:ButtonText;border-color:ButtonText}}

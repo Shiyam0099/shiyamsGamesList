@@ -1,4 +1,5 @@
-import {animateContent,pageReady} from '../lib/motion.mjs';
+import {revealSections,discoverySections} from '../lib/section-reveals.mjs';
+import {animateContent} from '../lib/motion.mjs';
 import {excludedExternalContent} from '../supabase/functions/_shared/content-policy.mjs';
 import './editorial.css';
 import './radar.css';
@@ -6,14 +7,19 @@ import './library.css';
 import {icon,loader} from '../lib/ui.mjs';
 import {sitePath,normalizeLinks} from '../lib/routes.mjs';
 import {esc,safe,dateLabel,gameCard,imageFallbacks} from './radar-cards.mjs';
-export async function startLibrary(client,kind){
+export async function startLibrary(client,kind,host=null){
  const calendar=kind==='calendar',title=calendar?'Release calendar':'All-time Top 250';
  const root=document.createElement('div');root.id='library-app';
  const source=document.querySelector('#public-app'),header=source.querySelector('header').cloneNode(true),footer=source.querySelector('footer').cloneNode(true);
  for(const el of [header,footer])el.querySelectorAll('a[href^="#"]').forEach(a=>a.setAttribute('href',sitePath('/')+a.getAttribute('href')));
  header.querySelectorAll('nav a').forEach(a=>{if(a.getAttribute('href')===sitePath('/'+kind))a.setAttribute('aria-current','page');});
  root.innerHTML=`${header.outerHTML}<main class="editorial-main"><section class="editorial-intro"><div><p class="eyebrow">${calendar?'MAKE ROOM IN YOUR SAVE FILE':'THE GAMES THAT LEFT THEIR MARK'}</p><h1>${title}<span class="lime">.</span></h1><p class="editorial-description">${calendar?'Plan your next adventure. Browse release dates by month or choose a day to see what’s arriving.':'250 standout games across generations and platforms, ranked by Metacritic scores available on RAWG.'}</p></div><div class="editorial-mark" aria-hidden="true">${icon(calendar?'calendar':'star')}</div></section><nav class="library-links" aria-label="Game discovery"><a href="${sitePath('/radar')}">Gaming radar</a><a href="${sitePath('/top250')}" ${!calendar?'aria-current="page"':''}>All-time Top 250</a><a href="${sitePath('/calendar')}" ${calendar?'aria-current="page"':''}>Release calendar</a></nav>${calendar?`<section class="calendar-controls" aria-label="Calendar filters"><div class="calendar-year-row"><div class="calendar-year-picker"><button id="previous-year" aria-label="Previous year">${icon('chevronLeft')}</button><label for="calendar-year">Year<input type="number" id="calendar-year" min="1900" max="2099" step="1"></label><button id="next-year" aria-label="Next year">${icon('chevronRight')}</button></div><button id="current-month">This month</button><button id="toggle-days" aria-expanded="false" aria-controls="calendar-picker">${icon('calendar')} <span>Choose a day</span></button><button id="whole-month" hidden>Clear day</button></div><div id="calendar-months" class="calendar-months" role="group" aria-label="Choose a month">${Array.from({length:12},(_,i)=>`<button data-month="${String(i+1).padStart(2,'0')}" aria-pressed="false">${new Date(Date.UTC(2026,i,1)).toLocaleDateString('en',{month:'long',timeZone:'UTC'})}</button>`).join('')}</div><div class="calendar-filters"><label for="calendar-order">Order by<select id="calendar-order"><option value="date">Release date: earliest</option><option value="newest">Release date: latest</option><option value="popular">Most popular</option><option value="rating">Metacritic score</option><option value="title">Title: A–Z</option></select></label><label for="calendar-platform">Platform<select id="calendar-platform"><option value="all">All platforms</option><option value="pc">PC</option><option value="playstation">PlayStation</option><option value="xbox">Xbox</option><option value="nintendo">Nintendo</option><option value="ios">iOS</option><option value="android">Android</option><option value="mac">macOS</option><option value="linux">Linux</option></select></label><label class="calendar-popular"><input type="checkbox" role="switch" id="calendar-popular"><span>Popular only<small>100+ RAWG list additions</small></span></label></div><div id="calendar-picker" hidden><div id="calendar-days" class="calendar-days" role="group" aria-label="Select a release day"></div></div></section>`:`<div class="editorial-toolbar"><label class="editorial-search" for="top-search">Search the Top 250<input type="search" id="top-search" placeholder="Find a classic…"></label></div>`}<section id="library-panel" aria-labelledby="library-heading"><div class="editorial-toolbar"><h2 id="library-heading">${calendar?'Releases':'The ranking'}</h2><button id="library-refresh">${icon('refresh')} Refresh</button></div><p class="library-note muted">${calendar?'Release dates are supplied by RAWG and can change. Undated games are excluded. Browse 40 releases at a time, or select a specific day.':'Metacritic score determines the order; tied scores retain RAWG’s ordering. Unscored games are excluded. This is a ranking built from RAWG data, not an official RAWG Top 250 chart.'}</p><div class="editorial-status"><p id="library-count" role="status"></p><p id="library-updated"></p></div><p id="library-notice" role="status" hidden></p><div id="library-content"></div><button id="library-more" hidden>Load more games</button></section><p class="editorial-attribution">Game data, artwork and ${calendar?'release dates':'Metacritic scores'} supplied by <a href="https://rawg.io/" target="_blank" rel="noopener noreferrer">RAWG</a>. Data refreshes every six hours. Artwork belongs to its respective owners.</p></main>${footer.outerHTML}`;
- document.body.append(root);pageReady(root);normalizeLinks(root);document.querySelector('#load-state').hidden=true;document.title=title+' — Shiyam’s Games List';
+ if(host){
+  root.querySelector('header')?.remove();root.querySelector('footer')?.remove();
+  root.querySelector('.editorial-intro')?.remove();root.querySelector('.library-links')?.remove();
+  const main=root.querySelector('main'),section=document.createElement('div');section.className=main.className;section.append(...main.childNodes);main.replaceWith(section);
+  root.classList.add('admin-discovery');host.append(root);
+ }else document.body.append(root);const reveals=revealSections(root,discoverySections);normalizeLinks(root);document.querySelector('#load-state').hidden=true;document.title=title+' — Shiyam’s Games List';
  const $=s=>root.querySelector(s),cache=new Map();let month=new Date().toISOString().slice(0,7),day='',order='date',platform='all',popular=false,items=[],shown=40,nextPage=null,total=0,requestId=0,lastPayload=null,loadedKey='';
  function periodLabel(){return day?dateLabel(month+'-'+day):new Date(month+'-01T12:00:00Z').toLocaleDateString(undefined,{month:'long',year:'numeric',timeZone:'UTC'});}
  function drawCalendar(){
@@ -31,7 +37,7 @@ export async function startLibrary(client,kind){
   if(!visible.length)$('#library-content').innerHTML=`<div class="editorial-empty"><h2>${needle?'No matching games.':'No games listed.'}</h2><p>${calendar?'No matching games on the loaded pages. Try another selection or use Load more games if available.':'Try a different search or refresh the ranking.'}</p></div>`;
   else if(calendar&&['date','newest'].includes(order)){const groups=new Map();for(const game of visible){if(!groups.has(game.releaseDate))groups.set(game.releaseDate,[]);groups.get(game.releaseDate).push(game);}$('#library-content').innerHTML=[...groups].sort(([a],[b])=>order==='newest'?b.localeCompare(a):a.localeCompare(b)).map(([date,games])=>`<section class="calendar-release-group"><h3 class="calendar-date">${esc(dateLabel(date))}</h3><div class="radar-grid">${games.map(g=>gameCard(g,g.rank,kind)).join('')}</div></section>`).join('');}
   else $('#library-content').innerHTML=`<div class="radar-grid">${visible.map(g=>gameCard(g,g.rank,kind)).join('')}</div>`;
-  $('#library-more').hidden=calendar?!nextPage:visible.length>=filtered.length;imageFallbacks(root);animateContent($('#library-content'));
+  $('#library-more').hidden=calendar?!nextPage:visible.length>=filtered.length;imageFallbacks(root);reveals.refresh();
  }
  async function load(append=false,force=false){
   const id=++requestId,selection=calendar?[month,day,order,platform,popular].join(':'):kind,page=append?nextPage:1;if(!page)return;
@@ -58,5 +64,5 @@ export async function startLibrary(client,kind){
   for(const id of ['calendar-order','calendar-platform','calendar-popular'])$('#'+id).onchange=()=>{order=$('#calendar-order').value;platform=$('#calendar-platform').value;popular=$('#calendar-popular').checked;load();};
   drawCalendar();
  }else $('#top-search').oninput=()=>{shown=40;if(lastPayload)render();};
- $('#library-more').onclick=()=>{if(calendar)load(true);else{shown+=40;render();}};$('#library-refresh').onclick=()=>load(false,true);await load();
+ $('#library-more').onclick=()=>{if(calendar)load(true);else{shown+=40;render();}};$('#library-refresh').onclick=()=>load(false,true);await load();return ()=>reveals.dispose();
 }

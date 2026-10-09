@@ -598,3 +598,26 @@ header nav a{white-space:nowrap}
 .brand:hover .brand-emblem{transform:translateY(-1px) rotate(-3deg);filter:drop-shadow(0 0 8px #cefa6926)}
 @media(max-width:760px){.brand-emblem{width:42px;height:42px}.brand-wordmark{font-size:23px}.brand-wordmark .brand-sub{font-size:8px}}
 @media(prefers-reduced-motion:reduce){.brand:hover .brand-emblem{transform:none}}
+
+/* Shared dropdown affordance. Keep these properties through page-specific
+   background/padding shorthands, including styles loaded with admin routes. */
+select:not([multiple]):not([size]),select[size="1"] {
+    appearance:none;
+    -webkit-appearance:none;
+    padding-right:44px!important;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23a2aa9b' stroke-width='1.7' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E")!important;
+    background-repeat:no-repeat!important;
+    background-position:right 16px center!important;
+    background-size:16px 16px!important;
+    text-overflow:ellipsis;
+}
+.collection-genre-picker #collection-genre-toggle,
+.admin-shell #genres-toggle { padding-right:16px; }
+.genre-chevron { flex-shrink:0; }
+@media(forced-colors:active) {
+    select:not([multiple]):not([size]),select[size="1"] {
+        appearance:auto;
+        -webkit-appearance:auto;
+        background-image:none!important;
+    }
+}

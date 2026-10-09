@@ -1,0 +1,38 @@
+/* Small, deliberate movement and a little light keep the personal archive alive. */
+#public-app .stats{background:linear-gradient(120deg,#202a1b,#171e16);box-shadow:0 12px 36px #00000016;overflow:hidden}
+#public-app .stat{position:relative;isolation:isolate;transition:background-color .3s}
+#public-app .stat:after{content:'';position:absolute;bottom:0;left:24px;right:24px;height:2px;background:linear-gradient(90deg,transparent,#cefa6960,transparent);pointer-events:none}
+#public-app .stat strong{display:inline-block;font-variant-numeric:tabular-nums;text-shadow:0 0 24px #cefa6915}
+#public-app .rate{padding:14px 16px;border:1px solid #a2b58c20;border-radius:12px;background:linear-gradient(135deg,#cefa6906,transparent);transition:background-color .3s,border-color .3s}
+#public-app .rate strong{font-variant-numeric:tabular-nums}
+#public-app .library-bar{height:10px;box-shadow:0 0 16px #cefa690a;transform-origin:left center}
+#public-app .age-track>span{transform-origin:left center;background:linear-gradient(90deg,#829c50,#cefa69);box-shadow:0 0 12px #cefa6920}
+#public-app .age-row{transition:background-color .25s,border-color .25s}
+#public-app #grid .card{transition:transform .4s cubic-bezier(.16,1,.3,1)}
+#public-app .cover-button{box-shadow:0 8px 20px #0002;transition:box-shadow .4s,outline-color .4s;outline:1px solid #ffffff0a;outline-offset:-1px}
+#public-app .cover-button img{transition:transform .65s cubic-bezier(.16,1,.3,1)}
+#public-app .cover-play .play-icon{transition:box-shadow .3s,transform .3s}
+#public-app .playing-card{transition:transform .4s,box-shadow .4s,border-color .4s}
+#public-app .card:focus-within .cover-button{outline-color:#cefa6980;box-shadow:0 10px 30px #0004}
+@media(hover:hover) and (pointer:fine){
+ #public-app .stat:hover{background:#cefa6908}
+ #public-app .rate:hover{background-color:#cefa6907;border-color:#cefa6940}
+ #public-app #grid .card:hover{transform:translateY(-5px)}
+ #public-app .card:hover .cover-button{box-shadow:0 16px 32px #0005;outline-color:#cefa6950}
+ #public-app .card:hover .cover-button img{transform:scale(1.045)}
+ #public-app .card:hover .play-icon{box-shadow:0 0 18px #cefa6940;transform:scale(1.08)}
+ #public-app .playing-card:hover{transform:translateY(-3px);box-shadow:0 12px 28px #0004}
+}
+@media(prefers-reduced-motion:reduce){
+ #public-app #grid .card:hover,#public-app .playing-card:hover,#public-app .card:hover .cover-button img,#public-app .card:hover .play-icon,#public-app .cover-button:hover img{transform:none}
+}
+
+/* Reserve the settled value's dimensions while the visible counter ticks. */
+#public-app .stat strong.is-counting,#public-app .rate strong.is-counting{display:inline-grid;position:relative;overflow:clip;vertical-align:bottom}
+#public-app .is-counting .count-final,#public-app .is-counting .count-ticker{grid-area:1/1;font:inherit;letter-spacing:inherit}
+#public-app .is-counting .count-final{opacity:0}
+#public-app .is-counting .count-ticker{position:absolute;inset:0;white-space:nowrap;text-align:right;contain:layout paint}
+
+/* Percentages remain on their own line and aligned with their labels. */
+#public-app .rate strong.is-counting{display:grid;vertical-align:baseline}
+#public-app .rate .count-ticker{text-align:left}

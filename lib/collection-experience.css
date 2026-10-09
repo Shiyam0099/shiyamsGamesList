@@ -1,0 +1,47 @@
+#game-dialog{--art-accent:206 250 105;width:min(940px,95vw);padding:28px;border-color:rgb(var(--art-accent)/.45);background:radial-gradient(ellipse at 0 0,rgb(var(--art-accent)/.14),transparent 65%),#171e18;box-shadow:0 28px 90px #0008;transform-origin:center}
+#game-dialog .dialog-top{margin-bottom:20px}
+.game-detail-heading{display:flex;align-items:center;gap:24px;margin-bottom:24px}
+.game-detail-heading>div{min-width:0}
+#dialog-artwork{width:130px;aspect-ratio:2/2.8;object-fit:cover;border-radius:10px;border:1px solid rgb(var(--art-accent)/.35);box-shadow:0 10px 28px #0005;flex-shrink:0}
+#game-dialog #dialog-title{font-size:clamp(32px,5vw,54px);overflow-wrap:anywhere}
+#game-dialog .eyebrow{color:rgb(var(--art-accent))}
+#game-dialog #dialog-links a{padding:10px 14px;border:1px solid rgb(var(--art-accent)/.3);border-radius:8px;background:rgb(var(--art-accent)/.07);color:var(--ink)}
+#public-app #recommendations{--art-accent:206 250 105;border-color:rgb(var(--art-accent)/.3)}
+/* Artwork bleeds behind the copy instead of ending at a column boundary. */
+#public-app #recommendations{position:relative;isolation:isolate;display:block;background:#192018}
+#public-app #recommendations .rec-art{position:absolute;inset:0 0 0 50%;height:auto;min-height:0;background:transparent;z-index:0;pointer-events:none;mask-image:linear-gradient(90deg,transparent,#000 22%)}
+#public-app #recommendations .rec-art img{object-position:center 30%}
+#public-app #recommendations .rec-art:after{background:linear-gradient(90deg,#19201870 0%,#19201818 25%,transparent 65%),linear-gradient(0deg,#192018b3,transparent 45%)}
+#public-app #recommendations .rec-copy{position:relative;z-index:1;width:50%;background:none}
+#public-app #recommendations .rec-copy:before{content:'';position:absolute;inset:0 -35% 0 0;z-index:-1;pointer-events:none;background:radial-gradient(ellipse at 0 20%,rgb(var(--art-accent)/.08),transparent 70%)}
+#public-app #recommendations .rec-selectors{max-width:250px}
+#public-app #recommendations .rec-selectors label{flex:0 1 250px}
+#public-app #recommendations .rec-label{background:#111a1259}
+#public-app #recommendations:has(.rec-art.is-empty) .rec-art{opacity:.3}
+@media(max-width:760px){
+ #public-app #recommendations .rec-art{inset:0 0 auto;height:370px;mask-image:linear-gradient(180deg,#000 25%,transparent 100%)}
+ #public-app #recommendations .rec-art img{object-position:center 25%}
+ #public-app #recommendations .rec-art:after{background:linear-gradient(180deg,#19201805 15%,#19201870 60%,#192018)}
+ #public-app #recommendations .rec-copy{width:100%;padding-top:235px}
+ #public-app #recommendations .rec-copy:before{inset:180px 0 0}
+ #public-app #recommendations:has(.rec-art.is-empty) .rec-copy{padding-top:32px}
+}
+#public-app #recommendations #rec-info h3{color:var(--ink)}
+@media(max-width:600px){
+ #game-dialog{width:100%;max-width:none;max-height:90svh;margin:auto 0 0;border-radius:20px 20px 0 0;padding:20px;overscroll-behavior:contain}
+ .game-detail-heading{gap:16px}#dialog-artwork{width:85px}#game-dialog #dialog-title{font-size:32px}
+ #dialog-meta{font-size:12px}
+}
+
+#public-app .collection-shortcut{
+ position:fixed;right:max(24px,env(safe-area-inset-right));bottom:calc(24px + env(safe-area-inset-bottom));z-index:35;
+ display:flex;align-items:center;gap:9px;padding:12px 17px;border:1px solid #cefa6960;border-radius:50px;
+ color:#e5f3d3;background:#202c1af5;box-shadow:inset 0 1px 0 #ffffff12,0 8px 24px #0005;
+ font-size:12px;animation:collection-shortcut-in .25s ease-out;
+}
+#public-app .collection-shortcut:hover{border-color:#cefa69;background:#2b3a21}
+#public-app .collection-shortcut:focus-visible{outline:2px solid var(--lime);outline-offset:4px}
+.collection-shortcut .ui-icon{width:18px;height:18px;color:var(--lime)}
+@keyframes collection-shortcut-in{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+@media(max-width:600px){#public-app .collection-shortcut{right:max(16px,env(safe-area-inset-right));bottom:calc(16px + env(safe-area-inset-bottom));padding:11px 14px}}
+@media(prefers-reduced-motion:reduce){#public-app .collection-shortcut{animation:none}}

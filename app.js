@@ -1,3 +1,7 @@
+import {mountGameMedia} from './lib/game-details.mjs';
+import {artworkAccent,expandDetails,collectionShortcut} from './lib/collection-experience.mjs';
+import {revealRecommendation} from './lib/recommendation-motion.mjs';
+import {animateHome} from './lib/home-motion.mjs';
 import {animateCollection,animateTabSelection} from './lib/motion.mjs';
 import {collectionGenreFilter} from './lib/collection-genre.mjs';
 import {icon} from './lib/ui.mjs';
@@ -139,7 +143,6 @@ $("#grid").addEventListener("click", (e) => {
 });
 // Recommendation pools and affinities are built once from the curated collection.
 const recommender = createRecommender(games);
-recommender.genres.forEach((genre) => $("#rec-genre").add(new Option(genre, genre)));
 const histories = { taste: [], surprise: [] };
 for (const mode of Object.keys(histories)) {
   try {
@@ -147,10 +150,9 @@ for (const mode of Object.keys(histories)) {
     if (Array.isArray(stored)) histories[mode] = stored;
   } catch { /* Recommendations also work when storage is unavailable. */ }
 }
-function nextRecommendation(animate = true) {
+function nextRecommendation(animate = true, spin = false) {
   const mode = $("#rec-mode").value;
-  $("#rec-genre-label").hidden = mode !== "genre";
-  const result = recommender.pick({ mode, genre: $("#rec-genre").value,
+  const result = recommender.pick({ mode,
     previous: recommendation, seen: histories[mode] || [] });
   recommendation = result.game;
   $("#rec-trailer").disabled = !recommendation;
@@ -158,12 +160,12 @@ function nextRecommendation(animate = true) {
   $(".rec-label").hidden = !recommendation;
   $(".rec-art").classList.toggle("is-empty", !recommendation);
   if (!recommendation) {
-    const message = mode === "genre" ? "No unplayed games found in this genre."
-      : mode === "rated" ? "No rated unplayed games available yet."
+    const message = mode === "rated" ? "No rated unplayed games available yet."
       : mode === "newest" ? "No dated unplayed games available."
       : "No eligible backlog games remain.";
     $("#rec-info").innerHTML = `<h3>A little pause.</h3><p class="rec-reason">${message}</p>`;
     $("#rec-image").removeAttribute("src");
+    revealRecommendation($("#recommendations"),{animate,spin});
     return;
   }
   if (Object.hasOwn(histories, mode)) {
@@ -171,6 +173,7 @@ function nextRecommendation(animate = true) {
     try { sessionStorage.setItem(`shiyams-rec-${mode}`, JSON.stringify(result.seen)); } catch {}
   }
   const game = recommendation;
+  artworkAccent($("#recommendations"),game.poster);
   $("#rec-info").innerHTML = `<h3>${escapeHTML(game.title)}</h3>
     <div class="rec-meta">${escapeHTML(game.year)} / ${game.genres.map(escapeHTML).join(" · ")}
     ${rating(game) !== null ? `<span class="score-inline">Metacritic ${rating(game)}</span>` : ""}
@@ -185,15 +188,10 @@ function nextRecommendation(animate = true) {
   artwork.addEventListener("error", imgError);
   artwork.src = game.poster || placeholder;
   $("#rec-image").replaceWith(artwork);
-  if (animate && !matchMedia("(prefers-reduced-motion: reduce)").matches) {
-    $("#rec-info").getAnimations().forEach((animation) => animation.cancel());
-    $("#rec-info").animate([{ opacity: 0, transform: "translateY(6px)" },
-      { opacity: 1, transform: "translateY(0)" }], { duration: 220, easing: "ease-out" });
-  }
+  revealRecommendation($("#recommendations"),{animate,spin});
 }
-$("#next-rec").addEventListener("click", () => nextRecommendation());
+$("#next-rec").addEventListener("click", () => nextRecommendation(true,true));
 $("#rec-mode").addEventListener("change", () => nextRecommendation());
-$("#rec-genre").addEventListener("change", () => nextRecommendation());
 $("#rec-trailer").addEventListener("click", () => recommendation && showGame(recommendation.id));
 
 // Keep active games separate from never-started backlog and completed games.
@@ -255,27 +253,19 @@ $("#clear-age").addEventListener("click", () => {
 });
 
 const dialog = $("#game-dialog");
+let disposeGameMedia;
 function showGame(id) {
   const game = games.find((g) => g.id === id);
   if (!game) return;
+  const source=document.activeElement?.closest(".card,.playing-card,#recommendations");
+  const cover=$("#dialog-artwork");cover.src=game.poster||placeholder;cover.alt=game.title+" artwork";cover.onerror=imgError;
+  artworkAccent(dialog,game.poster);
   $("#dialog-title").textContent = game.title;
   $("#dialog-meta").textContent =
     `${game.year} · ${game.genres.join(" / ")} · ${statusNames[game.status]}`;
-  const slot = $("#video-slot");
-  slot.replaceChildren();
-  if (game.videoId && /^[\w-]{11}$/.test(game.videoId)) {
-    const iframe = document.createElement("iframe");
-    iframe.src = `https://www.youtube-nocookie.com/embed/${game.videoId}?rel=0`;
-    iframe.title = game.title + " trailer";
-    iframe.allow =
-      "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
-    iframe.referrerPolicy = "strict-origin-when-cross-origin";
-    iframe.allowFullscreen = true;
-    slot.append(iframe);
-  }
-  slot.hidden = !slot.children.length;
-  $("#dialog-description").textContent = game.description || "";
-  $("#dialog-description").hidden = !game.description;
+  disposeGameMedia?.();
+  $("#dialog-description").textContent = game.description || "Every game has a story. This chapter is still waiting to be written.";
+  $("#dialog-description").hidden = false;
   const metascore = rating(game);
   $("#dialog-rating").innerHTML = `<strong>${metascore ?? "N/A"}</strong><span>Metacritic
     <small>${metascore === null ? "Not rated" : "Critic score / 100"}</small>
@@ -287,6 +277,9 @@ function showGame(id) {
 
   ].join("");
   dialog.showModal();
+  disposeGameMedia=mountGameMedia(dialog,game,placeholder);
+  dialog.scrollTop=0;
+  expandDetails(dialog,source);
   $("#close-dialog").focus();
 }
 $("#close-dialog").addEventListener("click", () => dialog.close());
@@ -302,8 +295,10 @@ dialog.addEventListener("click", (e) => {
       dialog.close();
   }
 });
-dialog.addEventListener("close", () => $("#video-slot").replaceChildren());
+dialog.addEventListener("close", () => {disposeGameMedia?.();disposeGameMedia=null;});
 render();
 nextRecommendation(false);
+animateHome($("#public-app"));
+collectionShortcut($("#public-app"));
 
 }

@@ -5,6 +5,7 @@ const assert=require('node:assert/strict');
  try{
   const page=await browser.newPage({viewport:{width:1440,height:1000},reducedMotion:'reduce'}),errors=[];
   page.on('pageerror',e=>errors.push(e.message));
+ if(process.env.TEST_THEME==='light')await page.addInitScript(()=>localStorage.setItem('shiyams-theme','light'));
   const site=process.env.SITE_URL||'http://127.0.0.1:4175/shiyamsGamesList',id='00000000-0000-0000-0000-000000000042';
   const user={id,aud:'authenticated',role:'authenticated',email:'collector@example.test',email_confirmed_at:new Date().toISOString(),app_metadata:{provider:'email'},user_metadata:{},created_at:new Date().toISOString()};
   const b64=v=>Buffer.from(JSON.stringify(v)).toString('base64url'),token=b64({alg:'HS256'})+'.'+b64({sub:id,role:'authenticated',exp:Math.floor(Date.now()/1000)+3600})+'.test';
@@ -44,13 +45,42 @@ const assert=require('node:assert/strict');
   await page.screenshot({path:'/private/tmp/member-register.png',fullPage:true});
   await page.locator('[name=email]').fill('bad');await page.locator('[name=password]').fill('test-password-123');await page.locator('#member-auth button').click();assert.equal(signup,0);
   await page.locator('[name=email]').fill(user.email);await page.locator('#member-auth button').click();await page.locator('#member-profile').waitFor();assert.equal(signup,1);assert.equal(await page.locator('.member-welcome .member-links').count(),0);assert.equal(await page.locator('#account-app>header .member-signout').count(),1);
-  assert.equal(await page.locator('.avatar-choice').count(),50);assert.equal(await page.locator('input[type=file]').count(),0);
+  const savedTheme=await page.locator('html').getAttribute('data-theme');
+  for(const theme of ['dark','light']){
+   await page.evaluate(t=>document.documentElement.dataset.theme=t,theme);
+   for(const width of [390,1440]){
+    await page.setViewportSize({width,height:1000});
+    const boxes=await page.locator('#account-app>header .member-icon-control,#account-app>header .avatar-link').evaluateAll(es=>es.map(el=>{const r=el.getBoundingClientRect();return {w:r.width,h:r.height,y:r.y+r.height/2};}).filter(r=>r.w));
+    assert.ok(boxes.length>=2);assert.ok(boxes.every(r=>r.w===42&&r.h===42&&Math.abs(r.y-boxes[0].y)<1),'header circles align '+theme+' '+width);
+   }
+  }
+  await page.evaluate(t=>document.documentElement.dataset.theme=t,savedTheme);
+  assert.equal(await page.locator('.avatar-choice').count(),110);assert.equal(await page.locator('input[type=file]').count(),0);
+  await page.getByRole('tab',{name:'Anime',exact:false}).click();assert.equal(await page.locator('#avatar-panel-anime .avatar-choice').count(),30);
+  await page.locator('[name=avatar_id][value="107"]').check();
+  await page.getByRole('tab',{name:'Superhero',exact:false}).click();assert.equal(await page.locator('#avatar-panel-superhero .avatar-choice').count(),30);
+  await page.locator('[name=avatar_id][value="109"]').check();await page.getByRole('button',{name:'Save profile',exact:true}).click();await page.getByText(/Profile saved/).waitFor();assert.equal(profile.avatar_id,109);
+  await page.reload();await page.locator('#member-profile').waitFor();assert.equal(await page.getByRole('tab',{name:'Superhero',exact:false}).getAttribute('aria-selected'),'true');assert.ok(await page.locator('[name=avatar_id][value="109"]').isChecked());
+  await page.getByRole('tab',{name:'Game',exact:false}).click();assert.ok(await page.locator('[name=avatar_id][value="109"]').isChecked());
+  await page.getByRole('tab',{name:'Game',exact:false}).press('ArrowRight');assert.equal(await page.getByRole('tab',{name:'Anime',exact:false}).getAttribute('aria-selected'),'true');
+  await page.getByRole('tab',{name:'Anime',exact:false}).press('Home');assert.equal(await page.getByRole('tab',{name:'Game',exact:false}).getAttribute('aria-selected'),'true');
+
+
   await page.locator('#member-search').fill('Adventure');await page.locator('[data-catalog="2"]').click();await page.getByText('Added. Game details are maintained by administrators.').waitFor();assert.equal(collection.length,1);
   await page.locator('[data-import="88"]').click();await page.waitForFunction(()=>document.querySelector('#personal-count').textContent==='2');assert.equal(collection.length,2);
   await page.locator('[data-member-status="2"]').selectOption('playing');await page.getByText('Collection status saved.').waitFor();assert.equal(catalog[1].status,'unplayed');
   await page.locator('[name=display_name]').fill('New Collector');await page.locator('[name=bio]').fill('My story <script>alert(1)</script>');await page.locator('[name=avatar_id][value="49"]').check();await page.getByRole('button',{name:'Save profile',exact:true}).click();await page.getByText(/Profile saved/).waitFor();assert.equal(profile.avatar_id,49);
-  for(const width of [320,390,768,1024,1440]){await page.setViewportSize({width,height:1000});assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),'account overflow '+width);}
+  for(const width of [320,390,768,1024,1440]){await page.setViewportSize({width,height:1000});assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),'account overflow '+width);
+   const spacing=await page.evaluate(()=>{const root=document.querySelector('#account-app'),footer=root.querySelector('footer'),last=root.querySelector('main').lastElementChild;return {gap:footer.getBoundingClientRect().top-last.getBoundingClientRect().bottom,tail:document.documentElement.scrollHeight-(footer.getBoundingClientRect().bottom+scrollY)};});
+   assert.ok(spacing.gap>=0&&spacing.gap<=24,'account content/footer gap '+width);assert.ok(spacing.tail<3,'space after footer '+width);
+  }
   assert.ok(await page.evaluate(()=>document.documentElement.scrollHeight-(document.querySelector('#account-app>footer').getBoundingClientRect().bottom+scrollY)<3),'extra space after footer');
+  await page.evaluate(()=>window.scrollTo({top:document.documentElement.scrollHeight,behavior:'instant'}));
+  assert.ok(await page.evaluate(()=>Math.abs(document.querySelector('#account-app>footer').getBoundingClientRect().bottom-innerHeight)<3),'scroll ends at account footer');
+  // Positioned decoration must never enlarge the page beyond its footer.
+  await page.evaluate(()=>{const probe=document.createElement('div');probe.id='overflow-probe';probe.style.cssText='position:absolute;top:100%;height:600px;width:1px;pointer-events:none';document.querySelector('#account-app').append(probe);});
+  assert.ok(await page.evaluate(()=>document.documentElement.scrollHeight-(document.querySelector('#account-app>footer').getBoundingClientRect().bottom+scrollY)<3),'account clips decorative overflow');
+  await page.locator('#overflow-probe').evaluate(el=>el.remove());
   await page.screenshot({path:'/private/tmp/member-account.png',fullPage:true});
   await page.goto(site+'/');await page.locator('#grid .card').first().waitFor();assert.equal(await page.locator('#grid .card').count(),2);assert.equal(await page.locator('#grid').getByText('Owner Original').count(),0);assert.ok((await page.locator('#about').textContent()).includes('New Collector'));assert.equal(await page.locator('#about script').count(),0);
   for(const path of ['/top250','/calendar']){await page.goto(site+path);await page.locator('[data-add-rawg]').click();await page.getByRole('button',{name:'In your collection',exact:true}).waitFor();assert.equal(collection.length,2);}

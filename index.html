@@ -5,6 +5,19 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="theme-color" content="#111411">
+    <script>
+        // Apply a saved choice before the first paint; new visitors start dark.
+        try { document.documentElement.dataset.theme = localStorage.getItem('shiyams-theme') === 'light' ? 'light' : 'dark'; }
+        catch { document.documentElement.dataset.theme = 'dark'; }
+        document.documentElement.style.colorScheme = document.documentElement.dataset.theme;
+    </script>
+    <style>
+        /* Theme-correct canvas and loader before application CSS/JS arrives. */
+        html[data-theme="light"],html[data-theme="light"] body{background:#eef1eb;color:#26332b}
+        html[data-theme="light"] body #load-state:not([hidden]){background:#eef1eb;color:#26332b}
+        html[data-theme="light"] .boot-spinner{border-color:#c0ceba;border-top-color:#416c4e}
+        html[data-theme="light"] .boot-label{color:#56665a}
+    </style>
     <meta name="description"
         content="Shiyam`s Games List. A personal collection of games to play, games loved, and games left behind. Discover your next adventure.">
     <title>Shiyam`s Games List — The next adventure</title>
@@ -26,7 +39,7 @@
 </head>
 
 <body><div id="load-state" role="status"><span class="boot-spinner" aria-hidden="true"></span><span class="boot-label">Loading collection…</span></div><div id="admin-app" hidden></div><div id="public-app" hidden><a class="skip" href="#collection">Skip to collection</a>
-    <header><a class="brand" href="#"><span class="brand-mark">S<span>+</span></span><span>SHIYAM`S<span
+    <header><a class="brand" href="/"><span class="brand-mark">S<span>+</span></span><span>SHIYAM`S<span
                     class="brand-sub">GAMES LIST</span></span></a>
         <nav aria-label="Main navigation"><a href="#collection">Collection</a><a href="#recommendations">Discover</a><a href="/radar">Gaming Radar</a><a href="/top250">All-time top 250</a><a href="/calendar">Release Calendar</a><a href="/news">News</a><a href="/reviews">Reviews</a><a
                 href="#about">About me</a></nav><a class="avatar-link" href="#about"><img src="./assets/profile.jpg"
@@ -81,13 +94,9 @@
                             <option value="rated">Highest-Rated Unplayed</option>
                             <option value="newest">Newest Unplayed</option>
                             <option value="oldest">Oldest Backlog Game</option>
-                            <option value="genre">Random From a Genre</option>
                             <option value="surprise">Surprise Me</option>
                             <option value="taste">Taste-Matched</option>
                         </select>
-                    </label>
-                    <label id="rec-genre-label" for="rec-genre" hidden>Choose a genre
-                        <select id="rec-genre"></select>
                     </label>
                 </div>
                 <div id="rec-info" aria-live="polite"></div>
@@ -152,21 +161,25 @@
             </div>
         </section>
     </main>
-    <footer><a class="brand" href="#">SHIYAM`S<span class="muted">GAMES LIST</span></a><span>One more game. One more
+    <footer><a class="brand" href="/">SHIYAM`S<span class="muted">GAMES LIST</span></a><span>One more game. One more
             story.</span><a href="#">Back to top <svg class="ui-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M12 20V4m-6 6 6-6 6 6"/></svg></a>
         <p>Unofficial personal fan collection. Game artwork, titles and trailers belong to their respective owners. Game metadata supplied in part by <a href="https://rawg.io/" target="_blank" rel="noopener noreferrer">RAWG</a>.</p>
     </footer>
     <dialog id="game-dialog" aria-labelledby="dialog-title">
-        <div class="dialog-top"><span class="eyebrow">NOW SHOWING</span><button id="close-dialog"
+        <div class="dialog-top"><span class="eyebrow">THE GAME ROOM</span><button id="close-dialog"
                 aria-label="Close game details"><svg class="ui-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="m6 6 12 12M6 18 18 6"/></svg></button></div>
-        <h2 id="dialog-title"></h2>
-        <p id="dialog-meta" class="muted"></p>
-        <div class="dialog-summary">
-            <p id="dialog-description"></p>
-            <div id="dialog-rating" class="metacritic"></div>
+        <div class="detail-stage">
+            <img id="detail-backdrop" alt="" aria-hidden="true">
+            <div id="video-slot" hidden></div>
+            <div id="detail-fallback"><span class="detail-orbit" aria-hidden="true"><svg class="ui-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="m8 4 12 8-12 8Z"/></svg></span><p class="eyebrow">THE WORLD BEHIND THE GAME</p><h3 id="detail-fallback-title"></h3><p id="detail-fallback-copy"></p></div>
         </div>
-        <div id="video-slot"></div>
-        <div id="dialog-links"></div>
+        <div class="detail-media-bar"><p id="detail-media-status" role="status"></p><div><button id="detail-play" type="button">Play trailer</button><button id="detail-sound" type="button" aria-pressed="false">Enable sound</button><a id="detail-external" target="_blank" rel="noopener noreferrer">Open on YouTube</a></div></div>
+        <div class="detail-body">
+            <div class="game-detail-heading"><img id="dialog-artwork" alt=""><div><p class="eyebrow">YOUR NEXT WORLD</p><h2 id="dialog-title"></h2><p id="dialog-meta" class="muted"></p></div></div>
+            <div class="detail-media-options" role="group" aria-label="Choose game video"><button type="button" data-detail-media="trailer" aria-pressed="true"><span>01 / THE FIRST LOOK</span><strong>Trailer</strong><small>Step into the world</small></button><button type="button" data-detail-media="critic" aria-pressed="false"><span>02 / A SECOND OPINION</span><strong>Critic review</strong><small>See what’s worth playing</small></button></div>
+            <div class="dialog-summary"><div><p class="eyebrow">THE STORY SO FAR</p><p id="dialog-description"></p></div><div id="dialog-rating" class="metacritic"></div></div>
+            <div id="dialog-links"></div>
+        </div>
     </dialog></div><noscript>
         <p style="padding:30px">Enable JavaScript to browse the collection and use the recommendation picker.
         </p>

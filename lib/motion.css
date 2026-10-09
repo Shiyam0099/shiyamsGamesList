@@ -9,8 +9,8 @@
 
 #collection .tabs{position:relative;isolation:isolate}
 #collection .tab-indicator-track{position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:1}
-#collection .tab-indicator{position:absolute;left:0;bottom:0;height:3px;border-radius:3px;background:var(--lime);box-shadow:0 -3px 16px #cefa6928;pointer-events:none;z-index:1}
-#collection .tabs[data-indicator-ready] .tab-indicator{transition:transform 420ms cubic-bezier(.22,1,.36,1),width 420ms cubic-bezier(.22,1,.36,1)}
+#collection .tab-indicator{position:absolute;left:0;bottom:0;width:1px;height:3px;transform-origin:left center;background:var(--lime);pointer-events:none;z-index:1}
+#collection .tabs[data-indicator-ready] .tab-indicator{transition:transform 800ms cubic-bezier(.22,.61,.36,1)}
 #collection .tabs[data-indicator-ready] button[aria-selected=true]{border-bottom-color:transparent;background:#cefa6909}
 #collection .tabs button{transition:color .2s,background-color .25s,transform .18s}
 #collection .tabs button:hover{color:var(--lime);background:#cefa6907}

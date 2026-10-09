@@ -1,0 +1,46 @@
+const {chromium}=require(process.env.PLAYWRIGHT_MODULE||'playwright');
+const assert=require('node:assert/strict');
+(async()=>{const browser=await chromium.launch({executablePath:process.env.CHROME_EXECUTABLE,headless:true});try{
+ const page=await browser.newPage({viewport:{width:1440,height:1000},reducedMotion:'reduce'}),errors=[],requests=[];
+ page.on('pageerror',e=>errors.push(e.message));page.on('request',r=>{if(r.url().includes('/audio/'))requests.push(r.url());});
+ await page.addInitScript(()=>{
+  window.audioCheck={clips:[]};
+  const Native=window.Audio;
+  window.Audio=function(...args){const audio=new Native(...args);audio.addEventListener('playing',()=>{audio.firstPlayingTime??=audio.currentTime;});audioCheck.clips.push(audio);return audio;};
+ });
+ const base=(process.env.SITE_URL||'http://127.0.0.1:4176/shiyamsGamesList').replace(/\/$/,'');
+ await page.goto(base+'/admin',{waitUntil:'domcontentloaded'});await page.locator('.theme-toggle').waitFor();
+ assert.equal(await page.evaluate(()=>audioCheck.clips.length),0,'page load is silent');assert.equal(requests.length,0,'no audio downloaded on load');
+ await page.locator('.theme-toggle').click();
+ await page.waitForFunction(()=>audioCheck.clips[0]?.currentTime>.1);
+ assert.equal(await page.evaluate(()=>audioCheck.clips[0].src),base+'/audio/light-mode.mp3');
+ assert.equal(await page.evaluate(()=>audioCheck.clips[0].volume),.35,'birdsong uses the softer playback volume');
+ await page.getByRole('button',{name:'Mute theme sounds',exact:true}).click();
+ assert.ok(await page.evaluate(()=>audioCheck.clips.every(a=>a.paused&&a.currentTime===0)),'mute stops and resets playback');
+ await page.locator('.theme-toggle').click();assert.equal(await page.evaluate(()=>audioCheck.clips.length),1,'muted switch is silent');
+ await page.reload();await page.getByRole('button',{name:'Enable theme sounds',exact:true}).waitFor();
+ await page.locator('.theme-toggle').click();assert.equal(await page.evaluate(()=>audioCheck.clips.length),0,'mute survives reload');
+ await page.getByRole('button',{name:'Enable theme sounds',exact:true}).click();
+ await page.locator('.theme-toggle').click();await page.waitForFunction(()=>audioCheck.clips[0]?.firstPlayingTime>=.42);
+ assert.equal(await page.evaluate(()=>audioCheck.clips[0].src),base+'/audio/dark-mode.mp3');
+ assert.equal(await page.evaluate(()=>audioCheck.clips[0].volume),.65,'howl keeps its original playback volume');
+ assert.ok(await page.evaluate(()=>audioCheck.clips[0].firstPlayingTime<.55),'howl starts just after its silent lead-in');
+ await page.locator('.theme-toggle').click();await page.waitForFunction(()=>audioCheck.clips[1]?.currentTime>.1);
+ assert.ok(await page.evaluate(()=>audioCheck.clips[0].paused&&audioCheck.clips[0].currentTime===0),'switch stops old recording');
+ await page.waitForTimeout(2500);assert.ok(await page.evaluate(()=>audioCheck.clips[1].currentTime>2.5),'recording continues beyond transition');
+ const durations=await page.evaluate(()=>audioCheck.clips.map(a=>a.duration));assert.ok(durations.every(d=>Number.isFinite(d)&&d>0),'both MP3s decode');
+ await page.evaluate(()=>{const clip=audioCheck.clips[1];clip.currentTime=clip.duration-.2;});
+ await page.waitForFunction(()=>audioCheck.clips[1].ended);assert.equal(await page.evaluate(()=>audioCheck.clips[1].loop),false);
+ await page.evaluate(()=>{for(let i=0;i<5;i++)document.querySelector('.theme-toggle').click();});
+ await page.waitForFunction(()=>audioCheck.clips.at(-1).currentTime>.1);
+ assert.equal(await page.evaluate(()=>audioCheck.clips.filter(a=>!a.paused).length),1,'rapid clicks leave only the latest recording playing');
+ await page.evaluate(()=>window.dispatchEvent(new Event('pagehide')));
+ assert.ok(await page.evaluate(()=>audioCheck.clips.every(a=>a.paused)),'leaving stops playback');
+ // A missing recording must never block a theme change or create an unhandled rejection.
+ await page.route('**/audio/*.mp3',route=>route.abort());
+ const before=await page.evaluate(()=>document.documentElement.dataset.theme);
+ await page.locator('.theme-toggle').click();
+ await page.waitForFunction(previous=>document.documentElement.dataset.theme!==previous,before);
+ await page.waitForTimeout(300);
+ assert.deepEqual(errors,[]);console.log('PASS: real MP3 playback, silent startup, mute persistence, full duration, rapid interruption, missing audio fallback. Durations:',durations);
+ }finally{await browser.close();}})().catch(e=>{console.error(e);process.exit(1)});

@@ -1,3 +1,4 @@
+import './lib/theme.mjs';
 import {applyBrand} from './lib/branding.mjs';
 import {pageReady} from './lib/motion.mjs';
 import {loader,observeFields} from './lib/ui.mjs';
@@ -8,6 +9,9 @@ import {getSupabase} from './lib/supabase.mjs';
 import {gameService} from './lib/game-data.mjs';
 import {startCinematicHero} from './lib/cinematic-hero.mjs';
 import {initMembers,member,refreshMember,personalGames,personalize,memberHeader} from './members/client.mjs';
+import './lib/surface-light.css';
+import './lib/glass-edges.css';
+import './lib/about.css';
 const loading=document.querySelector('#load-state');
 const publicRoot=document.querySelector('#public-app');
 loading.innerHTML=loader();
