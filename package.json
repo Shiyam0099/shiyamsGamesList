@@ -20,7 +20,10 @@
     "metadata:verify": "node scripts/verify-metadata.mjs",
     "members:deploy": "node scripts/deploy-members.mjs",
     "members:configure": "node scripts/configure-members.mjs --apply",
-    "members:verify": "node scripts/verify-members.mjs"
+    "members:verify": "node scripts/verify-members.mjs",
+    "palettes:build": "node scripts/build-palettes.mjs",
+    "prebuild": "npm run palettes:build",
+    "predev": "npm run palettes:build"
   },
   "engines": {
     "node": ">=22.17.0"
@@ -32,6 +35,7 @@
   "devDependencies": {
     "@electric-sql/pglite": "^0.5.8",
     "pg": "^8.23.0",
+    "postcss": "^8.5.29",
     "vite": "^8.3.0"
   }
 }

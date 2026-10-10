@@ -60,6 +60,8 @@ const assert=require('node:assert/strict');
   await page.locator('[name=avatar_id][value="107"]').check();
   await page.getByRole('tab',{name:'Superhero',exact:false}).click();assert.equal(await page.locator('#avatar-panel-superhero .avatar-choice').count(),30);
   await page.locator('[name=avatar_id][value="109"]').check();await page.getByRole('button',{name:'Save profile',exact:true}).click();await page.getByText(/Profile saved/).waitFor();assert.equal(profile.avatar_id,109);
+  assert.equal(await page.locator('#member-profile [data-form-message]').getAttribute('data-tone'),'success');
+  assert.ok(await page.locator('#member-profile [data-form-message]').evaluate(el=>{const box=el.getBoundingClientRect();return box.top>=0&&box.bottom<=innerHeight;}),'save confirmation is visible next to the save button');
   await page.reload();await page.locator('#member-profile').waitFor();assert.equal(await page.getByRole('tab',{name:'Superhero',exact:false}).getAttribute('aria-selected'),'true');assert.ok(await page.locator('[name=avatar_id][value="109"]').isChecked());
   await page.getByRole('tab',{name:'Game',exact:false}).click();assert.ok(await page.locator('[name=avatar_id][value="109"]').isChecked());
   await page.getByRole('tab',{name:'Game',exact:false}).press('ArrowRight');assert.equal(await page.getByRole('tab',{name:'Anime',exact:false}).getAttribute('aria-selected'),'true');
@@ -82,7 +84,25 @@ const assert=require('node:assert/strict');
   assert.ok(await page.evaluate(()=>document.documentElement.scrollHeight-(document.querySelector('#account-app>footer').getBoundingClientRect().bottom+scrollY)<3),'account clips decorative overflow');
   await page.locator('#overflow-probe').evaluate(el=>el.remove());
   await page.screenshot({path:'/private/tmp/member-account.png',fullPage:true});
+  if(process.env.PALETTE_AUDIT){
+   await page.emulateMedia({reducedMotion:'reduce'});
+   const savedMode=await page.locator('html').getAttribute('data-theme');
+   for(const [mode,id] of [['dark','crimson'],['dark','neon-blue'],['light','gold'],['light','purple']]){
+    await page.evaluate(({mode,id})=>{document.documentElement.dataset.theme=mode;document.documentElement.dataset[mode+'Palette']=id;},{mode,id});
+    await require('./palette-audit.cjs')(page,id+' member profile and collection');
+   }
+   await page.evaluate(mode=>{document.documentElement.dataset.theme=mode;document.documentElement.dataset.darkPalette='original';document.documentElement.dataset.lightPalette='sage';},savedMode);
+  }
   await page.goto(site+'/');await page.locator('#grid .card').first().waitFor();assert.equal(await page.locator('#grid .card').count(),2);assert.equal(await page.locator('#grid').getByText('Owner Original').count(),0);assert.ok((await page.locator('#about').textContent()).includes('New Collector'));assert.equal(await page.locator('#about script').count(),0);
+  if(process.env.PALETTE_AUDIT){
+   admin=true;await page.reload();await page.locator('header .member-signout').waitFor();
+   for(const id of ['gold','purple']){
+    await page.evaluate(id=>{document.documentElement.dataset.theme='light';document.documentElement.dataset.lightPalette=id;},id);
+    assert.equal(await page.locator('header .member-icon-control').count(),3,'account, admin and signout icons are tested');
+    await require('./icon-contrast.cjs')(page,id+' public header');
+   }
+   admin=false;
+  }
   for(const path of ['/top250','/calendar']){await page.goto(site+path);await page.locator('[data-add-rawg]').click();await page.getByRole('button',{name:'In your collection',exact:true}).waitFor();assert.equal(collection.length,2);}
   await page.goto(site+'/radar');await page.locator('[data-find-game]').click();await page.waitForURL('**/account?search=*');await page.locator('[data-import="88"]').waitFor();assert.equal(await page.locator('[data-import="88"]').isDisabled(),true);
   await page.goto(site+'/radar');await page.locator('[data-kind=anticipated]').click();await page.locator('[data-add-rawg]').click();await page.getByRole('button',{name:'In your collection',exact:true}).waitFor();

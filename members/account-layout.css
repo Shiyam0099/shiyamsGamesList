@@ -54,4 +54,10 @@ body:has(#account-app){margin:0;padding:0;overscroll-behavior-y:none;display:flo
 #account-app .avatar-tabs button:hover{border-color:#cefa6950}
 #account-app .avatar-selection{font-size:12px;color:#c3dba6;margin:12px 0 0}
 #account-app .avatar-grid{align-content:start;scrollbar-gutter:stable}
+#account-app .profile-feedback{margin:16px 0 12px;padding:12px 16px;border:1px solid var(--line);border-radius:9px;font-size:13px;line-height:1.6;color:var(--ink);background:var(--panel)}
+#account-app .profile-feedback:empty{display:none}
+#account-app .profile-feedback[data-tone=success]{border-color:#8caf5c66;background:#83ad4412;color:#d6edb4}
+#account-app .profile-feedback[data-tone=error]{border-color:#d58c8466;color:#efb1aa}
+html[data-theme=light] #account-app .profile-feedback[data-tone=success]{background:#e4eddb;border-color:#b3c89c;color:#355623}
+html[data-theme=light] #account-app .profile-feedback[data-tone=error]{background:#f5e6e2;border-color:#d8a99f;color:#843c31}
 @media(max-width:380px){#account-app .avatar-tabs button{font-size:11px;gap:4px;padding:9px 5px}}

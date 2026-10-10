@@ -1,0 +1,132 @@
+/* Optional ivory + brushed gold palette. Sage remains the light default. */
+html[data-theme=light][data-light-palette=gold]{
+ --bg:#fcfbf8;--panel:#ffffff;--line:#e6d7b8;--ink:#322819;--muted:#746347;--lime:#8a5a0a;
+ --palette-accent-rgb:186 133 32;--gold:#ba8520;--gold-bright:#ffe5a0;--gold-soft:#faf0d8;--rec-reveal-border:#d4ae6070;
+ --neu-raised:7px 7px 22px #d9cbb447,-7px -7px 20px #fff;
+ --neu-small:3px 3px 9px #d9cbb44d,-3px -3px 9px #fff;
+ --neu-inset:inset 3px 3px 7px #e8dfcd80,inset -3px -3px 7px #fff;
+ --glass-edge:#b58a3555;--glass-rim:inset 0 1px 0 #fff,inset 1px 0 0 #fff9,inset -1px 0 0 #cfb46d22,inset 0 -1px 0 #cfb46d22;
+ --surface-light:inset 0 1px 0 #fff;--surface-depth:var(--neu-raised);--surface-hover:0 8px 26px #b58a3526,inset 0 1px 0 #fff;
+ background:var(--bg);color:var(--ink);
+}
+html[data-theme=light][data-light-palette=gold] body{background:radial-gradient(ellipse 90% 650px at 90% 0,#edce852b,transparent 75%),var(--bg);color:var(--ink)}
+html[data-theme=light][data-light-palette=gold] body #load-state:not([hidden]){background:var(--bg);color:var(--ink)}
+html[data-theme=light][data-light-palette=gold] body :is(#public-app,#admin-app,#account-app,#radar-app,#library-app,#editorial-app)
+:is(.stats,.dashboard-panel,.playing-card,.playing-empty,.member-panel,.auth-panel,.admin-panel,.admin-toolbar,.workspace-welcome,.workspace-stat,.settings-summary,.metadata-sync,.radar-card,.article-card,.calendar-controls,.editorial-empty){background:radial-gradient(ellipse at 0 0,#f4d99218,transparent 65%),var(--panel);border-color:var(--line);box-shadow:var(--neu-raised)}
+html[data-theme=light][data-light-palette=gold] body :is(#public-app,#admin-app,#account-app,#radar-app,#library-app,#editorial-app)
+:is(.rate,.admin-row,.avatar-choice,.metadata-lookup,.admin-notice){background:var(--panel);border-color:var(--line);box-shadow:var(--neu-small)}
+html[data-theme=light][data-light-palette=gold] body :is(dialog,.genre-dropdown,.collection-genre-panel,#member-toast){background:var(--panel);border-color:var(--line);color:var(--ink);box-shadow:0 18px 60px #66502026}
+html[data-theme=light][data-light-palette=gold] body dialog::backdrop{background:#241e1380}
+html[data-theme=light][data-light-palette=gold] body :is(#public-app,#admin-app,#account-app,#radar-app,#library-app,#editorial-app)
+:is(input:not([type=checkbox]):not([type=radio]):not([type=hidden]),textarea,select,#collection-genre-toggle,#genres-toggle){background-color:var(--bg);border-color:var(--line);box-shadow:var(--neu-inset);color:var(--ink);accent-color:var(--gold)}
+html[data-theme=light][data-light-palette=gold] body :is(input[type=checkbox],input[type=radio]){accent-color:var(--gold)}
+html[data-theme=light][data-light-palette=gold] body .icon-field>.ui-icon{color:#a78b53}
+html[data-theme=light][data-light-palette=gold] body :is(#public-app,#admin-app,#account-app,#radar-app,#library-app,#editorial-app)
+:where(button:not(.cover-button):not(.hero-chapter):not(.hero-next):not(.hero-pause):not(.playing-card):not([role=option]),.button-link,.profile-edit-button){background-color:var(--panel);border-color:var(--line);box-shadow:var(--neu-small)}
+html[data-theme=light][data-light-palette=gold] body :is(#public-app,#admin-app,#account-app,#radar-app,#library-app,#editorial-app)
+:is(.primary,.member-primary,.hero-cta,.play-icon){background:linear-gradient(125deg,#fff0b9,#e3b749 42%,#bf831b 72%,#f0cf72);color:#392908;border-color:#caa450;box-shadow:inset 0 1px 0 #fff9,0 5px 15px #ad812b26}
+html[data-theme=light][data-light-palette=gold] body :is(#public-app,#admin-app,#account-app,#radar-app,#library-app,#editorial-app)
+:is(.primary,.member-primary):hover:not(:disabled){background:linear-gradient(125deg,#fff6d2,#efc866 42%,#cd952a 72%,#f8dc8a);color:#392908;border-color:#b58a35}
+html[data-theme=light][data-light-palette=gold] body :is(#public-app,#admin-app,#account-app,#radar-app,#library-app,#editorial-app)
+:is(button[aria-selected=true],button[aria-pressed=true],.admin-nav a[aria-current],.avatar-choice:has(input:checked)){background:var(--gold-soft);color:#735016;border-color:#c9a660;box-shadow:var(--neu-inset)}
+html[data-theme=light][data-light-palette=gold] body :is(#public-app,#admin-app,#account-app,#radar-app,#library-app,#editorial-app)
+:is(.eyebrow,.lime,.card-tag,.radar-link,.role-badge,.status-pill,.score-inline,.admin-nav-label,.settings-avatar,.workspace-heading-icon .ui-icon){color:var(--lime)}
+html[data-theme=light][data-light-palette=gold] body :is(.tabs span,.role-badge,.status-pill,.score-inline,.about-tags span,.calendar-popular,.avatar-tabs,.member-tabs,.settings-avatar){background-color:var(--gold-soft);border-color:var(--line)}
+html[data-theme=light][data-light-palette=gold] body .member-control-tooltip{background:var(--panel);color:var(--ink);border-color:var(--line);box-shadow:0 5px 18px #85602120}
+html[data-theme=light][data-light-palette=gold] body :is(button,input,select,textarea,a):focus-visible{outline-color:var(--gold)}
+html[data-theme=light][data-light-palette=gold] body :is(#public-app,#admin-app,#account-app,#radar-app,#library-app,#editorial-app)
+:is(select,#sort,#collection-genre-toggle,#genres-toggle):is(:hover,:focus){border-color:#bca67d;box-shadow:var(--neu-inset)}
+html[data-theme=light][data-light-palette=gold] body :is(#public-app,#admin-app,#account-app,#radar-app,#library-app,#editorial-app) header :is(.member-icon-control,.theme-toggle){background:var(--panel);color:#80602b;border-color:var(--line)}
+html[data-theme=light][data-light-palette=gold] body :is(#public-app,#admin-app,#account-app,#radar-app,#library-app,#editorial-app) header .member-icon-control:is(:hover,:focus-visible){background:#f4e7c9;color:#69470d;border-color:#c3a362;box-shadow:var(--neu-inset)}
+html[data-theme=light][data-light-palette=gold] body header .avatar-link img{border-color:var(--panel)}
+html[data-theme=light][data-light-palette=gold] body .brand-emblem [stroke="#cefa69"]{stroke:#c79b43}
+html[data-theme=light][data-light-palette=gold] body .brand-emblem [fill="#cefa69"]{fill:#e7c575}
+html[data-theme=light][data-light-palette=gold] body .brand-emblem [fill="#182218"]{fill:#302718}
+html[data-theme=light][data-light-palette=gold] body :is(.floating-theme-toggle,.theme-sound-toggle){background:var(--panel);color:#80602b;border-color:#cfb985;box-shadow:var(--neu-small)}
+html[data-theme=light][data-light-palette=gold] body .floating-theme-toggle .theme-switch-thumb{background:linear-gradient(145deg,#efd38e,#b78930);box-shadow:0 2px 9px #b58a3533}
+html[data-theme=light][data-light-palette=gold] body .floating-theme-toggle :is(.theme-switch-moon,.theme-switch-sun){color:#705019}
+html[data-theme=light][data-light-palette=gold] body .floating-theme-toggle[data-mode=light] .theme-switch-sun{color:#382706}
+/* A warm shaft of light over the white sections, never over the artwork. */
+html[data-theme=light][data-light-palette=gold] body #public-app :is(.intro,.about){background-image:radial-gradient(ellipse 65% 220px at 15% 0,#e8bd5620,transparent 80%)}
+html[data-theme=light][data-light-palette=gold] body #public-app :is(#about,#recommendations){background:radial-gradient(ellipse at 0 0,#efcf851f,transparent 70%),var(--panel);border-color:var(--line);box-shadow:var(--neu-raised)}
+html[data-theme=light][data-light-palette=gold] body #public-app #about p:not(.eyebrow){color:var(--muted)}
+html[data-theme=light][data-light-palette=gold] body #public-app #about .about-tags span{background:var(--gold-soft);border-color:var(--line);color:#7c5c28}
+html[data-theme=light][data-light-palette=gold] body #public-app #about .portrait{background:#f5ecd9;border-color:var(--line)}
+html[data-theme=light][data-light-palette=gold] body #public-app #about .portrait>span{background:#342a18e8;color:#f0dca5;border-color:#d8bb7660}
+html[data-theme=light][data-light-palette=gold] body #public-app #about .eyebrow:before{background:#c8a14a80}
+html[data-theme=light][data-light-palette=gold] body #public-app .stat:after{background:linear-gradient(90deg,transparent,#cba65080,transparent)}
+html[data-theme=light][data-light-palette=gold] body #public-app .stat strong{text-shadow:0 0 24px #d3aa5320}
+html[data-theme=light][data-light-palette=gold] body #public-app .age-track>span{background:linear-gradient(90deg,#a27927,#e5c373);box-shadow:0 0 12px #d7b36520}
+html[data-theme=light][data-light-palette=gold] body #public-app .segment-backlog{background:#ad9770}
+html[data-theme=light][data-light-palette=gold] body #public-app .segment-playing{background:#e4c878}
+html[data-theme=light][data-light-palette=gold] body #public-app .segment-other{background:#b9b2a5}
+html[data-theme=light][data-light-palette=gold] body #public-app .collection-shortcut{background:var(--panel);color:#80602b;border-color:#c4a35f;box-shadow:0 5px 20px #ad812b26}
+html[data-theme=light][data-light-palette=gold] body #public-app .collection-shortcut:is(:hover,:focus-visible){background:#fff3d5;color:#543600;border-color:#b58a35;box-shadow:0 0 0 3px #c2932420,0 4px 12px #a47b2414}
+html[data-theme=light][data-light-palette=gold] body #public-app #playing-games .playing-card{background:var(--panel);border-color:var(--line)}
+html[data-theme=light][data-light-palette=gold] body #public-app #recommendations .rec-art:after{background:linear-gradient(90deg,#ffffff70,transparent 35%),linear-gradient(0deg,#ffffff80,transparent 45%)}
+html[data-theme=light][data-light-palette=gold] body #public-app #recommendations .rec-copy:before{background:radial-gradient(ellipse at 0 20%,#e9bd5920,transparent 70%)}
+html[data-theme=light][data-light-palette=gold] body #public-app #recommendations #next-rec{background:linear-gradient(120deg,#fff0b9,#e3b749 42%,#bf831b 72%,#f0cf72);color:#392908;border-color:#caa450;box-shadow:inset 0 1px 0 #fff9,0 5px 15px #ad812b26}
+html[data-theme=light][data-light-palette=gold] body #public-app #recommendations #rec-trailer{background:linear-gradient(130deg,#fffefa,#f4ebd8);color:#735321;border-color:#d5bf91;box-shadow:var(--neu-small)}
+html[data-theme=light][data-light-palette=gold] body #public-app #recommendations .rec-label{color:#fff6df;background:#342a18b3;border-color:#e6cf9b80}
+html[data-theme=light][data-light-palette=gold] body #public-app #recommendations .rec-scan{background:linear-gradient(90deg,transparent,#ffdf941a 45%,#fff0c270 96%,transparent);border-right-color:#fff0c299}
+/* Keep the hero's dark scrim, with champagne markers and controls. */
+html[data-theme=light][data-light-palette=gold] body #public-app .cinematic-hero{--lime:#f0cf7c;--muted:#e1d5bc}
+html[data-theme=light][data-light-palette=gold] body #public-app .cinematic-hero .eyebrow{color:#f0cf7c}
+html[data-theme=light][data-light-palette=gold] body #public-app #cinematic-hero .hero-chapter{color:#e1d5bc}
+html[data-theme=light][data-light-palette=gold] body #public-app #cinematic-hero .hero-chapter.is-current{color:#ffe4a0;text-shadow:0 0 14px #e9bd5950}
+html[data-theme=light][data-light-palette=gold] body #public-app #cinematic-hero .hero-chapter.is-current .hero-chapter-line{background:#edc77759;box-shadow:0 0 0 1px #edc77770,0 0 10px #edc77730}
+html[data-theme=light][data-light-palette=gold] body #public-app #cinematic-hero .hero-chapter-line i{background:#edc777}
+html[data-theme=light][data-light-palette=gold] body #public-app #cinematic-hero :is(.hero-pause,.hero-next){background:#292318d9;color:#fff5df;border-color:#ead5a550}
+html[data-theme=light][data-light-palette=gold] body .article-type{color:#f0cf7c}
+/* Neutral reading colors keep gold accents legible on white. */
+html[data-theme=light][data-light-palette=gold] body #public-app #game-dialog{--detail-bg:#ffffff;--detail-text:#332c20;--detail-muted:#73634d;box-shadow:0 25px 90px #6a4d2038}
+html[data-theme=light][data-light-palette=gold] body #public-app #game-dialog .detail-body .eyebrow{color:#80602b}
+html[data-theme=light][data-light-palette=gold] body #game-dialog :is(.metacritic span,.metacritic small,#dialog-meta){color:var(--muted)}
+html[data-theme=light][data-light-palette=gold] body #account-app :is(.auth-save,.auth-perks,.auth-footnote){color:#80602b}
+html[data-theme=light][data-light-palette=gold] body #account-app .auth-save .ui-icon{color:var(--gold)}
+html[data-theme=light][data-light-palette=gold] body #account-app .avatar-tabs{background:var(--gold-soft);border-color:var(--line)}
+html[data-theme=light][data-light-palette=gold] body #account-app :is(.auth-art-label,.auth-portrait span,.auth-story>p:not(.eyebrow)){color:var(--muted)}
+html[data-theme=light][data-light-palette=gold] body #account-app .auth-portrait{background:var(--panel);border-color:#d5bf91;box-shadow:0 12px 28px #8b641b20}
+html[data-theme=light][data-light-palette=gold] body #account-app .auth-orbit{border-color:#d5b66950;box-shadow:0 0 70px #e5bc5330,inset 0 0 60px #e5bc5312}
+html[data-theme=light][data-light-palette=gold] body #account-app .auth-panel:before{background:linear-gradient(90deg,transparent,#c69b42,transparent)}
+html[data-theme=light][data-light-palette=gold] body #account-app :is(.auth-perks .ui-icon,.member-text-button){color:var(--lime)}
+html[data-theme=light][data-light-palette=gold] body #account-app .member-main button:hover:not(:disabled){background-color:var(--gold-soft);color:#735016}
+html[data-theme=light][data-light-palette=gold] body #public-app .profile-edit-button{background:linear-gradient(120deg,#f8e6af,#e4bc60);color:#392908;border-color:#caa450;box-shadow:0 5px 15px #ad812b26}
+html[data-theme=light][data-light-palette=gold] body #admin-app{background:var(--bg)}
+html[data-theme=light][data-light-palette=gold] body #admin-app .admin-nav a:hover{background:var(--gold-soft);color:#735016}
+html[data-theme=light][data-light-palette=gold] body #admin-app .admin-nav a .ui-icon{color:#9b824f}
+html[data-theme=light][data-light-palette=gold] body #admin-app :is(.workspace-welcome h2 span,.workspace-emblem .ui-icon,.stat-top>.ui-icon,.admin-nav a[aria-current] .ui-icon,.workspace-note .ui-icon,.admin-panel h2>.ui-icon){color:#89621c}
+html[data-theme=light][data-light-palette=gold] body #admin-app .workspace-emblem{background:var(--gold-soft);border-color:var(--line)}
+html[data-theme=light][data-light-palette=gold] body #admin-app .stat-meter{background:#eddfbf}
+html[data-theme=light][data-light-palette=gold] body #admin-app .stat-meter i{background:linear-gradient(90deg,#b58a35,#edcd7b)}
+html[data-theme=light][data-light-palette=gold] body #admin-app .playing-options label{background:var(--panel);border-color:var(--line)}
+html[data-theme=light][data-light-palette=gold] body #admin-app .playing-options label:has(:checked){background:var(--gold-soft);color:#735016;border-color:#c9a660}
+html[data-theme=light][data-light-palette=gold] body #admin-app .playing-options label:has(:checked)>span{color:#735016}
+/* Early loading, navigation and theme changes use the same ivory canvas. */
+html[data-theme=light][data-light-palette=gold] body :is(.loading-kicker,.orbit-core .ui-icon){color:#89621c}
+html[data-theme=light][data-light-palette=gold] body :is(.loading-copy p,.boot-label){color:var(--muted)}
+html[data-theme=light][data-light-palette=gold] body .orbit-ring{border-color:#e0d0ac}
+html[data-theme=light][data-light-palette=gold] body .orbit-ring:before{border-color:#e0d0ac;border-top-color:#a67b29;border-right-color:#a67b29}
+html[data-theme=light][data-light-palette=gold] body .orbit-ring:after{border-color:transparent;border-top-color:#a67b29;border-bottom-color:#d3ae5e;border-left-color:#d3ae5e}
+html[data-theme=light][data-light-palette=gold] body .orbit-core{background:var(--panel);border-color:#d0b879}
+html[data-theme=light][data-light-palette=gold] body .orbit-dot:after{background:#a67b29;box-shadow:0 0 10px #d2ac5c60}
+html[data-theme=light][data-light-palette=gold] body .loading-track{background:#eee2c6}
+html[data-theme=light][data-light-palette=gold] body .loading-track>span{background:linear-gradient(90deg,transparent,#a67b29,transparent)}
+html[data-theme=light][data-light-palette=gold] body .boot-spinner{border-color:#e0d0ac;border-top-color:#a67b29}
+@media(max-width:760px){html[data-theme=light][data-light-palette=gold] body #public-app #recommendations .rec-art:after{background:linear-gradient(180deg,#ffffff05 15%,#ffffff70 60%,#ffffff)}}
+@media(forced-colors:active){
+ html[data-theme=light][data-light-palette=gold] body{background:Canvas;color:CanvasText}
+ html[data-theme=light][data-light-palette=gold] body :is(button,input,select,textarea){border-color:ButtonText}
+}
+
+html[data-theme=light][data-light-palette=gold] body #admin-app .workspace-stat{--stat-color:var(--lime)!important}
+
+/* Opaque pearl surfaces replace dark glass beneath light-mode icon glyphs.
+   Include interactive states so the generic frosted hover cannot win. */
+html[data-theme=light][data-light-palette=gold] body :is(#public-app,#admin-app,#account-app,#radar-app,#library-app,#editorial-app)
+:is(.member-icon-control,.workspace-heading-icon,.editorial-mark){background:#fff;color:#76500f;border-color:#dfc996;box-shadow:0 3px 10px #a47b2414,inset 0 1px 0 #fff;backdrop-filter:none;-webkit-backdrop-filter:none}
+html[data-theme=light][data-light-palette=gold] body :is(#public-app,#admin-app,#account-app,#radar-app,#library-app,#editorial-app)
+:is(.member-icon-control,.workspace-heading-icon,.editorial-mark):is(:hover,:focus-visible):not(:disabled){background:#fff3d5;color:#543600;border-color:#b58a35;box-shadow:0 0 0 3px #c2932420,0 4px 12px #a47b2414;filter:none}
+html[data-theme=light][data-light-palette=gold] body #admin-app :is(.workspace-heading-icon,.editorial-mark,.admin-nav a:hover,.admin-nav a:focus-visible) .ui-icon{color:#76500f;filter:none}
+
+html[data-theme=light][data-light-palette=gold] body #public-app :is(.currently-playing,.collection){background-image:radial-gradient(ellipse 50% 140px at 50% 140px,#e8bd561c,transparent 100%);background-size:100% 280px;background-repeat:no-repeat}

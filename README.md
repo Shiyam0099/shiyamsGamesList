@@ -275,3 +275,18 @@ The floating sun/moon button on the right side switches between dark and light t
 Theme switching uses a 1.5-second smoke reveal with a pre-rendered alpha texture to avoid recalculating SVG noise during animation. Reduced-motion users switch instantly. Local recordings in `public/audio/dark-mode.mp3` and `public/audio/light-mode.mp3` play only after a theme-button action. Playback skips the dark recording’s 0.42-second silent lead-in and lowers the light recording’s volume to balance the two. Replace those files to change the sounds; their volume and start offsets are configured in `lib/theme-sound.mjs`. The adjacent speaker control saves its mute preference; repeat clicks stop the previous recording rather than stacking sounds. Unsupported or blocked audio never prevents theme switching.
 
 Game details use artwork-derived accents and a cinematic trailer preview. YouTube trailers autoplay muted when permitted; reduced-motion visitors get an explicit Play button. The critic-review selector uses the saved YouTube review URL in the same player. Switching videos, closing the dialog, or hiding the page stops/pauses playback. Missing, blocked, and unavailable media use artwork fallbacks with source/search links. `tests/game-details-smoke.cjs` tests playback controls and errors with mocked YouTube API events, plus responsive layouts and theme contrast.
+
+### Site color themes
+
+**Admin → Themes** lets any active administrator preview and save one palette per mode:
+
+- Dark: Original (default), Crimson, Neon Blue.
+- Light: Sage (original/default), Gold, Vibrant Purple.
+
+Visitors keep their own dark/light preference. Previewing changes only the current admin page; leaving the page restores saved colors. **Save site themes** changes the public configuration, which visitors fetch when opening or returning to the site. **Use original colors** selects Original + Sage; save to publish that reset. Palettes include logos/favicon, controls, loading screens, hero accents and admin pages; game artwork and character portraits keep their colors.
+
+Before using shared saves, apply `supabase/migrations/202610100001_site_themes.sql` using `npm run db:migrate` against the intended Supabase project. The migration adds a public-read singleton with original defaults, an admin-only validated save RPC and audit logging. It does not change existing collections. Until that migration is applied, local previews work and shared saving shows an unavailable message. No new Edge Function, API key or GitHub secret is needed.
+
+The saved palette pair is cached locally for first paint and offline visits; invalid cache values fall back to Original + Sage. `lib/light-gold.css` contains the optional gold styling. `scripts/build-palettes.mjs` recolors shared component states for each optional palette and bundles the curated Gold/Purple overrides after them; `npm run build` and `npm run dev` regenerate `lib/palettes.generated.css`. Run `npm run palettes:build` to regenerate only the palette source; run `npm run build` to refresh a production preview. Generated rules are scoped to optional palettes, so original colors remain untouched.
+
+Validation: `npm test` covers database authorization and all nine valid pairs. `tests/admin-smoke.cjs` covers preview/save/reset/failure flows; `tests/palettes-smoke.cjs` checks all six palettes across routes, logos/loaders, responsive layouts and cached/offline startup.

@@ -1,4 +1,5 @@
 import './lib/theme.mjs';
+import {initSiteThemes} from './lib/site-themes.mjs';
 import {applyBrand} from './lib/branding.mjs';
 import {pageReady} from './lib/motion.mjs';
 import {loader,observeFields} from './lib/ui.mjs';
@@ -21,6 +22,7 @@ applyBrand(publicRoot);
 async function start(){
   try {
     const client=getSupabase();
+    initSiteThemes(client);
     if(/^\/admin(?:\/|$)/.test(localPath())) {
       const {startAdmin}=await import('./admin/admin.mjs');
       loading.hidden=true; document.querySelector('#admin-app').hidden=false;

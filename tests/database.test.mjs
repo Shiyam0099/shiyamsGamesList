@@ -10,6 +10,7 @@ test('PostgreSQL enforces public, admin, inactive and single-Super-Admin boundar
   await db.exec(await readFile(new URL('../supabase/migrations/202609130001_initial.sql',import.meta.url),'utf8'));
   await db.exec(await readFile(new URL('../supabase/migrations/202609140001_discovery_cache.sql',import.meta.url),'utf8'));
   await db.exec(await readFile(new URL('../supabase/migrations/202609200001_game_metadata.sql',import.meta.url),'utf8'));
+  await db.exec(await readFile(new URL('../supabase/migrations/202610100001_site_themes.sql',import.meta.url),'utf8'));
   await db.query('insert into auth.users values ($1,$2),($3,$4),($5,$6)',[superId,'super@example.test',adminId,'admin@example.test',strangerId,'stranger@example.test']);
   await db.query('select public.bootstrap_super_admin($1,$2)',[superId,'Super']);
   await db.query("insert into public.admin_profiles(id,email,username) values($1,'admin@example.test','Admin')",[adminId]);
@@ -51,12 +52,27 @@ test('PostgreSQL enforces public, admin, inactive and single-Super-Admin boundar
    await as('authenticated',adminId,'select set_currently_playing(array[]::bigint[])');
    assert.equal((await db.query("select * from games where status='playing'")).rows.length,0);
   });
+  await t.test('site palettes are public to read, admin-only to save and strictly validated',async()=>{
+   assert.deepEqual((await as('anon',null,'select dark_theme,light_theme from site_theme_settings')).rows,[{dark_theme:'original',light_theme:'sage'}]);
+   await assert.rejects(as('anon',null,"select set_site_themes('crimson','gold')"));
+   await assert.rejects(as('authenticated',strangerId,"select set_site_themes('crimson','gold')"));
+   await assert.rejects(as('authenticated',adminId,"update site_theme_settings set light_theme='gold'"));
+   await assert.rejects(as('authenticated',adminId,'delete from site_theme_settings'));
+   await assert.rejects(as('authenticated',adminId,"select set_site_themes('invalid','gold')"));
+   await assert.rejects(as('authenticated',adminId,"select set_site_themes('crimson',null)"));
+   for(const dark of ['original','crimson','neon-blue'])for(const light of ['sage','gold','purple']){
+    await as('authenticated',adminId,'select set_site_themes($1,$2)',[dark,light]);
+    assert.deepEqual((await as('anon',null,'select dark_theme,light_theme from site_theme_settings')).rows,[{dark_theme:dark,light_theme:light}]);
+   }
+   assert.equal((await db.query("select count(*)::int as n from activity_log where entity='site_themes'")).rows[0].n,9);
+  });
   await t.test('deactivation immediately denies existing authenticated identity',async()=>{
    await as('authenticated',superId,"select manage_admin_profile($1,'Renamed',false)",[adminId]);
    await assert.rejects(as('authenticated',adminId,"insert into games(title,genres) values('bad',array['RPG'])"));
    assert.equal((await as('authenticated',adminId,'delete from games where id=1 returning id')).rows.length,0);
    await assert.rejects(as('authenticated',adminId,'select set_currently_playing(array[1]::bigint[])'));
    await assert.rejects(as('authenticated',adminId,"select update_my_username('Blocked')"));
+   await assert.rejects(as('authenticated',adminId,"select set_site_themes('original','sage')"));
    assert.equal((await as('authenticated',adminId,'select * from activity_log')).rows.length,0);
   });
   await t.test('even privileged operations cannot create, demote, deactivate, cascade-delete or truncate away the Super Admin',async()=>{

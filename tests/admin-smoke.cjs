@@ -4,10 +4,12 @@ const path=require('node:path');
 (async()=>{
  const {toRow}=await import('../lib/game-data.mjs');
  const browser=await chromium.launch({executablePath:process.env.CHROME_EXECUTABLE || undefined,headless:true});
- const page=await browser.newPage({viewport:{width:1440,height:1000}}),errors=[];
+ // Keep route/layout checks deterministic; animation timing has separate suites.
+ const page=await browser.newPage({viewport:{width:1440,height:1000},reducedMotion:'reduce'}),errors=[];
  page.on('pageerror',e=>errors.push(e.message));
  if(process.env.TEST_THEME==='light')await page.addInitScript(()=>localStorage.setItem('shiyams-theme','light'));
  const site=process.env.SITE_URL || 'http://127.0.0.1:4174';
+ let palettes={dark_theme:'original',light_theme:'sage'},failThemes=false,missingThemes=false;
  const adminId='00000000-0000-0000-0000-000000000001',otherId='00000000-0000-0000-0000-000000000002';
  let role='admin',active=true,failGames=false,functionsCalls=0;
  let games=[toRow({id:1,title:'First Game',poster:'https://art.example.test/game.svg',year:'2020',genres:['RPG'],status:'playing',videoId:'',description:'First description'},true),toRow({id:2,title:'Second Game',year:'2023',genres:['Action'],status:'unplayed'},true)];
@@ -33,7 +35,13 @@ const path=require('node:path');
    return respond(url.searchParams.has('id')?profile:[profile,...users]);
   }
   if(url.pathname.includes('/rest/v1/activity_log'))return respond([]);
+  if(url.pathname.includes('/rest/v1/site_theme_settings'))return missingThemes?respond({message:'missing table'},404):respond(palettes);
   if(url.pathname.includes('/rpc/')){
+   if(url.pathname.endsWith('/set_site_themes')){
+    await new Promise(resolve=>setTimeout(resolve,300));
+    if(failThemes)return respond({message:'Access denied'},403);
+    palettes={dark_theme:body.new_dark,light_theme:body.new_light};return respond(palettes);
+   }
    if(url.pathname.endsWith('/set_currently_playing')){games=games.map(g=>({...g,status:body.game_ids.includes(g.id)?'playing':g.status==='playing'?'unplayed':g.status}));}
    if(url.pathname.endsWith('/update_my_username'))profile.username=body.new_username;
    if(url.pathname.endsWith('/manage_admin_profile'))users=users.map(u=>u.id===body.target_id?{...u,username:body.new_username,is_active:body.active}:u);
@@ -75,6 +83,18 @@ const path=require('node:path');
  await page.getByText('Unable to sign in. Check your email and password.').waitFor();
  await page.locator('[name=password]').fill('test-password-123');await page.getByRole('button',{name:'Sign in',exact:true}).click();
  await page.getByRole('heading',{name:'Overview',exact:true}).waitFor();
+ if(process.env.PALETTE_AUDIT){
+ // Audit every admin surface with custom palettes, including controls and icons.
+ for(const route of ['', '/games','/games/new','/playing','/members','/settings']){
+  await page.goto(site+'/admin'+route);await page.locator('#admin-content').waitFor();
+  await page.locator('#admin-content .loading-experience').waitFor({state:'hidden'});
+  for(const [mode,id] of [['dark','crimson'],['dark','neon-blue'],['light','gold'],['light','purple']]){
+   await page.evaluate(({mode,id})=>{document.documentElement.dataset.theme=mode;document.documentElement.dataset[mode+'Palette']=id;},{mode,id});
+   await require('./palette-audit.cjs')(page,id+' admin'+route);
+  }
+ }
+ await page.goto(site+'/admin');await page.getByRole('heading',{name:'Overview',exact:true}).waitFor();
+ }
  assert.equal(await page.locator('.admin-header .brand').getAttribute('href'),new URL(site+'/').pathname);
  assert.equal(await page.locator('.admin-header .brand').getAttribute('data-route'),null,'logo must leave the admin router');
  await page.locator('.admin-header .brand').click();await page.waitForURL(site+'/');
@@ -105,6 +125,29 @@ const path=require('node:path');
  page.once('dialog',d=>d.accept());await page.locator('[data-action=delete]').click();await page.getByText('No members on this page.').waitFor();assert.equal(members.length,0);
  await page.getByRole('link',{name:'Settings',exact:true}).click();await page.locator('#username-form [name=username]').fill('New Curator');await page.getByRole('button',{name:'Save username'}).click();await page.getByText('Username saved.',{exact:false}).waitFor();assert.equal(profile.username,'New Curator');
  await page.locator('[name=current]').fill('test-password-123');await page.locator('#password-form [name=password]').fill('different-password');await page.locator('[name=confirm]').fill('does-not-match');await page.getByRole('button',{name:'Change password',exact:true}).click();await page.getByText('New passwords do not match.').waitFor();await page.locator('[name=confirm]').fill('different-password');await page.getByRole('button',{name:'Change password',exact:true}).click();await page.getByText('Password changed successfully.').waitFor();
+ await page.getByRole('link',{name:'Themes',exact:true}).click();await page.locator('#site-themes-form').waitFor();
+ assert.equal(await page.locator('.palette-option').count(),6);
+ const initialMode=await page.locator('html').getAttribute('data-theme');
+ for(const [name,mode,id] of [['Crimson','dark','crimson'],['Neon Blue','dark','neon-blue'],['Gold','light','gold'],['Vibrant Purple','light','purple']]){
+  await page.getByRole('button',{name:'Preview '+name,exact:true}).click();
+  assert.equal(await page.locator('html').getAttribute('data-theme'),mode);
+  assert.equal(await page.locator('html').getAttribute('data-'+mode+'-palette'),id);
+  await require('./palette-audit.cjs')(page,id+' admin themes');
+  if(mode==='light')await require('./icon-contrast.cjs')(page,id+' admin');
+  assert.deepEqual(palettes,{dark_theme:'original',light_theme:'sage'},'preview never writes shared settings');
+ }
+ for(const width of [320,390,768,1440]){await page.setViewportSize({width,height:1000});assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),'theme settings overflow '+width);}
+ await page.screenshot({path:'/private/tmp/admin-themes.png',fullPage:true});
+ await page.getByRole('link',{name:'Overview',exact:true}).click();await page.getByRole('heading',{name:'Overview',exact:true}).waitFor();
+ assert.equal(await page.locator('html').getAttribute('data-theme'),initialMode);
+ assert.equal(await page.locator('html').getAttribute('data-light-palette'),'sage','leaving preview restores saved choices');
+ await page.getByRole('link',{name:'Themes',exact:true}).click();await page.getByRole('button',{name:'Preview Crimson',exact:true}).click();await page.getByRole('button',{name:'Preview Gold',exact:true}).click();
+ failThemes=true;await page.getByRole('button',{name:'Save site themes',exact:true}).click();assert.equal(await page.locator('#site-themes-form').getAttribute('aria-busy'),'true');await page.getByText(/Could not save themes/).waitFor();assert.equal(palettes.dark_theme,'original');assert.equal(await page.locator('#site-themes-form').getAttribute('aria-busy'),null);
+ failThemes=false;await page.getByRole('button',{name:'Save site themes',exact:true}).click();await page.getByText(/Themes saved\./).waitFor();assert.deepEqual(palettes,{dark_theme:'crimson',light_theme:'gold'});
+ await page.reload();await page.locator('#site-themes-form').waitFor();assert.ok(await page.locator('[name=dark_theme][value=crimson]').isChecked());assert.ok(await page.locator('[name=light_theme][value=gold]').isChecked());
+ await page.getByRole('button',{name:'Use original colors',exact:true}).click();await page.getByRole('button',{name:'Save site themes',exact:true}).click();await page.getByText(/Themes saved\./).waitFor();assert.deepEqual(palettes,{dark_theme:'original',light_theme:'sage'});
+ missingThemes=true;await page.reload();await page.getByText(/You can still preview/).waitFor();const disabledSave=page.getByRole('button',{name:'Save site themes',exact:true});assert.ok(await disabledSave.isDisabled());assert.equal(await disabledSave.evaluate(el=>getComputedStyle(el).cursor),'not-allowed');assert.equal(await page.locator('#site-themes-form').getAttribute('aria-busy'),null);await page.getByRole('button',{name:'Preview Neon Blue',exact:true}).click();assert.equal(await page.locator('html').getAttribute('data-dark-palette'),'neon-blue');
+ missingThemes=false;await page.getByRole('button',{name:'Retry loading themes',exact:true}).click();await page.locator('#site-themes-form').waitFor();assert.ok(await page.getByRole('button',{name:'Save site themes',exact:true}).isEnabled());
  role='super_admin';await page.goto(site+'/admin/users');await page.getByRole('heading',{name:'Add admin'}).waitFor();
  await page.locator('#create-admin [name=username]').fill('Second Admin');await page.locator('#create-admin [name=email]').fill('second@example.test');await page.locator('#create-admin [name=password]').fill('temporary-password');await page.getByRole('button',{name:'Create admin'}).click();await page.getByRole('heading',{name:'Second Admin'}).waitFor();assert.equal(users.length,1);
  const userForm=page.locator(`[data-user="${otherId}"]`);await userForm.locator('[name=active]').uncheck();await userForm.getByRole('button',{name:'Save',exact:true}).click();await page.getByText('Inactive admin', {exact:true}).waitFor();assert.equal(users[0].is_active,false);
@@ -122,7 +165,7 @@ const path=require('node:path');
   const box=await page.locator('.admin-header').boundingBox();assert.equal(box.x,headerBox.x);assert.equal(box.y,headerBox.y);assert.equal(box.height,headerBox.height);
   assert.equal(await page.locator('.admin-discovery header').count(),0);
   if(route!=='radar'){
-   const add=page.getByRole('button',{name:'Add to my collection',exact:true});const card=await page.locator('.radar-card').boundingBox(),button=await add.boundingBox();assert.ok(button.y+button.height<=card.y+card.height,'collection action is not clipped');
+   const add=page.getByRole('button',{name:'Add to my collection',exact:true});assert.ok(await add.evaluate(el=>el.getBoundingClientRect().bottom<=el.closest('.radar-card').getBoundingClientRect().bottom+1),'collection action is not clipped');
    await add.click();await page.getByRole('button',{name:'In your collection',exact:true}).waitFor();
   }
   for(const width of [320,390,768,1440]){await page.setViewportSize({width,height:1000});assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),'admin discovery overflow '+route+' '+width);}

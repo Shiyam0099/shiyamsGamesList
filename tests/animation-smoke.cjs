@@ -48,6 +48,20 @@ const assert=require('node:assert/strict'),fs=require('node:fs'),vm=require('nod
    assert.equal(await page.locator('.is-counting').count(),0,'scrolling back does not restart settled counters');
    await page.locator('#next-rec').click();
    assert.ok(await page.locator('#next-rec .ui-icon').evaluate(el=>el.getAnimations().length>0),'spin icon animates immediately');
+   assert.ok(await page.locator('#rec-info h3').evaluate(el=>el.getAnimations().some(a=>a.effect.getTiming().duration===1000)),'game title has a noticeable one-second reveal');
+   await page.waitForFunction(()=>document.querySelector('#rec-image').getAnimations().some(a=>a.effect.getTiming().duration===1500));
+   assert.ok(await page.locator('.rec-scan').evaluate(el=>el.getAnimations().length===1),'spin sweeps light across the artwork');
+   assert.ok(await page.locator('.rec-lock').evaluate(el=>el.getAnimations().length===1),'spin reveals targeting brackets');
+   if(process.env.CAPTURE_RECOMMENDATION){await page.waitForTimeout(350);await page.locator('#recommendations').screenshot({path:'/private/tmp/recommendation-'+theme+'.png',animations:'allow'});}
+   await page.evaluate(()=>{for(let i=0;i<3;i++)document.querySelector('#next-rec').click();});
+   assert.equal(await page.locator('#next-rec .ui-icon').evaluate(el=>el.getAnimations().length),1,'rapid spins replace the prior effect');
+   await page.waitForTimeout(1700);
+   assert.equal(await page.locator('#recommendations').evaluate(el=>el.getAnimations({subtree:true}).length),0,'spin effects settle without looping');
+   const pickedTitle=await page.locator('#rec-info h3').textContent();
+   await page.getByRole('button',{name:'View game details',exact:true}).click();
+   await page.locator('#game-dialog').waitFor();
+   assert.equal(await page.locator('#dialog-title').textContent(),pickedTitle,'details open the latest spun game');
+   await page.keyboard.press('Escape');
    await page.locator('#collection').scrollIntoViewIfNeeded();
    await page.evaluate(()=>{for(const id of ['loved','unplayed','dropped','all'])document.querySelector('#tab-'+id).click();});
    assert.ok(await page.locator('#grid').evaluate(el=>el.getAnimations({subtree:true}).some(a=>a.effect.getTiming().duration===1000)),'collection tabs use the slower one-second reveal');
@@ -64,7 +78,8 @@ const assert=require('node:assert/strict'),fs=require('node:fs'),vm=require('nod
      await page.waitForTimeout(80);
      await section.evaluate(el=>el.scrollIntoView({block:'center',behavior:'instant'}));
      await page.waitForFunction(s=>document.querySelector(s).getAnimations().some(a=>a.effect.getTiming().duration===1000),selector);
-     await page.waitForTimeout(1150);
+     if(selector==='#recommendations')assert.ok(await page.locator('#rec-info h3').evaluate(el=>el.getAnimations().length>0),'game reveal replays on section entry');
+     await page.waitForTimeout(1300);
      assert.equal(await section.evaluate(el=>el.getAnimations().length),0,`${selector} settles without looping`);
     }
    }

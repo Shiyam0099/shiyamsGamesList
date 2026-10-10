@@ -298,6 +298,7 @@ dialog.addEventListener("click", (e) => {
 dialog.addEventListener("close", () => {disposeGameMedia?.();disposeGameMedia=null;});
 render();
 nextRecommendation(false);
+$("#recommendations").addEventListener("section-reveal",()=>revealRecommendation($("#recommendations"),{restart:false}));
 animateHome($("#public-app"));
 collectionShortcut($("#public-app"));
 

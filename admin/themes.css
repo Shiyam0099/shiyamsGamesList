@@ -1,0 +1,61 @@
+/* Theme Studio: selectable scenes with native keyboard-accessible radios. */
+#admin-app .theme-settings{padding:clamp(20px,3vw,38px);border-radius:22px}
+#admin-app .theme-studio-heading{display:flex;align-items:center;justify-content:space-between;gap:20px}
+#admin-app .theme-studio-heading h2{font-size:clamp(32px,4vw,48px);margin:0;letter-spacing:-.02em}
+#admin-app .theme-studio-heading .eyebrow{font-size:10px;margin:0 0 12px}
+#admin-app .theme-studio-badge{display:flex;align-items:center;gap:8px;white-space:nowrap;font-size:9px;letter-spacing:.12em;color:var(--lime);border:1px solid var(--line);border-radius:6px;padding:10px 12px}
+#admin-app .theme-studio-badge .ui-icon{width:18px;height:18px}
+#admin-app .theme-settings>p{max-width:760px;line-height:1.7;font-size:13px;color:var(--muted)}
+#admin-app .palette-group{border:0;padding:0;margin:34px 0}
+#admin-app .palette-group legend{display:flex;align-items:center;gap:12px;font-size:22px;font-weight:700;margin-bottom:18px;color:var(--ink)}
+#admin-app .palette-group legend small{display:block;font-size:9px;letter-spacing:.13em;font-weight:600;color:var(--muted);margin-top:4px}
+#admin-app .palette-mode-icon{display:grid;place-items:center;width:40px;height:40px;border:1px solid var(--line);border-radius:12px;color:var(--lime);background:var(--panel)}
+#admin-app .palette-options{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+#admin-app .palette-option{min-width:0;border:1px solid var(--line);border-radius:16px;background:var(--panel);padding:8px;display:flex;flex-direction:column;gap:12px;transition:transform .25s ease,border-color .25s ease,box-shadow .25s ease}
+#admin-app .palette-option:has(input:checked){border-color:var(--lime);box-shadow:0 0 0 1px var(--lime),0 8px 24px #00000014}
+#admin-app .palette-option label{position:relative;display:grid;gap:8px;cursor:pointer;color:var(--ink);flex:1;padding:0 0 4px}
+#admin-app .palette-option input{position:absolute;z-index:3;top:12px;right:12px;accent-color:var(--lime);width:18px;height:18px;min-height:18px;margin:0;cursor:pointer}
+#admin-app .palette-option:has(input:focus-visible){outline:2px solid var(--lime);outline-offset:5px}
+#admin-app .palette-option .palette-card-title{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:5px 8px 0}
+#admin-app .palette-option strong{font-size:16px;line-height:1.3}
+#admin-app .palette-option small{font-size:11px;color:var(--muted);padding:0 8px;line-height:1.6}
+#admin-app .palette-equipped{display:flex;align-items:center;gap:4px;color:var(--lime);font-size:9px;white-space:nowrap;visibility:hidden}
+#admin-app .palette-equipped .ui-icon{width:13px;height:13px}
+#admin-app .palette-option:has(input:checked) .palette-equipped{visibility:visible}
+#admin-app .palette-option button{font-size:11px;width:100%;background:var(--panel);color:var(--ink);border:1px solid var(--line);border-radius:9px;display:flex;align-items:center;gap:8px;padding:11px 10px;text-align:left}
+#admin-app .palette-option button .ui-icon{width:15px;height:15px;flex-shrink:0;color:var(--lime)}
+#admin-app .palette-option button .ui-icon:last-child{margin-left:auto;transition:transform .2s ease}
+#admin-app .palette-option button:hover .ui-icon:last-child{transform:translateX(3px)}
+#admin-app .theme-settings .admin-actions{flex-wrap:wrap}
+#admin-app .theme-studio-actions{border-top:1px solid var(--line);padding-top:20px;margin-top:18px;gap:10px}
+#admin-app .theme-studio-actions button{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-size:12px;min-height:44px}
+#admin-app #theme-preview-status{font-size:12px;color:var(--muted)}
+#admin-app #theme-save-status:empty{display:none}
+#admin-app #site-themes-form button:disabled{cursor:not-allowed}
+#admin-app #site-themes-form[data-busy=true] button:disabled{cursor:wait}
+/* Self-contained preview art uses its own palette, even while another is active. */
+#admin-app .palette-scene{display:block;position:relative;isolation:isolate;height:168px;overflow:hidden;border-radius:10px;background:var(--preview-bg);color:var(--preview-ink);border:1px solid #ffffff18}
+#admin-app .palette-scene-orb{position:absolute;width:160px;height:160px;right:5%;top:35px;border-radius:50%;background:radial-gradient(circle at 35% 25%,var(--preview-accent),var(--preview-bg) 72%);box-shadow:0 0 34px color-mix(in srgb,var(--preview-accent) 35%,transparent);opacity:.85;transition:transform .6s ease}
+#admin-app .palette-scene-beam{position:absolute;inset:-40% 28%;transform:rotate(28deg);background:linear-gradient(90deg,transparent 44%,var(--preview-accent) 49%,#fff 50%,var(--preview-accent) 51%,transparent 57%);opacity:.4}
+#admin-app .palette-scene-grid{position:absolute;inset:64% -20% -30%;transform:perspective(100px) rotateX(45deg);background:repeating-linear-gradient(90deg,transparent 0 29px,var(--preview-accent) 30px 31px),repeating-linear-gradient(0deg,transparent 0 19px,var(--preview-accent) 20px 21px);opacity:.15}
+#admin-app .palette-scene-hud{position:absolute;inset:15px auto auto 14px;display:flex;align-items:center;gap:10px;font:8px monospace;letter-spacing:.12em;color:var(--preview-ink);z-index:1}
+#admin-app .palette-scene-hud .ui-icon{width:18px;height:18px;color:var(--preview-accent)}
+#admin-app .palette-scene-caption{position:absolute;left:14px;bottom:32px;color:var(--preview-ink);font-size:11px;font-weight:800;letter-spacing:.14em;z-index:1}
+#admin-app .palette-scene-meter{position:absolute;left:14px;bottom:16px;display:flex;gap:4px;z-index:1}
+#admin-app .palette-scene-meter i{display:block;width:22px;height:3px;background:var(--preview-accent)}
+#admin-app .palette-scene-meter i:nth-last-child(-n+2){opacity:.3}
+#admin-app [data-palette=crimson] .palette-scene-orb{width:240px;height:240px;right:-20px;top:38px;background:radial-gradient(circle at 50% 100%,var(--preview-accent),var(--preview-bg) 72%);box-shadow:0 -2px 4px var(--preview-accent),0 -10px 30px color-mix(in srgb,var(--preview-accent) 30%,transparent)}
+#admin-app [data-palette=crimson] .palette-scene-beam{display:none}
+#admin-app [data-palette=neon-blue] .palette-scene-orb{inset:auto -20% -70%;width:140%;height:190px;border-radius:50%;background:radial-gradient(ellipse,var(--preview-accent),transparent 65%);box-shadow:none;opacity:.5}
+#admin-app [data-palette=neon-blue] .palette-scene-beam{inset:-40% 8%;opacity:.9;background:linear-gradient(90deg,transparent 15%,var(--preview-accent) 18%,#fff 19%,var(--preview-accent) 20%,transparent 24% 63%,var(--preview-accent) 67%,#fff 68%,var(--preview-accent) 69%,transparent 73%)}
+#admin-app :is([data-palette=sage],[data-palette=gold],[data-palette=purple]) .palette-scene{color:var(--preview-accent);border-color:#0000000c}
+#admin-app :is([data-palette=sage],[data-palette=gold],[data-palette=purple]) :is(.palette-scene-caption,.palette-scene-hud){color:var(--preview-accent)}
+#admin-app :is([data-palette=gold],[data-palette=purple]) .palette-scene-orb{width:230px;height:260px;right:-80px;top:-65px;border-radius:45%;transform:rotate(-30deg);background:linear-gradient(110deg,var(--preview-bg) 25%,var(--preview-ink) 34%,var(--preview-accent) 43%,var(--preview-ink) 52%,var(--preview-accent) 67%,var(--preview-bg) 73%);box-shadow:0 8px 24px #00000014;opacity:1}
+#admin-app :is([data-palette=gold],[data-palette=purple]) .palette-scene-beam{inset:-80% 15% 40% -30%;border-radius:50%;background:transparent;border:18px solid var(--preview-accent);transform:rotate(-20deg);opacity:.15}
+#admin-app :is([data-palette=sage],[data-palette=gold],[data-palette=purple]) .palette-scene-grid{opacity:.07}
+@media(hover:hover) and (pointer:fine){#admin-app .palette-option:hover{transform:translateY(-3px);border-color:var(--lime)}#admin-app .palette-option:hover .palette-scene-orb{translate:0 -5px}}
+@media(max-width:1200px) and (min-width:801px){#admin-app .palette-options{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:1000px){#admin-app .theme-studio-badge{display:none}}
+@media(max-width:650px){#admin-app .palette-options{grid-template-columns:1fr}#admin-app .theme-studio-actions button{width:100%}#admin-app .palette-scene{height:155px}}
+@media(prefers-reduced-motion:reduce){#admin-app .palette-option,#admin-app .palette-scene-orb,#admin-app .palette-option button .ui-icon{transition:none;transform:none;translate:none}}
+@media(forced-colors:active){#admin-app .palette-option:has(input:checked){outline:2px solid Highlight}#admin-app .palette-scene{display:none}}

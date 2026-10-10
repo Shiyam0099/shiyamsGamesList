@@ -10,6 +10,14 @@
         try { document.documentElement.dataset.theme = localStorage.getItem('shiyams-theme') === 'light' ? 'light' : 'dark'; }
         catch { document.documentElement.dataset.theme = 'dark'; }
         document.documentElement.style.colorScheme = document.documentElement.dataset.theme;
+        // Validate the cached public choices before first paint; refresh from Supabase later.
+        try {
+            const palettes = JSON.parse(localStorage.getItem('shiyams-site-palettes-v1'));
+            if (['original','crimson','neon-blue'].includes(palettes?.dark_theme) && ['sage','gold','purple'].includes(palettes?.light_theme)) {
+                document.documentElement.dataset.darkPalette = palettes.dark_theme;
+                document.documentElement.dataset.lightPalette = palettes.light_theme;
+            }
+        } catch {}
     </script>
     <style>
         /* Theme-correct canvas and loader before application CSS/JS arrives. */
@@ -24,6 +32,8 @@
     <link rel="icon"
         href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='10' fill='%23cefa69'/%3E%3Ctext x='10' y='29' font-family='Arial' font-weight='900' font-size='28'%3ES%3C/text%3E%3C/svg%3E">
     <link rel="stylesheet" href="./styles.css">
+    <!-- Optional palettes stay scoped; original dark and sage are defaults. -->
+    <link rel="stylesheet" href="./lib/palettes.generated.css">
     <script>
         // Native transitions may be skipped by rapid navigation or a viewport change.
         for (const name of ['pagereveal', 'pageswap']) {
@@ -100,8 +110,18 @@
                     </label>
                 </div>
                 <div id="rec-info" aria-live="polite"></div>
-                <div class="rec-actions"><button class="primary" id="next-rec"><svg class="ui-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M20 8a8 8 0 1 0 0 8M20 3v5h-5"/></svg> Spin Again</button>
-                    <button id="rec-trailer">View game details</button></div>
+                <div class="rec-actions">
+                    <button class="primary rec-action" id="next-rec" aria-label="Spin Again">
+                        <span class="rec-action-icon"><svg class="ui-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M20 8a8 8 0 1 0 0 8M20 3v5h-5"/></svg></span>
+                        <span class="rec-action-copy"><small aria-hidden="true">REROLL YOUR BACKLOG</small><strong>Spin Again</strong></span>
+                        <span class="rec-charge" aria-hidden="true"></span>
+                    </button>
+                    <button class="rec-action" id="rec-trailer" aria-label="View game details">
+                        <span class="rec-action-icon"><svg class="ui-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M8 3H3v5m13-5h5v5M3 16v5h5m13-5v5h-5M9 8l7 4-7 4Z"/></svg></span>
+                        <span class="rec-action-copy"><small aria-hidden="true">EXPLORE THIS WORLD</small><strong>View game details</strong></span>
+                        <!-- <svg class="ui-icon rec-action-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M5 12h14m-5-5 5 5-5 5"/></svg> -->
+                    </button>
+                </div>
                 <details>
                     <summary>How this pick works</summary>
                     <p>Random gives each eligible game an equal chance. Highest-rated uses recorded Metacritic scores;
@@ -111,7 +131,7 @@
                         Spinning never changes a game’s status.</p>
                 </details>
             </div>
-            <div class="rec-art"><img id="rec-image" alt="" decoding="async"><span class="rec-label">THE BACKLOG IS
+            <div class="rec-art"><img id="rec-image" alt="" decoding="async"><span class="rec-scan" aria-hidden="true"></span><span class="rec-lock" aria-hidden="true"></span><span class="rec-label">THE BACKLOG IS
                     CALLING</span></div>
         </section>
         <section id="collection" class="collection">

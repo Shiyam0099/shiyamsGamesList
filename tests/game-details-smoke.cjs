@@ -14,6 +14,7 @@ const assert=require('node:assert/strict');
   }};
  });
  const games=[{id:1,title:'Crimson Frontier',videoId:'abcdefghijk',criticVideoUrl:'https://www.youtube.com/watch?v=lmnopqrstuv',poster:'https://detail-art.example/red.svg',description:'A world at the edge of the known sky. Find your own path through its forgotten cities.',metacritic:91,ratingUrl:'https://www.metacritic.com/game/example/'},{id:2,title:'Midnight Archive',poster:'https://detail-art.example/blue.svg',description:''},{id:3,title:'The Unwritten World',poster:'https://detail-art.example/broken.svg',videoId:'bad',criticVideoUrl:'https://example.com/review'}].map(g=>({year:'2026',genres:['Action','RPG'],status:'unplayed',...g}));
+ await page.route('**/rest/v1/site_theme_settings**',r=>r.fulfill({json:{dark_theme:'original',light_theme:'sage'}}));
  await page.route('**/rest/v1/games**',r=>r.fulfill({json:games.map(g=>toRow(g,true))}));
  await page.route('**/functions/v1/gaming-radar**',r=>r.fulfill({json:{items:[]}}));
  await page.route('https://detail-art.example/**',r=>r.request().url().endsWith('broken.svg')?r.abort():r.fulfill({headers:{'Access-Control-Allow-Origin':'*'},contentType:'image/svg+xml',body:`<svg xmlns="http://www.w3.org/2000/svg" width="600" height="900"><rect width="100%" height="100%" fill="${r.request().url().includes('red')?'#a63333':'#3344a6'}"/></svg>`}));

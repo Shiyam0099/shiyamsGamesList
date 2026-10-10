@@ -12,7 +12,7 @@
  border-top-color:#b9d29b35;
 }
 /* Broad ambient light stays inside sections, without overlays over controls. */
-#public-app :is(.intro,.currently-playing,.collection,.about){
+#public-app :is(.intro,.about){
  background-image:radial-gradient(ellipse 65% 220px at 15% 0,#b8da7706,transparent 80%);
  background-repeat:no-repeat;
 }
@@ -124,4 +124,10 @@ body :is(dialog,.genre-dropdown,.collection-genre-panel){
   border-color:#cefa6999;
   box-shadow:inset 0 0 0 1px #cefa6918,0 0 14px #cefa691c;
  }
+}
+
+/* Keep the section glow away from all four edges, so it fades into the page. */
+#public-app :is(.currently-playing,.collection){
+ background-image:radial-gradient(ellipse 50% 140px at 50% 140px,#b8da770a,transparent 100%);
+ background-size:100% 280px;background-repeat:no-repeat;
 }
