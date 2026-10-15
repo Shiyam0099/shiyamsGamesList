@@ -204,11 +204,15 @@ The API and cache migration are deployed. Publish the frontend through the exist
 
 ## YouTube critic reviews
 
-Reviewed mappings and unmatched titles are recorded in `reports/before-you-buy-matches.md` and `reports/alternative-review-matches.md`, with JSON manifests for repeatable imports. The first pass saved 121 Gameranx links; the alternative pass saved 29 links. Fourteen games remain without verified reviews; trailers, previews and unrelated anime/sequel reviews were not substituted. Imports update only `critic_video_url`, preserve other fields, create a private local backup, and stop if a review was edited since matching.
+Reviewed mappings and unmatched titles are recorded in `reports/before-you-buy-matches.md` and `reports/alternative-review-matches.md`, with JSON manifests for repeatable imports. The first pass saved 121 Gameranx links; the alternative pass saved 29 links and left fourteen games without verified reviews. Those historical imports update only `critic_video_url`, preserve other fields, create a private local backup, and stop if a review was edited since matching.
+
+The October 15, 2026 pass covers the expanded 191-game catalog: 25 missing trailers and 26 missing reviews across 27 games, with 12 reviews still unverified. Exact matches, source links, verification limits, and the remaining titles are recorded in [`reports/game-media-matches.md`](reports/game-media-matches.md). This importer only fills empty media fields and preserves all existing links. It verifies the complete catalog against its pre-import snapshot before committing.
 
 ```sh
 node scripts/import-critic-reviews.mjs --alternatives     # dry run
 node scripts/import-critic-reviews.mjs --alternatives --apply
+node scripts/import-missing-media.mjs                  # dry run for the October additions
+node scripts/import-missing-media.mjs --apply
 ```
 
 ## Cinematic anticipation hero

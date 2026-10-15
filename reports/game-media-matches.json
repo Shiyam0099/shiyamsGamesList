@@ -1,0 +1,924 @@
+{
+  "checkedAt": "2026-10-15T16:55:58.561Z",
+  "catalogSize": 191,
+  "scope": "Fill empty trailer and critic review fields only; preserve all existing links.",
+  "verification": "Selected by exact game/edition, then checked against YouTube oEmbed metadata. An embed response does not guarantee playback in every country, browser, or age/account context.",
+  "matched": [
+    {
+      "id": 86,
+      "title": "Castlevania: Belmont’s Curse",
+      "review": {
+        "videoId": "lzqbRCkew3A",
+        "url": "https://www.youtube.com/watch?v=lzqbRCkew3A",
+        "title": "Austin recommends: 'Castlevania: Belmont's Curse' (Review)",
+        "channel": "Skill Up",
+        "searchQuery": "Castlevania: Belmont’s Curse  game review",
+        "duration": "17:33",
+        "searchTitle": "Austin recommends: 'Castlevania: Belmont's Curse' (Review)",
+        "searchChannel": "Skill Up",
+        "channelUrl": "https://www.youtube.com/@SkillUp",
+        "verification": "YouTube oEmbed returned matching video iframe and public title/channel",
+        "embedMetadataAvailable": true,
+        "verifiedAt": "2026-10-15T16:58:59.513Z"
+      }
+    },
+    {
+      "id": 96,
+      "title": "Star Wars: Galactic Racer",
+      "review": {
+        "videoId": "X7BaeEKcYTg",
+        "url": "https://www.youtube.com/watch?v=X7BaeEKcYTg",
+        "title": "Star Wars Galactic Racer - Before You Buy",
+        "channel": "gameranx",
+        "searchQuery": "Star Wars: Galactic Racer  game review",
+        "duration": "13:44",
+        "searchTitle": "Star Wars Galactic Racer - Before You Buy",
+        "searchChannel": "gameranx",
+        "channelUrl": "https://www.youtube.com/@gameranxTV",
+        "verification": "YouTube oEmbed returned matching video iframe and public title/channel",
+        "embedMetadataAvailable": true,
+        "verifiedAt": "2026-10-15T16:58:59.586Z"
+      }
+    },
+    {
+      "id": 165,
+      "title": "Prince of Persia: The Sands of Time Remake",
+      "trailer": {
+        "videoId": "IAnLmxrSInk",
+        "url": "https://www.youtube.com/watch?v=IAnLmxrSInk",
+        "title": "The Sands of Time Remake Official Reveal Trailer | Ubisoft Forward 2020",
+        "channel": "Ubisoft",
+        "searchQuery": "Prince of Persia: The Sands of Time Remake  official trailer",
+        "duration": "2:05",
+        "searchTitle": "The Sands of Time Remake Official Reveal Trailer | Ubisoft Forward 2020",
+        "searchChannel": "Ubisoft",
+        "channelUrl": "https://www.youtube.com/@Ubisoft",
+        "verification": "YouTube oEmbed returned matching video iframe and public title/channel",
+        "embedMetadataAvailable": true,
+        "verifiedAt": "2026-10-15T16:58:59.602Z"
+      },
+      "note": "Historical reveal trailer for the Sands of Time Remake. No completed-game review verified; not the 2003 original."
+    },
+    {
+      "id": 167,
+      "title": "Prince of Persia: Warrior Within",
+      "trailer": {
+        "videoId": "PSi4dp_7ctI",
+        "url": "https://www.youtube.com/watch?v=PSi4dp_7ctI",
+        "title": "Prince of Persia: Warrior Within PlayStation 2 Trailer -",
+        "channel": "IGN",
+        "searchQuery": "Prince of Persia: Warrior Within 2004 official trailer",
+        "duration": "1:30",
+        "searchTitle": "Prince of Persia: Warrior Within PlayStation 2 Trailer -",
+        "searchChannel": "IGN",
+        "channelUrl": "https://www.youtube.com/@IGN",
+        "verification": "YouTube oEmbed returned matching video iframe and public title/channel",
+        "embedMetadataAvailable": true,
+        "verifiedAt": "2026-10-15T16:58:59.740Z"
+      },
+      "review": {
+        "videoId": "SvjhtR7hw3s",
+        "url": "https://www.youtube.com/watch?v=SvjhtR7hw3s",
+        "title": "That Early 2000s Edge | Prince of Persia: Warrior Within (in 2024) Review",
+        "channel": "Three Minute Gaming",
+        "searchQuery": "Prince of Persia: Warrior Within 2004 game review",
+        "duration": "3:49",
+        "searchTitle": "That Early 2000s Edge | Prince of Persia: Warrior Within (in 2024) Review",
+        "searchChannel": "Three Minute Gaming",
+        "channelUrl": "https://www.youtube.com/@ThreeMinuteGaming",
+        "verification": "YouTube oEmbed returned matching video iframe and public title/channel",
+        "embedMetadataAvailable": true,
+        "verifiedAt": "2026-10-15T16:58:59.723Z"
+      }
+    },
+    {
+      "id": 168,
+      "title": "Prince of Persia: The Two Thrones",
+      "trailer": {
+        "videoId": "cJb0GlJ-J-s",
+        "url": "https://www.youtube.com/watch?v=cJb0GlJ-J-s",
+        "title": "Prince of Persia: The Two Thrones PlayStation 2 Trailer -",
+        "channel": "IGN",
+        "searchQuery": "Prince of Persia: The Two Thrones 2005 official trailer",
+        "duration": "1:12",
+        "searchTitle": "Prince of Persia: The Two Thrones PlayStation 2 Trailer -",
+        "searchChannel": "IGN",
+        "channelUrl": "https://www.youtube.com/@IGN",
+        "verification": "YouTube oEmbed returned matching video iframe and public title/channel",
+        "embedMetadataAvailable": true,
+        "verifiedAt": "2026-10-15T16:58:59.827Z"
+      },
+      "review": {
+        "videoId": "md0Hf6uoO3g",
+        "url": "https://www.youtube.com/watch?v=md0Hf6uoO3g",
+        "title": "Prince of Persia: The Two Thrones PlayStation 2 Review -",
+        "channel": "IGN",
+        "searchQuery": "Prince of Persia: The Two Thrones 2005 game review",
+        "duration": "6:22",
+        "searchTitle": "Prince of Persia: The Two Thrones PlayStation 2 Review -",
+        "searchChannel": "IGN",
+        "channelUrl": "https://www.youtube.com/@IGN",
+        "verification": "YouTube oEmbed returned matching video iframe and public title/channel",
+        "embedMetadataAvailable": true,
+        "verifiedAt": "2026-10-15T16:58:59.895Z"
+      }
+    },
+    {
+      "id": 169,
+      "title": "Prince of Persia: The Forgotten Sands",
+      "trailer": {
+        "videoId": "4iFaVcKebvo",
+        "url": "https://www.youtube.com/watch?v=4iFaVcKebvo",
+        "title": "Prince of Persia: The Forgotten Sands Launch Trailer (North America)",
+        "channel": "Ubisoft",
+        "searchQuery": "Prince of Persia: The Forgotten Sands 2010 official trailer",
+        "duration": "1:43",
+        "searchTitle": "Prince of Persia: The Forgotten Sands Launch Trailer (North America)",
+        "searchChannel": "Ubisoft",
+        "channelUrl": "https://www.youtube.com/@Ubisoft",
+        "verification": "YouTube oEmbed returned matching video iframe and public title/channel",
+        "embedMetadataAvailable": true,
+        "verifiedAt": "2026-10-15T16:58:59.911Z"
+      },
+      "review": {
+        "videoId": "_vP9q7cMRAI",
+        "url": "https://www.youtube.com/watch?v=_vP9q7cMRAI",
+        "title": "Prince of Persia: The Forgotten Sands Review",
+        "channel": "IGN",
+        "searchQuery": "Prince of Persia: The Forgotten Sands 2010 game review",
+        "duration": "4:13",
+        "searchTitle": "Prince of Persia: The Forgotten Sands Review",
+        "searchChannel": "IGN",
+        "channelUrl": "https://www.youtube.com/@IGN",
+        "verification": "YouTube oEmbed returned matching video iframe and public title/channel",
+        "embedMetadataAvailable": true,
+        "verifiedAt": "2026-10-15T16:59:00.034Z"
+      }
+    },
+    {
+      "id": 170,
+      "title": "Need For Speed: Most Wanted",
+      "trailer": {
+        "videoId": "f7PizLICibk",
+        "url": "https://www.youtube.com/watch?v=f7PizLICibk",
+        "title": "Need for Speed Most Wanted GameCube Trailer - Trailer",
+        "channel": "IGN",
+        "searchQuery": "Need For Speed: Most Wanted 2005 official trailer",
+        "duration": "1:42",
+        "searchTitle": "Need for Speed Most Wanted GameCube Trailer - Trailer",
+        "searchChannel": "IGN",
+        "channelUrl": "https://www.youtube.com/@IGN",
+        "verification": "YouTube oEmbed returned matching video iframe and public title/channel",
+        "embedMetadataAvailable": true,
+        "verifiedAt": "2026-10-15T16:58:59.996Z"
+      },
+      "review": {
+        "videoId": "lJ5pV4vUCCY",
+        "url": "https://www.youtube.com/watch?v=lJ5pV4vUCCY",
+        "title": "Need for Speed Most Wanted Xbox 360 Review - Video Review",
+        "channel": "IGN",
+        "searchQuery": "Need for Speed Most Wanted 2005 review IGN",
+        "duration": "3:28",
+        "searchTitle": "Need for Speed Most Wanted Xbox 360 Review - Video Review",
+        "searchChannel": "IGN",
+        "channelUrl": "https://www.youtube.com/@IGN",
+        "verification": "YouTube oEmbed returned matching video iframe and public title/channel",
+        "embedMetadataAvailable": true,
+        "verifiedAt": "2026-10-15T16:59:00.076Z"
+      }
+    },
+    {
+      "id": 171,
+      "title": "Need For Speed Carbon",
+      "trailer": {
+        "videoId": "DSL5Iuj_kjc",
+        "url": "https://www.youtube.com/watch?v=DSL5Iuj_kjc",
+        "title": "Need for Speed Carbon PlayStation 3 Trailer - Canyon",
+        "channel": "IGN",
+        "searchQuery": "Need For Speed Carbon 2006 official trailer",
+        "duration": "1:51",
+        "searchTitle": "Need for Speed Carbon PlayStation 3 Trailer - Canyon",
+        "searchChannel": "IGN",
+        "channelUrl": "https://www.youtube.com/@IGN",
+        "verification": "YouTube oEmbed returned matching video iframe and public title/channel",
+        "embedMetadataAvailable": true,
+        "verifiedAt": "2026-10-15T16:59:00.195Z"
+      },
+      "review": {
+        "videoId": "fdBFII5zAcA",
+        "url": "https://www.youtube.com/watch?v=fdBFII5zAcA",
+        "title": "Need for Speed Carbon Xbox 360 Review - Video Review",
+        "channel": "IGN",
+        "searchQuery": "Need For Speed Carbon 2006 game review",
+        "duration": "4:58",
+        "searchTitle": "Need for Speed Carbon Xbox 360 Review - Video Review",
+        "searchChannel": "IGN",
+        "channelUrl": "https://www.youtube.com/@IGN",
+        "verification": "YouTube oEmbed returned matching video iframe and public title/channel",
+        "embedMetadataAvailable": true,
+        "verifiedAt": "2026-10-15T16:59:00.175Z"
+      }
+    },
+    {
+      "id": 172,
+      "title": "Naruto Shippuden Ultimate Ninja Storm Trilogy",
+      "trailer": {
+        "videoId": "h68zUSmQ7is",
+        "url": "https://www.youtube.com/watch?v=h68zUSmQ7is",
+        "title": "Naruto Shippuden: Ultimate Ninja Storm Trilogy Announcement Trailer | Switch",
+        "channel": "Bandai Namco Entertainment America",
+        "searchQuery": "Naruto Shippuden Ultimate Ninja Storm Trilogy 2017 official trailer",
+        "duration": "2:59",
+        "searchTitle": "Naruto Shippuden: Ultimate Ninja Storm Trilogy Announcement Trailer | Switch",
+        "searchChannel": "Bandai Namco Entertainment America",
+        "channelUrl": "https://www.youtube.com/@BandaiNamcoAmerica",
+        "verification": "YouTube oEmbed returned matching video iframe and public title/channel",
+        "embedMetadataAvailable": true,
+        "verifiedAt": "2026-10-15T16:59:00.281Z"
+      },
+      "review": {
+        "videoId": "aC4s7jQ1PGs",
+        "url": "https://www.youtube.com/watch?v=aC4s7jQ1PGs",
+        "title": "Naruto Shippuden: Ultimate Ninja Storm Trilogy (Switch) Review",
+        "channel": "Reviews 2 Go",
+        "searchQuery": "Naruto Shippuden Ultimate Ninja Storm Trilogy 2017 game review",
+        "duration": "8:17",
+        "searchTitle": "Naruto Shippuden: Ultimate Ninja Storm Trilogy (Switch) Review",
+        "searchChannel": "Reviews 2 Go",
+        "channelUrl": "https://www.youtube.com/@Reviews2Go",
+        "verification": "YouTube oEmbed returned matching video iframe and public title/channel",
+        "embedMetadataAvailable": true,
+        "verifiedAt": "2026-10-15T16:59:00.354Z"
+      },
+      "note": "The trilogy is the same collection; the official trailer and Reviews 2 Go review cover its Nintendo Switch port."
+    },
+    {
+      "id": 173,
+      "title": "NARUTO SHIPPUDEN: Ultimate Ninja STORM Revolution",
+      "trailer": {
+        "videoId": "Ptmg2cXuoIA",
+        "url": "https://www.youtube.com/watch?v=Ptmg2cXuoIA",
+        "title": "Naruto Shippuden: Ultimate Ninja Storm Revolution - Launch Trailer",
+        "channel": "Bandai Namco Entertainment America",
+        "searchQuery": "NARUTO SHIPPUDEN: Ultimate Ninja STORM Revolution 2014 official trailer",
+        "duration": "1:47",
+        "searchTitle": "Naruto Shippuden: Ultimate Ninja Storm Revolution - Launch Trailer",
+        "searchChannel": "Bandai Namco Entertainment America",
+        "channelUrl": "https://www.youtube.com/@BandaiNamcoAmerica",
+        "verification": "YouTube oEmbed returned matching video iframe and public title/channel",
+        "embedMetadataAvailable": true,
+        "verifiedAt": "2026-10-15T16:59:00.361Z"
+      },
+      "review": {
+        "videoId": "8ujnsHBuhQo",
+        "url": "https://www.youtube.com/watch?v=8ujnsHBuhQo",
+        "title": "Naruto Shippuden: Ultimate Ninja Storm Revolution Review",
+        "channel": "IBTimesTV",
+        "searchQuery": "NARUTO SHIPPUDEN: Ultimate Ninja STORM Revolution 2014 game review",
+        "duration": "4:26",
+        "searchTitle": "Naruto Shippuden: Ultimate Ninja Storm Revolution Review",
+        "searchChannel": "IBTimesTV",
+        "channelUrl": "https://www.youtube.com/@IBTimesTV",
+        "verification": "YouTube oEmbed returned matching video iframe and public title/channel",
+        "embedMetadataAvailable": true,
+        "verifiedAt": "2026-10-15T16:59:00.492Z"
+      }
+    },
+    {
+      "id": 174,
+      "title": "NARUTO SHIPPUDEN: Ultimate Ninja STORM 4",
+      "trailer": {
+        "videoId": "9Vm4m15r2Xc",
+        "url": "https://www.youtube.com/watch?v=9Vm4m15r2Xc",
+        "title": "NARUTO SHIPPUDEN: Ultimate Ninja STORM 4 Gameplay Trailer | PS4",
+        "channel": "PlayStation",
+        "searchQuery": "NARUTO SHIPPUDEN: Ultimate Ninja STORM 4 2016 official trailer",
+        "duration": "1:05",
+        "searchTitle": "NARUTO SHIPPUDEN: Ultimate Ninja STORM 4 Gameplay Trailer | PS4",
+        "searchChannel": "PlayStation",
+        "channelUrl": "https://www.youtube.com/@PlayStation",
+        "verification": "YouTube oEmbed returned matching video iframe and public title/channel",
+        "embedMetadataAvailable": true,
+        "verifiedAt": "2026-10-15T16:59:00.441Z"
+      },
+      "review": {
+        "videoId": "vMTuw8TOgOY",
+        "url": "https://www.youtube.com/watch?v=vMTuw8TOgOY",
+        "title": "Naruto Shippuden: Ultimate Ninja Storm 4 - Review",
+        "channel": "GameSpot",
+        "searchQuery": "NARUTO SHIPPUDEN: Ultimate Ninja STORM 4 2016 game review",
+        "duration": "4:10",
+        "searchTitle": "Naruto Shippuden: Ultimate Ninja Storm 4 - Review",
+        "searchChannel": "GameSpot",
+        "channelUrl": "https://www.youtube.com/@gamespot",
+        "verification": "YouTube oEmbed returned matching video iframe and public title/channel",
+        "embedMetadataAvailable": true,
+        "verifiedAt": "2026-10-15T16:59:00.522Z"
+      }
+    },
+    {
+      "id": 175,
+      "title": "Dragon Ball Xenoverse",
+      "trailer": {
+        "videoId": "2iBqy2uUOz0",
+        "url": "https://www.youtube.com/watch?v=2iBqy2uUOz0",
+        "title": "Dragon Ball Xenoverse E3 Announcement Trailer",
+        "channel": "Bandai Namco Entertainment America",
+        "searchQuery": "Dragon Ball Xenoverse 2015 official trailer",
+        "duration": "1:31",
+        "searchTitle": "Dragon Ball Xenoverse E3 Announcement Trailer",
+        "searchChannel": "Bandai Namco Entertainment America",
+        "channelUrl": "https://www.youtube.com/@BandaiNamcoAmerica",
+        "verification": "YouTube oEmbed returned matching video iframe and public title/channel",
+        "embedMetadataAvailable": true,
+        "verifiedAt": "2026-10-15T16:59:00.631Z"
+      },
+      "review": {
+        "videoId": "FrS3Fpv2U8o",
+        "url": "https://www.youtube.com/watch?v=FrS3Fpv2U8o",
+        "title": "Dragon Ball XenoVerse Review",
+        "channel": "IGN",
+        "searchQuery": "Dragon Ball Xenoverse 2015 game review",
+        "duration": "2:37",
+        "searchTitle": "Dragon Ball XenoVerse Review",
+        "searchChannel": "IGN",
+        "channelUrl": "https://www.youtube.com/@IGN",
+        "verification": "YouTube oEmbed returned matching video iframe and public title/channel",
+        "embedMetadataAvailable": true,
+        "verifiedAt": "2026-10-15T16:59:00.606Z"
+      }
+    },
+    {
+      "id": 176,
+      "title": "Dragon Ball Xenoverse 2",
+      "trailer": {
+        "videoId": "JnUbg-9v_bE",
+        "url": "https://www.youtube.com/watch?v=JnUbg-9v_bE",
+        "title": "Launch Trailer - Dragon Ball XENOVERSE 2 | PS4, X1, Steam",
+        "channel": "Bandai Namco Entertainment America",
+        "searchQuery": "Dragon Ball Xenoverse 2 2016 official trailer",
+        "duration": "1:41",
+        "searchTitle": "Launch Trailer - Dragon Ball XENOVERSE 2 | PS4, X1, Steam",
+        "searchChannel": "Bandai Namco Entertainment America",
+        "channelUrl": "https://www.youtube.com/@BandaiNamcoAmerica",
+        "verification": "YouTube oEmbed returned matching video iframe and public title/channel",
+        "embedMetadataAvailable": true,
+        "verifiedAt": "2026-10-15T16:59:00.684Z"
+      },
+      "review": {
+        "videoId": "vJqxYLd6-A8",
+        "url": "https://www.youtube.com/watch?v=vJqxYLd6-A8",
+        "title": "Dragon Ball Xenoverse 2 - Before You Buy",
+        "channel": "gameranx",
+        "searchQuery": "Dragon Ball Xenoverse 2 2016 game review",
+        "duration": "6:19",
+        "searchTitle": "Dragon Ball Xenoverse 2 - Before You Buy",
+        "searchChannel": "gameranx",
+        "channelUrl": "https://www.youtube.com/@gameranxTV",
+        "verification": "YouTube oEmbed returned matching video iframe and public title/channel",
+        "embedMetadataAvailable": true,
+        "verifiedAt": "2026-10-15T16:59:00.767Z"
+      }
+    },
+    {
+      "id": 177,
+      "title": "Grand Theft Auto: Vice City",
+      "trailer": {
+        "videoId": "BcqMaYdYow0",
+        "url": "https://www.youtube.com/watch?v=BcqMaYdYow0",
+        "title": "GTA Vice City Official Trailer (PC)",
+        "channel": "GTA Series Videos",
+        "searchQuery": "Grand Theft Auto: Vice City 2002 official trailer",
+        "duration": "1:01",
+        "searchTitle": "GTA Vice City Official Trailer (PC)",
+        "searchChannel": "GTA Series Videos",
+        "channelUrl": "https://www.youtube.com/@GTASeriesVideos",
+        "verification": "YouTube oEmbed returned matching video iframe and public title/channel",
+        "embedMetadataAvailable": true,
+        "verifiedAt": "2026-10-15T16:59:00.760Z"
+      },
+      "review": {
+        "videoId": "0heJ9txKFHw",
+        "url": "https://www.youtube.com/watch?v=0heJ9txKFHw",
+        "title": "Grand Theft Auto: Vice City - The Legacy Review",
+        "channel": "IGN",
+        "searchQuery": "Grand Theft Auto: Vice City 2002 game review",
+        "duration": "23:56",
+        "searchTitle": "Grand Theft Auto: Vice City - The Legacy Review",
+        "searchChannel": "IGN",
+        "channelUrl": "https://www.youtube.com/@IGN",
+        "verification": "YouTube oEmbed returned matching video iframe and public title/channel",
+        "embedMetadataAvailable": true,
+        "verifiedAt": "2026-10-15T16:59:00.852Z"
+      },
+      "note": "Original Vice City trailer and IGN retrospective, not the Definitive Edition."
+    },
+    {
+      "id": 178,
+      "title": "DRAGON BALL FighterZ",
+      "trailer": {
+        "videoId": "BnyUyug0li8",
+        "url": "https://www.youtube.com/watch?v=BnyUyug0li8",
+        "title": "DRAGON BALL FighterZ - Launch Trailer | PS4, X1, PC",
+        "channel": "Bandai Namco Entertainment America",
+        "searchQuery": "DRAGON BALL FighterZ 2018 official trailer",
+        "duration": "1:26",
+        "searchTitle": "DRAGON BALL FighterZ - Launch Trailer | PS4, X1, PC",
+        "searchChannel": "Bandai Namco Entertainment America",
+        "channelUrl": "https://www.youtube.com/@BandaiNamcoAmerica",
+        "verification": "YouTube oEmbed returned matching video iframe and public title/channel",
+        "embedMetadataAvailable": true,
+        "verifiedAt": "2026-10-15T16:59:00.904Z"
+      },
+      "review": {
+        "videoId": "5YtB4haELbM",
+        "url": "https://www.youtube.com/watch?v=5YtB4haELbM",
+        "title": "Dragon Ball FighterZ - Before You Buy",
+        "channel": "gameranx",
+        "searchQuery": "DRAGON BALL FighterZ 2018 game review",
+        "duration": "6:31",
+        "searchTitle": "Dragon Ball FighterZ - Before You Buy",
+        "searchChannel": "gameranx",
+        "channelUrl": "https://www.youtube.com/@gameranxTV",
+        "verification": "YouTube oEmbed returned matching video iframe and public title/channel",
+        "embedMetadataAvailable": true,
+        "verifiedAt": "2026-10-15T16:59:00.937Z"
+      }
+    },
+    {
+      "id": 179,
+      "title": "Call of Duty: Ghosts",
+      "trailer": {
+        "videoId": "tUBcYogq-3M",
+        "url": "https://www.youtube.com/watch?v=tUBcYogq-3M",
+        "title": "Official Call of Duty®: Ghosts Gameplay Launch Trailer",
+        "channel": "Call of Duty",
+        "searchQuery": "Call of Duty: Ghosts 2013 official trailer",
+        "duration": "1:13",
+        "searchTitle": "Official Call of Duty®: Ghosts Gameplay Launch Trailer",
+        "searchChannel": "Call of Duty",
+        "channelUrl": "https://www.youtube.com/@CallofDuty",
+        "verification": "YouTube oEmbed returned matching video iframe and public title/channel",
+        "embedMetadataAvailable": true,
+        "verifiedAt": "2026-10-15T16:59:01.056Z"
+      },
+      "review": {
+        "videoId": "leseAJDyK4o",
+        "url": "https://www.youtube.com/watch?v=leseAJDyK4o",
+        "title": "IGN Reviews - Call of Duty: Ghosts - Review",
+        "channel": "IGN",
+        "searchQuery": "Call of Duty: Ghosts 2013 game review",
+        "duration": "8:18",
+        "searchTitle": "IGN Reviews - Call of Duty: Ghosts - Review",
+        "searchChannel": "IGN",
+        "channelUrl": "https://www.youtube.com/@IGN",
+        "verification": "YouTube oEmbed returned matching video iframe and public title/channel",
+        "embedMetadataAvailable": true,
+        "verifiedAt": "2026-10-15T16:59:01.017Z"
+      }
+    },
+    {
+      "id": 180,
+      "title": "Prototype",
+      "trailer": {
+        "videoId": "Eo4CbgKzv4Y",
+        "url": "https://www.youtube.com/watch?v=Eo4CbgKzv4Y",
+        "title": "Prototype Xbox 360 Trailer - E3 2009 Trailer: The Hunt",
+        "channel": "IGN",
+        "searchQuery": "Prototype 2009 official trailer",
+        "duration": "1:44",
+        "searchTitle": "Prototype Xbox 360 Trailer - E3 2009 Trailer: The Hunt",
+        "searchChannel": "IGN",
+        "channelUrl": "https://www.youtube.com/@IGN",
+        "verification": "YouTube oEmbed returned matching video iframe and public title/channel",
+        "embedMetadataAvailable": true,
+        "verifiedAt": "2026-10-15T16:59:01.116Z"
+      },
+      "review": {
+        "videoId": "l6YeIQ47Lg4",
+        "url": "https://www.youtube.com/watch?v=l6YeIQ47Lg4",
+        "title": "Prototype Video Review",
+        "channel": "IGN",
+        "searchQuery": "Prototype 2009 game review",
+        "duration": "4:22",
+        "searchTitle": "Prototype Video Review",
+        "searchChannel": "IGN",
+        "channelUrl": "https://www.youtube.com/@IGN",
+        "verification": "YouTube oEmbed returned matching video iframe and public title/channel",
+        "embedMetadataAvailable": true,
+        "verifiedAt": "2026-10-15T16:59:01.203Z"
+      }
+    },
+    {
+      "id": 181,
+      "title": "Prototype 2",
+      "trailer": {
+        "videoId": "o8pvt1U78yM",
+        "url": "https://www.youtube.com/watch?v=o8pvt1U78yM",
+        "title": "E3 2011: Prototype 2 Trailer (PC, PS3, Xbox 360)",
+        "channel": "GameSpot",
+        "searchQuery": "Prototype 2 2012 official trailer",
+        "duration": "2:00",
+        "searchTitle": "E3 2011: Prototype 2 Trailer (PC, PS3, Xbox 360)",
+        "searchChannel": "GameSpot",
+        "channelUrl": "https://www.youtube.com/@gamespot",
+        "verification": "YouTube oEmbed returned matching video iframe and public title/channel",
+        "embedMetadataAvailable": true,
+        "verifiedAt": "2026-10-15T16:59:01.209Z"
+      },
+      "review": {
+        "videoId": "4YGUxBFV7Pw",
+        "url": "https://www.youtube.com/watch?v=4YGUxBFV7Pw",
+        "title": "Prototype 2 - Video Review",
+        "channel": "IGN",
+        "searchQuery": "Prototype 2 2012 game review",
+        "duration": "3:30",
+        "searchTitle": "Prototype 2 - Video Review",
+        "searchChannel": "IGN",
+        "channelUrl": "https://www.youtube.com/@IGN",
+        "verification": "YouTube oEmbed returned matching video iframe and public title/channel",
+        "embedMetadataAvailable": true,
+        "verifiedAt": "2026-10-15T16:59:01.376Z"
+      }
+    },
+    {
+      "id": 182,
+      "title": "Prince of Persia (2008)",
+      "trailer": {
+        "videoId": "V2oP2k7HNr8",
+        "url": "https://www.youtube.com/watch?v=V2oP2k7HNr8",
+        "title": "Prince of Persia - Theatrical trailer",
+        "channel": "Ubisoft",
+        "searchQuery": "Prince of Persia (2008) 2008 official trailer",
+        "duration": "2:06",
+        "searchTitle": "Prince of Persia - Theatrical trailer",
+        "searchChannel": "Ubisoft",
+        "channelUrl": "https://www.youtube.com/@Ubisoft",
+        "verification": "YouTube oEmbed returned matching video iframe and public title/channel",
+        "embedMetadataAvailable": true,
+        "verifiedAt": "2026-10-15T16:59:01.310Z"
+      },
+      "review": {
+        "videoId": "G_rtf2Ko7MI",
+        "url": "https://www.youtube.com/watch?v=G_rtf2Ko7MI",
+        "title": "Prince of Persia Review",
+        "channel": "IGN",
+        "searchQuery": "Prince of Persia (2008) 2008 game review",
+        "duration": "5:30",
+        "searchTitle": "Prince of Persia Review",
+        "searchChannel": "IGN",
+        "channelUrl": "https://www.youtube.com/@IGN",
+        "verification": "YouTube oEmbed returned matching video iframe and public title/channel",
+        "embedMetadataAvailable": true,
+        "verifiedAt": "2026-10-15T16:59:01.408Z"
+      }
+    },
+    {
+      "id": 183,
+      "title": "Just Cause 2",
+      "trailer": {
+        "videoId": "pbhPGQkAS4k",
+        "url": "https://www.youtube.com/watch?v=pbhPGQkAS4k",
+        "title": "Just Cause 2 Launch Trailer",
+        "channel": "Avalanche Studios Group",
+        "searchQuery": "Just Cause 2 2010 official trailer",
+        "duration": "1:20",
+        "searchTitle": "Just Cause 2 Launch Trailer",
+        "searchChannel": "Avalanche Studios Group",
+        "channelUrl": "https://www.youtube.com/@AvalancheStudiosSE",
+        "verification": "YouTube oEmbed returned matching video iframe and public title/channel",
+        "embedMetadataAvailable": true,
+        "verifiedAt": "2026-10-15T16:59:01.524Z"
+      },
+      "review": {
+        "videoId": "RVirgfyuIC8",
+        "url": "https://www.youtube.com/watch?v=RVirgfyuIC8",
+        "title": "Just Cause 2 Review",
+        "channel": "IGN",
+        "searchQuery": "Just Cause 2 2010 game review",
+        "duration": "5:01",
+        "searchTitle": "Just Cause 2 Review",
+        "searchChannel": "IGN",
+        "channelUrl": "https://www.youtube.com/@IGN",
+        "verification": "YouTube oEmbed returned matching video iframe and public title/channel",
+        "embedMetadataAvailable": true,
+        "verifiedAt": "2026-10-15T16:59:01.491Z"
+      }
+    },
+    {
+      "id": 184,
+      "title": "Devil May Cry 5 Special Edition",
+      "trailer": {
+        "videoId": "gFj8qt9HiZg",
+        "url": "https://www.youtube.com/watch?v=gFj8qt9HiZg",
+        "title": "Devil May Cry 5 Special Edition - Launch Trailer",
+        "channel": "Devil May Cry",
+        "searchQuery": "Devil May Cry 5 Special Edition 2020 official trailer",
+        "duration": "4:37",
+        "searchTitle": "Devil May Cry 5 Special Edition - Launch Trailer",
+        "searchChannel": "Devil May Cry",
+        "channelUrl": "https://www.youtube.com/@devilmaycry",
+        "verification": "YouTube oEmbed returned matching video iframe and public title/channel",
+        "embedMetadataAvailable": true,
+        "verifiedAt": "2026-10-15T16:59:01.606Z"
+      },
+      "review": {
+        "videoId": "qKALmTgnrao",
+        "url": "https://www.youtube.com/watch?v=qKALmTgnrao",
+        "title": "Devil May Cry 5 Special Edition Review",
+        "channel": "TheGamingBritShow",
+        "searchQuery": "Devil May Cry 5 Special Edition 2020 game review",
+        "duration": "11:41",
+        "searchTitle": "Devil May Cry 5 Special Edition Review",
+        "searchChannel": "TheGamingBritShow",
+        "channelUrl": "https://www.youtube.com/@TheGamingBritShow",
+        "verification": "YouTube oEmbed returned matching video iframe and public title/channel",
+        "embedMetadataAvailable": true,
+        "verifiedAt": "2026-10-15T16:59:01.690Z"
+      }
+    },
+    {
+      "id": 185,
+      "title": "Call of Duty 4: Modern Warfare",
+      "trailer": {
+        "videoId": "LhuIjNSg7Gg",
+        "url": "https://www.youtube.com/watch?v=LhuIjNSg7Gg",
+        "title": "Call of Duty 4: Modern Warfare Trailer",
+        "channel": "Gamehelper",
+        "searchQuery": "Call of Duty 4: Modern Warfare 2007 official trailer",
+        "duration": "1:38",
+        "searchTitle": "Call of Duty 4: Modern Warfare Trailer",
+        "searchChannel": "Gamehelper",
+        "channelUrl": "https://www.youtube.com/@gamehelper",
+        "verification": "YouTube oEmbed returned matching video iframe and public title/channel",
+        "embedMetadataAvailable": true,
+        "verifiedAt": "2026-10-15T16:59:01.684Z"
+      },
+      "review": {
+        "videoId": "QgX8xPp46lA",
+        "url": "https://www.youtube.com/watch?v=QgX8xPp46lA",
+        "title": "Call of Duty 4: Modern Warfare for PC Video Review",
+        "channel": "Gaming Pastime",
+        "searchQuery": "Call of Duty 4: Modern Warfare 2007 game review",
+        "duration": "15:56",
+        "searchTitle": "Call of Duty 4: Modern Warfare for PC Video Review",
+        "searchChannel": "Gaming Pastime",
+        "channelUrl": "https://www.youtube.com/@Gamingpastime64",
+        "verification": "YouTube oEmbed returned matching video iframe and public title/channel",
+        "embedMetadataAvailable": true,
+        "verifiedAt": "2026-10-15T16:59:01.766Z"
+      },
+      "note": "Original 2007 trailer archived by Gamehelper, paired with a PC review; not the remaster or 2019 reboot."
+    },
+    {
+      "id": 186,
+      "title": "Call of Duty: Modern Warfare 2",
+      "trailer": {
+        "videoId": "TiFSSpYdPuc",
+        "url": "https://www.youtube.com/watch?v=TiFSSpYdPuc",
+        "title": "Modern Warfare 2 Worldwide Reveal Trailer (Official HD)",
+        "channel": "InfinityWard",
+        "searchQuery": "Call of Duty: Modern Warfare 2 2009 official trailer",
+        "duration": "2:02",
+        "searchTitle": "Modern Warfare 2 Worldwide Reveal Trailer (Official HD)",
+        "searchChannel": "InfinityWard",
+        "channelUrl": "https://www.youtube.com/@InfinityWard",
+        "verification": "YouTube oEmbed returned matching video iframe and public title/channel",
+        "embedMetadataAvailable": true,
+        "verifiedAt": "2026-10-15T16:59:01.827Z"
+      },
+      "review": {
+        "videoId": "Y1zFmnlmSZE",
+        "url": "https://www.youtube.com/watch?v=Y1zFmnlmSZE",
+        "title": "Call of Duty: Modern Warfare 2 Review",
+        "channel": "IGN",
+        "searchQuery": "Call of Duty: Modern Warfare 2 2009 game review",
+        "duration": "4:32",
+        "searchTitle": "Call of Duty: Modern Warfare 2 Review",
+        "searchChannel": "IGN",
+        "channelUrl": "https://www.youtube.com/@IGN",
+        "verification": "YouTube oEmbed returned matching video iframe and public title/channel",
+        "embedMetadataAvailable": true,
+        "verifiedAt": "2026-10-15T16:59:01.856Z"
+      }
+    },
+    {
+      "id": 187,
+      "title": "Call of Duty: Modern Warfare 3",
+      "trailer": {
+        "videoId": "1xjCdN_rWCE",
+        "url": "https://www.youtube.com/watch?v=1xjCdN_rWCE",
+        "title": "Official Call of Duty: Modern Warfare 3 - Launch Trailer",
+        "channel": "Call of Duty",
+        "searchQuery": "Call of Duty: Modern Warfare 3 2011 official trailer",
+        "duration": "1:01",
+        "searchTitle": "Official Call of Duty: Modern Warfare 3 - Launch Trailer",
+        "searchChannel": "Call of Duty",
+        "channelUrl": "https://www.youtube.com/@CallofDuty",
+        "verification": "YouTube oEmbed returned matching video iframe and public title/channel",
+        "embedMetadataAvailable": true,
+        "verifiedAt": "2026-10-15T16:59:01.963Z"
+      },
+      "review": {
+        "videoId": "SgLgytuJhXk",
+        "url": "https://www.youtube.com/watch?v=SgLgytuJhXk",
+        "title": "IGN Reviews - Modern Warfare 3 Game Review",
+        "channel": "IGN",
+        "searchQuery": "Call of Duty: Modern Warfare 3 2011 game review",
+        "duration": "4:28",
+        "searchTitle": "IGN Reviews - Modern Warfare 3 Game Review",
+        "searchChannel": "IGN",
+        "channelUrl": "https://www.youtube.com/@IGN",
+        "verification": "YouTube oEmbed returned matching video iframe and public title/channel",
+        "embedMetadataAvailable": true,
+        "verifiedAt": "2026-10-15T16:59:01.938Z"
+      }
+    },
+    {
+      "id": 188,
+      "title": "Assassin’s Creed III",
+      "trailer": {
+        "videoId": "pAb-Joqhrz8",
+        "url": "https://www.youtube.com/watch?v=pAb-Joqhrz8",
+        "title": "Assassin's Creed 3 - Official Launch Trailer [UK]",
+        "channel": "Assassin's Creed",
+        "searchQuery": "Assassin’s Creed III 2012 official trailer",
+        "duration": "1:32",
+        "searchTitle": "Assassin's Creed 3 - Official Launch Trailer [UK]",
+        "searchChannel": "Assassin's Creed",
+        "channelUrl": "https://www.youtube.com/@assassinscreed",
+        "verification": "YouTube oEmbed returned matching video iframe and public title/channel",
+        "embedMetadataAvailable": true,
+        "verifiedAt": "2026-10-15T16:59:02.029Z"
+      },
+      "review": {
+        "videoId": "0UNjT9uFv0c",
+        "url": "https://www.youtube.com/watch?v=0UNjT9uFv0c",
+        "title": "Assassin's Creed 3 Review - IGN Reviews",
+        "channel": "IGN",
+        "searchQuery": "Assassin’s Creed III 2012 game review",
+        "duration": "6:20",
+        "searchTitle": "Assassin's Creed 3 Review - IGN Reviews",
+        "searchChannel": "IGN",
+        "channelUrl": "https://www.youtube.com/@IGN",
+        "verification": "YouTube oEmbed returned matching video iframe and public title/channel",
+        "embedMetadataAvailable": true,
+        "verifiedAt": "2026-10-15T16:59:02.126Z"
+      }
+    },
+    {
+      "id": 189,
+      "title": "Assassin's Creed Revelations",
+      "trailer": {
+        "videoId": "HMsbMK9Odoc",
+        "url": "https://www.youtube.com/watch?v=HMsbMK9Odoc",
+        "title": "Assassin's Creed: Revelations - Official E3 Trailer",
+        "channel": "Digic Pictures",
+        "searchQuery": "Assassin's Creed Revelations 2011 official trailer",
+        "duration": "3:05",
+        "searchTitle": "Assassin's Creed: Revelations - Official E3 Trailer",
+        "searchChannel": "Digic Pictures",
+        "channelUrl": "https://www.youtube.com/@TheDigicPictures",
+        "verification": "YouTube oEmbed returned matching video iframe and public title/channel",
+        "embedMetadataAvailable": true,
+        "verifiedAt": "2026-10-15T16:59:02.104Z"
+      },
+      "review": {
+        "videoId": "0dv4ggAxb1M",
+        "url": "https://www.youtube.com/watch?v=0dv4ggAxb1M",
+        "title": "IGN Reviews - Assassin's Creed Revelations Game Review",
+        "channel": "IGN",
+        "searchQuery": "Assassin's Creed Revelations 2011 game review",
+        "duration": "5:29",
+        "searchTitle": "IGN Reviews - Assassin's Creed Revelations Game Review",
+        "searchChannel": "IGN",
+        "channelUrl": "https://www.youtube.com/@IGN",
+        "verification": "YouTube oEmbed returned matching video iframe and public title/channel",
+        "embedMetadataAvailable": true,
+        "verifiedAt": "2026-10-15T16:59:02.185Z"
+      }
+    },
+    {
+      "id": 190,
+      "title": "Assassin’s Creed Rogue",
+      "trailer": {
+        "videoId": "uOGRPmZtckg",
+        "url": "https://www.youtube.com/watch?v=uOGRPmZtckg",
+        "title": "Assassin’s Creed Rogue | Launch Trailer [UK]",
+        "channel": "Assassin's Creed",
+        "searchQuery": "Assassin’s Creed Rogue 2014 official trailer",
+        "duration": "1:49",
+        "searchTitle": "Assassin’s Creed Rogue | Launch Trailer [UK]",
+        "searchChannel": "Assassin's Creed",
+        "channelUrl": "https://www.youtube.com/@assassinscreed",
+        "verification": "YouTube oEmbed returned matching video iframe and public title/channel",
+        "embedMetadataAvailable": true,
+        "verifiedAt": "2026-10-15T16:59:02.281Z"
+      },
+      "review": {
+        "videoId": "0EyfANL14as",
+        "url": "https://www.youtube.com/watch?v=0EyfANL14as",
+        "title": "Assassin's Creed Rogue - Video Review",
+        "channel": "IGN",
+        "searchQuery": "Assassin’s Creed Rogue 2014 game review",
+        "duration": "2:49",
+        "searchTitle": "Assassin's Creed Rogue - Video Review",
+        "searchChannel": "IGN",
+        "channelUrl": "https://www.youtube.com/@IGN",
+        "verification": "YouTube oEmbed returned matching video iframe and public title/channel",
+        "embedMetadataAvailable": true,
+        "verifiedAt": "2026-10-15T16:59:02.290Z"
+      }
+    }
+  ],
+  "unmatched": [
+    {
+      "id": 93,
+      "title": "Phantom Blade Zero",
+      "missing": "review",
+      "reason": "No verified full-game review found; search results were trailers, previews, demos, or unrelated games."
+    },
+    {
+      "id": 97,
+      "title": "ANANTA",
+      "missing": "review",
+      "reason": "No verified full-game review found; search results were trailers, previews, demos, or unrelated games."
+    },
+    {
+      "id": 98,
+      "title": "Lords of the Fallen II",
+      "missing": "review",
+      "reason": "No verified full-game review found; search results were trailers, previews, demos, or unrelated games."
+    },
+    {
+      "id": 99,
+      "title": "A Whisper of Fall: Jinyiwei",
+      "missing": "review",
+      "reason": "No verified full-game review found; search results were trailers, previews, demos, or unrelated games."
+    },
+    {
+      "id": 100,
+      "title": "Black Myth: Zhong Kui",
+      "missing": "review",
+      "reason": "No verified full-game review found; search results were trailers, previews, demos, or unrelated games."
+    },
+    {
+      "id": 101,
+      "title": "Genigods: Nezha",
+      "missing": "review",
+      "reason": "No verified full-game review found; search results were trailers, previews, demos, or unrelated games."
+    },
+    {
+      "id": 102,
+      "title": "Hitori No Shita: The Outcast",
+      "missing": "review",
+      "reason": "Also searched the current game title, The Hidden Ones; only pre-release gameplay/test coverage found."
+    },
+    {
+      "id": 104,
+      "title": "John Wick (AAA game by Saber Interactive)",
+      "missing": "review",
+      "reason": "No verified full-game review found; search results were trailers, previews, demos, or unrelated games."
+    },
+    {
+      "id": 105,
+      "title": "Project Windless",
+      "missing": "review",
+      "reason": "No verified full-game review found; search results were trailers, previews, demos, or unrelated games."
+    },
+    {
+      "id": 106,
+      "title": "The God Slayer",
+      "missing": "review",
+      "reason": "No verified full-game review found; search results were trailers, previews, demos, or unrelated games."
+    },
+    {
+      "id": 107,
+      "title": "Tides of Annihilation",
+      "missing": "review",
+      "reason": "No verified full-game review found; search results were trailers, previews, demos, or unrelated games."
+    },
+    {
+      "id": 165,
+      "title": "Prince of Persia: The Sands of Time Remake",
+      "missing": "review",
+      "reason": "No verified full-game review found; search results were trailers, previews, demos, or unrelated games."
+    }
+  ],
+  "summary": {
+    "gamesUpdated": 27,
+    "trailersAdded": 25,
+    "reviewsAdded": 26,
+    "remainingMissingTrailers": 0,
+    "remainingMissingReviews": 12
+  },
+  "importResult": {
+    "status": "applied",
+    "verifiedAt": "2026-10-15T17:19:26.638Z",
+    "catalogGames": 191,
+    "gamesWithTrailer": 191,
+    "gamesWithReview": 179,
+    "repeatDryRunChanges": 0,
+    "unrelatedFieldsPreserved": true
+  }
+}
